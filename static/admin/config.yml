@@ -1,5 +1,5 @@
 backend:
-    name: git
+    name: github
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -17,7 +17,7 @@ collections:
       label: English
       files:
           - file: 'src/markdown/en/index.md'
-            label: 'Index'
+            label: 'Home'
             name: 'index'
             fields:
                 - {
@@ -39,7 +39,7 @@ collections:
       label: Deutsch
       files:
           - file: 'src/markdown/de/index.md'
-            label: 'Index'
+            label: 'Home'
             name: 'index'
             fields:
                 - {

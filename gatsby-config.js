@@ -1,8 +1,118 @@
 module.exports = {
     siteMetadata: {
-        title: 'Gatsby + Netlify CMS Starter',
-        description:
-            'This repo contains an example business website that is built with Gatsby, and Netlify CMS.It follows the JAMstack architecture by using Git as a single source of truth, and Netlify for continuous deployment, and CDN distribution.',
+        title: 'Renergy',
+        description: 'Renergy description',
+        menu: [
+            {
+                item: {
+                    en: 'Home',
+                    de: 'Start',
+                },
+                to: '/',
+            },
+            {
+                item: {
+                    en: 'Our Story',
+                    de: 'Über Uns',
+                },
+                to: '/our-story',
+            },
+            {
+                item: {
+                    en: 'Waste To Energy',
+                    de: 'Energie aus Müll',
+                },
+                to: '/waste-to-energy',
+                children: [
+                    {
+                        item: {
+                            en: 'Concept',
+                            de: 'Konzept',
+                        },
+                        to: '/waste-to-energy/concept',
+                    },
+                    {
+                        item: {
+                            en: 'Technology',
+                            de: 'Technologie',
+                        },
+                        to: '/waste-to-energy/technology',
+                    },
+                    {
+                        item: {
+                            en: 'Configuration',
+                            de: 'Konfiguration',
+                        },
+                        to: '/waste-to-energy/configuration',
+                    },
+                    {
+                        item: {
+                            en: 'Input / Output',
+                            de: 'Input / Output',
+                        },
+                        to: '/waste-to-energy/input-output',
+                    },
+                ],
+            },
+            {
+                item: {
+                    en: 'Tire Recycling',
+                    de: 'Reifen Recycling',
+                },
+                to: '/tire-recycling',
+                children: [
+                    {
+                        item: {
+                            en: 'Concept',
+                            de: 'Konzept',
+                        },
+                        to: '/tire-recycling/concept',
+                    },
+                    {
+                        item: {
+                            en: 'Technology',
+                            de: 'Technologie',
+                        },
+                        to: '/tire-recycling/technology',
+                    },
+                    {
+                        item: {
+                            en: 'Configuration',
+                            de: 'Anlagenaufbau',
+                        },
+                        to: '/tire-recycling/configuration',
+                    },
+                    {
+                        item: {
+                            en: 'Input / Output',
+                            de: 'Input / Output',
+                        },
+                        to: '/tire-recycling/input-output',
+                    },
+                ],
+            },
+            {
+                item: {
+                    en: 'Our Offer',
+                    de: 'Angebot',
+                },
+                to: '/our-offer',
+            },
+            {
+                item: {
+                    en: 'Calculation',
+                    de: 'Kalkulation',
+                },
+                to: '/calculation',
+            },
+            {
+                item: {
+                    en: 'Contact Us',
+                    de: 'Kontakt',
+                },
+                to: '/contact-us',
+            },
+        ],
     },
     plugins: [
         'gatsby-plugin-react-helmet',

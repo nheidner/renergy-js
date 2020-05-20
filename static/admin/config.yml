@@ -16,6 +16,43 @@ collections:
     - name: en
       label: English
       files:
+          - file: 'src/markdown/en/index.md'
+            label: 'Index'
+            name: 'index'
+            fields:
+                - {
+                      label: 'Template Key',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'index',
+                  }
+                - {
+                      label: 'Language',
+                      name: 'lang',
+                      widget: 'hidden',
+                      default: 'en',
+                  }
+                - { label: 'Page Title', name: 'pageTitle', widget: 'string' }
+                - { label: 'Path', name: 'path', widget: 'string' }
+
     - name: de
       label: Deutsch
       files:
+          - file: 'src/markdown/de/index.md'
+            label: 'Index'
+            name: 'index'
+            fields:
+                - {
+                      label: 'Template Key',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'index',
+                  }
+                - {
+                      label: 'Language',
+                      name: 'lang',
+                      widget: 'hidden',
+                      default: 'de',
+                  }
+                - { label: 'Page Title', name: 'pageTitle', widget: 'string' }
+                - { label: 'Path', name: 'path', widget: 'string' }

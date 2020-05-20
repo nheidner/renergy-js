@@ -16,7 +16,7 @@ collections:
     - name: en
       label: English
       files:
-          - file: 'src/markdown/en/index.md'
+          - file: 'src/markdown/pages/en/index.md'
             label: 'Home'
             name: 'index'
             fields:
@@ -38,7 +38,7 @@ collections:
     - name: de
       label: Deutsch
       files:
-          - file: 'src/markdown/de/index.md'
+          - file: 'src/markdown/pages/de/index.md'
             label: 'Home'
             name: 'index'
             fields:

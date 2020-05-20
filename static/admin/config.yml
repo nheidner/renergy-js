@@ -1,5 +1,6 @@
 backend:
-    name: git-gateway
+    name: git
+    repo: nheidner/renergy-js
     branch: master
     commit_messages:
         create: 'Create {{collection}} “{{slug}}”'
@@ -12,3 +13,9 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+    - name: en
+      label: English
+      files:
+    - name: de
+      label: Deutsch
+      files:

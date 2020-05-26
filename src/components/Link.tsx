@@ -3,7 +3,6 @@ import { Link as GatsbyLink } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import { css } from '@emotion/core';
 import isHash from '../utils/isHash';
-import theme from '../utils/theme';
 
 interface ILink {
     (props: {

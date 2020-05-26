@@ -27,8 +27,8 @@ collections:
                       default: 'index',
                   }
                 - {
-                      label: 'Language',
-                      name: 'lang',
+                      label: 'Locale',
+                      name: 'locale',
                       widget: 'hidden',
                       default: 'en',
                   }
@@ -49,8 +49,8 @@ collections:
                       default: 'index',
                   }
                 - {
-                      label: 'Language',
-                      name: 'lang',
+                      label: 'Locale',
+                      name: 'locale',
                       widget: 'hidden',
                       default: 'de',
                   }

@@ -1,7 +1,10 @@
+const locales = require('./locales');
+
 module.exports = {
     siteMetadata: {
         title: 'Renergy',
         description: 'Renergy description',
+        localesSettings: locales,
         menu: [
             {
                 item: {

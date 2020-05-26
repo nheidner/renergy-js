@@ -11,5 +11,5 @@
         "noUnusedLocals": false,
         "allowJs": true
     },
-    "include": ["src/**/*tsx", "src/**/*.ts", "*.ts"]
+    "include": ["src/**/*tsx", "src/**/*.ts", "*.ts", "locales.js"]
 }

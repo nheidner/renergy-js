@@ -1,5 +1,6 @@
 ---
-lang: en
+locale: en
 templateKey: index
+pageTitle: Home
 path: /
 ---

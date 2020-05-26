@@ -1,5 +1,6 @@
-const path = require('path');
+const pathFunc = require('path');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+const locales = require('./locales');
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;
@@ -10,10 +11,12 @@ exports.createPages = ({ actions, graphql }) => {
                 edges {
                     node {
                         id
+                        fields {
+                            slug
+                        }
                         frontmatter {
-                            lang
+                            locale
                             templateKey
-                            path
                         }
                     }
                 }
@@ -28,11 +31,12 @@ exports.createPages = ({ actions, graphql }) => {
         const posts = result.data.allMarkdownRemark.edges;
 
         posts.forEach((edge) => {
-            const id = edge.node.id;
-            if (edge.node.frontmatter.path) {
+            if (typeof edge.node.fields.slug === 'string') {
+                const { id } = edge.node;
+                const path = edge.node.fields.slug;
                 createPage({
-                    path: edge.node.frontmatter.path,
-                    component: path.resolve(
+                    path,
+                    component: pathFunc.resolve(
                         `src/templates/${String(
                             edge.node.frontmatter.templateKey
                         )}.tsx`
@@ -47,6 +51,22 @@ exports.createPages = ({ actions, graphql }) => {
     });
 };
 
-exports.onCreateNode = ({ node }) => {
+exports.onCreateNode = ({ node, actions }) => {
+    const { createNodeField } = actions;
     fmImagesToRelative(node); // convert image paths for gatsby images
+
+    // create slug field of type string only for markdown files which are supposed to become pages
+    if (node.internal.owner !== 'gatsby-transformer-remark') return;
+
+    const slug = node.frontmatter.templateKey
+        ? (locales.primary === node.frontmatter.locale
+              ? ''
+              : `/${node.frontmatter.locale}`) + node.frontmatter.path
+        : undefined;
+
+    createNodeField({
+        node,
+        name: 'slug',
+        value: slug,
+    });
 };

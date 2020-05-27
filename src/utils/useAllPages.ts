@@ -18,7 +18,7 @@ interface TDataQuery {
     };
 }
 
-const useAllPages = (): IPageItem[] => {
+const useAllPages = (): { allPages: IPageItem[] } => {
     const query = useCallback(
         () =>
             useStaticQuery<TDataQuery>(
@@ -46,7 +46,7 @@ const useAllPages = (): IPageItem[] => {
         []
     );
 
-    return query().allMarkdownRemark.edges;
+    return { allPages: query().allMarkdownRemark.edges };
 };
 
 export default useAllPages;

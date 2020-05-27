@@ -13,7 +13,7 @@ interface TData {
     };
 }
 
-const getLocales = (): ILocalesSettings => {
+const useLocales = (): ILocalesSettings => {
     const { site } = useStaticQuery<TData>(
         graphql`
             query {
@@ -31,4 +31,4 @@ const getLocales = (): ILocalesSettings => {
     return site.siteMetadata.localesSettings;
 };
 
-export default getLocales;
+export default useLocales;

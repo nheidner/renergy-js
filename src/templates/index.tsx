@@ -5,6 +5,8 @@ import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Link from '../components/Link';
+import { IndexQuery } from '../../gatsby-graphql';
+import { String } from '../types/optionalTypes';
 
 const Heading = styled('h1')`
     font-size: 30px;
@@ -12,51 +14,53 @@ const Heading = styled('h1')`
 `;
 
 interface IIndexTemplate {
-    title: string;
+    title: String;
+    content: String;
 }
 
-export const IndexTemplate: FC<IIndexTemplate> = ({ title }) => (
-    <div
-        css={css`
-            background-color: #ddd;
-        `}>
-        <Heading>{title}</Heading>
-        <Link
-            to='/'
+export const IndexTemplate: FC<IIndexTemplate> = ({ title, content }) => {
+    return (
+        <div
             css={css`
-                background-color: #aaa;
+                background-color: #ddd;
             `}>
-            Hello
-        </Link>
-        Hello world
-    </div>
-);
+            <Heading>{title}</Heading>
+            {content}
+            <Link
+                to='/'
+                css={css`
+                    background-color: #aaa;
+                `}>
+                hello world
+            </Link>
+        </div>
+    );
+};
 
-const Index: FC<IQuery> = ({ data }) => {
-    const { frontmatter } = data.markdownRemark;
+const Index = ({ data }: { data: IndexQuery }) => {
+    const { frontmatter } = data.markdownRemark || {};
 
     return (
         <Layout>
-            <IndexTemplate title={frontmatter.title} />
+            <IndexTemplate
+                title={frontmatter?.title}
+                content={frontmatter?.content}
+            />
         </Layout>
     );
 };
 
-interface IQuery {
-    data: {
-        markdownRemark: {
-            frontmatter: {
-                title: string;
-            };
-        };
-    };
-}
-
 export const pageQuery = graphql`
-    query {
-        markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
+    query Index($locale: String) {
+        markdownRemark(
+            frontmatter: {
+                templateKey: { eq: "index" }
+                locale: { eq: $locale }
+            }
+        ) {
             frontmatter {
                 title
+                content
             }
         }
     }

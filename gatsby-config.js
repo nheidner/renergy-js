@@ -121,6 +121,12 @@ module.exports = {
         'gatsby-plugin-react-helmet',
         `gatsby-plugin-typescript`,
         {
+            resolve: `gatsby-plugin-graphql-codegen`,
+            options: {
+                fileName: `./gatsby-graphql.ts`,
+            },
+        },
+        {
             // keep as first gatsby-source-filesystem plugin for gatsby image support
             resolve: 'gatsby-source-filesystem',
             options: {

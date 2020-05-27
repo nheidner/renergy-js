@@ -53,7 +53,7 @@ interface IQuery {
 }
 
 export const pageQuery = graphql`
-    query {
+    query Test {
         markdownRemark(frontmatter: { templateKey: { eq: "index" } }) {
             frontmatter {
                 title

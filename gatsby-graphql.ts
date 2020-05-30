@@ -2947,6 +2947,22 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
+export type FooterQueryVariables = {};
+
+
+export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'content'>> }>, de?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'content'>> }> };
+
+export type Unnamed_1_QueryVariables = {};
+
+
+export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<{ menu?: Maybe<Array<Maybe<(
+        Pick<SiteSiteMetadataMenu, 'to'>
+        & { item?: Maybe<Pick<SiteSiteMetadataMenuItem, 'en' | 'de'>>, children?: Maybe<Array<Maybe<(
+          Pick<SiteSiteMetadataMenuChildren, 'to'>
+          & { item?: Maybe<Pick<SiteSiteMetadataMenuChildrenItem, 'en' | 'de'>> }
+        )>>> }
+      )>>> }> }> };
+
 export type IndexQueryVariables = {
   locale?: Maybe<Scalars['String']>;
 };
@@ -2959,15 +2975,15 @@ export type TestQueryVariables = {};
 
 export type TestQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }> };
 
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { allMarkdownRemark: { edges: Array<{ node: { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> } }> } };
-
 export type Unnamed_2_QueryVariables = {};
 
 
-export type Unnamed_2_Query = { site?: Maybe<{ siteMetadata?: Maybe<{ localesSettings?: Maybe<Pick<SiteSiteMetadataLocalesSettings, 'locales' | 'primary'>> }> }> };
+export type Unnamed_2_Query = { allMarkdownRemark: { edges: Array<{ node: { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> } }> } };
+
+export type LocalesQueryVariables = {};
+
+
+export type LocalesQuery = { site?: Maybe<{ siteMetadata?: Maybe<{ localesSettings?: Maybe<Pick<SiteSiteMetadataLocalesSettings, 'locales' | 'primary'>> }> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 

@@ -4,30 +4,7 @@ import useLocales from '../../utils/useLocales';
 import matchPaths from '../../utils/matchPaths';
 import useAllPages, { IPageItem } from '../../utils/useAllPages';
 import Link from '../Link';
-
-const IntlLink: FC<{
-    targetLocale: string;
-    targetPath: string;
-    primaryLocale: string;
-}> = ({ targetLocale, targetPath, primaryLocale, children }): ReactElement => {
-    const path =
-        (targetLocale === primaryLocale ? '' : '/' + targetLocale) + targetPath;
-    const { allPages } = useAllPages();
-    const { pageExists, pathName } = existsPathInPages(allPages, path);
-
-    return (
-        <Link
-            to={
-                pageExists
-                    ? pathName
-                    : (targetLocale === primaryLocale
-                          ? ''
-                          : '/' + targetLocale) + '/'
-            }>
-            {children}
-        </Link>
-    );
-};
+import usePath from '../../utils/usePath';
 
 const existsPathInPages = (
     pages: IPageItem[],
@@ -42,29 +19,34 @@ const existsPathInPages = (
     return { pageExists: false, pathName: '' };
 };
 
-const returnPathWithoutLocale = (
-    pathname: string,
-    locales: string[]
-): {
-    pathWithoutLocale: string;
-} => {
-    for (const locale of locales) {
-        if (pathname.includes(`/${locale}/`, 0)) {
-            const pathWithoutLocale = pathname.replace(`/${locale}`, '');
-            return {
-                pathWithoutLocale,
-            };
-        }
-    }
-    return {
-        pathWithoutLocale: pathname,
-    };
+const IntlLink: FC<{
+    targetLocale: string;
+    targetPath: string;
+    primaryLocale: string;
+}> = ({ targetLocale, targetPath, primaryLocale, children }): ReactElement => {
+    const path =
+        (targetLocale === primaryLocale ? '' : `/${targetLocale}`) + targetPath;
+    const { allPages } = useAllPages();
+    const { pageExists, pathName } = existsPathInPages(allPages, path);
+
+    return (
+        <Link
+            to={
+                pageExists
+                    ? pathName
+                    : targetLocale === primaryLocale
+                    ? ''
+                    : `/${targetLocale}/`
+            }>
+            {children}
+        </Link>
+    );
 };
 
 const LocalesToggle = () => {
-    const { locales, primary } = useLocales();
+    const { locales, primary: primaryLocale } = useLocales() || {};
     const { pathname } = useLocation();
-    const { pathWithoutLocale } = returnPathWithoutLocale(pathname, locales);
+    const { pathWithoutLocale } = usePath(pathname, locales, primaryLocale);
     return (
         <ul>
             {locales.map((locale, index) => {
@@ -73,7 +55,7 @@ const LocalesToggle = () => {
                         <IntlLink
                             targetLocale={locale}
                             targetPath={pathWithoutLocale}
-                            primaryLocale={primary}>
+                            primaryLocale={primaryLocale}>
                             {locale}
                         </IntlLink>
                     </li>

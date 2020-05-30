@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Link from '../components/Link';
 import { IndexQuery } from '../../gatsby-graphql';
-import { String } from '../types/optionalTypes';
+import { makeOptional } from '../types/optionalTypes';
 
 const Heading = styled('h1')`
     font-size: 30px;
@@ -14,8 +14,8 @@ const Heading = styled('h1')`
 `;
 
 interface IIndexTemplate {
-    title: String;
-    content: String;
+    title: makeOptional<string>;
+    content: makeOptional<string>;
 }
 
 export const IndexTemplate: FC<IIndexTemplate> = ({ title, content }) => {

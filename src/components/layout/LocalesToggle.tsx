@@ -43,15 +43,20 @@ const IntlLink: FC<{
     );
 };
 
-const LocalesToggle = () => {
+const LocalesToggle: FC<{ [prop: string]: any }> = ({ ...props }) => {
     const { locales, primary: primaryLocale } = useLocales() || {};
     const { pathname } = useLocation();
-    const { pathWithoutLocale } = usePath(pathname, locales, primaryLocale);
+    const { pathWithoutLocale, locale: currentLocale } = usePath(
+        pathname,
+        locales,
+        primaryLocale
+    );
     return (
-        <ul>
+        <ul {...props}>
             {locales.map((locale, index) => {
+                const active = locale === currentLocale;
                 return (
-                    <li key={index}>
+                    <li key={index} className={active ? 'active' : ''}>
                         <IntlLink
                             targetLocale={locale}
                             targetPath={pathWithoutLocale}

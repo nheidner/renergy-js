@@ -6,6 +6,7 @@
     "dependencies": {
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
+        "@nteeeeed/react-multilang-menu": "1.0.16",
         "gatsby": "^2.20.35",
         "gatsby-image": "^2.3.5",
         "gatsby-plugin-graphql-codegen": "^2.7.1",

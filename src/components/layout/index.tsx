@@ -11,6 +11,8 @@ const globalStyles = css`
     body {
         font-family: 'Archivo', Helvetica, Arial, sans-serif;
         margin: 0;
+        background: #1c1c1c;
+        color: #bbbbbb;
     }
 `;
 
@@ -20,12 +22,19 @@ const globalStyles = css`
 const Layout: FC = ({ children }) => {
     const { locales, primary: primaryLocale } = useLocales();
     const { pathname } = useLocation();
-    const { locale: currentLocale } = usePath(pathname, locales, primaryLocale);
+    const { locale: currentLocale, pathWithoutLocale } = usePath(
+        pathname,
+        locales,
+        primaryLocale
+    );
     return (
         <div>
             <Helmet></Helmet>
             <Global styles={globalStyles} />
-            <Header currentLocale={currentLocale} />
+            <Header
+                currentLocale={currentLocale}
+                pathWithoutLocale={pathWithoutLocale}
+            />
             <div>{children}</div>
             <Footer currentLocale={currentLocale} />
         </div>

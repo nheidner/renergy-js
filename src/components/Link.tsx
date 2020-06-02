@@ -4,7 +4,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import { css } from '@emotion/core';
 import isHash from '../utils/isHash';
 
-interface ILink {
+export interface ILink {
     (props: {
         children: ReactNode;
         to: string;

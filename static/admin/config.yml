@@ -34,6 +34,16 @@ collections:
                   }
                 - { label: 'Page Title', name: 'pageTitle', widget: 'string' }
                 - { label: 'Path', name: 'path', widget: 'string' }
+                - label: Openers
+                  name: opener
+                  widget: object
+                  fields:
+                      - label: 'Opener Image', 
+                        name: 'opener-image', 
+                        widget: object
+                        fields: 
+                          - {label: 'Image', name: 'image', widget: 'image'}
+                          - {label: 'Alt', name: 'alt', widget: 'string'}
 
     - name: de
       label: Deutsch

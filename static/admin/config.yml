@@ -37,6 +37,7 @@ collections:
                 - label: Openers
                   name: openers
                   widget: list
+                  summary: 'opener'
                   fields:
                       - label: 'Opener Image'
                         name: 'image'

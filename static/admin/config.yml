@@ -40,7 +40,7 @@ collections:
                   fields:
                       - label: 'Opener Image', 
                         name: 'opener-image', 
-                        widget: object
+                        widget: object,
                         fields: 
                           - {label: 'Image', name: 'image', widget: 'image'}
                           - {label: 'Alt', name: 'alt', widget: 'string'}

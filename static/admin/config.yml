@@ -13,21 +13,6 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-    - name: 'pages'
-      label: 'Alle Seiten'
-      folder: 'src/markdown'
-      field_identifier: path
-      create: true
-      fields:
-          - {
-                label: 'Template Key',
-                name: 'templateKey',
-                widget: 'hidden',
-                default: 'index',
-            }
-          - { label: 'Seitenpfad', name: 'path', widget: 'string' }
-          - { label: 'Seitentitel', name: 'pageTitle', widget: 'string' }
-          - { label: 'Überschrift', name: 'heading', widget: 'string' }
     - name: en
       label: English
       files:

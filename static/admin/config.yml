@@ -16,7 +16,7 @@ collections:
     - name: en
       label: English
       files:
-          - file: 'src/markdown/pages/en/index.md'
+          - file: 'src/markdown/en/index.md'
             label: 'Home'
             name: 'index'
             fields:

@@ -307,6 +307,9 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                         return <p key={index}>{addressLine?.line}</p>;
                     })}
                 </section>
+                <MoreButton to={contact?.link?.href as string}>
+                    {contact?.link?.text}
+                </MoreButton>
             </Section>
         </div>
     );

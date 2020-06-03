@@ -50,8 +50,8 @@ collections:
                                   widget: 'image',
                               }
                             - { label: 'Alt', name: 'alt', widget: 'string' }
-                      - label: 'Link'
-                        name: 'link'
+                      - label: 'Heading Link'
+                        name: 'heading'
                         widget: object
                         collapsed: true
                         fields:
@@ -60,6 +60,13 @@ collections:
                                   name: 'text',
                                   widget: 'markdown',
                               }
+                            - { label: 'Href', name: 'href', widget: 'string' }
+                      - label: 'More Link'
+                        name: 'link'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - { label: 'Text', name: 'text', widget: 'string' }
                             - { label: 'Href', name: 'href', widget: 'string' }
                 - label: Introducing
                   name: introducing

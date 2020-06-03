@@ -8,12 +8,7 @@ openers:
       source: /img/item-1.jpg
       alt: make money without invest!
     link:
-      text: |-
-        make money
-
-        without invest!
-
-        Loose the rubbish problems
+      text: Find Out More →
       href: /
     heading:
       text: |-

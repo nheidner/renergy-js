@@ -3248,25 +3248,28 @@ export type IndexQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<(
         Pick<MarkdownRemarkFrontmatterIntroducing, 'topic' | 'heading' | 'text'>
         & { image?: Maybe<(
           Pick<MarkdownRemarkFrontmatterIntroducingImage, 'alt'>
-          & { source?: Maybe<PersonImgFragment> }
+          & { source?: Maybe<ThumbNailFragment> }
         )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterIntroducingLink, 'text' | 'href'>> }
       )>, clients?: Maybe<(
         Pick<MarkdownRemarkFrontmatterClients, 'topic'>
         & { clients_list?: Maybe<Array<Maybe<{ image?: Maybe<(
             Pick<MarkdownRemarkFrontmatterClientsClients_ListImage, 'alt'>
-            & { source?: Maybe<PersonImgFragment> }
+            & { source?: Maybe<ClientFragment> }
           )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterClientsClients_ListLink, 'href'>> }>>> }
       )>, contact?: Maybe<(
         Pick<MarkdownRemarkFrontmatterContact, 'topic' | 'heading'>
         & { image?: Maybe<(
           Pick<MarkdownRemarkFrontmatterContactImage, 'alt'>
-          & { source?: Maybe<PersonImgFragment> }
+          & { source?: Maybe<ThumbNailFragment> }
         )>, office_germany?: Maybe<(
           Pick<MarkdownRemarkFrontmatterContactOffice_Germany, 'heading'>
           & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterContactOffice_GermanyAddress, 'line'>>>> }
         )>, get_in_touch?: Maybe<(
           Pick<MarkdownRemarkFrontmatterContactGet_In_Touch, 'heading' | 'telephone'>
           & { email?: Maybe<Pick<MarkdownRemarkFrontmatterContactGet_In_TouchEmail, 'text' | 'href'>> }
+        )>, office_uae?: Maybe<(
+          Pick<MarkdownRemarkFrontmatterContactOffice_Uae, 'heading'>
+          & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterContactOffice_UaeAddress, 'line'>>>> }
         )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterContactLink, 'text' | 'href'>> }
       )> }
     )> }> };
@@ -3279,6 +3282,10 @@ export type TestQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<Mark
 export type OpenerImageFragmentFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 
 export type PersonImgFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
+
+export type ThumbNailFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
+
+export type ClientFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 
 export type Unnamed_2_QueryVariables = {};
 

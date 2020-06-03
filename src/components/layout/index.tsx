@@ -14,6 +14,25 @@ const globalStyles = css`
         margin: 0;
         background: #1c1c1c;
         color: #bbbbbb;
+        font-size: 14px;
+        line-height: 1.72;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        .h6 {
+            font-family: 'Archivo', Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            line-height: 1.33;
+            color: #ffffff;
+        }
     }
 `;
 

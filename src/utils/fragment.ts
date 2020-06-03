@@ -19,3 +19,23 @@ export const personImg = graphql`
         }
     }
 `;
+
+export const thumbNail = graphql`
+    fragment thumbNail on File {
+        childImageSharp {
+            fluid(maxWidth: 1100) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+`;
+
+export const client = graphql`
+    fragment client on File {
+        childImageSharp {
+            fluid(maxWidth: 200) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+`;

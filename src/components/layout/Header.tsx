@@ -92,6 +92,7 @@ const mobileMenuStyles = css`
 
 const menuStyles = css`
     ul.menu {
+        z-index: 1;
         ${clearfix}
         list-style: none;
         margin: 0;
@@ -183,6 +184,8 @@ const localesToggleStyles = css`
     list-style: none;
     padding-left: 0;
     margin: 0;
+    line-height: 1.72;
+    font-size: 17px;
     li {
         float: left;
         padding: 2px 6px;

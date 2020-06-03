@@ -15,6 +15,44 @@ openers:
 
         Loose the rubbish problems
       href: /
+    heading:
+      text: |-
+        make money 
+
+        without invest!
+
+        Loose the rubbish 
+
+        problems
+      href: /
+  - image:
+      source: /img/mll20.jpg
+      alt: Energy from waste
+    heading:
+      text: |-
+        Energy
+
+        from
+
+        waste
+      href: /
+    link:
+      text: Find out More →
+      href: /
+  - image:
+      source: /img/foto.jpg
+      alt: Energy with a clean environment
+    heading:
+      text: |-
+        Energy with a 
+
+        clean
+
+        environment
+      href: /
+    link:
+      text: Find out more →
+      href: /
 introducing:
   topic: Introducing.
   heading: Generation and Utilisation of Synthesis Gas from organic waste
@@ -35,6 +73,41 @@ clients:
     - image:
         source: /img/item-8.png
         alt: Trapp
+      link:
+        href: /
+    - image:
+        source: /img/item-2.png
+        alt: Belaz
+      link:
+        href: /
+    - image:
+        source: /img/item-1.png
+        alt: RPA Process
+      link:
+        href: /
+    - image:
+        source: /img/item-3.png
+        alt: Blair Rubbercompany
+      link:
+        href: /
+    - image:
+        source: /img/item-4.png
+        alt: Turbo Rührwerke
+      link:
+        href: /
+    - image:
+        source: /img/item-5.png
+        alt: Hormesa
+      link:
+        href: /
+    - image:
+        source: /img/item-6.png
+        alt: TMS
+      link:
+        href: /
+    - image:
+        source: /img/logomittel.png
+        alt: GPM Engineering Technologie LTD
       link:
         href: /
 contact:

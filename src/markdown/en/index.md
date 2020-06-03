@@ -36,7 +36,6 @@ clients:
         source: /img/item-8.png
         alt: Trapp
       link:
-        text: sdf
         href: /
 contact:
   topic: Contact.

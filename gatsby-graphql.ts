@@ -698,6 +698,14 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___pageTitle'
   | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___content'
+  | 'childMarkdownRemark___frontmatter___openers'
+  | 'childMarkdownRemark___frontmatter___introducing___topic'
+  | 'childMarkdownRemark___frontmatter___introducing___heading'
+  | 'childMarkdownRemark___frontmatter___introducing___text'
+  | 'childMarkdownRemark___frontmatter___clients___topic'
+  | 'childMarkdownRemark___frontmatter___clients___clients_list'
+  | 'childMarkdownRemark___frontmatter___contact___topic'
+  | 'childMarkdownRemark___frontmatter___contact___heading'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1473,6 +1481,32 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___pageTitle'
   | 'frontmatter___path'
   | 'frontmatter___content'
+  | 'frontmatter___openers'
+  | 'frontmatter___openers___image___source'
+  | 'frontmatter___openers___image___alt'
+  | 'frontmatter___openers___link___text'
+  | 'frontmatter___openers___link___href'
+  | 'frontmatter___introducing___topic'
+  | 'frontmatter___introducing___heading'
+  | 'frontmatter___introducing___text'
+  | 'frontmatter___introducing___image___source'
+  | 'frontmatter___introducing___image___alt'
+  | 'frontmatter___introducing___link___text'
+  | 'frontmatter___introducing___link___href'
+  | 'frontmatter___clients___topic'
+  | 'frontmatter___clients___clients_list'
+  | 'frontmatter___contact___topic'
+  | 'frontmatter___contact___heading'
+  | 'frontmatter___contact___image___source'
+  | 'frontmatter___contact___image___alt'
+  | 'frontmatter___contact___office_germany___heading'
+  | 'frontmatter___contact___office_germany___address'
+  | 'frontmatter___contact___get_in_touch___heading'
+  | 'frontmatter___contact___get_in_touch___telephone'
+  | 'frontmatter___contact___office_uae___heading'
+  | 'frontmatter___contact___office_uae___address'
+  | 'frontmatter___contact___link___text'
+  | 'frontmatter___contact___link___href'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1605,6 +1639,158 @@ export type MarkdownRemarkFrontmatter = {
   pageTitle?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
+  openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
+  introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
+  clients?: Maybe<MarkdownRemarkFrontmatterClients>;
+  contact?: Maybe<MarkdownRemarkFrontmatterContact>;
+};
+
+export type MarkdownRemarkFrontmatterClients = {
+  topic?: Maybe<Scalars['String']>;
+  clients_list?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterClientsClients_List>>>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_List = {
+  image?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListImage>;
+  link?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListLink>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_ListFilterInput = {
+  image?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListImageFilterInput>;
+  link?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListLinkFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_ListFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_ListImage = {
+  source?: Maybe<Scalars['String']>;
+  alt?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_ListImageFilterInput = {
+  source?: Maybe<StringQueryOperatorInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_ListLink = {
+  href?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterClientsClients_ListLinkFilterInput = {
+  href?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterClientsFilterInput = {
+  topic?: Maybe<StringQueryOperatorInput>;
+  clients_list?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListFilterListInput>;
+};
+
+export type MarkdownRemarkFrontmatterContact = {
+  topic?: Maybe<Scalars['String']>;
+  heading?: Maybe<Scalars['String']>;
+  image?: Maybe<MarkdownRemarkFrontmatterContactImage>;
+  office_germany?: Maybe<MarkdownRemarkFrontmatterContactOffice_Germany>;
+  get_in_touch?: Maybe<MarkdownRemarkFrontmatterContactGet_In_Touch>;
+  office_uae?: Maybe<MarkdownRemarkFrontmatterContactOffice_Uae>;
+  link?: Maybe<MarkdownRemarkFrontmatterContactLink>;
+};
+
+export type MarkdownRemarkFrontmatterContactFilterInput = {
+  topic?: Maybe<StringQueryOperatorInput>;
+  heading?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<MarkdownRemarkFrontmatterContactImageFilterInput>;
+  office_germany?: Maybe<MarkdownRemarkFrontmatterContactOffice_GermanyFilterInput>;
+  get_in_touch?: Maybe<MarkdownRemarkFrontmatterContactGet_In_TouchFilterInput>;
+  office_uae?: Maybe<MarkdownRemarkFrontmatterContactOffice_UaeFilterInput>;
+  link?: Maybe<MarkdownRemarkFrontmatterContactLinkFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactGet_In_Touch = {
+  heading?: Maybe<Scalars['String']>;
+  telephone?: Maybe<Scalars['String']>;
+  email?: Maybe<MarkdownRemarkFrontmatterContactGet_In_TouchEmail>;
+};
+
+export type MarkdownRemarkFrontmatterContactGet_In_TouchEmail = {
+  text?: Maybe<Scalars['String']>;
+  href?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterContactGet_In_TouchEmailFilterInput = {
+  text?: Maybe<StringQueryOperatorInput>;
+  href?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactGet_In_TouchFilterInput = {
+  heading?: Maybe<StringQueryOperatorInput>;
+  telephone?: Maybe<StringQueryOperatorInput>;
+  email?: Maybe<MarkdownRemarkFrontmatterContactGet_In_TouchEmailFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactImage = {
+  source?: Maybe<Scalars['String']>;
+  alt?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterContactImageFilterInput = {
+  source?: Maybe<StringQueryOperatorInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactLink = {
+  text?: Maybe<Scalars['String']>;
+  href?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterContactLinkFilterInput = {
+  text?: Maybe<StringQueryOperatorInput>;
+  href?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_Germany = {
+  heading?: Maybe<Scalars['String']>;
+  address?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterContactOffice_GermanyAddress>>>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_GermanyAddress = {
+  line?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_GermanyAddressFilterInput = {
+  line?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_GermanyAddressFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterContactOffice_GermanyAddressFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_GermanyFilterInput = {
+  heading?: Maybe<StringQueryOperatorInput>;
+  address?: Maybe<MarkdownRemarkFrontmatterContactOffice_GermanyAddressFilterListInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_Uae = {
+  heading?: Maybe<Scalars['String']>;
+  address?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterContactOffice_UaeAddress>>>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_UaeAddress = {
+  line?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_UaeAddressFilterInput = {
+  line?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_UaeAddressFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterContactOffice_UaeAddressFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterContactOffice_UaeFilterInput = {
+  heading?: Maybe<StringQueryOperatorInput>;
+  address?: Maybe<MarkdownRemarkFrontmatterContactOffice_UaeAddressFilterListInput>;
 };
 
 export type MarkdownRemarkFrontmatterFilterInput = {
@@ -1614,6 +1800,80 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   pageTitle?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<StringQueryOperatorInput>;
+  openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
+  introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
+  clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
+  contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterIntroducing = {
+  topic?: Maybe<Scalars['String']>;
+  heading?: Maybe<Scalars['String']>;
+  text?: Maybe<Scalars['String']>;
+  image?: Maybe<MarkdownRemarkFrontmatterIntroducingImage>;
+  link?: Maybe<MarkdownRemarkFrontmatterIntroducingLink>;
+};
+
+export type MarkdownRemarkFrontmatterIntroducingFilterInput = {
+  topic?: Maybe<StringQueryOperatorInput>;
+  heading?: Maybe<StringQueryOperatorInput>;
+  text?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<MarkdownRemarkFrontmatterIntroducingImageFilterInput>;
+  link?: Maybe<MarkdownRemarkFrontmatterIntroducingLinkFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterIntroducingImage = {
+  source?: Maybe<Scalars['String']>;
+  alt?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterIntroducingImageFilterInput = {
+  source?: Maybe<StringQueryOperatorInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterIntroducingLink = {
+  text?: Maybe<Scalars['String']>;
+  href?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterIntroducingLinkFilterInput = {
+  text?: Maybe<StringQueryOperatorInput>;
+  href?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterOpeners = {
+  image?: Maybe<MarkdownRemarkFrontmatterOpenersImage>;
+  link?: Maybe<MarkdownRemarkFrontmatterOpenersLink>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersFilterInput = {
+  image?: Maybe<MarkdownRemarkFrontmatterOpenersImageFilterInput>;
+  link?: Maybe<MarkdownRemarkFrontmatterOpenersLinkFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterOpenersFilterInput>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersImage = {
+  source?: Maybe<Scalars['String']>;
+  alt?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersImageFilterInput = {
+  source?: Maybe<StringQueryOperatorInput>;
+  alt?: Maybe<StringQueryOperatorInput>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersLink = {
+  text?: Maybe<Scalars['String']>;
+  href?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersLinkFilterInput = {
+  text?: Maybe<StringQueryOperatorInput>;
+  href?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {

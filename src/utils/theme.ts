@@ -1,5 +1,5 @@
 export default {
-    breakpoints: [768, 1000, 1150],
+    breakpoints: [768, 1000, 1150, 400],
     margins: {
         marginBetweenContainers0: '10px',
         marginBetweenContainers1: '30px',

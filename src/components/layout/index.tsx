@@ -6,6 +6,7 @@ import Footer from './Footer';
 import Header from './Header';
 import usePath from '../../utils/usePath';
 import useLocales from '../../utils/useLocales';
+import { makeOptional } from '../../types/optionalTypes';
 
 const globalStyles = css`
     body {
@@ -19,7 +20,10 @@ const globalStyles = css`
 /**
  * Layout contains passes currentLocale prop to components
  */
-const Layout: FC = ({ children }) => {
+const Layout: FC<{ pageTitle?: makeOptional<string> }> = ({
+    children,
+    pageTitle,
+}) => {
     const { locales, primary: primaryLocale } = useLocales();
     const { pathname } = useLocation();
     const { locale: currentLocale, pathWithoutLocale } = usePath(

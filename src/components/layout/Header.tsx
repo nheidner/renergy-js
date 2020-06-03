@@ -322,6 +322,7 @@ const HeaderTemplate: FC<{
             <div
                 css={css`
                     position: absolute;
+                    z-index: 1;
                     width: 100%;
                     max-height: ${showMenu ? '1000px' : '0'};
                     transition: max-height, 350ms;

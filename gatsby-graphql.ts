@@ -695,9 +695,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___templateKey'
+  | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___pageTitle'
   | 'childMarkdownRemark___frontmatter___path'
-  | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
@@ -1478,18 +1478,18 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___title'
   | 'frontmatter___locale'
   | 'frontmatter___templateKey'
+  | 'frontmatter___content'
   | 'frontmatter___pageTitle'
   | 'frontmatter___path'
-  | 'frontmatter___content'
   | 'frontmatter___openers'
-  | 'frontmatter___openers___image___source'
   | 'frontmatter___openers___image___alt'
   | 'frontmatter___openers___link___text'
   | 'frontmatter___openers___link___href'
+  | 'frontmatter___openers___heading___text'
+  | 'frontmatter___openers___heading___href'
   | 'frontmatter___introducing___topic'
   | 'frontmatter___introducing___heading'
   | 'frontmatter___introducing___text'
-  | 'frontmatter___introducing___image___source'
   | 'frontmatter___introducing___image___alt'
   | 'frontmatter___introducing___link___text'
   | 'frontmatter___introducing___link___href'
@@ -1497,7 +1497,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___clients___clients_list'
   | 'frontmatter___contact___topic'
   | 'frontmatter___contact___heading'
-  | 'frontmatter___contact___image___source'
   | 'frontmatter___contact___image___alt'
   | 'frontmatter___contact___office_germany___heading'
   | 'frontmatter___contact___office_germany___address'
@@ -1636,9 +1635,9 @@ export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
+  content?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  content?: Maybe<Scalars['String']>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
@@ -1665,12 +1664,12 @@ export type MarkdownRemarkFrontmatterClientsClients_ListFilterListInput = {
 };
 
 export type MarkdownRemarkFrontmatterClientsClients_ListImage = {
-  source?: Maybe<Scalars['String']>;
+  source?: Maybe<File>;
   alt?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterClientsClients_ListImageFilterInput = {
-  source?: Maybe<StringQueryOperatorInput>;
+  source?: Maybe<FileFilterInput>;
   alt?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1730,12 +1729,12 @@ export type MarkdownRemarkFrontmatterContactGet_In_TouchFilterInput = {
 };
 
 export type MarkdownRemarkFrontmatterContactImage = {
-  source?: Maybe<Scalars['String']>;
+  source?: Maybe<File>;
   alt?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterContactImageFilterInput = {
-  source?: Maybe<StringQueryOperatorInput>;
+  source?: Maybe<FileFilterInput>;
   alt?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1797,9 +1796,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   locale?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  content?: Maybe<StringQueryOperatorInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
@@ -1823,12 +1822,12 @@ export type MarkdownRemarkFrontmatterIntroducingFilterInput = {
 };
 
 export type MarkdownRemarkFrontmatterIntroducingImage = {
-  source?: Maybe<Scalars['String']>;
+  source?: Maybe<File>;
   alt?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterIntroducingImageFilterInput = {
-  source?: Maybe<StringQueryOperatorInput>;
+  source?: Maybe<FileFilterInput>;
   alt?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -1845,24 +1844,36 @@ export type MarkdownRemarkFrontmatterIntroducingLinkFilterInput = {
 export type MarkdownRemarkFrontmatterOpeners = {
   image?: Maybe<MarkdownRemarkFrontmatterOpenersImage>;
   link?: Maybe<MarkdownRemarkFrontmatterOpenersLink>;
+  heading?: Maybe<MarkdownRemarkFrontmatterOpenersHeading>;
 };
 
 export type MarkdownRemarkFrontmatterOpenersFilterInput = {
   image?: Maybe<MarkdownRemarkFrontmatterOpenersImageFilterInput>;
   link?: Maybe<MarkdownRemarkFrontmatterOpenersLinkFilterInput>;
+  heading?: Maybe<MarkdownRemarkFrontmatterOpenersHeadingFilterInput>;
 };
 
 export type MarkdownRemarkFrontmatterOpenersFilterListInput = {
   elemMatch?: Maybe<MarkdownRemarkFrontmatterOpenersFilterInput>;
 };
 
+export type MarkdownRemarkFrontmatterOpenersHeading = {
+  text?: Maybe<Scalars['String']>;
+  href?: Maybe<Scalars['String']>;
+};
+
+export type MarkdownRemarkFrontmatterOpenersHeadingFilterInput = {
+  text?: Maybe<StringQueryOperatorInput>;
+  href?: Maybe<StringQueryOperatorInput>;
+};
+
 export type MarkdownRemarkFrontmatterOpenersImage = {
-  source?: Maybe<Scalars['String']>;
+  source?: Maybe<File>;
   alt?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterOpenersImageFilterInput = {
-  source?: Maybe<StringQueryOperatorInput>;
+  source?: Maybe<FileFilterInput>;
   alt?: Maybe<StringQueryOperatorInput>;
 };
 
@@ -2078,15 +2089,15 @@ export type QuerySitePageArgs = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
 };
 
 
@@ -2544,15 +2555,15 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
   isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
   context?: Maybe<SitePageContext>;
   pluginCreator?: Maybe<SitePlugin>;
   pluginCreatorId?: Maybe<Scalars['String']>;
   componentPath?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
 };
 
 export type SitePageConnection = {
@@ -2598,84 +2609,6 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
-  | 'isCreatedByStatefulCreatePages'
-  | 'context___id'
-  | 'context___locale'
-  | 'pluginCreator___id'
-  | 'pluginCreator___parent___id'
-  | 'pluginCreator___parent___parent___id'
-  | 'pluginCreator___parent___parent___children'
-  | 'pluginCreator___parent___children'
-  | 'pluginCreator___parent___children___id'
-  | 'pluginCreator___parent___children___children'
-  | 'pluginCreator___parent___internal___content'
-  | 'pluginCreator___parent___internal___contentDigest'
-  | 'pluginCreator___parent___internal___description'
-  | 'pluginCreator___parent___internal___fieldOwners'
-  | 'pluginCreator___parent___internal___ignoreType'
-  | 'pluginCreator___parent___internal___mediaType'
-  | 'pluginCreator___parent___internal___owner'
-  | 'pluginCreator___parent___internal___type'
-  | 'pluginCreator___children'
-  | 'pluginCreator___children___id'
-  | 'pluginCreator___children___parent___id'
-  | 'pluginCreator___children___parent___children'
-  | 'pluginCreator___children___children'
-  | 'pluginCreator___children___children___id'
-  | 'pluginCreator___children___children___children'
-  | 'pluginCreator___children___internal___content'
-  | 'pluginCreator___children___internal___contentDigest'
-  | 'pluginCreator___children___internal___description'
-  | 'pluginCreator___children___internal___fieldOwners'
-  | 'pluginCreator___children___internal___ignoreType'
-  | 'pluginCreator___children___internal___mediaType'
-  | 'pluginCreator___children___internal___owner'
-  | 'pluginCreator___children___internal___type'
-  | 'pluginCreator___internal___content'
-  | 'pluginCreator___internal___contentDigest'
-  | 'pluginCreator___internal___description'
-  | 'pluginCreator___internal___fieldOwners'
-  | 'pluginCreator___internal___ignoreType'
-  | 'pluginCreator___internal___mediaType'
-  | 'pluginCreator___internal___owner'
-  | 'pluginCreator___internal___type'
-  | 'pluginCreator___resolve'
-  | 'pluginCreator___name'
-  | 'pluginCreator___version'
-  | 'pluginCreator___pluginOptions___plugins'
-  | 'pluginCreator___pluginOptions___plugins___resolve'
-  | 'pluginCreator___pluginOptions___plugins___id'
-  | 'pluginCreator___pluginOptions___plugins___name'
-  | 'pluginCreator___pluginOptions___plugins___version'
-  | 'pluginCreator___pluginOptions___plugins___browserAPIs'
-  | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
-  | 'pluginCreator___pluginOptions___fileName'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___name'
-  | 'pluginCreator___pluginOptions___maxWidth'
-  | 'pluginCreator___pluginOptions___destinationDir'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___nodeAPIs'
-  | 'pluginCreator___browserAPIs'
-  | 'pluginCreator___ssrAPIs'
-  | 'pluginCreator___pluginFilepath'
-  | 'pluginCreator___packageJson___name'
-  | 'pluginCreator___packageJson___description'
-  | 'pluginCreator___packageJson___version'
-  | 'pluginCreator___packageJson___main'
-  | 'pluginCreator___packageJson___license'
-  | 'pluginCreator___packageJson___dependencies'
-  | 'pluginCreator___packageJson___dependencies___name'
-  | 'pluginCreator___packageJson___dependencies___version'
-  | 'pluginCreator___packageJson___devDependencies'
-  | 'pluginCreator___packageJson___devDependencies___name'
-  | 'pluginCreator___packageJson___devDependencies___version'
-  | 'pluginCreator___packageJson___peerDependencies'
-  | 'pluginCreator___packageJson___peerDependencies___name'
-  | 'pluginCreator___packageJson___peerDependencies___version'
-  | 'pluginCreator___packageJson___keywords'
-  | 'pluginCreatorId'
-  | 'componentPath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2761,7 +2694,85 @@ export type SitePageFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type';
+  | 'internal___type'
+  | 'isCreatedByStatefulCreatePages'
+  | 'context___id'
+  | 'context___locale'
+  | 'pluginCreator___id'
+  | 'pluginCreator___parent___id'
+  | 'pluginCreator___parent___parent___id'
+  | 'pluginCreator___parent___parent___children'
+  | 'pluginCreator___parent___children'
+  | 'pluginCreator___parent___children___id'
+  | 'pluginCreator___parent___children___children'
+  | 'pluginCreator___parent___internal___content'
+  | 'pluginCreator___parent___internal___contentDigest'
+  | 'pluginCreator___parent___internal___description'
+  | 'pluginCreator___parent___internal___fieldOwners'
+  | 'pluginCreator___parent___internal___ignoreType'
+  | 'pluginCreator___parent___internal___mediaType'
+  | 'pluginCreator___parent___internal___owner'
+  | 'pluginCreator___parent___internal___type'
+  | 'pluginCreator___children'
+  | 'pluginCreator___children___id'
+  | 'pluginCreator___children___parent___id'
+  | 'pluginCreator___children___parent___children'
+  | 'pluginCreator___children___children'
+  | 'pluginCreator___children___children___id'
+  | 'pluginCreator___children___children___children'
+  | 'pluginCreator___children___internal___content'
+  | 'pluginCreator___children___internal___contentDigest'
+  | 'pluginCreator___children___internal___description'
+  | 'pluginCreator___children___internal___fieldOwners'
+  | 'pluginCreator___children___internal___ignoreType'
+  | 'pluginCreator___children___internal___mediaType'
+  | 'pluginCreator___children___internal___owner'
+  | 'pluginCreator___children___internal___type'
+  | 'pluginCreator___internal___content'
+  | 'pluginCreator___internal___contentDigest'
+  | 'pluginCreator___internal___description'
+  | 'pluginCreator___internal___fieldOwners'
+  | 'pluginCreator___internal___ignoreType'
+  | 'pluginCreator___internal___mediaType'
+  | 'pluginCreator___internal___owner'
+  | 'pluginCreator___internal___type'
+  | 'pluginCreator___resolve'
+  | 'pluginCreator___name'
+  | 'pluginCreator___version'
+  | 'pluginCreator___pluginOptions___plugins'
+  | 'pluginCreator___pluginOptions___plugins___resolve'
+  | 'pluginCreator___pluginOptions___plugins___id'
+  | 'pluginCreator___pluginOptions___plugins___name'
+  | 'pluginCreator___pluginOptions___plugins___version'
+  | 'pluginCreator___pluginOptions___plugins___browserAPIs'
+  | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
+  | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___maxWidth'
+  | 'pluginCreator___pluginOptions___destinationDir'
+  | 'pluginCreator___pluginOptions___pathCheck'
+  | 'pluginCreator___nodeAPIs'
+  | 'pluginCreator___browserAPIs'
+  | 'pluginCreator___ssrAPIs'
+  | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___packageJson___name'
+  | 'pluginCreator___packageJson___description'
+  | 'pluginCreator___packageJson___version'
+  | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___license'
+  | 'pluginCreator___packageJson___dependencies'
+  | 'pluginCreator___packageJson___dependencies___name'
+  | 'pluginCreator___packageJson___dependencies___version'
+  | 'pluginCreator___packageJson___devDependencies'
+  | 'pluginCreator___packageJson___devDependencies___name'
+  | 'pluginCreator___packageJson___devDependencies___version'
+  | 'pluginCreator___packageJson___peerDependencies'
+  | 'pluginCreator___packageJson___peerDependencies___name'
+  | 'pluginCreator___packageJson___peerDependencies___version'
+  | 'pluginCreator___packageJson___keywords'
+  | 'pluginCreatorId'
+  | 'componentPath';
 
 export type SitePageFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -2769,15 +2780,15 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
 };
 
 export type SitePageGroupConnection = {
@@ -3228,12 +3239,46 @@ export type IndexQueryVariables = {
 };
 
 
-export type IndexQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'content'>> }> };
+export type IndexQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'pageTitle'>
+      & { openers?: Maybe<Array<Maybe<{ image?: Maybe<(
+          Pick<MarkdownRemarkFrontmatterOpenersImage, 'alt'>
+          & { source?: Maybe<OpenerImageFragmentFragment> }
+        )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterOpenersLink, 'text' | 'href'>>, heading?: Maybe<Pick<MarkdownRemarkFrontmatterOpenersHeading, 'text' | 'href'>> }>>>, introducing?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterIntroducing, 'topic' | 'heading' | 'text'>
+        & { image?: Maybe<(
+          Pick<MarkdownRemarkFrontmatterIntroducingImage, 'alt'>
+          & { source?: Maybe<PersonImgFragment> }
+        )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterIntroducingLink, 'text' | 'href'>> }
+      )>, clients?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterClients, 'topic'>
+        & { clients_list?: Maybe<Array<Maybe<{ image?: Maybe<(
+            Pick<MarkdownRemarkFrontmatterClientsClients_ListImage, 'alt'>
+            & { source?: Maybe<PersonImgFragment> }
+          )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterClientsClients_ListLink, 'href'>> }>>> }
+      )>, contact?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterContact, 'topic' | 'heading'>
+        & { image?: Maybe<(
+          Pick<MarkdownRemarkFrontmatterContactImage, 'alt'>
+          & { source?: Maybe<PersonImgFragment> }
+        )>, office_germany?: Maybe<(
+          Pick<MarkdownRemarkFrontmatterContactOffice_Germany, 'heading'>
+          & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterContactOffice_GermanyAddress, 'line'>>>> }
+        )>, get_in_touch?: Maybe<(
+          Pick<MarkdownRemarkFrontmatterContactGet_In_Touch, 'heading' | 'telephone'>
+          & { email?: Maybe<Pick<MarkdownRemarkFrontmatterContactGet_In_TouchEmail, 'text' | 'href'>> }
+        )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterContactLink, 'text' | 'href'>> }
+      )> }
+    )> }> };
 
 export type TestQueryVariables = {};
 
 
 export type TestQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }> };
+
+export type OpenerImageFragmentFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
+
+export type PersonImgFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 
 export type Unnamed_2_QueryVariables = {};
 

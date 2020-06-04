@@ -65,11 +65,11 @@ collections:
                         widget: object
                         collapsed: true
                         fields:
-                            - {
-                                  label: 'Text',
-                                  name: 'text',
-                                  widget: 'markdown',
-                              }
+                            - label: 'Text'
+                              name: 'text'
+                              widget: markdown
+                              buttons: [bold, italic, link]
+                              editorComponents: []
                             - { label: 'Href', name: 'href', widget: 'string' }
                       - label: 'More Link'
                         name: 'link'
@@ -85,7 +85,11 @@ collections:
                   fields:
                       - { label: Topic, name: topic, widget: string }
                       - { label: Heading, name: heading, widget: string }
-                      - { label: Excerpt, name: text, widget: markdown }
+                      - label: 'Excerpt'
+                        name: 'text'
+                        widget: markdown
+                        buttons: [bold, italic, link]
+                        editorComponents: []
                       - label: 'Image'
                         name: 'image'
                         widget: object
@@ -252,7 +256,21 @@ collections:
                             widget: 'image',
                         }
                       - { label: 'Alt', name: 'alt', widget: 'string' }
-                - { label: 'Page Content', name: 'content', widget: markdown }
+                - label: 'Page Content'
+                  name: 'content'
+                  widget: markdown
+                  buttons:
+                      [
+                          bold,
+                          italic,
+                          link,
+                          heading-one,
+                          heading-two,
+                          heading-three,
+                          bulleted-list,
+                          numbered-list,
+                      ]
+                  editorComponents: [image]
                 - label: Team
                   name: team-list
                   widget: list

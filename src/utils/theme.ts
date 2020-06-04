@@ -1,8 +1,8 @@
 export default {
     breakpoints: [768, 1000, 1150, 400],
+    maxWidths: { contentMaxWidth: '1150px' },
     margins: {
-        marginBetweenContainers0: '10px',
-        marginBetweenContainers1: '30px',
+        margin1: '24px',
     },
     paddings: { paddingToTextMobile: '12px', paddingToText: '20px' },
     fontSizes: { baseText: '15px' },

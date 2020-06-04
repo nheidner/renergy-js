@@ -13,8 +13,8 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-    - name: en
-      label: English
+    - name: pages-en
+      label: Pages (En)
       files:
           - file: 'src/markdown/en/index.md'
             label: 'Home'
@@ -289,9 +289,58 @@ collections:
                               }
                             - { label: 'Alt', name: 'alt', widget: 'string' }
                       - { label: Role, name: role, widget: string }
+    - name: 'one-column'
+      label: 'One Column Pages (En)'
+      label_singular: Page
+      folder: 'src/markdown/en/one-column-pages'
+      field_identifier: path
+      create: true
+      fields:
+          - {
+                label: 'TemplateKey',
+                name: 'templateKey',
+                widget: 'hidden',
+                default: 'index',
+            }
+          - { label: 'Locale', name: 'locale', widget: 'hidden', default: 'en' }
+          - {
+                label: 'Page Title',
+                name: 'pageTitle',
+                widget: 'string',
+                hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+            }
+          - {
+                label: 'Path',
+                name: 'path',
+                widget: 'string',
+                hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+            }
+          - label: 'Opener Image'
+            name: 'opener-image'
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+                - { label: 'Image Source', name: 'source', widget: 'image' }
+                - { label: 'Alt', name: 'alt', widget: 'string' }
+          - label: 'Page Content'
+            name: 'content'
+            widget: markdown
+            buttons:
+                [
+                    bold,
+                    italic,
+                    link,
+                    heading-one,
+                    heading-two,
+                    heading-three,
+                    bulleted-list,
+                    numbered-list,
+                ]
+            editorComponents: [image]
 
-    - name: de
-      label: Deutsch
+    - name: pages-de
+      label: Pages (De)
       files:
           - file: 'src/markdown/pages/de/index.md'
             label: 'Home'

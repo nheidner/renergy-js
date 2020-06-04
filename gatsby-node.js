@@ -15,7 +15,6 @@ exports.createPages = ({ actions, graphql }) => {
                             slug
                         }
                         frontmatter {
-                            locale
                             templateKey
                         }
                     }
@@ -33,7 +32,6 @@ exports.createPages = ({ actions, graphql }) => {
         posts.forEach((edge) => {
             if (typeof edge.node.fields.slug === 'string') {
                 const { id } = edge.node;
-                const { locale } = edge.node.frontmatter;
                 const path = edge.node.fields.slug;
                 createPage({
                     path,
@@ -45,7 +43,6 @@ exports.createPages = ({ actions, graphql }) => {
                     // additional data can be passed via context
                     context: {
                         id,
-                        locale,
                     },
                 });
             }

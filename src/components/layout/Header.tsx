@@ -295,6 +295,8 @@ const HeaderTemplate: FC<{
             <header
                 css={css`
                     display: flex;
+                    max-width: calc(${theme.maxWidths.contentMaxWidth} - 48px);
+                    margin: auto;
                     align-items: center;
                     justify-content: space-between;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);

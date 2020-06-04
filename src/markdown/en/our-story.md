@@ -1,7 +1,7 @@
 ---
 templateKey: one-column-page
 locale: en
-pageTitle: Home
+pageTitle: Our Story
 path: /our-story
 opener-image:
   source: /img/konzept.jpg

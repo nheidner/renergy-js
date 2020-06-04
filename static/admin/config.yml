@@ -202,6 +202,52 @@ collections:
                         fields:
                             - { label: 'Text', name: 'text', widget: 'string' }
                             - { label: 'Href', name: 'href', widget: 'string' }
+          - file: 'src/markdown/en/our-story.md'
+            label: 'Home'
+            name: 'index'
+            fields:
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'one-column-page',
+                  }
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'en',
+                  }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Adapts the title of the page that will be rendered in the browser - f.e. in the tab bar',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Adapts the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - label: 'Image'
+                  name: 'image'
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - {
+                            label: 'Image Source',
+                            name: 'source',
+                            widget: 'image',
+                        }
+                      - { label: 'Alt', name: 'alt', widget: 'string' }
+                - label: 'Link'
+                  name: 'link'
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: 'Text', name: 'text', widget: 'markdown' }
+                      - { label: 'Href', name: 'href', widget: 'string' }
 
     - name: de
       label: Deutsch

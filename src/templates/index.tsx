@@ -1,12 +1,11 @@
 /** @jsx jsx */
 import { FC } from 'react';
 import { css, jsx } from '@emotion/core';
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Link from '../components/Link';
 import { IndexQuery } from '../../gatsby-graphql';
-import { makeOptional } from '../types/optionalTypes';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { openerImageFragment, thumbNail, client } from '../utils/fragment';
@@ -315,7 +314,8 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
     );
 };
 
-const Index = ({ data }: { data: IndexQuery }) => {
+const Index: FC<{ data: IndexQuery }> = ({ data }) => {
+    console.log('data: ', data);
     const { frontmatter } = data.markdownRemark || {};
 
     return (
@@ -330,7 +330,7 @@ const Index = ({ data }: { data: IndexQuery }) => {
     );
 };
 
-export const pageQuery = graphql`
+export const indexQuery = graphql`
     query Index($locale: String) {
         markdownRemark(
             frontmatter: {

@@ -1,5 +1,6 @@
 ---
 locale: en
 templateKey: one-column-page
-path: /waste-to-energy/concept
+pageTitle: Home
+path: /our-story
 ---

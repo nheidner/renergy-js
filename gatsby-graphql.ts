@@ -695,9 +695,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___templateKey'
+  | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___pageTitle'
-  | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
@@ -1478,9 +1478,9 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___title'
   | 'frontmatter___locale'
   | 'frontmatter___templateKey'
+  | 'frontmatter___path'
   | 'frontmatter___content'
   | 'frontmatter___pageTitle'
-  | 'frontmatter___path'
   | 'frontmatter___openers'
   | 'frontmatter___openers___image___alt'
   | 'frontmatter___openers___link___text'
@@ -1635,9 +1635,9 @@ export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
-  path?: Maybe<Scalars['String']>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
@@ -1796,9 +1796,9 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   locale?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
+  path?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
@@ -3234,6 +3234,13 @@ export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<{ menu?: May
         )>>> }
       )>>> }> }> };
 
+export type BlueprintQueryVariables = {
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type BlueprintQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> }> };
+
 export type IndexQueryVariables = {
   locale?: Maybe<Scalars['String']>;
 };
@@ -3274,10 +3281,12 @@ export type IndexQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<(
       )> }
     )> }> };
 
-export type TestQueryVariables = {};
+export type OneColumnPageQueryVariables = {
+  locale?: Maybe<Scalars['String']>;
+};
 
 
-export type TestQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title'>> }> };
+export type OneColumnPageQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> }> };
 
 export type OpenerImageFragmentFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 

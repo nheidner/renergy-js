@@ -52,4 +52,29 @@ team-list:
       alt: Nils Burde
     name: Nils Burde
     role: General Manager
+  - name: Hisham Dishoni
+    role: Marketing Director
+    image:
+      source: /img/hisham.jpg
+      alt: Hisham Dishoni
+  - name: Ali Said
+    image:
+      alt: Ali Said
+      source: /img/ali2.jpg
+    role: Technical Director Asia
+  - name: Thorsten Schmitt
+    image:
+      alt: Thorsten Schmitt
+      source: /img/07d8cbe4-6146-4487-92f6-06185ed2d191.jpg
+    role: Technical Director Europe
+  - name: Mary Mc Kay
+    image:
+      alt: Mary Mc Kay
+      source: /img/susanne.jpg
+    role: Logistic Chief
+  - name: Karin Sommer
+    image:
+      alt: Karin Sommer
+      source: /img/karin.jpg
+    role: Marketing Assistant
 ---

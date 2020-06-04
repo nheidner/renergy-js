@@ -32,8 +32,18 @@ collections:
                       widget: 'hidden',
                       default: 'en',
                   }
-                - { label: 'Page Title', name: 'pageTitle', widget: 'string' }
-                - { label: 'Path', name: 'path', widget: 'string' }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
                 - label: Openers
                   name: openers
                   widget: list
@@ -203,8 +213,8 @@ collections:
                             - { label: 'Text', name: 'text', widget: 'string' }
                             - { label: 'Href', name: 'href', widget: 'string' }
           - file: 'src/markdown/en/our-story.md'
-            label: 'Home'
-            name: 'index'
+            label: 'Our Story'
+            name: 'our-story'
             fields:
                 - {
                       label: 'TemplateKey',
@@ -222,18 +232,19 @@ collections:
                       label: 'Page Title',
                       name: 'pageTitle',
                       widget: 'string',
-                      hint: 'Adapts the title of the page that will be rendered in the browser - f.e. in the tab bar',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
                   }
                 - {
                       label: 'Path',
                       name: 'path',
                       widget: 'string',
-                      hint: 'Adapts the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
                   }
-                - label: 'Image'
-                  name: 'image'
+                - label: 'Opener Image'
+                  name: 'opener-image'
                   widget: object
                   collapsed: true
+                  required: false
                   fields:
                       - {
                             label: 'Image Source',
@@ -241,13 +252,25 @@ collections:
                             widget: 'image',
                         }
                       - { label: 'Alt', name: 'alt', widget: 'string' }
-                - label: 'Link'
-                  name: 'link'
-                  widget: object
+                - { label: 'Page Content', name: 'content', widget: markdown }
+                - label: Team
+                  name: team-list
+                  widget: list
                   collapsed: true
                   fields:
-                      - { label: 'Text', name: 'text', widget: 'markdown' }
-                      - { label: 'Href', name: 'href', widget: 'string' }
+                      - { label: Name, name: name, widget: string }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                              }
+                            - { label: 'Alt', name: 'alt', widget: 'string' }
+                      - { label: Role, name: role, widget: string }
 
     - name: de
       label: Deutsch

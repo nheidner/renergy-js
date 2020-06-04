@@ -696,7 +696,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___path'
-  | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___pageTitle'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
@@ -706,6 +705,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___clients___clients_list'
   | 'childMarkdownRemark___frontmatter___contact___topic'
   | 'childMarkdownRemark___frontmatter___contact___heading'
+  | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1479,7 +1479,6 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___locale'
   | 'frontmatter___templateKey'
   | 'frontmatter___path'
-  | 'frontmatter___content'
   | 'frontmatter___pageTitle'
   | 'frontmatter___openers'
   | 'frontmatter___openers___image___alt'
@@ -1506,6 +1505,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___contact___office_uae___address'
   | 'frontmatter___contact___link___text'
   | 'frontmatter___contact___link___href'
+  | 'frontmatter___content'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1636,12 +1636,12 @@ export type MarkdownRemarkFrontmatter = {
   locale?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  content?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
   contact?: Maybe<MarkdownRemarkFrontmatterContact>;
+  content?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterClients = {
@@ -1797,12 +1797,12 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   locale?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  content?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
   contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
+  content?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterIntroducing = {

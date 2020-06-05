@@ -119,6 +119,7 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
             data-netlify='true'
             method='POST'
             name='Contact Form'>
+            <input type='hidden' name='form-name' value='Contact Form' />
             <input type='hidden' name='bot-field' />
             <div className='name'>
                 <label htmlFor='name'>

@@ -11,11 +11,12 @@ const OneColumnPagePreview = ({ entry }) => {
     // const md = new MarkdownIt();
     // const text = md.render(data.body);
     return (
-        <div>hello world</div>
-        // <OneColumnPageTemplate
-        //     openerImage={data.openerImage}
-        //     content={data.content}
-        // />
+        // <div>hello world</div>
+        <OneColumnPageTemplate
+            openerImage={data.openerImage}
+            content={data.content}
+            team_list={data.team - list}
+        />
     );
 };
 

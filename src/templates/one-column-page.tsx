@@ -20,7 +20,7 @@ type TOneColumnPageTemplate = TMarkdownRemark['frontmatter'];
 export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
     openerImage,
     content,
-    team_list,
+    teamList,
 }) => (
     <Wrapper>
         <div

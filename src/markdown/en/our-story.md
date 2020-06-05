@@ -46,7 +46,7 @@ content: >-
 
 
   *Renergy* understands itself as system provider of innovative environmental technologies and user-specific know-how – tailored to your needs and driven by sustainability.
-team-list:
+teamList:
   - image:
       source: /img/nils.jpg
       alt: Nils Burde

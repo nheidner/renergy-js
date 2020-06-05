@@ -278,7 +278,7 @@ collections:
                       ]
                   editorComponents: [image]
                 - label: Team
-                  name: team-list
+                  name: teamList
                   widget: list
                   collapsed: true
                   fields:

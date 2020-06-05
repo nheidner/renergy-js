@@ -65,16 +65,19 @@ type TMarkdownRemark = IndexQuery[keyof IndexQuery] & {
     [name: string]: IndexQuery[keyof IndexQuery];
 };
 
-type TIndexTemplate = TMarkdownRemark['frontmatter'];
+type TIndexTemplate = TMarkdownRemark['frontmatter'] & {
+    preview?: boolean;
+};
 
 export const IndexTemplate: FC<TIndexTemplate> = ({
     openers,
     introducing,
     clients,
     contact,
+    preview,
 }) => {
     return (
-        <React.Fragment>
+        <div>
             <Carousel
                 css={css`
                     margin: auto;
@@ -94,19 +97,33 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                 {openers?.map((opener, index) => {
                     return (
                         <div key={index}>
-                            <Img
-                                fluid={
-                                    opener?.image?.source?.childImageSharp
-                                        ?.fluid as FluidObject
-                                }
-                                style={{
-                                    width: '100%',
-                                }}
-                                imgStyle={{
-                                    width: '100%',
-                                    height: 'auto',
-                                }}
-                                alt={opener?.image?.alt as string}></Img>
+                            {opener?.image?.source?.childImageSharp ? (
+                                <Img
+                                    fluid={
+                                        opener?.image?.source?.childImageSharp
+                                            ?.fluid as FluidObject
+                                    }
+                                    style={{
+                                        width: '100%',
+                                    }}
+                                    imgStyle={{
+                                        width: '100%',
+                                        height: 'auto',
+                                    }}
+                                    alt={opener?.image?.alt as string}
+                                />
+                            ) : (
+                                <img
+                                    src={opener?.image?.source as string}
+                                    alt={opener?.image?.alt as string}
+                                    css={css`
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                    `}
+                                />
+                            )}
+
                             <div
                                 css={css`
                                     position: absolute;
@@ -174,13 +191,25 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             margin: 0 0 10px;
                         }
                     `}>
-                    <Img
-                        fluid={
-                            introducing?.image?.source?.childImageSharp
-                                ?.fluid as FluidObject
-                        }
-                        alt={introducing?.image?.alt as string}
-                    />
+                    {introducing?.image?.source?.childImageSharp ? (
+                        <Img
+                            fluid={
+                                introducing?.image?.source?.childImageSharp
+                                    ?.fluid as FluidObject
+                            }
+                            alt={introducing?.image?.alt as string}
+                        />
+                    ) : (
+                        <img
+                            src={introducing?.image?.source as string}
+                            alt={introducing?.image?.alt as string}
+                            css={css`
+                                margin-bottom: 48px;
+                                display: block;
+                            `}
+                        />
+                    )}
+
                     <SectionHeading>{introducing?.topic}</SectionHeading>
                     <h3>{introducing?.heading}</h3>
                     <div className='excerpt'>
@@ -227,19 +256,42 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                     `}>
                     <SectionHeading>{clients?.topic}</SectionHeading>
                     <div className='bodyWrapper'>
-                        {clients?.clients_list?.map((clientItem, index) => {
+                        {clients?.clientsList?.map((clientItem, index) => {
                             return (
                                 <Link
                                     key={index}
                                     to={clientItem?.link?.href as string}>
-                                    <Img
-                                        fluid={
-                                            clientItem?.image?.source
-                                                ?.childImageSharp
-                                                ?.fluid as FluidObject
-                                        }
-                                        alt={clientItem?.image?.alt as string}
-                                    />
+                                    {clientItem?.image?.source
+                                        ?.childImageSharp ? (
+                                        <Img
+                                            fluid={
+                                                clientItem?.image?.source
+                                                    ?.childImageSharp
+                                                    ?.fluid as FluidObject
+                                            }
+                                            alt={
+                                                clientItem?.image?.alt as string
+                                            }
+                                        />
+                                    ) : (
+                                        <img
+                                            src={
+                                                clientItem?.image
+                                                    ?.source as string
+                                            }
+                                            alt={
+                                                clientItem?.image?.alt as string
+                                            }
+                                            css={css`
+                                                display: block;
+                                                /* position: absolute;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                margin: 0 auto;
+                                                max-width: 170px; */
+                                            `}
+                                        />
+                                    )}
                                 </Link>
                             );
                         })}
@@ -279,13 +331,25 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             text-decoration: none;
                         }
                     `}>
-                    <Img
-                        fluid={
-                            contact?.image?.source?.childImageSharp
-                                ?.fluid as FluidObject
-                        }
-                        alt={contact?.image?.alt as string}
-                    />
+                    {contact?.image?.source?.childImageSharp ? (
+                        <Img
+                            fluid={
+                                contact?.image?.source?.childImageSharp
+                                    ?.fluid as FluidObject
+                            }
+                            alt={contact?.image?.alt as string}
+                        />
+                    ) : (
+                        <img
+                            src={contact?.image?.source as string}
+                            alt={contact?.image?.alt as string}
+                            css={css`
+                                margin-bottom: 48px;
+                                display: block;
+                            `}
+                        />
+                    )}
+
                     <SectionHeading>{contact?.topic}</SectionHeading>
                     <h2>{contact?.heading}</h2>
                     <section>
@@ -321,7 +385,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                     </Button>
                 </Section>
             </Wrapper>
-        </React.Fragment>
+        </div>
     );
 };
 
@@ -378,7 +442,7 @@ export const indexQuery = graphql`
                 }
                 clients {
                     topic
-                    clients_list {
+                    clientsList {
                         image {
                             source {
                                 ...client

@@ -1,23 +1,37 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
-import { OneColumnPageTemplate } from '../templates/one-column-page';
+import { Template, OneColumnPageTemplate } from '../templates/one-column-page';
+import { IndexTemplate } from '../templates/index';
 import withEmotion from './with-emotion';
-// import MarkdownIt from 'markdown-it';
 
 const OneColumnPagePreview = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
-    console.log(data);
-    console.log(data.openerImage);
-    // const md = new MarkdownIt();
-    // const text = md.render(data.body);
+    // console.log('openerImage: ', data.openerImage);
+    // console.log('content: ', data.content);
+    // console.log('teamList: ', data.teamList);
     return (
         // <div>hello world</div>
         <OneColumnPageTemplate
             openerImage={data.openerImage}
             content={data.content}
-            team_list={data.team - list}
+            teamList={data.teamList}
+        />
+    );
+};
+
+const IndexTemplatePreview = ({ entry }) => {
+    const data = entry.getIn(['data']).toJS();
+    console.log(data);
+    return (
+        <IndexTemplate
+            openers={data.openers}
+            introducing={data.introducing}
+            clients={data.clients}
+            contact={data.contact}
         />
     );
 };
 
 CMS.registerPreviewTemplate('our-story', withEmotion(OneColumnPagePreview));
+CMS.registerPreviewTemplate('one-column', withEmotion(OneColumnPagePreview));
+CMS.registerPreviewTemplate('index', withEmotion(IndexTemplatePreview));

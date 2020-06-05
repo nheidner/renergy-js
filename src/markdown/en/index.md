@@ -64,7 +64,7 @@ introducing:
     href: /
 clients:
   topic: Clients.
-  clients-list:
+  clientsList:
     - image:
         source: /img/item-8.png
         alt: Trapp

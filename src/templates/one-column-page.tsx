@@ -26,27 +26,44 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
         <div
             css={css`
                 background: #252525;
-            `}>
-            <Img
-                fluid={
-                    openerImage?.source?.childImageSharp?.fluid as FluidObject
+                > img {
+                    width: 100%;
                 }
-                alt={openerImage?.alt as string}
-                css={css`
-                    margin-bottom: 40px;
-                `}
-            />
+            `}>
+            {openerImage?.source?.childImageSharp ? (
+                <Img
+                    fluid={
+                        openerImage?.source?.childImageSharp
+                            ?.fluid as FluidObject
+                    }
+                    alt={openerImage?.alt as string}
+                />
+            ) : (
+                <img
+                    src={openerImage?.source as string}
+                    alt={openerImage?.alt as string}
+                />
+            )}
+
             <div
                 css={css`
                     padding: 0 ${theme.margins.margin1};
-                    h2 {
+                    h2,
+                    h3 {
                         color: #bbb;
                     }
+
+                    font-family: 'Archivo', Helvetica, Arial, sans-serif;
+                    margin: 0;
+                    background: #1c1c1c;
+                    color: #bbbbbb;
+                    font-size: 14px;
+                    line-height: 1.72;
                 `}>
                 <Content
                     markdown={content as string}
                     css={css`
-                        margin-bottom: 70px;
+                        padding: 40px 0 70px;
                     `}
                 />
                 <div
@@ -79,27 +96,45 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                             color: #bbb;
                         }
                     `}>
-                    {team_list
-                        ? team_list?.map((person, index) => {
+                    {teamList && teamList.length > 0
+                        ? teamList?.map((person, index) => {
                               return (
                                   <div key={index}>
-                                      <Img
-                                          fluid={
-                                              person?.image?.source
-                                                  ?.childImageSharp
-                                                  ?.fluid as FluidObject
-                                          }
-                                          alt={person?.image?.alt as string}
-                                          style={{
-                                              borderRadius: '3%',
-                                          }}
-                                      />
+                                      {person?.image?.source
+                                          ?.childImageSharp ? (
+                                          <Img
+                                              fluid={
+                                                  person?.image?.source
+                                                      ?.childImageSharp
+                                                      ?.fluid as FluidObject
+                                              }
+                                              alt={person?.image?.alt as string}
+                                              style={{
+                                                  borderRadius: '3%',
+                                              }}
+                                          />
+                                      ) : (
+                                          <img
+                                              src={
+                                                  person?.image
+                                                      ?.source as string
+                                              }
+                                              alt={person?.image?.alt as string}
+                                              css={css`
+                                                  display: block;
+                                                  border-radius: 3%;
+                                                  width: 160px;
+                                                  margin: 0 auto 14px;
+                                              `}
+                                          />
+                                      )}
+
                                       <p className='name'>{person?.name}</p>
                                       <p className='role'>{person?.role}</p>
                                   </div>
                               );
                           })
-                        : null}
+                        : ''}
                 </div>
             </div>
         </div>
@@ -114,7 +149,7 @@ const OneColumnPage: FC<{ data: OneColumnPageQuery }> = ({ data }) => {
             <OneColumnPageTemplate
                 content={frontmatter?.content}
                 openerImage={frontmatter?.openerImage}
-                team_list={frontmatter?.team_list}
+                teamList={frontmatter?.teamList}
             />
         </Layout>
     );
@@ -131,7 +166,7 @@ export const oneColumnPageQuery = graphql`
                     }
                     alt
                 }
-                team_list {
+                teamList {
                     image {
                         source {
                             ...teamPerson

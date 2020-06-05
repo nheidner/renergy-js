@@ -48,91 +48,88 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
             subject: '',
             message: '',
         },
-        // validationSchema: Yup.object({
-        //     name: Yup.string()
-        //         .max(
-        //             80,
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Must be 80 characters or less',
-        //                     de: 'Kann max. 80 Zeichen enthalten',
-        //                 },
-        //                 locale
-        //             )
-        //         )
-        //         .required(
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Required',
-        //                     de: 'Benötigt',
-        //                 },
-        //                 locale
-        //             )
-        //         ),
+        validationSchema: Yup.object({
+            name: Yup.string()
+                .max(
+                    80,
+                    returnLocalizedString(
+                        {
+                            en: 'Must be 80 characters or less',
+                            de: 'Kann max. 80 Zeichen enthalten',
+                        },
+                        locale
+                    )
+                )
+                .required(
+                    returnLocalizedString(
+                        {
+                            en: 'Required',
+                            de: 'Benötigt',
+                        },
+                        locale
+                    )
+                ),
 
-        //     email: Yup.string()
-        //         .email(
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Invalid email address',
-        //                     de: 'Ungültige Email Addresse',
-        //                 },
-        //                 locale
-        //             )
-        //         )
-        //         .required(
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Required',
-        //                     de: 'Benötigt',
-        //                 },
-        //                 locale
-        //             )
-        //         ),
-        //     subject: Yup.string()
-        //         .max(
-        //             40,
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Must be 40 characters or less',
-        //                     de: 'Kann max. 40 Zeichen enthalten',
-        //                 },
-        //                 locale
-        //             )
-        //         )
-        //         .required(
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Required',
-        //                     de: 'Benötigt',
-        //                 },
-        //                 locale
-        //             )
-        //         ),
-        //     message: Yup.string()
-        //         .max(
-        //             300,
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Must be 300 characters or less',
-        //                     de: 'Kann max. 300 Zeichen enthalten',
-        //                 },
-        //                 locale
-        //             )
-        //         )
-        //         .required(
-        //             returnLocalizedString(
-        //                 {
-        //                     en: 'Required',
-        //                     de: 'Benötigt',
-        //                 },
-        //                 locale
-        //             )
-        //         ),
-        // }),
-        validate: () => {
-            return {};
-        },
+            email: Yup.string()
+                .email(
+                    returnLocalizedString(
+                        {
+                            en: 'Invalid email address',
+                            de: 'Ungültige Email Addresse',
+                        },
+                        locale
+                    )
+                )
+                .required(
+                    returnLocalizedString(
+                        {
+                            en: 'Required',
+                            de: 'Benötigt',
+                        },
+                        locale
+                    )
+                ),
+            subject: Yup.string()
+                .max(
+                    40,
+                    returnLocalizedString(
+                        {
+                            en: 'Must be 40 characters or less',
+                            de: 'Kann max. 40 Zeichen enthalten',
+                        },
+                        locale
+                    )
+                )
+                .required(
+                    returnLocalizedString(
+                        {
+                            en: 'Required',
+                            de: 'Benötigt',
+                        },
+                        locale
+                    )
+                ),
+            message: Yup.string()
+                .max(
+                    300,
+                    returnLocalizedString(
+                        {
+                            en: 'Must be 300 characters or less',
+                            de: 'Kann max. 300 Zeichen enthalten',
+                        },
+                        locale
+                    )
+                )
+                .required(
+                    returnLocalizedString(
+                        {
+                            en: 'Required',
+                            de: 'Benötigt',
+                        },
+                        locale
+                    )
+                ),
+        }),
         onSubmit: (values) => {
             console.log(encode({ 'form-name': 'contact', ...values }));
             fetch('/', {

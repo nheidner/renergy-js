@@ -113,8 +113,12 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
         },
     });
     return (
-        // @ts-ignore
-        <form onSubmit={formik.handleSubmit} data-netlify='true'>
+        <form
+            onSubmit={formik.handleSubmit}
+            netlify-honeypot='bot-field'
+            data-netlify='true'
+            method='POST'>
+            <input type='hidden' name='bot-field' />
             <div className='name'>
                 <label htmlFor='name'>
                     {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}

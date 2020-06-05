@@ -72,11 +72,11 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                         }
                         > div > p.name {
                             font-size: 17px;
-                            color: #ffc400;
+                            color: #eee;
                         }
                         > div > p.role {
                             font-size: 15px;
-                            color: #eee;
+                            color: #bbb;
                         }
                     `}>
                     {team_list?.map((person, index) => {

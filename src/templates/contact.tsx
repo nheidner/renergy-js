@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { css, jsx } from '@emotion/core';
 import styled from '@emotion/styled';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import { ContactQuery } from '../../gatsby-graphql';
-import { Formik, useFormik, FormikValues, FormikErrors } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button } from '../utils/styles';
 import returnLocalizedString from '../utils/returnLocalizedString';
@@ -41,6 +41,8 @@ const encode = (data: IProps) => {
 };
 
 const Form: FC<{ locale: string }> = ({ locale }) => {
+    const [submitted, setSubmitted] = useState(false);
+
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -55,7 +57,7 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                     returnLocalizedString(
                         {
                             en: 'Must be 80 characters or less',
-                            de: 'Kann max. 80 Zeichen enthalten',
+                            de: 'Kann max. nur 80 Zeichen enthalten',
                         },
                         locale
                     )
@@ -95,7 +97,7 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                     returnLocalizedString(
                         {
                             en: 'Must be 40 characters or less',
-                            de: 'Kann max. 40 Zeichen enthalten',
+                            de: 'Kann max. nur 40 Zeichen enthalten',
                         },
                         locale
                     )
@@ -115,7 +117,7 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                     returnLocalizedString(
                         {
                             en: 'Must be 300 characters or less',
-                            de: 'Kann max. 300 Zeichen enthalten',
+                            de: 'Kann max. nur 300 Zeichen enthalten',
                         },
                         locale
                     )
@@ -139,7 +141,8 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                 },
                 body: encode({ 'form-name': 'contact', ...values }),
             })
-                .then(() => alert('Success!'))
+                .then(() => setSubmitted(true))
+                .then(() => formik.resetForm())
                 .catch((error) => alert(error));
         },
     });
@@ -198,6 +201,17 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
             <SubmitButton type='submit'>
                 {returnLocalizedString({ en: 'Submit', de: 'Senden' }, locale)}
             </SubmitButton>
+            {submitted ? (
+                <div>
+                    {returnLocalizedString(
+                        {
+                            en: 'Your message was sent',
+                            de: 'Deine Nachricht wurde gesendet',
+                        },
+                        locale
+                    )}
+                </div>
+            ) : null}
         </form>
     );
 };

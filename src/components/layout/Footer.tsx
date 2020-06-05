@@ -1,10 +1,23 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
 import React, { FC, ReactElement } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FooterQuery } from '../../../gatsby-graphql';
-import { makeOptional } from '../../types/optionalTypes';
 
-const FooterTemplate = ({ content }: { content: makeOptional<string> }) => {
-    return <div>{content}</div>;
+type TLocale = IFooterQuery[keyof IFooterQuery] & {
+    [name: string]: IFooterQuery[keyof IFooterQuery];
+};
+
+type TFooterTemplate = TLocale['frontmatter'];
+
+const FooterTemplate: FC<TFooterTemplate> = ({ content }) => {
+    return (
+        <div
+            css={css`
+                background-color: #151515;
+                height: 0px;
+            `}></div>
+    );
 };
 
 interface IFooterProps {
@@ -14,10 +27,6 @@ interface IFooterProps {
 interface IFooterQuery extends FooterQuery {
     [locale: string]: FooterQuery[keyof FooterQuery];
 }
-
-// type IFooterQuery = FooterQuery & {
-//     [locale: string]: FooterQuery[keyof FooterQuery];
-// };
 
 const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
     const queryData = useStaticQuery<IFooterQuery>(

@@ -695,13 +695,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___templateKey'
-  | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___content'
+  | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___pageTitle'
-  | 'childMarkdownRemark___frontmatter___opener_image___alt'
-  | 'childMarkdownRemark___frontmatter___team_list'
-  | 'childMarkdownRemark___frontmatter___team_list___name'
-  | 'childMarkdownRemark___frontmatter___team_list___role'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
@@ -710,6 +706,10 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___clients___clients_list'
   | 'childMarkdownRemark___frontmatter___contact___topic'
   | 'childMarkdownRemark___frontmatter___contact___heading'
+  | 'childMarkdownRemark___frontmatter___openerImage___alt'
+  | 'childMarkdownRemark___frontmatter___team_list'
+  | 'childMarkdownRemark___frontmatter___team_list___name'
+  | 'childMarkdownRemark___frontmatter___team_list___role'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1482,50 +1482,9 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___title'
   | 'frontmatter___locale'
   | 'frontmatter___templateKey'
-  | 'frontmatter___path'
   | 'frontmatter___content'
+  | 'frontmatter___path'
   | 'frontmatter___pageTitle'
-  | 'frontmatter___opener_image___source___sourceInstanceName'
-  | 'frontmatter___opener_image___source___absolutePath'
-  | 'frontmatter___opener_image___source___relativePath'
-  | 'frontmatter___opener_image___source___extension'
-  | 'frontmatter___opener_image___source___size'
-  | 'frontmatter___opener_image___source___prettySize'
-  | 'frontmatter___opener_image___source___modifiedTime'
-  | 'frontmatter___opener_image___source___accessTime'
-  | 'frontmatter___opener_image___source___changeTime'
-  | 'frontmatter___opener_image___source___birthTime'
-  | 'frontmatter___opener_image___source___root'
-  | 'frontmatter___opener_image___source___dir'
-  | 'frontmatter___opener_image___source___base'
-  | 'frontmatter___opener_image___source___ext'
-  | 'frontmatter___opener_image___source___name'
-  | 'frontmatter___opener_image___source___relativeDirectory'
-  | 'frontmatter___opener_image___source___dev'
-  | 'frontmatter___opener_image___source___mode'
-  | 'frontmatter___opener_image___source___nlink'
-  | 'frontmatter___opener_image___source___uid'
-  | 'frontmatter___opener_image___source___gid'
-  | 'frontmatter___opener_image___source___rdev'
-  | 'frontmatter___opener_image___source___ino'
-  | 'frontmatter___opener_image___source___atimeMs'
-  | 'frontmatter___opener_image___source___mtimeMs'
-  | 'frontmatter___opener_image___source___ctimeMs'
-  | 'frontmatter___opener_image___source___atime'
-  | 'frontmatter___opener_image___source___mtime'
-  | 'frontmatter___opener_image___source___ctime'
-  | 'frontmatter___opener_image___source___birthtime'
-  | 'frontmatter___opener_image___source___birthtimeMs'
-  | 'frontmatter___opener_image___source___blksize'
-  | 'frontmatter___opener_image___source___blocks'
-  | 'frontmatter___opener_image___source___publicURL'
-  | 'frontmatter___opener_image___source___id'
-  | 'frontmatter___opener_image___source___children'
-  | 'frontmatter___opener_image___alt'
-  | 'frontmatter___team_list'
-  | 'frontmatter___team_list___image___alt'
-  | 'frontmatter___team_list___name'
-  | 'frontmatter___team_list___role'
   | 'frontmatter___openers'
   | 'frontmatter___openers___image___alt'
   | 'frontmatter___openers___link___text'
@@ -1551,6 +1510,47 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___contact___office_uae___address'
   | 'frontmatter___contact___link___text'
   | 'frontmatter___contact___link___href'
+  | 'frontmatter___openerImage___source___sourceInstanceName'
+  | 'frontmatter___openerImage___source___absolutePath'
+  | 'frontmatter___openerImage___source___relativePath'
+  | 'frontmatter___openerImage___source___extension'
+  | 'frontmatter___openerImage___source___size'
+  | 'frontmatter___openerImage___source___prettySize'
+  | 'frontmatter___openerImage___source___modifiedTime'
+  | 'frontmatter___openerImage___source___accessTime'
+  | 'frontmatter___openerImage___source___changeTime'
+  | 'frontmatter___openerImage___source___birthTime'
+  | 'frontmatter___openerImage___source___root'
+  | 'frontmatter___openerImage___source___dir'
+  | 'frontmatter___openerImage___source___base'
+  | 'frontmatter___openerImage___source___ext'
+  | 'frontmatter___openerImage___source___name'
+  | 'frontmatter___openerImage___source___relativeDirectory'
+  | 'frontmatter___openerImage___source___dev'
+  | 'frontmatter___openerImage___source___mode'
+  | 'frontmatter___openerImage___source___nlink'
+  | 'frontmatter___openerImage___source___uid'
+  | 'frontmatter___openerImage___source___gid'
+  | 'frontmatter___openerImage___source___rdev'
+  | 'frontmatter___openerImage___source___ino'
+  | 'frontmatter___openerImage___source___atimeMs'
+  | 'frontmatter___openerImage___source___mtimeMs'
+  | 'frontmatter___openerImage___source___ctimeMs'
+  | 'frontmatter___openerImage___source___atime'
+  | 'frontmatter___openerImage___source___mtime'
+  | 'frontmatter___openerImage___source___ctime'
+  | 'frontmatter___openerImage___source___birthtime'
+  | 'frontmatter___openerImage___source___birthtimeMs'
+  | 'frontmatter___openerImage___source___blksize'
+  | 'frontmatter___openerImage___source___blocks'
+  | 'frontmatter___openerImage___source___publicURL'
+  | 'frontmatter___openerImage___source___id'
+  | 'frontmatter___openerImage___source___children'
+  | 'frontmatter___openerImage___alt'
+  | 'frontmatter___team_list'
+  | 'frontmatter___team_list___image___alt'
+  | 'frontmatter___team_list___name'
+  | 'frontmatter___team_list___role'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1680,15 +1680,15 @@ export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
-  path?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
-  opener_image?: Maybe<MarkdownRemarkFrontmatterOpener_Image>;
-  team_list?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeam_List>>>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
   contact?: Maybe<MarkdownRemarkFrontmatterContact>;
+  openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImage>;
+  team_list?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeam_List>>>;
 };
 
 export type MarkdownRemarkFrontmatterClients = {
@@ -1843,15 +1843,15 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   locale?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<StringQueryOperatorInput>;
+  path?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
-  opener_image?: Maybe<MarkdownRemarkFrontmatterOpener_ImageFilterInput>;
-  team_list?: Maybe<MarkdownRemarkFrontmatterTeam_ListFilterListInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
   contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
+  openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImageFilterInput>;
+  team_list?: Maybe<MarkdownRemarkFrontmatterTeam_ListFilterListInput>;
 };
 
 export type MarkdownRemarkFrontmatterIntroducing = {
@@ -1890,12 +1890,12 @@ export type MarkdownRemarkFrontmatterIntroducingLinkFilterInput = {
   href?: Maybe<StringQueryOperatorInput>;
 };
 
-export type MarkdownRemarkFrontmatterOpener_Image = {
+export type MarkdownRemarkFrontmatterOpenerImage = {
   source?: Maybe<File>;
   alt?: Maybe<Scalars['String']>;
 };
 
-export type MarkdownRemarkFrontmatterOpener_ImageFilterInput = {
+export type MarkdownRemarkFrontmatterOpenerImageFilterInput = {
   source?: Maybe<FileFilterInput>;
   alt?: Maybe<StringQueryOperatorInput>;
 };
@@ -2833,6 +2833,7 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___name'
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___destinationDir'
+  | 'pluginCreator___pluginOptions___modulePath'
   | 'pluginCreator___pluginOptions___enableIdentityWidget'
   | 'pluginCreator___pluginOptions___publicPath'
   | 'pluginCreator___pluginOptions___htmlTitle'
@@ -3038,6 +3039,7 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___name'
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___destinationDir'
+  | 'pluginOptions___modulePath'
   | 'pluginOptions___enableIdentityWidget'
   | 'pluginOptions___publicPath'
   | 'pluginOptions___htmlTitle'
@@ -3160,6 +3162,7 @@ export type SitePluginPluginOptions = {
   name?: Maybe<Scalars['String']>;
   maxWidth?: Maybe<Scalars['Int']>;
   destinationDir?: Maybe<Scalars['String']>;
+  modulePath?: Maybe<Scalars['String']>;
   enableIdentityWidget?: Maybe<Scalars['String']>;
   publicPath?: Maybe<Scalars['String']>;
   htmlTitle?: Maybe<Scalars['String']>;
@@ -3173,6 +3176,7 @@ export type SitePluginPluginOptionsFilterInput = {
   name?: Maybe<StringQueryOperatorInput>;
   maxWidth?: Maybe<IntQueryOperatorInput>;
   destinationDir?: Maybe<StringQueryOperatorInput>;
+  modulePath?: Maybe<StringQueryOperatorInput>;
   enableIdentityWidget?: Maybe<StringQueryOperatorInput>;
   publicPath?: Maybe<StringQueryOperatorInput>;
   htmlTitle?: Maybe<StringQueryOperatorInput>;
@@ -3389,9 +3393,9 @@ export type OneColumnPageQueryVariables = {
 
 export type OneColumnPageQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'content'>
-      & { opener_image?: Maybe<(
-        Pick<MarkdownRemarkFrontmatterOpener_Image, 'alt'>
-        & { source?: Maybe<OpenerImageFragment> }
+      & { openerImage?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterOpenerImage, 'alt'>
+        & { source?: Maybe<OpenerImageFragmentFragment> }
       )>, team_list?: Maybe<Array<Maybe<(
         Pick<MarkdownRemarkFrontmatterTeam_List, 'name' | 'role'>
         & { image?: Maybe<(
@@ -3405,7 +3409,7 @@ export type OpenerImageGalleryFragment = { childImageSharp?: Maybe<{ fluid?: May
 
 export type TeamPersonFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 
-export type OpenerImageFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
+export type OpenerImageFragmentFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 
 export type ThumbNailFragment = { childImageSharp?: Maybe<{ fluid?: Maybe<GatsbyImageSharpFluidFragment> }> };
 

@@ -1,5 +1,5 @@
 backend:
-    name: git-gateway
+    name: github
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -245,7 +245,7 @@ collections:
                       hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
                   }
                 - label: 'Opener Image'
-                  name: 'opener-image'
+                  name: 'openerImage'
                   widget: object
                   collapsed: true
                   required: false
@@ -322,7 +322,7 @@ collections:
                 hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
             }
           - label: 'Opener Image'
-            name: 'opener-image'
+            name: 'openerImage'
             widget: object
             collapsed: true
             required: false

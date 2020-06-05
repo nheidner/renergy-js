@@ -3,7 +3,7 @@ templateKey: one-column-page
 locale: en
 pageTitle: Our Story
 path: /our-story
-opener-image:
+openerImage:
   source: /img/konzept.jpg
   alt: Concept
 content: >-

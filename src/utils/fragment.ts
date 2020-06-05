@@ -20,8 +20,8 @@ export const teamPerson = graphql`
     }
 `;
 
-export const openerImage = graphql`
-    fragment openerImage on File {
+export const openerImageFragment = graphql`
+    fragment openerImageFragment on File {
         childImageSharp {
             fluid(maxWidth: 1100) {
                 ...GatsbyImageSharpFluid

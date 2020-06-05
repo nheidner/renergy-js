@@ -18,20 +18,14 @@ type TIndexTemplate = TMarkdownRemark['frontmatter'];
 
 const SubmitButton = Button.withComponent('button');
 
-interface IProps {
+const encode = (data: {
     'form-name': string;
     name: string;
     email: string;
     subject: string;
     message: string;
     [props: string]: string;
-}
-
-interface I {
-    form: string;
-}
-
-const encode = (data: IProps) => {
+}) => {
     return Object.keys(data)
         .map(
             (key) =>

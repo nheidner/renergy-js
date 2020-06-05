@@ -254,8 +254,14 @@ collections:
                             label: 'Image Source',
                             name: 'source',
                             widget: 'image',
+                            required: false,
                         }
-                      - { label: 'Alt', name: 'alt', widget: 'string' }
+                      - {
+                            label: 'Alt',
+                            name: 'alt',
+                            widget: 'string',
+                            required: false,
+                        }
                 - label: 'Page Content'
                   name: 'content'
                   widget: markdown
@@ -321,8 +327,18 @@ collections:
             collapsed: true
             required: false
             fields:
-                - { label: 'Image Source', name: 'source', widget: 'image' }
-                - { label: 'Alt', name: 'alt', widget: 'string' }
+                - {
+                      label: 'Image Source',
+                      name: 'source',
+                      widget: 'image',
+                      required: false,
+                  }
+                - {
+                      label: 'Alt',
+                      name: 'alt',
+                      widget: 'string',
+                      required: false,
+                  }
           - label: 'Page Content'
             name: 'content'
             widget: markdown

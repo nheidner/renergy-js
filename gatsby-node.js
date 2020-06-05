@@ -1,6 +1,17 @@
 const pathFunc = require('path');
 const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 const locales = require('./locales');
+const webpack = require(`webpack`);
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+    actions.setWebpackConfig({
+        plugins: [
+            new webpack.IgnorePlugin({
+                resourceRegExp: /^netlify-identity-widget$/,
+            }),
+        ],
+    });
+};
 
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions;

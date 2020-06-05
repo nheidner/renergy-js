@@ -117,7 +117,8 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
             onSubmit={formik.handleSubmit}
             netlify-honeypot='bot-field'
             data-netlify='true'
-            method='POST'>
+            method='POST'
+            name='Contact Form'>
             <input type='hidden' name='bot-field' />
             <div className='name'>
                 <label htmlFor='name'>

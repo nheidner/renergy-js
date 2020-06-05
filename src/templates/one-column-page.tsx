@@ -32,22 +32,51 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                     opener_image?.source?.childImageSharp?.fluid as FluidObject
                 }
                 alt={opener_image?.alt as string}
+                css={css`
+                    margin-bottom: 40px;
+                `}
             />
             <div
                 css={css`
-                    padding: ${theme.margins.margin1};
+                    padding: 0 ${theme.margins.margin1};
                     h2 {
                         color: #bbb;
                     }
                 `}>
-                <Content markdown={content as string} />
+                <Content
+                    markdown={content as string}
+                    css={css`
+                        margin-bottom: 70px;
+                    `}
+                />
                 <div
                     css={css`
                         display: flex;
-                        justify-content: space-between;
+                        justify-content: space-around;
                         flex-wrap: wrap;
+                        max-width: 970px;
+                        margin: auto;
                         > div {
-                            width: 23%;
+                            width: 250px;
+                            margin-bottom: 70px;
+                        }
+                        > div div.gatsby-image-wrapper {
+                            width: 160px;
+                            margin: 0 auto 14px;
+                        }
+                        > div > p {
+                            margin: auto;
+                            text-align: center;
+                            font-size: 17px;
+                            font-weight: bold;
+                        }
+                        > div > p.name {
+                            font-size: 17px;
+                            color: #ffc400;
+                        }
+                        > div > p.role {
+                            font-size: 15px;
+                            color: #eee;
                         }
                     `}>
                     {team_list?.map((person, index) => {
@@ -61,12 +90,10 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                     alt={person?.image?.alt as string}
                                     style={{
                                         borderRadius: '3%',
-                                        height: '160px',
                                     }}
-                                    imgStyle={{}}
                                 />
-                                <p>{person?.name}</p>
-                                <p>{person?.role}</p>
+                                <p className='name'>{person?.name}</p>
+                                <p className='role'>{person?.role}</p>
                             </div>
                         );
                     })}
@@ -78,7 +105,6 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
 
 const Index: FC<{ data: OneColumnPageQuery }> = ({ data }) => {
     const { frontmatter } = data.markdownRemark || {};
-    console.log(data);
 
     return (
         <Layout>

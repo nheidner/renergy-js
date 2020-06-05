@@ -1,6 +1,7 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import theme from './theme';
+import Link from '../components/Link';
 
 export const clearfix = css`
     content: '';
@@ -22,3 +23,5 @@ export const Wrapper = styled.div`
         width: calc(${theme.breakpoints[2]}px - 2 * ${theme.margins.margin1});
     }
 `;
+
+export const Button = styled(Link)``;

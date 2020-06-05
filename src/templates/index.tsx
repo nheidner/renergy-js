@@ -14,7 +14,7 @@ import Content from '../components/Content';
 import theme from '../utils/theme';
 // @ts-ignore
 import subHeadingImg from '../assets/sub-heading.png';
-import { Wrapper } from '../utils/styles';
+import { Wrapper, Button } from '../utils/styles';
 
 const SectionHeading: FC = ({ children }) => {
     return (
@@ -56,8 +56,6 @@ const SectionHeading: FC = ({ children }) => {
         </div>
     );
 };
-
-const MoreButton = styled(Link)``;
 
 const Section = styled('section')`
     margin-bottom: 100px;
@@ -119,7 +117,12 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                 <Link
                                     to={opener?.heading?.href as string}
                                     css={css`
-                                        font-size: 40px;
+                                        font-size: 25px;
+                                        text-decoration: none;
+                                        @media (min-width: ${theme
+                                                .breakpoints[3]}px) {
+                                            font-size: 40px;
+                                        }
                                         @media (min-width: ${theme
                                                 .breakpoints[0]}px) {
                                             font-size: 60px;
@@ -141,9 +144,9 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                         }
                                     />
                                 </Link>
-                                <MoreButton to={opener?.link?.href as string}>
+                                <Button to={opener?.link?.href as string}>
                                     {opener?.link?.text}
-                                </MoreButton>
+                                </Button>
                             </div>
                         </div>
                     );
@@ -183,9 +186,9 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                     <div className='excerpt'>
                         <Content markdown={introducing?.text as string} />
                     </div>
-                    <MoreButton to={introducing?.link?.href as string}>
+                    <Button to={introducing?.link?.href as string}>
                         {introducing?.link?.text}
-                    </MoreButton>
+                    </Button>
                 </Section>
                 <Section
                     css={css`
@@ -313,9 +316,9 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             }
                         )}
                     </section>
-                    <MoreButton to={contact?.link?.href as string}>
+                    <Button to={contact?.link?.href as string}>
                         {contact?.link?.text}
-                    </MoreButton>
+                    </Button>
                 </Section>
             </Wrapper>
         </React.Fragment>

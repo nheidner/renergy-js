@@ -693,10 +693,10 @@ export type FileFieldsEnum =
   | 'internal___type'
   | 'childMarkdownRemark___id'
   | 'childMarkdownRemark___frontmatter___title'
-  | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___locale'
-  | 'childMarkdownRemark___frontmatter___pageTitle'
+  | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___pageTitle'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
@@ -1480,10 +1480,10 @@ export type MarkdownRemarkFields = {
 export type MarkdownRemarkFieldsEnum = 
   | 'id'
   | 'frontmatter___title'
-  | 'frontmatter___templateKey'
   | 'frontmatter___locale'
-  | 'frontmatter___pageTitle'
+  | 'frontmatter___templateKey'
   | 'frontmatter___path'
+  | 'frontmatter___pageTitle'
   | 'frontmatter___openers'
   | 'frontmatter___openers___image___alt'
   | 'frontmatter___openers___link___text'
@@ -1678,10 +1678,10 @@ export type MarkdownRemarkFilterInput = {
 
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
-  templateKey?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
-  pageTitle?: Maybe<Scalars['String']>;
+  templateKey?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
+  pageTitle?: Maybe<Scalars['String']>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
@@ -1841,10 +1841,10 @@ export type MarkdownRemarkFrontmatterContactOffice_UaeFilterInput = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
-  templateKey?: Maybe<StringQueryOperatorInput>;
   locale?: Maybe<StringQueryOperatorInput>;
-  pageTitle?: Maybe<StringQueryOperatorInput>;
+  templateKey?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
+  pageTitle?: Maybe<StringQueryOperatorInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
@@ -3322,6 +3322,13 @@ export type BlueprintQueryVariables = {
 
 
 export type BlueprintQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> }> };
+
+export type ContactQueryVariables = {
+  id: Scalars['String'];
+};
+
+
+export type ContactQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> }> };
 
 export type IndexQueryVariables = {
   id: Scalars['String'];

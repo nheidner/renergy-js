@@ -131,7 +131,7 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                 ),
         }),
         onSubmit: (values) => {
-            console.log(encode({ 'form-name': 'contact', ...values }));
+            console.log(encode({ 'form-name': 'Contact Form', ...values }));
             fetch('/', {
                 method: 'POST',
                 headers: {
@@ -143,66 +143,61 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                 .catch((error) => alert(error));
         },
     });
+
     return (
-        <form
-            onSubmit={formik.handleSubmit}
-            // netlify-honeypot='bot-field'
-            // data-netlify='true'
-            // method='post'
-            // action='google.de'
-            name='Contact Form'>
-            <input type='hidden' name='form-name' value='Contact Form' />
-            <input type='hidden' name='bot-field' />
-            {/* <div className='name'> */}
-            <label htmlFor='name'>
-                {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
-            </label>
-            <input name='name' {...formik.getFieldProps('name')} />
-            {formik.touched.name && formik.errors.name ? (
-                <div>{formik.errors.name}</div>
-            ) : null}
-            {/* </div> */}
+        <form onSubmit={formik.handleSubmit} name='Contact Form'>
+            <div className='name'>
+                <label htmlFor='name'>
+                    {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
+                </label>
+                <input name='name' {...formik.getFieldProps('name')} />
+                {formik.touched.name && formik.errors.name ? (
+                    <div>{formik.errors.name}</div>
+                ) : null}
+            </div>
 
-            {/* <div className='email'> */}
-            <label htmlFor='email'>
-                {returnLocalizedString({ en: 'Email', de: 'E-Mail' }, locale)}
-            </label>
-            <input name='email' {...formik.getFieldProps('email')} />
-            {formik.touched.email && formik.errors.email ? (
-                <div>{formik.errors.email}</div>
-            ) : null}
-            {/* </div> */}
+            <div className='email'>
+                <label htmlFor='email'>
+                    {returnLocalizedString(
+                        { en: 'Email', de: 'E-Mail' },
+                        locale
+                    )}
+                </label>
+                <input name='email' {...formik.getFieldProps('email')} />
+                {formik.touched.email && formik.errors.email ? (
+                    <div>{formik.errors.email}</div>
+                ) : null}
+            </div>
 
-            {/* <div className='subject'> */}
-            <label htmlFor='subject'>
-                {returnLocalizedString(
-                    { en: 'Subject', de: 'Betreff' },
-                    locale
-                )}
-            </label>
-            <input name='subject' {...formik.getFieldProps('subject')} />
-            {formik.touched.subject && formik.errors.subject ? (
-                <div>{formik.errors.subject}</div>
-            ) : null}
-            {/* </div> */}
+            <div className='subject'>
+                <label htmlFor='subject'>
+                    {returnLocalizedString(
+                        { en: 'Subject', de: 'Betreff' },
+                        locale
+                    )}
+                </label>
+                <input name='subject' {...formik.getFieldProps('subject')} />
+                {formik.touched.subject && formik.errors.subject ? (
+                    <div>{formik.errors.subject}</div>
+                ) : null}
+            </div>
 
-            {/* <div className='message'> */}
-            <label htmlFor='message'>
-                {returnLocalizedString(
-                    { en: 'Message', de: 'Nachricht' },
-                    locale
-                )}
-            </label>
-            <textarea name='message' {...formik.getFieldProps('message')} />
-            {formik.touched.message && formik.errors.message ? (
-                <div>{formik.errors.message}</div>
-            ) : null}
-            {/* </div> */}
+            <div className='message'>
+                <label htmlFor='message'>
+                    {returnLocalizedString(
+                        { en: 'Message', de: 'Nachricht' },
+                        locale
+                    )}
+                </label>
+                <textarea name='message' {...formik.getFieldProps('message')} />
+                {formik.touched.message && formik.errors.message ? (
+                    <div>{formik.errors.message}</div>
+                ) : null}
+            </div>
 
-            <button type='submit'>Submit</button>
-            {/* <SubmitButton type='submit'>
+            <SubmitButton type='submit'>
                 {returnLocalizedString({ en: 'Submit', de: 'Senden' }, locale)}
-            </SubmitButton> */}
+            </SubmitButton>
         </form>
     );
 };

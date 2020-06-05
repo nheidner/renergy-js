@@ -696,7 +696,12 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___pageTitle'
+  | 'childMarkdownRemark___frontmatter___opener_image___alt'
+  | 'childMarkdownRemark___frontmatter___team_list'
+  | 'childMarkdownRemark___frontmatter___team_list___name'
+  | 'childMarkdownRemark___frontmatter___team_list___role'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
@@ -705,11 +710,6 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___clients___clients_list'
   | 'childMarkdownRemark___frontmatter___contact___topic'
   | 'childMarkdownRemark___frontmatter___contact___heading'
-  | 'childMarkdownRemark___frontmatter___content'
-  | 'childMarkdownRemark___frontmatter___opener_image___alt'
-  | 'childMarkdownRemark___frontmatter___team_list'
-  | 'childMarkdownRemark___frontmatter___team_list___name'
-  | 'childMarkdownRemark___frontmatter___team_list___role'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1483,33 +1483,8 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___locale'
   | 'frontmatter___templateKey'
   | 'frontmatter___path'
-  | 'frontmatter___pageTitle'
-  | 'frontmatter___openers'
-  | 'frontmatter___openers___image___alt'
-  | 'frontmatter___openers___link___text'
-  | 'frontmatter___openers___link___href'
-  | 'frontmatter___openers___heading___text'
-  | 'frontmatter___openers___heading___href'
-  | 'frontmatter___introducing___topic'
-  | 'frontmatter___introducing___heading'
-  | 'frontmatter___introducing___text'
-  | 'frontmatter___introducing___image___alt'
-  | 'frontmatter___introducing___link___text'
-  | 'frontmatter___introducing___link___href'
-  | 'frontmatter___clients___topic'
-  | 'frontmatter___clients___clients_list'
-  | 'frontmatter___contact___topic'
-  | 'frontmatter___contact___heading'
-  | 'frontmatter___contact___image___alt'
-  | 'frontmatter___contact___office_germany___heading'
-  | 'frontmatter___contact___office_germany___address'
-  | 'frontmatter___contact___get_in_touch___heading'
-  | 'frontmatter___contact___get_in_touch___telephone'
-  | 'frontmatter___contact___office_uae___heading'
-  | 'frontmatter___contact___office_uae___address'
-  | 'frontmatter___contact___link___text'
-  | 'frontmatter___contact___link___href'
   | 'frontmatter___content'
+  | 'frontmatter___pageTitle'
   | 'frontmatter___opener_image___source___sourceInstanceName'
   | 'frontmatter___opener_image___source___absolutePath'
   | 'frontmatter___opener_image___source___relativePath'
@@ -1551,6 +1526,31 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___team_list___image___alt'
   | 'frontmatter___team_list___name'
   | 'frontmatter___team_list___role'
+  | 'frontmatter___openers'
+  | 'frontmatter___openers___image___alt'
+  | 'frontmatter___openers___link___text'
+  | 'frontmatter___openers___link___href'
+  | 'frontmatter___openers___heading___text'
+  | 'frontmatter___openers___heading___href'
+  | 'frontmatter___introducing___topic'
+  | 'frontmatter___introducing___heading'
+  | 'frontmatter___introducing___text'
+  | 'frontmatter___introducing___image___alt'
+  | 'frontmatter___introducing___link___text'
+  | 'frontmatter___introducing___link___href'
+  | 'frontmatter___clients___topic'
+  | 'frontmatter___clients___clients_list'
+  | 'frontmatter___contact___topic'
+  | 'frontmatter___contact___heading'
+  | 'frontmatter___contact___image___alt'
+  | 'frontmatter___contact___office_germany___heading'
+  | 'frontmatter___contact___office_germany___address'
+  | 'frontmatter___contact___get_in_touch___heading'
+  | 'frontmatter___contact___get_in_touch___telephone'
+  | 'frontmatter___contact___office_uae___heading'
+  | 'frontmatter___contact___office_uae___address'
+  | 'frontmatter___contact___link___text'
+  | 'frontmatter___contact___link___href'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1681,14 +1681,14 @@ export type MarkdownRemarkFrontmatter = {
   locale?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
+  content?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
+  opener_image?: Maybe<MarkdownRemarkFrontmatterOpener_Image>;
+  team_list?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeam_List>>>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
   contact?: Maybe<MarkdownRemarkFrontmatterContact>;
-  content?: Maybe<Scalars['String']>;
-  opener_image?: Maybe<MarkdownRemarkFrontmatterOpener_Image>;
-  team_list?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeam_List>>>;
 };
 
 export type MarkdownRemarkFrontmatterClients = {
@@ -1844,14 +1844,14 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   locale?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
+  content?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
+  opener_image?: Maybe<MarkdownRemarkFrontmatterOpener_ImageFilterInput>;
+  team_list?: Maybe<MarkdownRemarkFrontmatterTeam_ListFilterListInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
   contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
-  content?: Maybe<StringQueryOperatorInput>;
-  opener_image?: Maybe<MarkdownRemarkFrontmatterOpener_ImageFilterInput>;
-  team_list?: Maybe<MarkdownRemarkFrontmatterTeam_ListFilterListInput>;
 };
 
 export type MarkdownRemarkFrontmatterIntroducing = {
@@ -2197,8 +2197,6 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2310,8 +2308,6 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
-  port?: Maybe<Scalars['Int']>;
-  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -2521,8 +2517,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___menu___to'
   | 'siteMetadata___menu___children'
   | 'siteMetadata___menu___children___to'
-  | 'port'
-  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -2615,8 +2609,6 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;

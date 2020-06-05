@@ -18,6 +18,28 @@ type TIndexTemplate = TMarkdownRemark['frontmatter'];
 
 const SubmitButton = Button.withComponent('button');
 
+interface IProps {
+    'form-name': string;
+    name: string;
+    email: string;
+    subject: string;
+    message: string;
+    [props: string]: string;
+}
+
+interface I {
+    form: string;
+}
+
+const encode = (data: IProps) => {
+    return Object.keys(data)
+        .map(
+            (key) =>
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+};
+
 const Form: FC<{ locale: string }> = ({ locale }) => {
     const formik = useFormik({
         initialValues: {
@@ -26,154 +48,164 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
             subject: '',
             message: '',
         },
-        validationSchema: Yup.object({
-            name: Yup.string()
-                .max(
-                    80,
-                    returnLocalizedString(
-                        {
-                            en: 'Must be 80 characters or less',
-                            de: 'Kann max. 80 Zeichen enthalten',
-                        },
-                        locale
-                    )
-                )
-                .required(
-                    returnLocalizedString(
-                        {
-                            en: 'Required',
-                            de: 'Benötigt',
-                        },
-                        locale
-                    )
-                ),
+        // validationSchema: Yup.object({
+        //     name: Yup.string()
+        //         .max(
+        //             80,
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Must be 80 characters or less',
+        //                     de: 'Kann max. 80 Zeichen enthalten',
+        //                 },
+        //                 locale
+        //             )
+        //         )
+        //         .required(
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Required',
+        //                     de: 'Benötigt',
+        //                 },
+        //                 locale
+        //             )
+        //         ),
 
-            email: Yup.string()
-                .email(
-                    returnLocalizedString(
-                        {
-                            en: 'Invalid email address',
-                            de: 'Ungültige Email Addresse',
-                        },
-                        locale
-                    )
-                )
-                .required(
-                    returnLocalizedString(
-                        {
-                            en: 'Required',
-                            de: 'Benötigt',
-                        },
-                        locale
-                    )
-                ),
-            subject: Yup.string()
-                .max(
-                    40,
-                    returnLocalizedString(
-                        {
-                            en: 'Must be 40 characters or less',
-                            de: 'Kann max. 40 Zeichen enthalten',
-                        },
-                        locale
-                    )
-                )
-                .required(
-                    returnLocalizedString(
-                        {
-                            en: 'Required',
-                            de: 'Benötigt',
-                        },
-                        locale
-                    )
-                ),
-            message: Yup.string()
-                .max(
-                    300,
-                    returnLocalizedString(
-                        {
-                            en: 'Must be 300 characters or less',
-                            de: 'Kann max. 300 Zeichen enthalten',
-                        },
-                        locale
-                    )
-                )
-                .required(
-                    returnLocalizedString(
-                        {
-                            en: 'Required',
-                            de: 'Benötigt',
-                        },
-                        locale
-                    )
-                ),
-        }),
+        //     email: Yup.string()
+        //         .email(
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Invalid email address',
+        //                     de: 'Ungültige Email Addresse',
+        //                 },
+        //                 locale
+        //             )
+        //         )
+        //         .required(
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Required',
+        //                     de: 'Benötigt',
+        //                 },
+        //                 locale
+        //             )
+        //         ),
+        //     subject: Yup.string()
+        //         .max(
+        //             40,
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Must be 40 characters or less',
+        //                     de: 'Kann max. 40 Zeichen enthalten',
+        //                 },
+        //                 locale
+        //             )
+        //         )
+        //         .required(
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Required',
+        //                     de: 'Benötigt',
+        //                 },
+        //                 locale
+        //             )
+        //         ),
+        //     message: Yup.string()
+        //         .max(
+        //             300,
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Must be 300 characters or less',
+        //                     de: 'Kann max. 300 Zeichen enthalten',
+        //                 },
+        //                 locale
+        //             )
+        //         )
+        //         .required(
+        //             returnLocalizedString(
+        //                 {
+        //                     en: 'Required',
+        //                     de: 'Benötigt',
+        //                 },
+        //                 locale
+        //             )
+        //         ),
+        // }),
+        validate: () => {
+            return {};
+        },
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
-            formik.submitForm();
+            console.log(encode({ 'form-name': 'contact', ...values }));
+            fetch('/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: encode({ 'form-name': 'contact', ...values }),
+            })
+                .then(() => alert('Success!'))
+                .catch((error) => alert(error));
         },
     });
     return (
         <form
             onSubmit={formik.handleSubmit}
-            netlify-honeypot='bot-field'
-            data-netlify='true'
-            method='POST'
+            // netlify-honeypot='bot-field'
+            // data-netlify='true'
+            // method='post'
+            // action='google.de'
             name='Contact Form'>
             <input type='hidden' name='form-name' value='Contact Form' />
             <input type='hidden' name='bot-field' />
-            <div className='name'>
-                <label htmlFor='name'>
-                    {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
-                </label>
-                <input name='name' {...formik.getFieldProps('name')} />
-                {formik.touched.name && formik.errors.name ? (
-                    <div>{formik.errors.name}</div>
-                ) : null}
-            </div>
+            {/* <div className='name'> */}
+            <label htmlFor='name'>
+                {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
+            </label>
+            <input name='name' {...formik.getFieldProps('name')} />
+            {formik.touched.name && formik.errors.name ? (
+                <div>{formik.errors.name}</div>
+            ) : null}
+            {/* </div> */}
 
-            <div className='email'>
-                <label htmlFor='email'>
-                    {returnLocalizedString(
-                        { en: 'Email', de: 'E-Mail' },
-                        locale
-                    )}
-                </label>
-                <input name='email' {...formik.getFieldProps('email')} />
-                {formik.touched.email && formik.errors.email ? (
-                    <div>{formik.errors.email}</div>
-                ) : null}
-            </div>
+            {/* <div className='email'> */}
+            <label htmlFor='email'>
+                {returnLocalizedString({ en: 'Email', de: 'E-Mail' }, locale)}
+            </label>
+            <input name='email' {...formik.getFieldProps('email')} />
+            {formik.touched.email && formik.errors.email ? (
+                <div>{formik.errors.email}</div>
+            ) : null}
+            {/* </div> */}
 
-            <div className='subject'>
-                <label htmlFor='subject'>
-                    {returnLocalizedString(
-                        { en: 'Subject', de: 'Betreff' },
-                        locale
-                    )}
-                </label>
-                <input name='subject' {...formik.getFieldProps('subject')} />
-                {formik.touched.subject && formik.errors.subject ? (
-                    <div>{formik.errors.subject}</div>
-                ) : null}
-            </div>
+            {/* <div className='subject'> */}
+            <label htmlFor='subject'>
+                {returnLocalizedString(
+                    { en: 'Subject', de: 'Betreff' },
+                    locale
+                )}
+            </label>
+            <input name='subject' {...formik.getFieldProps('subject')} />
+            {formik.touched.subject && formik.errors.subject ? (
+                <div>{formik.errors.subject}</div>
+            ) : null}
+            {/* </div> */}
 
-            <div className='message'>
-                <label htmlFor='message'>
-                    {returnLocalizedString(
-                        { en: 'Message', de: 'Nachricht' },
-                        locale
-                    )}
-                </label>
-                <textarea name='message' {...formik.getFieldProps('message')} />
-                {formik.touched.message && formik.errors.message ? (
-                    <div>{formik.errors.message}</div>
-                ) : null}
-            </div>
+            {/* <div className='message'> */}
+            <label htmlFor='message'>
+                {returnLocalizedString(
+                    { en: 'Message', de: 'Nachricht' },
+                    locale
+                )}
+            </label>
+            <textarea name='message' {...formik.getFieldProps('message')} />
+            {formik.touched.message && formik.errors.message ? (
+                <div>{formik.errors.message}</div>
+            ) : null}
+            {/* </div> */}
 
-            <SubmitButton type='submit'>
+            <button type='submit'>Submit</button>
+            {/* <SubmitButton type='submit'>
                 {returnLocalizedString({ en: 'Submit', de: 'Senden' }, locale)}
-            </SubmitButton>
+            </SubmitButton> */}
         </form>
     );
 };

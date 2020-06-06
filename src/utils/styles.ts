@@ -24,4 +24,28 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Button = styled(Link)``;
+export const Button = styled(Link)`
+    background: #ffc400;
+    color: #252525;
+    text-decoration: none;
+    :after {
+        content: '→';
+        display: inline-block;
+        font-family: 'Ionicons';
+        font-style: normal;
+        font-weight: bold;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+    }
+`;
+
+export const mainTextStyles = css`
+    font-family: 'Archivo', Helvetica, Arial, sans-serif;
+    margin: 0;
+    background: #1c1c1c;
+    color: #bbbbbb;
+    font-size: 14px;
+    line-height: 1.72;
+`;

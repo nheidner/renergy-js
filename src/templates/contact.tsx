@@ -9,6 +9,11 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { Button } from '../utils/styles';
 import returnLocalizedString from '../utils/returnLocalizedString';
+import { Wrapper } from '../utils/styles';
+import SectionHeading from '../components/SectionHeading';
+import { personImg } from '../utils/fragment';
+import Img, { FluidObject } from 'gatsby-image';
+import theme from '../utils/theme';
 
 type TMarkdownRemark = ContactQuery[keyof ContactQuery] & {
     [name: string]: ContactQuery[keyof ContactQuery];
@@ -34,7 +39,21 @@ const encode = (data: {
         .join('&');
 };
 
-const Form: FC<{ locale: string }> = ({ locale }) => {
+const returnRedAsteriks = () => (
+    <span
+        css={css`
+            color: #cc0000;
+        `}>
+        {' '}
+        *
+    </span>
+);
+const Form: FC<{
+    locale: string;
+    description: string;
+    buttonText: string;
+    [props: string]: any;
+}> = ({ locale, description, buttonText, ...props }) => {
     const [submitted, setSubmitted] = useState(false);
 
     const formik = useFormik({
@@ -142,15 +161,19 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
     });
 
     return (
-        <form onSubmit={formik.handleSubmit} name='Contact Form'>
+        <form onSubmit={formik.handleSubmit} name='Contact Form' {...props}>
+            <div className='description'>{description}</div>
             <div className='name'>
                 <label htmlFor='name'>
                     {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
+                    {returnRedAsteriks()}
                 </label>
                 <input name='name' {...formik.getFieldProps('name')} />
-                {formik.touched.name && formik.errors.name ? (
-                    <div>{formik.errors.name}</div>
-                ) : null}
+                <div className='errorMessage'>
+                    {formik.touched.name && formik.errors.name ? (
+                        <span>{formik.errors.name}</span>
+                    ) : null}
+                </div>
             </div>
 
             <div className='email'>
@@ -159,11 +182,14 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                         { en: 'Email', de: 'E-Mail' },
                         locale
                     )}
+                    {returnRedAsteriks()}
                 </label>
                 <input name='email' {...formik.getFieldProps('email')} />
-                {formik.touched.email && formik.errors.email ? (
-                    <div>{formik.errors.email}</div>
-                ) : null}
+                <div className='errorMessage'>
+                    {formik.touched.email && formik.errors.email ? (
+                        <span>{formik.errors.email}</span>
+                    ) : null}
+                </div>
             </div>
 
             <div className='subject'>
@@ -172,11 +198,14 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                         { en: 'Subject', de: 'Betreff' },
                         locale
                     )}
+                    {returnRedAsteriks()}
                 </label>
                 <input name='subject' {...formik.getFieldProps('subject')} />
-                {formik.touched.subject && formik.errors.subject ? (
-                    <div>{formik.errors.subject}</div>
-                ) : null}
+                <div className='errorMessage'>
+                    {formik.touched.subject && formik.errors.subject ? (
+                        <span>{formik.errors.subject}</span>
+                    ) : null}
+                </div>
             </div>
 
             <div className='message'>
@@ -185,16 +214,17 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
                         { en: 'Message', de: 'Nachricht' },
                         locale
                     )}
+                    {returnRedAsteriks()}
                 </label>
                 <textarea name='message' {...formik.getFieldProps('message')} />
-                {formik.touched.message && formik.errors.message ? (
-                    <div>{formik.errors.message}</div>
-                ) : null}
+                <div className='errorMessage'>
+                    {formik.touched.message && formik.errors.message ? (
+                        <span>{formik.errors.message}</span>
+                    ) : null}
+                </div>
             </div>
 
-            <SubmitButton type='submit'>
-                {returnLocalizedString({ en: 'Submit', de: 'Senden' }, locale)}
-            </SubmitButton>
+            <SubmitButton type='submit'>{buttonText}</SubmitButton>
             {submitted ? (
                 <div>
                     {returnLocalizedString(
@@ -210,18 +240,170 @@ const Form: FC<{ locale: string }> = ({ locale }) => {
     );
 };
 
-export const IndexTemplate: FC<TIndexTemplate> = ({ locale }) => (
-    <div>
-        <Form locale={locale as string} />
-    </div>
+export const IndexTemplate: FC<TIndexTemplate> = ({
+    locale,
+    heading,
+    form,
+    contact,
+}) => (
+    <Wrapper>
+        <h1
+            css={css`
+                margin: 50px 0 50px;
+            `}>
+            {heading}
+        </h1>
+        <div
+            css={css`
+                > section {
+                    margin-bottom: 50px;
+                }
+                @media (min-width: ${theme.breakpoints[0]}px) {
+                    display: flex;
+                    justify-content: space-between;
+                    > section {
+                        width: 43%;
+                    }
+                }
+            `}>
+            <section className='form'>
+                <SectionHeading backImg={false}>{form?.topic}</SectionHeading>
+                <h2
+                    css={css`
+                        font-size: 24px;
+                        margin-bottom: ${theme.margins.margin1};
+                    `}>
+                    {form?.heading}
+                </h2>
+                <Form
+                    locale={locale as string}
+                    description={form?.description as string}
+                    buttonText={form?.button as string}
+                    css={css`
+                        > div {
+                            width: 100%;
+                            margin-bottom: 12px;
+                        }
+
+                        div.description {
+                            font-size: 13px;
+                        }
+                        div.name {
+                        }
+                        div.email {
+                        }
+                        div.subject {
+                        }
+                        div.message textarea {
+                            height: 80px;
+                        }
+                        > div label {
+                            padding-bottom: 6px;
+                        }
+                        > div > input,
+                        textarea {
+                            width: calc(100% - 30px);
+                            display: block;
+
+                            /* height: 48px; */
+                            padding: 11px 15px;
+                            font-size: 14px;
+                            line-height: 1.72;
+                            color: #bbbbbb;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            border: 1px solid rgba(255, 255, 255, 0.01);
+                        }
+                        > div div.errorMessage {
+                            color: #a4a4a4;
+                            height: 23px;
+                        }
+                    `}
+                />
+            </section>
+            <section
+                className='contact'
+                css={css`
+                    h5 {
+                        color: #888888;
+                        font-size: 11px;
+                        font-family: 'IBM Plex Sans Condensed', sans-serif;
+                        font-weight: 400;
+                        text-transform: uppercase;
+                        margin-bottom: 6px;
+                    }
+                    p {
+                        width: 100%;
+                        margin: 0 0 5px;
+                    }
+                    section {
+                        margin-bottom: 25px;
+                    }
+                    .image-wrapper {
+                        border-radius: 50%;
+                        border: 24px solid #ffffff;
+                        overflow: hidden;
+                        position: relative;
+                        margin: 0 auto 24px;
+                        height: 230px;
+                        width: 230px;
+                        box-sizing: border-box;
+                        margin-bottom: ${theme.margins.margin1};
+                    }
+                `}>
+                {contact?.image?.source?.childImageSharp ? (
+                    <div className='image-wrapper'>
+                        <Img
+                            fluid={
+                                contact?.image?.source?.childImageSharp
+                                    ?.fluid as FluidObject
+                            }
+                            alt={contact?.image?.alt as string}
+                        />
+                    </div>
+                ) : (
+                    <div className='image-wrapper'>
+                        <img
+                            src={contact?.image?.source as string}
+                            alt={contact?.image?.alt as string}
+                            css={css``}
+                        />
+                    </div>
+                )}
+
+                <SectionHeading backImg={false}>{form?.topic}</SectionHeading>
+                <h2>{contact?.heading}</h2>
+                <div>
+                    <section>{contact?.role}</section>
+
+                    <section>
+                        <h5>{contact?.address?.heading}</h5>
+                        {contact?.address?.address?.map(
+                            (addressLine, index) => {
+                                return <p key={index}>{addressLine?.line}</p>;
+                            }
+                        )}
+                    </section>
+                    <section>
+                        <h5>{contact?.telephone?.heading}</h5>
+                        <p>{contact?.telephone?.line}</p>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </Wrapper>
 );
 
 const Index: FC<{ data: ContactQuery }> = ({ data }) => {
     const { frontmatter } = data.markdownRemark || {};
-
+    console.log(data);
     return (
         <Layout pageTitle={frontmatter?.pageTitle}>
-            <IndexTemplate locale={frontmatter?.locale} />
+            <IndexTemplate
+                locale={frontmatter?.locale}
+                heading={frontmatter?.heading}
+                form={frontmatter?.form}
+                contact={frontmatter?.contact}
+            />
         </Layout>
     );
 };
@@ -232,6 +414,34 @@ export const contact = graphql`
             frontmatter {
                 pageTitle
                 locale
+                heading
+                form {
+                    topic
+                    heading
+                    description
+                    button
+                }
+                contact {
+                    topic
+                    heading
+                    image {
+                        source {
+                            ...personImg
+                        }
+                        alt
+                    }
+                    role
+                    address {
+                        heading
+                        address {
+                            line
+                        }
+                    }
+                    telephone {
+                        heading
+                        line
+                    }
+                }
             }
         }
     }

@@ -49,3 +49,13 @@ export const client = graphql`
         }
     }
 `;
+
+export const personImg = graphql`
+    fragment personImg on File {
+        childImageSharp {
+            fluid(maxWidth: 200) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+`;

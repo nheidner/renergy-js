@@ -12,50 +12,8 @@ import { openerImageGallery, thumbNail, client } from '../utils/fragment';
 import Img, { FluidObject } from 'gatsby-image';
 import Content from '../components/Content';
 import theme from '../utils/theme';
-// @ts-ignore
-import subHeadingImg from '../assets/sub-heading.png';
-import { Wrapper, Button } from '../utils/styles';
-
-const SectionHeading: FC = ({ children }) => {
-    return (
-        <div
-            className='sectionHeading'
-            css={css`
-                position: relative;
-                h4 {
-                    display: initial;
-                    color: #ffc400;
-                    font-size: 12px;
-                    font-family: 'IBM Plex Sans Condensed', sans-serif;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                }
-                :before {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    height: 2px;
-                    top: 7px;
-                    left: -35px;
-                    margin-right: 24px;
-                    width: 24px;
-                    background: #ffc400;
-                }
-                :after {
-                    background-image: url(${subHeadingImg});
-                    content: '';
-                    position: absolute;
-                    top: -61px;
-                    left: -48px;
-                    height: 144px;
-                    width: 144px;
-                    z-index: -1;
-                }
-            `}>
-            <h4>{children}</h4>
-        </div>
-    );
-};
+import { Wrapper, Button, mainTextStyles } from '../utils/styles';
+import SectionHeading from '../components/SectionHeading';
 
 const Section = styled('section')`
     margin-bottom: 100px;
@@ -74,22 +32,19 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
     introducing,
     clients,
     contact,
-    preview,
 }) => {
     return (
         <div
             css={css`
-                font-family: 'Archivo', Helvetica, Arial, sans-serif;
-                margin: 0;
-                background: #1c1c1c;
-                color: #bbbbbb;
-                font-size: 14px;
-                line-height: 1.72;
+                ${mainTextStyles}
             `}>
             <Carousel
                 css={css`
                     margin: auto;
-                    max-width: calc(${theme.maxWidths.contentMaxWidth} - 48px);
+                    @media (min-width: 1500px) {
+                        width: calc(${theme.maxWidths.contentMaxWidth} - 48px);
+                    }
+
                     margin-bottom: 100px;
                 `}
                 showThumbs={false}
@@ -187,7 +142,6 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             font-size: 24px;
                             letter-spacing: -1.3px;
                             margin: 24px 0;
-                            font-family: 'Archivo', Helvetica, Arial, sans-serif;
                             font-weight: 700;
                             line-height: 1.33;
                             color: #ffffff;
@@ -198,35 +152,57 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                         div.excerpt {
                             margin: 0 0 10px;
                         }
-                    `}>
-                    {introducing?.image?.source?.childImageSharp ? (
-                        <Img
-                            fluid={
-                                introducing?.image?.source?.childImageSharp
-                                    ?.fluid as FluidObject
-                            }
-                            alt={introducing?.image?.alt as string}
-                        />
-                    ) : (
-                        <img
-                            src={introducing?.image?.source as string}
-                            alt={introducing?.image?.alt as string}
-                            css={css`
-                                width: 100%;
-                                margin-bottom: 48px;
-                                display: block;
-                            `}
-                        />
-                    )}
+                        @media (min-width: ${theme.breakpoints[0]}px) {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            justify-content: space-between;
+                            align-items: center;
 
-                    <SectionHeading>{introducing?.topic}</SectionHeading>
-                    <h3>{introducing?.heading}</h3>
-                    <div className='excerpt'>
-                        <Content markdown={introducing?.text as string} />
+                            > div.image {
+                                width: 50%;
+                            }
+                            > div.text {
+                                width: 40%;
+                            }
+                            div.gatsby-image-wrapper {
+                                margin-bottom: 0;
+                            }
+                        }
+                    `}>
+                    <div className='image'>
+                        {introducing?.image?.source?.childImageSharp ? (
+                            <Img
+                                fluid={
+                                    introducing?.image?.source?.childImageSharp
+                                        ?.fluid as FluidObject
+                                }
+                                alt={introducing?.image?.alt as string}
+                            />
+                        ) : (
+                            <div className='gatsby-image-wrapper'>
+                                <img
+                                    src={introducing?.image?.source as string}
+                                    alt={introducing?.image?.alt as string}
+                                    css={css`
+                                        width: 100%;
+                                        display: block;
+                                    `}
+                                />
+                            </div>
+                        )}
                     </div>
-                    <Button to={introducing?.link?.href as string}>
-                        {introducing?.link?.text}
-                    </Button>
+                    <div className='text'>
+                        <SectionHeading backImg>
+                            {introducing?.topic}
+                        </SectionHeading>
+                        <h3>{introducing?.heading}</h3>
+                        <div className='excerpt'>
+                            <Content markdown={introducing?.text as string} />
+                        </div>
+                        <Button to={introducing?.link?.href as string}>
+                            {introducing?.link?.text}
+                        </Button>
+                    </div>
                 </Section>
                 <Section
                     css={css`
@@ -273,7 +249,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             transform: translate(-50%, -50%);
                         }
                     `}>
-                    <SectionHeading>{clients?.topic}</SectionHeading>
+                    <SectionHeading backImg>{clients?.topic}</SectionHeading>
                     <div className='bodyWrapper'>
                         {clients?.clientsList?.map((clientItem, index) => {
                             return (
@@ -353,60 +329,86 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             color: #bbb;
                             text-decoration: none;
                         }
-                    `}>
-                    {contact?.image?.source?.childImageSharp ? (
-                        <Img
-                            fluid={
-                                contact?.image?.source?.childImageSharp
-                                    ?.fluid as FluidObject
-                            }
-                            alt={contact?.image?.alt as string}
-                        />
-                    ) : (
-                        <img
-                            src={contact?.image?.source as string}
-                            alt={contact?.image?.alt as string}
-                            css={css`
-                                width: 100%;
-                                margin-bottom: 48px;
-                                display: block;
-                            `}
-                        />
-                    )}
+                        @media (min-width: ${theme.breakpoints[0]}px) {
+                            display: flex;
+                            /* flex-direction: row-reverse; */
+                            justify-content: space-between;
+                            align-items: center;
 
-                    <SectionHeading>{contact?.topic}</SectionHeading>
-                    <h2>{contact?.heading}</h2>
-                    <section>
-                        <h5>{contact?.office_germany?.heading}</h5>
-                        {contact?.office_germany?.address?.map(
-                            (addressLine, index) => {
-                                return <p key={index}>{addressLine?.line}</p>;
+                            > div.image {
+                                width: 50%;
                             }
-                        )}
-                    </section>
-                    <section>
-                        <h5>{contact?.get_in_touch?.heading}</h5>
-                        <p>{contact?.get_in_touch?.telephone}</p>
-                        <p>
-                            <Link
-                                to={
-                                    contact?.get_in_touch?.email?.href as string
-                                }>
-                                {contact?.get_in_touch?.email?.text}
-                            </Link>
-                        </p>
-                    </section>
-                    <section>
-                        <h5>{contact?.office_uae?.heading}</h5>
-                        {contact?.office_uae?.address?.map(
-                            (addressLine, index) => {
-                                return <p key={index}>{addressLine?.line}</p>;
+                            > div.text {
+                                width: 40%;
                             }
+                            div.gatsby-image-wrapper {
+                                margin-bottom: 0;
+                            }
+                        }
+                    `}>
+                    <div className='image'>
+                        {contact?.image?.source?.childImageSharp ? (
+                            <Img
+                                fluid={
+                                    contact?.image?.source?.childImageSharp
+                                        ?.fluid as FluidObject
+                                }
+                                alt={contact?.image?.alt as string}
+                            />
+                        ) : (
+                            <img
+                                src={contact?.image?.source as string}
+                                alt={contact?.image?.alt as string}
+                                css={css`
+                                    width: 100%;
+                                    margin-bottom: 48px;
+                                    display: block;
+                                `}
+                            />
                         )}
-                    </section>
-                    <Button to={contact?.link?.href as string}>
-                        {contact?.link?.text}
-                    </Button>
+                    </div>
+                    <div className='text'>
+                        <SectionHeading backImg>
+                            {contact?.topic}
+                        </SectionHeading>
+                        <h2>{contact?.heading}</h2>
+                        <section>
+                            <h5>{contact?.office_germany?.heading}</h5>
+                            {contact?.office_germany?.address?.map(
+                                (addressLine, index) => {
+                                    return (
+                                        <p key={index}>{addressLine?.line}</p>
+                                    );
+                                }
+                            )}
+                        </section>
+                        <section>
+                            <h5>{contact?.get_in_touch?.heading}</h5>
+                            <p>{contact?.get_in_touch?.telephone}</p>
+                            <p>
+                                <Link
+                                    to={
+                                        contact?.get_in_touch?.email
+                                            ?.href as string
+                                    }>
+                                    {contact?.get_in_touch?.email?.text}
+                                </Link>
+                            </p>
+                        </section>
+                        <section>
+                            <h5>{contact?.office_uae?.heading}</h5>
+                            {contact?.office_uae?.address?.map(
+                                (addressLine, index) => {
+                                    return (
+                                        <p key={index}>{addressLine?.line}</p>
+                                    );
+                                }
+                            )}
+                        </section>
+                        <Button to={contact?.link?.href as string}>
+                            {contact?.link?.text}
+                        </Button>
+                    </div>
                 </Section>
             </Wrapper>
         </div>

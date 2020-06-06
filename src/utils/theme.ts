@@ -1,6 +1,6 @@
 export default {
-    breakpoints: [768, 1000, 1150, 370],
-    maxWidths: { contentMaxWidth: '1150px' },
+    breakpoints: [768, 1000, 1300, 370],
+    maxWidths: { contentMaxWidth: '1300px' },
     margins: {
         margin1: '24px',
     },

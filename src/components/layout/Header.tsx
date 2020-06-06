@@ -104,7 +104,7 @@ const menuStyles = css`
         float: left;
         padding-left: 0;
         padding-right: 0;
-        margin: 0 10px;
+        margin: 0 8px;
     }
     ul.menu > li a {
         transition: color, 100ms;
@@ -169,7 +169,7 @@ const menuStyles = css`
     ul.menu > li > ul > li.active > a {
         color: #ffc400;
     }
-    @media (max-width: ${theme.breakpoints[1]}px) {
+    @media (max-width: ${theme.breakpoints[1] - 1}px) {
         ul.menu {
             display: none;
         }
@@ -177,7 +177,7 @@ const menuStyles = css`
 `;
 
 const localesToggleStyles = css`
-    @media (max-width: ${theme.breakpoints[1]}px) {
+    @media (max-width: ${theme.breakpoints[1] - 1}px) {
         float: right;
     }
     min-width: 65px;
@@ -285,52 +285,60 @@ const HeaderTemplate: FC<{
     };
 
     const LocalesToggleWrapper = styled('div')`
-        @media (max-width: ${theme.breakpoints[1]}px) {
+        @media (max-width: ${theme.breakpoints[1] - 1}px) {
             width: 80%;
         }
     `;
 
     return (
         <React.Fragment>
-            <header
+            <div
                 css={css`
-                    display: flex;
-                    max-width: calc(${theme.maxWidths.contentMaxWidth} - 48px);
-                    margin: auto;
-                    align-items: center;
-                    justify-content: space-between;
+                    padding: 0 24px;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                    padding: 40px 24px;
-                    ${menuStyles}
                 `}>
-                <Link
-                    to={
-                        currentLocale === primaryLocale
-                            ? `/`
-                            : `/${currentLocale}/`
-                    }>
-                    <img
-                        src={logo}
-                        alt='logo'
-                        css={css`
-                            width: 120px;
-                        `}
+                <header
+                    css={css`
+                        display: flex;
+                        max-width: calc(
+                            ${theme.maxWidths.contentMaxWidth} - 48px
+                        );
+                        margin: auto;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        padding: 40px 0;
+                        ${menuStyles}
+                    `}>
+                    <Link
+                        to={
+                            currentLocale === primaryLocale
+                                ? `/`
+                                : `/${currentLocale}/`
+                        }>
+                        <img
+                            src={logo}
+                            alt='logo'
+                            css={css`
+                                width: 120px;
+                            `}
+                        />
+                    </Link>
+                    <Menu
+                        menuItems={menuItems}
+                        activeLocale={currentLocale}
+                        activePathWithoutLocale={pathWithoutLocale}
+                        Link={Link}
+                        primaryLocale={primaryLocale}
+                        DropdownCarret={DropDownCarret}
+                        classNameForTopElement='menu'
                     />
-                </Link>
-                <Menu
-                    menuItems={menuItems}
-                    activeLocale={currentLocale}
-                    activePathWithoutLocale={pathWithoutLocale}
-                    Link={Link}
-                    primaryLocale={primaryLocale}
-                    DropdownCarret={DropDownCarret}
-                    classNameForTopElement='menu'
-                />
-                <LocalesToggleWrapper>
-                    <LocalesToggle css={localesToggleStyles} />
-                </LocalesToggleWrapper>
-                <MenuToggle />
-            </header>
+                    <LocalesToggleWrapper>
+                        <LocalesToggle css={localesToggleStyles} />
+                    </LocalesToggleWrapper>
+                    <MenuToggle />
+                </header>
+            </div>
             <div
                 css={css`
                     position: absolute;

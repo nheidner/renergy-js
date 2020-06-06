@@ -8,7 +8,7 @@ import { OneColumnPageQuery } from '../../gatsby-graphql';
 import Img, { FluidObject } from 'gatsby-image';
 import { openerImageFragment, teamPerson } from '../utils/fragment';
 import Content from '../components/Content';
-import { Wrapper } from '../utils/styles';
+import { Wrapper, mainTextStyles } from '../utils/styles';
 import theme from '../utils/theme';
 
 type TMarkdownRemark = OneColumnPageQuery[keyof OneColumnPageQuery] & {
@@ -52,13 +52,8 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                     h3 {
                         color: #bbb;
                     }
-
-                    font-family: 'Archivo', Helvetica, Arial, sans-serif;
-                    margin: 0;
-                    background: #1c1c1c;
-                    color: #bbbbbb;
-                    font-size: 14px;
-                    line-height: 1.72;
+                    ${mainTextStyles}
+                    background-color: #252525;
                 `}>
                 <Content
                     markdown={content as string}

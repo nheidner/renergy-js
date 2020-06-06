@@ -62,7 +62,7 @@ module.exports = {
                     en: 'Tire Recycling',
                     de: 'Reifen Recycling',
                 },
-                to: '/tire-recycling/concept',
+                to: '/tire-recycling',
                 children: [
                     {
                         item: {

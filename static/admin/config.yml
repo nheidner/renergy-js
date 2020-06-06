@@ -389,6 +389,12 @@ collections:
       create: true
       fields:
           - {
+                label: 'Path',
+                name: 'path',
+                widget: 'string',
+                hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+            }
+          - {
                 label: 'TemplateKey',
                 name: 'templateKey',
                 widget: 'hidden',
@@ -401,12 +407,7 @@ collections:
                 widget: 'string',
                 hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
             }
-          - {
-                label: 'Path',
-                name: 'path',
-                widget: 'string',
-                hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
-            }
+
           - label: 'Opener Image'
             name: 'openerImage'
             widget: object

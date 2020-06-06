@@ -23,4 +23,5 @@ contact:
       - line: Deutschland, UAE
   telephone:
     line: +49 30 55570961
+    heading: Telephone
 ---

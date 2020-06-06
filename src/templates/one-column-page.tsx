@@ -29,6 +29,9 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                 > img {
                     width: 100%;
                 }
+                div.gatsby-image-wrapper  {
+                    margin-bottom: 40px;
+                }
             `}>
             {openerImage?.source?.childImageSharp ? (
                 <Img
@@ -39,10 +42,12 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                     alt={openerImage?.alt as string}
                 />
             ) : (
-                <img
-                    src={openerImage?.source as string}
-                    alt={openerImage?.alt as string}
-                />
+                <div>
+                    <img
+                        src={openerImage?.source as string}
+                        alt={openerImage?.alt as string}
+                    />
+                </div>
             )}
 
             <div
@@ -58,7 +63,7 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                 <Content
                     markdown={content as string}
                     css={css`
-                        padding: 40px 0 70px;
+                        padding: 0 40px 70px;
                     `}
                 />
                 <div

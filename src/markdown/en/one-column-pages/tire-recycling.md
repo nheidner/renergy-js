@@ -4,7 +4,7 @@ locale: en
 pageTitle: Tire Recycling
 path: /tire-recycling
 openerImage:
-  source: /img/rc400-05_en.jpg
+  source: /img/rc400-05_01_en.jpg
   alt: Concept
 content: >-
   # THE CONCEPT

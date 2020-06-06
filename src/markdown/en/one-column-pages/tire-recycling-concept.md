@@ -1,7 +1,7 @@
 ---
 templateKey: one-column-page
 locale: en
-pageTitle: Tire Recycling
+pageTitle: Tire Recycling Concept
 path: /tire-recycling/concept
 openerImage:
   source: /img/rc400-05_en.jpg

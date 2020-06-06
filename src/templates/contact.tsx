@@ -240,7 +240,7 @@ const Form: FC<{
     );
 };
 
-export const IndexTemplate: FC<TIndexTemplate> = ({
+export const ContactTemplate: FC<TIndexTemplate> = ({
     locale,
     heading,
     form,
@@ -398,7 +398,7 @@ const Index: FC<{ data: ContactQuery }> = ({ data }) => {
     console.log(data);
     return (
         <Layout pageTitle={frontmatter?.pageTitle}>
-            <IndexTemplate
+            <ContactTemplate
                 locale={frontmatter?.locale}
                 heading={frontmatter?.heading}
                 form={frontmatter?.form}

@@ -2,6 +2,7 @@ import CMS from 'netlify-cms-app';
 import React from 'react';
 import { Template, OneColumnPageTemplate } from '../templates/one-column-page';
 import { IndexTemplate } from '../templates/index';
+import { ContactTemplate } from '../templates/contact';
 import withEmotion from './with-emotion';
 
 const OneColumnPagePreview = ({ entry }) => {
@@ -32,6 +33,20 @@ const IndexTemplatePreview = ({ entry }) => {
     );
 };
 
+const ContactPreview = ({ entry }) => {
+    const data = entry.getIn(['data']).toJS();
+    console.log(data);
+    return (
+        <ContactTemplate
+            locale={data.locale}
+            heading={data.heading}
+            form={data.form}
+            contact={data.contact}
+        />
+    );
+};
+
 CMS.registerPreviewTemplate('our-story', withEmotion(OneColumnPagePreview));
 CMS.registerPreviewTemplate('one-column', withEmotion(OneColumnPagePreview));
 CMS.registerPreviewTemplate('index', withEmotion(IndexTemplatePreview));
+CMS.registerPreviewTemplate('contact_us', withEmotion(ContactPreview));

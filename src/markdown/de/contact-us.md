@@ -1,4 +1,6 @@
 ---
+templateKey: contact
+locale: de
 pageTitle: Kontakt
 path: /contact-us
 heading: Kontakt

@@ -697,21 +697,21 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___pageTitle'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___heading'
+  | 'childMarkdownRemark___frontmatter___form___topic'
+  | 'childMarkdownRemark___frontmatter___form___heading'
+  | 'childMarkdownRemark___frontmatter___form___description'
+  | 'childMarkdownRemark___frontmatter___form___button'
+  | 'childMarkdownRemark___frontmatter___contact___topic'
+  | 'childMarkdownRemark___frontmatter___contact___heading'
+  | 'childMarkdownRemark___frontmatter___contact___role'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
   | 'childMarkdownRemark___frontmatter___introducing___text'
   | 'childMarkdownRemark___frontmatter___clients___topic'
   | 'childMarkdownRemark___frontmatter___clients___clientsList'
-  | 'childMarkdownRemark___frontmatter___contact___topic'
-  | 'childMarkdownRemark___frontmatter___contact___heading'
-  | 'childMarkdownRemark___frontmatter___contact___role'
   | 'childMarkdownRemark___frontmatter___content'
-  | 'childMarkdownRemark___frontmatter___heading'
-  | 'childMarkdownRemark___frontmatter___form___topic'
-  | 'childMarkdownRemark___frontmatter___form___heading'
-  | 'childMarkdownRemark___frontmatter___form___description'
-  | 'childMarkdownRemark___frontmatter___form___button'
   | 'childMarkdownRemark___frontmatter___openerImage___alt'
   | 'childMarkdownRemark___frontmatter___teamList'
   | 'childMarkdownRemark___frontmatter___teamList___name'
@@ -1490,6 +1490,27 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___locale'
   | 'frontmatter___pageTitle'
   | 'frontmatter___path'
+  | 'frontmatter___heading'
+  | 'frontmatter___form___topic'
+  | 'frontmatter___form___heading'
+  | 'frontmatter___form___description'
+  | 'frontmatter___form___button'
+  | 'frontmatter___contact___topic'
+  | 'frontmatter___contact___heading'
+  | 'frontmatter___contact___role'
+  | 'frontmatter___contact___address___heading'
+  | 'frontmatter___contact___address___address'
+  | 'frontmatter___contact___telephone___line'
+  | 'frontmatter___contact___telephone___heading'
+  | 'frontmatter___contact___image___alt'
+  | 'frontmatter___contact___office_germany___heading'
+  | 'frontmatter___contact___office_germany___address'
+  | 'frontmatter___contact___get_in_touch___heading'
+  | 'frontmatter___contact___get_in_touch___telephone'
+  | 'frontmatter___contact___office_uae___heading'
+  | 'frontmatter___contact___office_uae___address'
+  | 'frontmatter___contact___link___text'
+  | 'frontmatter___contact___link___href'
   | 'frontmatter___openers'
   | 'frontmatter___openers___image___alt'
   | 'frontmatter___openers___link___text'
@@ -1504,28 +1525,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___introducing___link___href'
   | 'frontmatter___clients___topic'
   | 'frontmatter___clients___clientsList'
-  | 'frontmatter___contact___topic'
-  | 'frontmatter___contact___heading'
-  | 'frontmatter___contact___image___alt'
-  | 'frontmatter___contact___office_germany___heading'
-  | 'frontmatter___contact___office_germany___address'
-  | 'frontmatter___contact___get_in_touch___heading'
-  | 'frontmatter___contact___get_in_touch___telephone'
-  | 'frontmatter___contact___office_uae___heading'
-  | 'frontmatter___contact___office_uae___address'
-  | 'frontmatter___contact___link___text'
-  | 'frontmatter___contact___link___href'
-  | 'frontmatter___contact___role'
-  | 'frontmatter___contact___address___heading'
-  | 'frontmatter___contact___address___address'
-  | 'frontmatter___contact___telephone___line'
-  | 'frontmatter___contact___telephone___heading'
   | 'frontmatter___content'
-  | 'frontmatter___heading'
-  | 'frontmatter___form___topic'
-  | 'frontmatter___form___heading'
-  | 'frontmatter___form___description'
-  | 'frontmatter___form___button'
   | 'frontmatter___openerImage___source___sourceInstanceName'
   | 'frontmatter___openerImage___source___absolutePath'
   | 'frontmatter___openerImage___source___relativePath'
@@ -1698,13 +1698,13 @@ export type MarkdownRemarkFrontmatter = {
   locale?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
+  heading?: Maybe<Scalars['String']>;
+  form?: Maybe<MarkdownRemarkFrontmatterForm>;
+  contact?: Maybe<MarkdownRemarkFrontmatterContact>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
-  contact?: Maybe<MarkdownRemarkFrontmatterContact>;
   content?: Maybe<Scalars['String']>;
-  heading?: Maybe<Scalars['String']>;
-  form?: Maybe<MarkdownRemarkFrontmatterForm>;
   openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImage>;
   teamList?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeamList>>>;
 };
@@ -1754,14 +1754,14 @@ export type MarkdownRemarkFrontmatterClientsFilterInput = {
 export type MarkdownRemarkFrontmatterContact = {
   topic?: Maybe<Scalars['String']>;
   heading?: Maybe<Scalars['String']>;
+  role?: Maybe<Scalars['String']>;
+  address?: Maybe<MarkdownRemarkFrontmatterContactAddress>;
+  telephone?: Maybe<MarkdownRemarkFrontmatterContactTelephone>;
   image?: Maybe<MarkdownRemarkFrontmatterContactImage>;
   office_germany?: Maybe<MarkdownRemarkFrontmatterContactOffice_Germany>;
   get_in_touch?: Maybe<MarkdownRemarkFrontmatterContactGet_In_Touch>;
   office_uae?: Maybe<MarkdownRemarkFrontmatterContactOffice_Uae>;
   link?: Maybe<MarkdownRemarkFrontmatterContactLink>;
-  role?: Maybe<Scalars['String']>;
-  address?: Maybe<MarkdownRemarkFrontmatterContactAddress>;
-  telephone?: Maybe<MarkdownRemarkFrontmatterContactTelephone>;
 };
 
 export type MarkdownRemarkFrontmatterContactAddress = {
@@ -1789,14 +1789,14 @@ export type MarkdownRemarkFrontmatterContactAddressFilterInput = {
 export type MarkdownRemarkFrontmatterContactFilterInput = {
   topic?: Maybe<StringQueryOperatorInput>;
   heading?: Maybe<StringQueryOperatorInput>;
+  role?: Maybe<StringQueryOperatorInput>;
+  address?: Maybe<MarkdownRemarkFrontmatterContactAddressFilterInput>;
+  telephone?: Maybe<MarkdownRemarkFrontmatterContactTelephoneFilterInput>;
   image?: Maybe<MarkdownRemarkFrontmatterContactImageFilterInput>;
   office_germany?: Maybe<MarkdownRemarkFrontmatterContactOffice_GermanyFilterInput>;
   get_in_touch?: Maybe<MarkdownRemarkFrontmatterContactGet_In_TouchFilterInput>;
   office_uae?: Maybe<MarkdownRemarkFrontmatterContactOffice_UaeFilterInput>;
   link?: Maybe<MarkdownRemarkFrontmatterContactLinkFilterInput>;
-  role?: Maybe<StringQueryOperatorInput>;
-  address?: Maybe<MarkdownRemarkFrontmatterContactAddressFilterInput>;
-  telephone?: Maybe<MarkdownRemarkFrontmatterContactTelephoneFilterInput>;
 };
 
 export type MarkdownRemarkFrontmatterContactGet_In_Touch = {
@@ -1901,13 +1901,13 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   locale?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
+  heading?: Maybe<StringQueryOperatorInput>;
+  form?: Maybe<MarkdownRemarkFrontmatterFormFilterInput>;
+  contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
-  contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
   content?: Maybe<StringQueryOperatorInput>;
-  heading?: Maybe<StringQueryOperatorInput>;
-  form?: Maybe<MarkdownRemarkFrontmatterFormFilterInput>;
   openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImageFilterInput>;
   teamList?: Maybe<MarkdownRemarkFrontmatterTeamListFilterListInput>;
 };
@@ -2246,15 +2246,15 @@ export type QuerySitePageArgs = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
 };
 
 
@@ -2271,6 +2271,8 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
+  polyfill?: Maybe<BooleanQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2382,6 +2384,8 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
+  polyfill?: Maybe<Scalars['Boolean']>;
+  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -2591,6 +2595,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___menu___children___to'
   | 'port'
   | 'host'
+  | 'polyfill'
+  | 'pathPrefix'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2683,6 +2689,8 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
+  polyfill?: Maybe<BooleanQueryOperatorInput>;
+  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2704,15 +2712,15 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
   isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
   context?: Maybe<SitePageContext>;
   pluginCreator?: Maybe<SitePlugin>;
   pluginCreatorId?: Maybe<Scalars['String']>;
   componentPath?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
 };
 
 export type SitePageConnection = {
@@ -2756,87 +2764,6 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
-  | 'isCreatedByStatefulCreatePages'
-  | 'context___id'
-  | 'pluginCreator___id'
-  | 'pluginCreator___parent___id'
-  | 'pluginCreator___parent___parent___id'
-  | 'pluginCreator___parent___parent___children'
-  | 'pluginCreator___parent___children'
-  | 'pluginCreator___parent___children___id'
-  | 'pluginCreator___parent___children___children'
-  | 'pluginCreator___parent___internal___content'
-  | 'pluginCreator___parent___internal___contentDigest'
-  | 'pluginCreator___parent___internal___description'
-  | 'pluginCreator___parent___internal___fieldOwners'
-  | 'pluginCreator___parent___internal___ignoreType'
-  | 'pluginCreator___parent___internal___mediaType'
-  | 'pluginCreator___parent___internal___owner'
-  | 'pluginCreator___parent___internal___type'
-  | 'pluginCreator___children'
-  | 'pluginCreator___children___id'
-  | 'pluginCreator___children___parent___id'
-  | 'pluginCreator___children___parent___children'
-  | 'pluginCreator___children___children'
-  | 'pluginCreator___children___children___id'
-  | 'pluginCreator___children___children___children'
-  | 'pluginCreator___children___internal___content'
-  | 'pluginCreator___children___internal___contentDigest'
-  | 'pluginCreator___children___internal___description'
-  | 'pluginCreator___children___internal___fieldOwners'
-  | 'pluginCreator___children___internal___ignoreType'
-  | 'pluginCreator___children___internal___mediaType'
-  | 'pluginCreator___children___internal___owner'
-  | 'pluginCreator___children___internal___type'
-  | 'pluginCreator___internal___content'
-  | 'pluginCreator___internal___contentDigest'
-  | 'pluginCreator___internal___description'
-  | 'pluginCreator___internal___fieldOwners'
-  | 'pluginCreator___internal___ignoreType'
-  | 'pluginCreator___internal___mediaType'
-  | 'pluginCreator___internal___owner'
-  | 'pluginCreator___internal___type'
-  | 'pluginCreator___resolve'
-  | 'pluginCreator___name'
-  | 'pluginCreator___version'
-  | 'pluginCreator___pluginOptions___plugins'
-  | 'pluginCreator___pluginOptions___plugins___resolve'
-  | 'pluginCreator___pluginOptions___plugins___id'
-  | 'pluginCreator___pluginOptions___plugins___name'
-  | 'pluginCreator___pluginOptions___plugins___version'
-  | 'pluginCreator___pluginOptions___plugins___browserAPIs'
-  | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
-  | 'pluginCreator___pluginOptions___fileName'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___name'
-  | 'pluginCreator___pluginOptions___maxWidth'
-  | 'pluginCreator___pluginOptions___destinationDir'
-  | 'pluginCreator___pluginOptions___modulePath'
-  | 'pluginCreator___pluginOptions___enableIdentityWidget'
-  | 'pluginCreator___pluginOptions___publicPath'
-  | 'pluginCreator___pluginOptions___htmlTitle'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___nodeAPIs'
-  | 'pluginCreator___browserAPIs'
-  | 'pluginCreator___ssrAPIs'
-  | 'pluginCreator___pluginFilepath'
-  | 'pluginCreator___packageJson___name'
-  | 'pluginCreator___packageJson___description'
-  | 'pluginCreator___packageJson___version'
-  | 'pluginCreator___packageJson___main'
-  | 'pluginCreator___packageJson___license'
-  | 'pluginCreator___packageJson___dependencies'
-  | 'pluginCreator___packageJson___dependencies___name'
-  | 'pluginCreator___packageJson___dependencies___version'
-  | 'pluginCreator___packageJson___devDependencies'
-  | 'pluginCreator___packageJson___devDependencies___name'
-  | 'pluginCreator___packageJson___devDependencies___version'
-  | 'pluginCreator___packageJson___peerDependencies'
-  | 'pluginCreator___packageJson___peerDependencies___name'
-  | 'pluginCreator___packageJson___peerDependencies___version'
-  | 'pluginCreator___packageJson___keywords'
-  | 'pluginCreatorId'
-  | 'componentPath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2922,7 +2849,88 @@ export type SitePageFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type';
+  | 'internal___type'
+  | 'isCreatedByStatefulCreatePages'
+  | 'context___id'
+  | 'pluginCreator___id'
+  | 'pluginCreator___parent___id'
+  | 'pluginCreator___parent___parent___id'
+  | 'pluginCreator___parent___parent___children'
+  | 'pluginCreator___parent___children'
+  | 'pluginCreator___parent___children___id'
+  | 'pluginCreator___parent___children___children'
+  | 'pluginCreator___parent___internal___content'
+  | 'pluginCreator___parent___internal___contentDigest'
+  | 'pluginCreator___parent___internal___description'
+  | 'pluginCreator___parent___internal___fieldOwners'
+  | 'pluginCreator___parent___internal___ignoreType'
+  | 'pluginCreator___parent___internal___mediaType'
+  | 'pluginCreator___parent___internal___owner'
+  | 'pluginCreator___parent___internal___type'
+  | 'pluginCreator___children'
+  | 'pluginCreator___children___id'
+  | 'pluginCreator___children___parent___id'
+  | 'pluginCreator___children___parent___children'
+  | 'pluginCreator___children___children'
+  | 'pluginCreator___children___children___id'
+  | 'pluginCreator___children___children___children'
+  | 'pluginCreator___children___internal___content'
+  | 'pluginCreator___children___internal___contentDigest'
+  | 'pluginCreator___children___internal___description'
+  | 'pluginCreator___children___internal___fieldOwners'
+  | 'pluginCreator___children___internal___ignoreType'
+  | 'pluginCreator___children___internal___mediaType'
+  | 'pluginCreator___children___internal___owner'
+  | 'pluginCreator___children___internal___type'
+  | 'pluginCreator___internal___content'
+  | 'pluginCreator___internal___contentDigest'
+  | 'pluginCreator___internal___description'
+  | 'pluginCreator___internal___fieldOwners'
+  | 'pluginCreator___internal___ignoreType'
+  | 'pluginCreator___internal___mediaType'
+  | 'pluginCreator___internal___owner'
+  | 'pluginCreator___internal___type'
+  | 'pluginCreator___resolve'
+  | 'pluginCreator___name'
+  | 'pluginCreator___version'
+  | 'pluginCreator___pluginOptions___plugins'
+  | 'pluginCreator___pluginOptions___plugins___resolve'
+  | 'pluginCreator___pluginOptions___plugins___id'
+  | 'pluginCreator___pluginOptions___plugins___name'
+  | 'pluginCreator___pluginOptions___plugins___version'
+  | 'pluginCreator___pluginOptions___plugins___browserAPIs'
+  | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
+  | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___maxWidth'
+  | 'pluginCreator___pluginOptions___destinationDir'
+  | 'pluginCreator___pluginOptions___modulePath'
+  | 'pluginCreator___pluginOptions___enableIdentityWidget'
+  | 'pluginCreator___pluginOptions___publicPath'
+  | 'pluginCreator___pluginOptions___htmlTitle'
+  | 'pluginCreator___pluginOptions___pathCheck'
+  | 'pluginCreator___nodeAPIs'
+  | 'pluginCreator___browserAPIs'
+  | 'pluginCreator___ssrAPIs'
+  | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___packageJson___name'
+  | 'pluginCreator___packageJson___description'
+  | 'pluginCreator___packageJson___version'
+  | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___license'
+  | 'pluginCreator___packageJson___dependencies'
+  | 'pluginCreator___packageJson___dependencies___name'
+  | 'pluginCreator___packageJson___dependencies___version'
+  | 'pluginCreator___packageJson___devDependencies'
+  | 'pluginCreator___packageJson___devDependencies___name'
+  | 'pluginCreator___packageJson___devDependencies___version'
+  | 'pluginCreator___packageJson___peerDependencies'
+  | 'pluginCreator___packageJson___peerDependencies___name'
+  | 'pluginCreator___packageJson___peerDependencies___version'
+  | 'pluginCreator___packageJson___keywords'
+  | 'pluginCreatorId'
+  | 'componentPath';
 
 export type SitePageFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -2930,15 +2938,15 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
 };
 
 export type SitePageGroupConnection = {

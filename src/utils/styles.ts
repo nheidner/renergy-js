@@ -38,4 +38,9 @@ export const mainTextStyles = css`
     color: #bbbbbb;
     font-size: 14px;
     line-height: 1.72;
+    img {
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+    }
 `;

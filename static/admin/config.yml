@@ -361,7 +361,6 @@ collections:
                                   widget: 'string',
                                   required: false,
                               }
-                      - { label: Name, name: name, widget: string }
                       - { label: Role, name: role, widget: string }
                       - label: Address
                         name: address

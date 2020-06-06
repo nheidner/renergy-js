@@ -46,5 +46,6 @@ export const mainTextStyles = css`
     a {
         border-bottom: 1px dotted #ffc400;
         color: #bbbbbb;
+        text-decoration: none;
     }
 `;

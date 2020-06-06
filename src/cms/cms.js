@@ -37,12 +37,13 @@ const ContactPreview = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
     console.log(data);
     return (
-        <ContactTemplate
-            locale={data.locale}
-            heading={data.heading}
-            form={data.form}
-            contact={data.contact}
-        />
+        // <ContactTemplate
+        //     locale={data.locale}
+        //     heading={data.heading}
+        //     form={data.form}
+        //     contact={data.contact}
+        // />
+        <div></div>
     );
 };
 

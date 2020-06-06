@@ -100,5 +100,5 @@ CMS.registerPreviewTemplate(
     'one-column-de',
     withEmotion(OneColumnPagePreviewDe)
 );
-CMS.registerPreviewTemplate('index-de', withEmotion(IndexTemplatePreviewDe));
+CMS.registerPreviewTemplate('pages-de', withEmotion(IndexTemplatePreviewDe));
 CMS.registerPreviewTemplate('contact_us-de', withEmotion(ContactPreviewDe));

@@ -43,16 +43,10 @@ const ContactPreviewEn = ({ entry }) => {
     );
 };
 
-CMS.registerPreviewTemplate(
-    'our-story-en',
-    withEmotion(OneColumnPagePreviewEn)
-);
-CMS.registerPreviewTemplate(
-    'one-column-en',
-    withEmotion(OneColumnPagePreviewEn)
-);
-CMS.registerPreviewTemplate('index-en', withEmotion(IndexTemplatePreviewEn));
-CMS.registerPreviewTemplate('contact_us-en', withEmotion(ContactPreviewEn));
+CMS.registerPreviewTemplate('our-story', withEmotion(OneColumnPagePreviewEn));
+CMS.registerPreviewTemplate('one-column', withEmotion(OneColumnPagePreviewEn));
+CMS.registerPreviewTemplate('index', withEmotion(IndexTemplatePreviewEn));
+CMS.registerPreviewTemplate('contact_us', withEmotion(ContactPreviewEn));
 
 const OneColumnPagePreviewDe = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();

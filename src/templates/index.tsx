@@ -44,6 +44,9 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                     @media (min-width: 1500px) {
                         width: calc(${theme.maxWidths.contentMaxWidth} - 48px);
                     }
+                    img {
+                        margin: 0;
+                    }
 
                     margin-bottom: 100px;
                 `}

@@ -68,7 +68,9 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                 <Content
                     markdown={content as string}
                     css={css`
-                        padding: 0 40px 70px;
+                        @media (min-width: ${theme.breakpoints[1]}px) {
+                            padding: 0 40px 70px;
+                        }
                     `}
                 />
                 <div

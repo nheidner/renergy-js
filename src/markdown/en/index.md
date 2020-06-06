@@ -8,7 +8,7 @@ openers:
       source: /img/item-1.jpg
       alt: make money without invest!
     link:
-      text: Find Out More →
+      text: "Find Out More "
       href: /
     heading:
       text: |-
@@ -32,7 +32,7 @@ openers:
         waste
       href: /
     link:
-      text: Find out More →
+      text: "Find out More "
       href: /
   - image:
       source: /img/foto.jpg
@@ -46,7 +46,7 @@ openers:
         environment
       href: /
     link:
-      text: Find out more →
+      text: "Find out more "
       href: /
 introducing:
   topic: Introducing.
@@ -60,7 +60,7 @@ introducing:
     source: /img/item-1-1-.jpg
     alt: RENERGY Synthesis Gas Plant
   link:
-    text: Find Out More →
+    text: "Find Out More "
     href: /
 clients:
   topic: Clients.
@@ -127,7 +127,7 @@ contact:
       - line: Burj Khalifa Street, Opal Tower 605,
       - line: Business Bay, Dubai, UAE
   link:
-    text: Contact us now →
+    text: "Contact us now "
     href: /
 content: Hello Index in English
 ---

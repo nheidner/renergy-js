@@ -218,7 +218,7 @@ collections:
                             - { label: 'Href', name: 'href', widget: 'string' }
           - file: 'src/markdown/en/our-story.md'
             label: 'Our Story'
-            name: 'our-story'
+            name: 'our-story-en'
             fields:
                 - {
                       label: 'TemplateKey',
@@ -297,7 +297,7 @@ collections:
                       - { label: Role, name: role, widget: string }
           - file: 'src/markdown/en/contact-us.md'
             label: 'Contact Us'
-            name: 'contact_us'
+            name: 'contact_us-en'
             fields:
                 - {
                       label: 'TemplateKey',
@@ -752,7 +752,7 @@ collections:
                               }
           - file: 'src/markdown/de/our-story.md'
             label: 'Our Story'
-            name: 'our-story'
+            name: 'our-story-de'
             fields:
                 - {
                       label: 'TemplateKey',
@@ -831,7 +831,7 @@ collections:
                       - { label: Role, name: role, widget: string }
           - file: 'src/markdown/de/contact-us.md'
             label: 'Contact Us'
-            name: 'contact_us'
+            name: 'contact_us-de'
             fields:
                 - {
                       label: 'TemplateKey',

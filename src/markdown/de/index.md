@@ -19,4 +19,32 @@ openers:
     link:
       text: Find Out More
       href: /
+  - image:
+      source: /img/foto.jpg
+      alt: Energie umweltfreundlich produziert
+    heading:
+      text: |-
+        Energie 
+
+        umweltfreundlich 
+
+        produziert
+      href: /
+    link:
+      text: Find Out More
+      href: /
+  - image:
+      source: /img/item-1.jpg
+      alt: Recycling wird Energie
+    heading:
+      text: |-
+        Recycling 
+
+        wird 
+
+        Energie
+      href: /
+    link:
+      text: Find Out More
+      href: /
 ---

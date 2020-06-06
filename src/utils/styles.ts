@@ -43,4 +43,8 @@ export const mainTextStyles = css`
         margin: 20px auto;
         max-width: 100%;
     }
+    a {
+        border-bottom: 1px dotted #ffc400;
+        color: #bbbbbb;
+    }
 `;

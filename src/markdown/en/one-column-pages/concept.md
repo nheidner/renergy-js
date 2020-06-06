@@ -2,7 +2,7 @@
 templateKey: one-column-page
 locale: en
 pageTitle: Waste To Energy
-path: /concept
+path: /waste-to-energy/concept
 openerImage:
   source: /img/sg-300-.jpg
   alt: Waste To Energy

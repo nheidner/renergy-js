@@ -324,12 +324,12 @@ collections:
                       hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
                   }
                 - { label: 'Page Heading', name: heading, widget: string }
-                - { label: Topic, name: topic, widget: string }
                 - label: 'Contact Form'
                   name: form
                   widget: object
                   collapsed: true
                   fields:
+                      - { label: Topic, name: topic, widget: string }
                       - { label: Heading, name: heading, widget: string }
                       - {
                             label: Description,
@@ -342,6 +342,25 @@ collections:
                   widget: object
                   collapsed: true
                   fields:
+                      - { label: Topic, name: topic, widget: string }
+                      - { label: Heading, name: heading, widget: string }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Alt',
+                                  name: 'alt',
+                                  widget: 'string',
+                                  required: false,
+                              }
                       - { label: Name, name: name, widget: string }
                       - { label: Role, name: role, widget: string }
                       - label: Address

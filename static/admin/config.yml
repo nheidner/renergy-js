@@ -295,6 +295,73 @@ collections:
                               }
                             - { label: 'Alt', name: 'alt', widget: 'string' }
                       - { label: Role, name: role, widget: string }
+          - file: 'src/markdown/en/contact-us.md'
+            label: 'Contact Us'
+            name: 'contact_us'
+            fields:
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'contact',
+                  }
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'en',
+                  }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - { label: 'Page Heading', name: heading, widget: string }
+                - { label: Topic, name: topic, widget: string }
+                - label: 'Contact Form'
+                  name: form
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - {
+                            label: Description,
+                            name: description,
+                            widget: string,
+                        }
+                      - { label: 'Button Text', name: button, widget: string }
+                - label: Contact
+                  name: contact
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - { label: Role, name: role, widget: string }
+                      - label: Address
+                        name: address
+                        widget: object
+                        collapsed: false
+                        fields:
+                            - { label: Heading, name: heading, widget: string }
+                            - label: Address
+                              name: address
+                              widget: list
+                              fields:
+                                  - { label: Line, name: line, widget: string }
+                      - label: Telephone
+                        name: telephone
+                        widget: object
+                        collapsed: false
+                        fields:
+                            - { label: Line, name: line, widget: string }
+
     - name: 'one-column'
       label: 'One Column Pages (En)'
       label_singular: Page

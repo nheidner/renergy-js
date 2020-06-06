@@ -220,7 +220,7 @@ const Index: FC<{ data: ContactQuery }> = ({ data }) => {
     const { frontmatter } = data.markdownRemark || {};
 
     return (
-        <Layout>
+        <Layout pageTitle={frontmatter?.pageTitle}>
             <IndexTemplate locale={frontmatter?.locale} />
         </Layout>
     );
@@ -230,6 +230,7 @@ export const contact = graphql`
     query Contact($id: String!) {
         markdownRemark(id: { eq: $id }) {
             frontmatter {
+                pageTitle
                 locale
             }
         }

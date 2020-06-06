@@ -11,7 +11,7 @@ import Link from '../Link';
 import useLocales from '../../utils/useLocales';
 import { clearfix } from '../../utils/styles';
 // @ts-ignore
-import logo from '../../assets/big-logo.png';
+import logo from '../../assets/logo.png';
 import theme from '../../utils/theme';
 import styled from '@emotion/styled';
 
@@ -303,13 +303,20 @@ const HeaderTemplate: FC<{
                     padding: 40px 24px;
                     ${menuStyles}
                 `}>
-                <img
-                    src={logo}
-                    alt='logo'
-                    css={css`
-                        width: 80px;
-                    `}
-                />
+                <Link
+                    to={
+                        currentLocale === primaryLocale
+                            ? `/`
+                            : `/${currentLocale}/`
+                    }>
+                    <img
+                        src={logo}
+                        alt='logo'
+                        css={css`
+                            width: 120px;
+                        `}
+                    />
+                </Link>
                 <Menu
                     menuItems={menuItems}
                     activeLocale={currentLocale}

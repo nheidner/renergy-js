@@ -77,7 +77,15 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
     preview,
 }) => {
     return (
-        <div>
+        <div
+            css={css`
+                font-family: 'Archivo', Helvetica, Arial, sans-serif;
+                margin: 0;
+                background: #1c1c1c;
+                color: #bbbbbb;
+                font-size: 14px;
+                line-height: 1.72;
+            `}>
             <Carousel
                 css={css`
                     margin: auto;
@@ -204,6 +212,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             src={introducing?.image?.source as string}
                             alt={introducing?.image?.alt as string}
                             css={css`
+                                width: 100%;
                                 margin-bottom: 48px;
                                 display: block;
                             `}
@@ -230,6 +239,8 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             flex-wrap: wrap;
                         }
                         > div.bodyWrapper a {
+                            display: block;
+                            height: 120px;
                             width: 100%;
                             @media (min-width: 400px) {
                                 width: 45%;
@@ -247,11 +258,19 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             background-color: #000;
                         }
                         > div.bodyWrapper a div.gatsby-image-wrapper {
+                            max-width: 170px;
                             position: absolute;
                             top: 50%;
-                            transform: translateY(-50%);
-                            margin: 0 auto;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        > div.bodyWrapper a img.gatsby-image-wrapper {
                             max-width: 170px;
+                            width: calc(100% - 6px);
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
                         }
                     `}>
                     <SectionHeading>{clients?.topic}</SectionHeading>
@@ -274,23 +293,27 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                             }
                                         />
                                     ) : (
-                                        <img
-                                            src={
-                                                clientItem?.image
-                                                    ?.source as string
-                                            }
-                                            alt={
-                                                clientItem?.image?.alt as string
-                                            }
+                                        <div
                                             css={css`
-                                                display: block;
-                                                /* position: absolute;
-                                                top: 50%;
-                                                transform: translateY(-50%);
-                                                margin: 0 auto;
-                                                max-width: 170px; */
-                                            `}
-                                        />
+                                                width: 100%;
+                                                height: 100%;
+                                            `}>
+                                            <img
+                                                className='gatsby-image-wrapper'
+                                                src={
+                                                    clientItem?.image
+                                                        ?.source as string
+                                                }
+                                                alt={
+                                                    clientItem?.image
+                                                        ?.alt as string
+                                                }
+                                                css={css`
+                                                    display: block;
+                                                    width: 100%;
+                                                `}
+                                            />
+                                        </div>
                                     )}
                                 </Link>
                             );
@@ -344,6 +367,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             src={contact?.image?.source as string}
                             alt={contact?.image?.alt as string}
                             css={css`
+                                width: 100%;
                                 margin-bottom: 48px;
                                 display: block;
                             `}

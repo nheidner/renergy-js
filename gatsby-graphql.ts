@@ -696,20 +696,20 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___locale'
   | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___path'
-  | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___pageTitle'
+  | 'childMarkdownRemark___frontmatter___openerImage___alt'
+  | 'childMarkdownRemark___frontmatter___content'
+  | 'childMarkdownRemark___frontmatter___teamList'
+  | 'childMarkdownRemark___frontmatter___teamList___name'
+  | 'childMarkdownRemark___frontmatter___teamList___role'
   | 'childMarkdownRemark___frontmatter___openers'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
   | 'childMarkdownRemark___frontmatter___introducing___text'
   | 'childMarkdownRemark___frontmatter___clients___topic'
-  | 'childMarkdownRemark___frontmatter___clients___clients_list'
+  | 'childMarkdownRemark___frontmatter___clients___clientsList'
   | 'childMarkdownRemark___frontmatter___contact___topic'
   | 'childMarkdownRemark___frontmatter___contact___heading'
-  | 'childMarkdownRemark___frontmatter___openerImage___alt'
-  | 'childMarkdownRemark___frontmatter___teamList'
-  | 'childMarkdownRemark___frontmatter___teamList___name'
-  | 'childMarkdownRemark___frontmatter___teamList___role'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -1483,33 +1483,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___locale'
   | 'frontmatter___templateKey'
   | 'frontmatter___path'
-  | 'frontmatter___content'
   | 'frontmatter___pageTitle'
-  | 'frontmatter___openers'
-  | 'frontmatter___openers___image___alt'
-  | 'frontmatter___openers___link___text'
-  | 'frontmatter___openers___link___href'
-  | 'frontmatter___openers___heading___text'
-  | 'frontmatter___openers___heading___href'
-  | 'frontmatter___introducing___topic'
-  | 'frontmatter___introducing___heading'
-  | 'frontmatter___introducing___text'
-  | 'frontmatter___introducing___image___alt'
-  | 'frontmatter___introducing___link___text'
-  | 'frontmatter___introducing___link___href'
-  | 'frontmatter___clients___topic'
-  | 'frontmatter___clients___clients_list'
-  | 'frontmatter___contact___topic'
-  | 'frontmatter___contact___heading'
-  | 'frontmatter___contact___image___alt'
-  | 'frontmatter___contact___office_germany___heading'
-  | 'frontmatter___contact___office_germany___address'
-  | 'frontmatter___contact___get_in_touch___heading'
-  | 'frontmatter___contact___get_in_touch___telephone'
-  | 'frontmatter___contact___office_uae___heading'
-  | 'frontmatter___contact___office_uae___address'
-  | 'frontmatter___contact___link___text'
-  | 'frontmatter___contact___link___href'
   | 'frontmatter___openerImage___source___sourceInstanceName'
   | 'frontmatter___openerImage___source___absolutePath'
   | 'frontmatter___openerImage___source___relativePath'
@@ -1547,10 +1521,36 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___openerImage___source___id'
   | 'frontmatter___openerImage___source___children'
   | 'frontmatter___openerImage___alt'
+  | 'frontmatter___content'
   | 'frontmatter___teamList'
   | 'frontmatter___teamList___image___alt'
   | 'frontmatter___teamList___name'
   | 'frontmatter___teamList___role'
+  | 'frontmatter___openers'
+  | 'frontmatter___openers___image___alt'
+  | 'frontmatter___openers___link___text'
+  | 'frontmatter___openers___link___href'
+  | 'frontmatter___openers___heading___text'
+  | 'frontmatter___openers___heading___href'
+  | 'frontmatter___introducing___topic'
+  | 'frontmatter___introducing___heading'
+  | 'frontmatter___introducing___text'
+  | 'frontmatter___introducing___image___alt'
+  | 'frontmatter___introducing___link___text'
+  | 'frontmatter___introducing___link___href'
+  | 'frontmatter___clients___topic'
+  | 'frontmatter___clients___clientsList'
+  | 'frontmatter___contact___topic'
+  | 'frontmatter___contact___heading'
+  | 'frontmatter___contact___image___alt'
+  | 'frontmatter___contact___office_germany___heading'
+  | 'frontmatter___contact___office_germany___address'
+  | 'frontmatter___contact___get_in_touch___heading'
+  | 'frontmatter___contact___get_in_touch___telephone'
+  | 'frontmatter___contact___office_uae___heading'
+  | 'frontmatter___contact___office_uae___address'
+  | 'frontmatter___contact___link___text'
+  | 'frontmatter___contact___link___href'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -1681,56 +1681,56 @@ export type MarkdownRemarkFrontmatter = {
   locale?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
   path?: Maybe<Scalars['String']>;
-  content?: Maybe<Scalars['String']>;
   pageTitle?: Maybe<Scalars['String']>;
+  openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImage>;
+  content?: Maybe<Scalars['String']>;
+  teamList?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeamList>>>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducing>;
   clients?: Maybe<MarkdownRemarkFrontmatterClients>;
   contact?: Maybe<MarkdownRemarkFrontmatterContact>;
-  openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImage>;
-  teamList?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeamList>>>;
 };
 
 export type MarkdownRemarkFrontmatterClients = {
   topic?: Maybe<Scalars['String']>;
-  clients_list?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterClientsClients_List>>>;
+  clientsList?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterClientsClientsList>>>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_List = {
-  image?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListImage>;
-  link?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListLink>;
+export type MarkdownRemarkFrontmatterClientsClientsList = {
+  image?: Maybe<MarkdownRemarkFrontmatterClientsClientsListImage>;
+  link?: Maybe<MarkdownRemarkFrontmatterClientsClientsListLink>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_ListFilterInput = {
-  image?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListImageFilterInput>;
-  link?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListLinkFilterInput>;
+export type MarkdownRemarkFrontmatterClientsClientsListFilterInput = {
+  image?: Maybe<MarkdownRemarkFrontmatterClientsClientsListImageFilterInput>;
+  link?: Maybe<MarkdownRemarkFrontmatterClientsClientsListLinkFilterInput>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_ListFilterListInput = {
-  elemMatch?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListFilterInput>;
+export type MarkdownRemarkFrontmatterClientsClientsListFilterListInput = {
+  elemMatch?: Maybe<MarkdownRemarkFrontmatterClientsClientsListFilterInput>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_ListImage = {
+export type MarkdownRemarkFrontmatterClientsClientsListImage = {
   source?: Maybe<File>;
   alt?: Maybe<Scalars['String']>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_ListImageFilterInput = {
+export type MarkdownRemarkFrontmatterClientsClientsListImageFilterInput = {
   source?: Maybe<FileFilterInput>;
   alt?: Maybe<StringQueryOperatorInput>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_ListLink = {
+export type MarkdownRemarkFrontmatterClientsClientsListLink = {
   href?: Maybe<Scalars['String']>;
 };
 
-export type MarkdownRemarkFrontmatterClientsClients_ListLinkFilterInput = {
+export type MarkdownRemarkFrontmatterClientsClientsListLinkFilterInput = {
   href?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterClientsFilterInput = {
   topic?: Maybe<StringQueryOperatorInput>;
-  clients_list?: Maybe<MarkdownRemarkFrontmatterClientsClients_ListFilterListInput>;
+  clientsList?: Maybe<MarkdownRemarkFrontmatterClientsClientsListFilterListInput>;
 };
 
 export type MarkdownRemarkFrontmatterContact = {
@@ -1844,14 +1844,14 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   locale?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
-  content?: Maybe<StringQueryOperatorInput>;
   pageTitle?: Maybe<StringQueryOperatorInput>;
+  openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImageFilterInput>;
+  content?: Maybe<StringQueryOperatorInput>;
+  teamList?: Maybe<MarkdownRemarkFrontmatterTeamListFilterListInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
   introducing?: Maybe<MarkdownRemarkFrontmatterIntroducingFilterInput>;
   clients?: Maybe<MarkdownRemarkFrontmatterClientsFilterInput>;
   contact?: Maybe<MarkdownRemarkFrontmatterContactFilterInput>;
-  openerImage?: Maybe<MarkdownRemarkFrontmatterOpenerImageFilterInput>;
-  teamList?: Maybe<MarkdownRemarkFrontmatterTeamListFilterListInput>;
 };
 
 export type MarkdownRemarkFrontmatterIntroducing = {
@@ -3332,6 +3332,11 @@ export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<{ menu?: May
         )>>> }
       )>>> }> }> };
 
+export type Site_Metadata_QueryQueryVariables = {};
+
+
+export type Site_Metadata_QueryQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description'>> }> };
+
 export type BlueprintQueryVariables = {
   locale?: Maybe<Scalars['String']>;
 };
@@ -3344,7 +3349,7 @@ export type ContactQueryVariables = {
 };
 
 
-export type ContactQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'locale'>> }> };
+export type ContactQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'pageTitle' | 'locale'>> }> };
 
 export type IndexQueryVariables = {
   id: Scalars['String'];
@@ -3364,10 +3369,10 @@ export type IndexQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<(
         )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterIntroducingLink, 'text' | 'href'>> }
       )>, clients?: Maybe<(
         Pick<MarkdownRemarkFrontmatterClients, 'topic'>
-        & { clients_list?: Maybe<Array<Maybe<{ image?: Maybe<(
-            Pick<MarkdownRemarkFrontmatterClientsClients_ListImage, 'alt'>
+        & { clientsList?: Maybe<Array<Maybe<{ image?: Maybe<(
+            Pick<MarkdownRemarkFrontmatterClientsClientsListImage, 'alt'>
             & { source?: Maybe<ClientFragment> }
-          )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterClientsClients_ListLink, 'href'>> }>>> }
+          )>, link?: Maybe<Pick<MarkdownRemarkFrontmatterClientsClientsListLink, 'href'>> }>>> }
       )>, contact?: Maybe<(
         Pick<MarkdownRemarkFrontmatterContact, 'topic' | 'heading'>
         & { image?: Maybe<(
@@ -3392,7 +3397,7 @@ export type OneColumnPageQueryVariables = {
 
 
 export type OneColumnPageQuery = { markdownRemark?: Maybe<{ frontmatter?: Maybe<(
-      Pick<MarkdownRemarkFrontmatter, 'content'>
+      Pick<MarkdownRemarkFrontmatter, 'pageTitle' | 'content'>
       & { openerImage?: Maybe<(
         Pick<MarkdownRemarkFrontmatterOpenerImage, 'alt'>
         & { source?: Maybe<OpenerImageFragmentFragment> }

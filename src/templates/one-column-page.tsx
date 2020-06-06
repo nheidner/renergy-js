@@ -145,7 +145,7 @@ const OneColumnPage: FC<{ data: OneColumnPageQuery }> = ({ data }) => {
     const { frontmatter } = data.markdownRemark || {};
 
     return (
-        <Layout>
+        <Layout pageTitle={frontmatter?.pageTitle}>
             <OneColumnPageTemplate
                 content={frontmatter?.content}
                 openerImage={frontmatter?.openerImage}
@@ -159,6 +159,7 @@ export const oneColumnPageQuery = graphql`
     query OneColumnPage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             frontmatter {
+                pageTitle
                 content
                 openerImage {
                     source {

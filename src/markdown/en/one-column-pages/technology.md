@@ -7,6 +7,9 @@ openerImage:
   source: /img/sg_technology_en.png
   alt: The Technology
 content: >-
+  # THE TECHNOLOGY
+
+
   ## The Renergy Thermolytic Cracking Process
 
 
@@ -20,4 +23,57 @@ content: >-
 
 
   The Renergy Synthesis Gas Systems are characterised by a particularly consequent utilisation of the accrued exhaust heat for maintaining the overall process.
+
+
+  **Process Scheme:**
+
+
+  ![Process Scheme](/img/sg_technology_en.png "Process Scheme")
+
+
+  ## CHARACTERISTICS OF THE PROCESS
+
+
+  * Power generation of up to 2.2 MWh from one tonne of organic waste
+
+  * Carbon conversion to synthesis gas more than 99 %
+
+  * Thermal total efficiency degree approx. 88 %
+
+  * High availability due to modular and redundant design
+
+
+  ### Environmental Benefits of the Renergy Thermolytic Cracking Process (Renergy-TCP®):
+
+
+  * No flue-gases
+
+  * No dioxins and furans
+
+  * No residues such as oil, tar, coke or the like
+
+  * No incineration
+
+  * Synthesis gas generation in closed system
+
+  * The Renergy Synthesis Gas System is not a pyrolysis system
+
+  * No external heat source required – autothermal process
+
+  * Compliance with valid emission control acts and guidelines
+
+
+  ### Further Advantages
+
+
+  * Most modern technology Made in Germany
+
+  * Administrative approval in Germany for plant operation
+
+  * Very low electricity generation costs per kWh
+
+  * High profits for the operator
+
+
+  ![Further Advantages](/img/mll_en.png "Further Advantages")
 ---

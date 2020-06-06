@@ -135,283 +135,302 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                 })}
             </Carousel>
             <Wrapper>
-                <Section
-                    css={css`
-                        div.gatsby-image-wrapper {
-                            margin-bottom: 48px;
-                        }
-                        h3 {
-                            font-size: 24px;
-                            letter-spacing: -1.3px;
-                            margin: 24px 0;
-                            font-weight: 700;
-                            line-height: 1.33;
-                            color: #ffffff;
-                        }
-                        div.excerpt {
-                            margin: 0 0 24px;
-                        }
-                        div.excerpt {
-                            margin: 0 0 48px;
-                        }
-                        @media (min-width: ${theme.breakpoints[0]}px) {
-                            display: flex;
-                            flex-direction: row-reverse;
-                            justify-content: space-between;
-                            align-items: center;
-
-                            > div.image {
-                                width: 50%;
-                            }
-                            > div.text {
-                                width: 40%;
-                            }
+                {introducing ? (
+                    <Section
+                        css={css`
                             div.gatsby-image-wrapper {
-                                margin-bottom: 0;
+                                margin-bottom: 48px;
                             }
-                        }
-                    `}>
-                    <div className='image'>
-                        {introducing?.image?.source?.childImageSharp ? (
-                            <Img
-                                fluid={
-                                    introducing?.image?.source?.childImageSharp
-                                        ?.fluid as FluidObject
+                            h3 {
+                                font-size: 24px;
+                                letter-spacing: -1.3px;
+                                margin: 24px 0;
+                                font-weight: 700;
+                                line-height: 1.33;
+                                color: #ffffff;
+                            }
+                            div.excerpt {
+                                margin: 0 0 24px;
+                            }
+                            div.excerpt {
+                                margin: 0 0 48px;
+                            }
+                            @media (min-width: ${theme.breakpoints[0]}px) {
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                > div.image {
+                                    width: 50%;
                                 }
-                                alt={introducing?.image?.alt as string}
-                            />
-                        ) : (
-                            <div className='gatsby-image-wrapper'>
-                                <img
-                                    src={introducing?.image?.source as string}
+                                > div.text {
+                                    width: 40%;
+                                }
+                                div.gatsby-image-wrapper {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        `}>
+                        <div className='image'>
+                            {introducing?.image?.source?.childImageSharp ? (
+                                <Img
+                                    fluid={
+                                        introducing?.image?.source
+                                            ?.childImageSharp
+                                            ?.fluid as FluidObject
+                                    }
                                     alt={introducing?.image?.alt as string}
-                                    css={css`
-                                        width: 100%;
-                                        display: block;
-                                    `}
+                                />
+                            ) : (
+                                <div className='gatsby-image-wrapper'>
+                                    <img
+                                        src={
+                                            introducing?.image?.source as string
+                                        }
+                                        alt={introducing?.image?.alt as string}
+                                        css={css`
+                                            width: 100%;
+                                            display: block;
+                                        `}
+                                    />
+                                </div>
+                            )}
+                        </div>
+                        <div className='text'>
+                            <SectionHeading backImg>
+                                {introducing?.topic}
+                            </SectionHeading>
+                            <h3>{introducing?.heading}</h3>
+                            <div className='excerpt'>
+                                <Content
+                                    markdown={introducing?.text as string}
                                 />
                             </div>
-                        )}
-                    </div>
-                    <div className='text'>
-                        <SectionHeading backImg>
-                            {introducing?.topic}
-                        </SectionHeading>
-                        <h3>{introducing?.heading}</h3>
-                        <div className='excerpt'>
-                            <Content markdown={introducing?.text as string} />
+                            <Button to={introducing?.link?.href as string}>
+                                {introducing?.link?.text}
+                            </Button>
                         </div>
-                        <Button to={introducing?.link?.href as string}>
-                            {introducing?.link?.text}
-                        </Button>
-                    </div>
-                </Section>
-                <Section
-                    css={css`
-                        > div.sectionHeading {
-                            margin-bottom: 24px;
-                        }
-                        > div.bodyWrapper {
-                            display: flex;
-                            justify-content: space-between;
-                            flex-wrap: wrap;
-                        }
-                        > div.bodyWrapper a {
-                            display: block;
-                            height: 120px;
-                            width: 100%;
-                            @media (min-width: 400px) {
-                                width: 45%;
+                    </Section>
+                ) : null}
+                {clients ? (
+                    <Section
+                        css={css`
+                            > div.sectionHeading {
+                                margin-bottom: 24px;
                             }
-                            @media (min-width: 650px) {
-                                width: 22%;
+                            > div.bodyWrapper {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
                             }
-                            margin-bottom: 20px;
-                            padding: 20px 3px;
-                            background-color: #252525;
-                            transition: background-color, 150ms;
-                            position: relative;
-                        }
-                        > div.bodyWrapper a:hover {
-                            background-color: #000;
-                        }
-                        > div.bodyWrapper a div.gatsby-image-wrapper {
-                            max-width: 170px;
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        }
-                        > div.bodyWrapper a img.gatsby-image-wrapper {
-                            max-width: 170px;
-                            width: calc(100% - 6px);
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                        }
-                    `}>
-                    <SectionHeading backImg>{clients?.topic}</SectionHeading>
-                    <div className='bodyWrapper'>
-                        {clients?.clientsList?.map((clientItem, index) => {
-                            return (
-                                <Link
-                                    key={index}
-                                    to={clientItem?.link?.href as string}>
-                                    {clientItem?.image?.source
-                                        ?.childImageSharp ? (
-                                        <Img
-                                            fluid={
-                                                clientItem?.image?.source
-                                                    ?.childImageSharp
-                                                    ?.fluid as FluidObject
-                                            }
-                                            alt={
-                                                clientItem?.image?.alt as string
-                                            }
-                                        />
-                                    ) : (
-                                        <div
-                                            css={css`
-                                                width: 100%;
-                                                height: 100%;
-                                            `}>
-                                            <img
-                                                className='gatsby-image-wrapper'
-                                                src={
-                                                    clientItem?.image
-                                                        ?.source as string
+                            > div.bodyWrapper a {
+                                display: block;
+                                height: 120px;
+                                width: 100%;
+                                @media (min-width: 400px) {
+                                    width: 45%;
+                                }
+                                @media (min-width: 650px) {
+                                    width: 22%;
+                                }
+                                margin-bottom: 20px;
+                                padding: 20px 3px;
+                                background-color: #252525;
+                                transition: background-color, 150ms;
+                                position: relative;
+                            }
+                            > div.bodyWrapper a:hover {
+                                background-color: #000;
+                            }
+                            > div.bodyWrapper a div.gatsby-image-wrapper {
+                                max-width: 170px;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            > div.bodyWrapper a img.gatsby-image-wrapper {
+                                max-width: 170px;
+                                width: calc(100% - 6px);
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                        `}>
+                        <SectionHeading backImg>
+                            {clients?.topic}
+                        </SectionHeading>
+                        <div className='bodyWrapper'>
+                            {clients?.clientsList?.map((clientItem, index) => {
+                                return (
+                                    <Link
+                                        key={index}
+                                        to={clientItem?.link?.href as string}>
+                                        {clientItem?.image?.source
+                                            ?.childImageSharp ? (
+                                            <Img
+                                                fluid={
+                                                    clientItem?.image?.source
+                                                        ?.childImageSharp
+                                                        ?.fluid as FluidObject
                                                 }
                                                 alt={
                                                     clientItem?.image
                                                         ?.alt as string
                                                 }
-                                                css={css`
-                                                    display: block;
-                                                    width: 100%;
-                                                `}
                                             />
-                                        </div>
-                                    )}
-                                </Link>
-                            );
-                        })}
-                    </div>
-                </Section>
-                <Section
-                    css={css`
-                        div.gatsby-image-wrapper  {
-                            margin-bottom: 48px;
-                        }
-                        div.sectionHeading {
-                            margin-bottom: 24px;
-                        }
-                        h2 {
-                            max-width: 336px;
-                            margin-top: 0;
-                            margin-bottom: 48px;
-                            font-size: 40px;
-                        }
-                        section {
-                            margin-bottom: 48px;
-                        }
-                        section h5 {
-                            color: #888888;
-                            font-size: 11px;
-                            font-family: 'IBM Plex Sans Condensed', sans-serif;
-                            font-weight: 400;
-                            text-transform: uppercase;
-                            margin-bottom: 6px;
-                        }
-                        section p {
-                            margin: 0 0 2px;
-                        }
-                        section a {
-                            border-bottom: 1px dotted #ffc400;
-                            color: #bbb;
-                            text-decoration: none;
-                        }
-                        @media (min-width: ${theme.breakpoints[0]}px) {
-                            display: flex;
-                            /* flex-direction: row-reverse; */
-                            justify-content: space-between;
-                            align-items: center;
+                                        ) : (
+                                            <div
+                                                css={css`
+                                                    width: 100%;
+                                                    height: 100%;
+                                                `}>
+                                                <img
+                                                    className='gatsby-image-wrapper'
+                                                    src={
+                                                        clientItem?.image
+                                                            ?.source as string
+                                                    }
+                                                    alt={
+                                                        clientItem?.image
+                                                            ?.alt as string
+                                                    }
+                                                    css={css`
+                                                        display: block;
+                                                        width: 100%;
+                                                    `}
+                                                />
+                                            </div>
+                                        )}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    </Section>
+                ) : null}
+                {contact ? (
+                    <Section
+                        css={css`
+                            div.gatsby-image-wrapper  {
+                                margin-bottom: 48px;
+                            }
+                            div.sectionHeading {
+                                margin-bottom: 24px;
+                            }
+                            h2 {
+                                max-width: 336px;
+                                margin-top: 0;
+                                margin-bottom: 48px;
+                                font-size: 40px;
+                            }
+                            section {
+                                margin-bottom: 48px;
+                            }
+                            section h5 {
+                                color: #888888;
+                                font-size: 11px;
+                                font-family: 'IBM Plex Sans Condensed',
+                                    sans-serif;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                margin-bottom: 6px;
+                            }
+                            section p {
+                                margin: 0 0 2px;
+                            }
+                            section a {
+                                border-bottom: 1px dotted #ffc400;
+                                color: #bbb;
+                                text-decoration: none;
+                            }
+                            @media (min-width: ${theme.breakpoints[0]}px) {
+                                display: flex;
+                                /* flex-direction: row-reverse; */
+                                justify-content: space-between;
+                                align-items: center;
 
-                            > div.image {
-                                width: 50%;
-                            }
-                            > div.text {
-                                width: 40%;
-                            }
-                            div.gatsby-image-wrapper {
-                                margin-bottom: 0;
-                            }
-                        }
-                    `}>
-                    <div className='image'>
-                        {contact?.image?.source?.childImageSharp ? (
-                            <Img
-                                fluid={
-                                    contact?.image?.source?.childImageSharp
-                                        ?.fluid as FluidObject
+                                > div.image {
+                                    width: 50%;
                                 }
-                                alt={contact?.image?.alt as string}
-                            />
-                        ) : (
-                            <img
-                                src={contact?.image?.source as string}
-                                alt={contact?.image?.alt as string}
-                                css={css`
-                                    width: 100%;
-                                    margin-bottom: 48px;
-                                    display: block;
-                                `}
-                            />
-                        )}
-                    </div>
-                    <div className='text'>
-                        <SectionHeading backImg>
-                            {contact?.topic}
-                        </SectionHeading>
-                        <h2>{contact?.heading}</h2>
-                        <section>
-                            <h5>{contact?.office_germany?.heading}</h5>
-                            {contact?.office_germany?.address?.map(
-                                (addressLine, index) => {
-                                    return (
-                                        <p key={index}>{addressLine?.line}</p>
-                                    );
+                                > div.text {
+                                    width: 40%;
                                 }
+                                div.gatsby-image-wrapper {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        `}>
+                        <div className='image'>
+                            {contact?.image?.source?.childImageSharp ? (
+                                <Img
+                                    fluid={
+                                        contact?.image?.source?.childImageSharp
+                                            ?.fluid as FluidObject
+                                    }
+                                    alt={contact?.image?.alt as string}
+                                />
+                            ) : (
+                                <img
+                                    src={contact?.image?.source as string}
+                                    alt={contact?.image?.alt as string}
+                                    css={css`
+                                        width: 100%;
+                                        margin-bottom: 48px;
+                                        display: block;
+                                    `}
+                                />
                             )}
-                        </section>
-                        <section>
-                            <h5>{contact?.get_in_touch?.heading}</h5>
-                            <p>{contact?.get_in_touch?.telephone}</p>
-                            <p>
-                                <Link
-                                    to={
-                                        contact?.get_in_touch?.email
-                                            ?.href as string
-                                    }>
-                                    {contact?.get_in_touch?.email?.text}
-                                </Link>
-                            </p>
-                        </section>
-                        <section>
-                            <h5>{contact?.office_uae?.heading}</h5>
-                            {contact?.office_uae?.address?.map(
-                                (addressLine, index) => {
-                                    return (
-                                        <p key={index}>{addressLine?.line}</p>
-                                    );
-                                }
-                            )}
-                        </section>
-                        <Button to={contact?.link?.href as string}>
-                            {contact?.link?.text}
-                        </Button>
-                    </div>
-                </Section>
+                        </div>
+                        <div className='text'>
+                            <SectionHeading backImg>
+                                {contact?.topic}
+                            </SectionHeading>
+                            <h2>{contact?.heading}</h2>
+                            <section>
+                                <h5>{contact?.office_germany?.heading}</h5>
+                                {contact?.office_germany?.address?.map(
+                                    (addressLine, index) => {
+                                        return (
+                                            <p key={index}>
+                                                {addressLine?.line}
+                                            </p>
+                                        );
+                                    }
+                                )}
+                            </section>
+                            <section>
+                                <h5>{contact?.get_in_touch?.heading}</h5>
+                                <p>{contact?.get_in_touch?.telephone}</p>
+                                <p>
+                                    <Link
+                                        to={
+                                            contact?.get_in_touch?.email
+                                                ?.href as string
+                                        }>
+                                        {contact?.get_in_touch?.email?.text}
+                                    </Link>
+                                </p>
+                            </section>
+                            <section>
+                                <h5>{contact?.office_uae?.heading}</h5>
+                                {contact?.office_uae?.address?.map(
+                                    (addressLine, index) => {
+                                        return (
+                                            <p key={index}>
+                                                {addressLine?.line}
+                                            </p>
+                                        );
+                                    }
+                                )}
+                            </section>
+                            <Button to={contact?.link?.href as string}>
+                                {contact?.link?.text}
+                            </Button>
+                        </div>
+                    </Section>
+                ) : null}
             </Wrapper>
         </div>
     );

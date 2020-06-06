@@ -14,6 +14,9 @@ import { mainTextStyles } from '../../utils/styles';
 const globalStyles = css`
     body {
         ${mainTextStyles}
+        img {
+            margin: 0;
+        }
         h1,
         h2,
         h3,

@@ -381,7 +381,7 @@ collections:
                             - { label: Heading, name: heading, widget: string }
                             - { label: Line, name: line, widget: string }
 
-    - name: 'one-column'
+    - name: 'one-column-en'
       label: 'One Column Pages (En)'
       label_singular: Page
       folder: 'src/markdown/en/one-column-pages'
@@ -445,12 +445,12 @@ collections:
     - name: pages-de
       label: Pages (De)
       files:
-          - file: 'src/markdown/pages/de/index.md'
+          - file: 'src/markdown/de/index.md'
             label: 'Home'
             name: 'index'
             fields:
                 - {
-                      label: 'Template Key',
+                      label: 'TemplateKey',
                       name: 'templateKey',
                       widget: 'hidden',
                       default: 'index',
@@ -461,5 +461,517 @@ collections:
                       widget: 'hidden',
                       default: 'de',
                   }
-                - { label: 'Page Title', name: 'pageTitle', widget: 'string' }
-                - { label: 'Path', name: 'path', widget: 'string' }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - label: Openers
+                  name: openers
+                  widget: list
+                  summary: 'opener'
+                  fields:
+                      - label: 'Opener Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                              }
+                            - { label: 'Alt', name: 'alt', widget: 'string' }
+                      - label: 'Heading Link'
+                        name: 'heading'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - label: 'Text'
+                              name: 'text'
+                              widget: markdown
+                              buttons: [bold, italic, link]
+                              editorComponents: []
+                            - { label: 'Href', name: 'href', widget: 'string' }
+                      - label: 'More Link'
+                        name: 'link'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - { label: 'Text', name: 'text', widget: 'string' }
+                            - { label: 'Href', name: 'href', widget: 'string' }
+                - label: Introducing
+                  name: introducing
+                  widget: object
+                  required: false
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Topic,
+                            name: topic,
+                            widget: string,
+                            required: false,
+                        }
+                      - {
+                            label: Heading,
+                            name: heading,
+                            widget: string,
+                            required: false,
+                        }
+                      - label: 'Excerpt'
+                        name: 'text'
+                        required: false
+                        widget: markdown
+                        buttons: [bold, italic, link]
+                        editorComponents: []
+                      - label: 'Image'
+                        name: 'image'
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Alt',
+                                  name: 'alt',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                      - label: 'Link'
+                        name: 'link'
+                        widget: object
+                        required: false
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Text',
+                                  name: 'text',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Href',
+                                  name: 'href',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                - label: Clients
+                  name: clients
+                  widget: object
+                  required: false
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Topic,
+                            name: topic,
+                            widget: string,
+                            required: false,
+                        }
+                      - label: List Of Clients
+                        name: clients-list
+                        required: false
+                        widget: list
+                        fields:
+                            - label: 'Image'
+                              name: 'image'
+                              required: false
+                              widget: object
+                              collapsed: true
+                              fields:
+                                  - {
+                                        label: 'Image Source',
+                                        name: 'source',
+                                        required: false,
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'Alt',
+                                        name: 'alt',
+                                        required: false,
+                                        widget: 'string',
+                                    }
+                            - label: 'Link'
+                              name: 'link'
+                              required: false
+                              widget: object
+                              collapsed: true
+                              fields:
+                                  - {
+                                        label: 'Href',
+                                        name: 'href',
+                                        required: false,
+                                        widget: 'string',
+                                    }
+                - label: Contact
+                  name: contact
+                  required: false
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Topic,
+                            name: topic,
+                            widget: string,
+                            required: false,
+                        }
+                      - {
+                            label: Heading,
+                            name: heading,
+                            widget: string,
+                            required: false,
+                        }
+                      - label: 'Image'
+                        name: 'image'
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  required: false,
+                                  widget: 'image',
+                              }
+                            - {
+                                  label: 'Alt',
+                                  name: 'alt',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                      - label: Office Germany
+                        name: office-germany
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: Heading,
+                                  name: heading,
+                                  widget: string,
+                                  required: false,
+                              }
+                            - label: Address
+                              name: address
+                              required: false
+                              widget: list
+                              fields:
+                                  - {
+                                        label: Line,
+                                        name: line,
+                                        widget: string,
+                                        required: false,
+                                    }
+                      - label: Get In Touch
+                        name: get-in-touch
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: Heading,
+                                  name: heading,
+                                  widget: string,
+                                  required: false,
+                              }
+                            - {
+                                  label: Telephone,
+                                  name: telephone,
+                                  required: false,
+                                  widget: string,
+                              }
+                            - label: 'Email'
+                              name: 'email'
+                              required: false,
+                              widget: object
+                              collapsed: true
+                              fields:
+                                  - {
+                                        label: 'Text',
+                                        name: 'text',
+                                        required: false,
+                                        widget: 'string',
+                                    }
+                                  - {
+                                        label: 'Email Address',
+                                        name: 'href',
+                                        required: false,
+                                        widget: 'string',
+                                    }
+                      - label: Office UAE
+                        name: office-uae
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: Heading,
+                                  name: heading,
+                                  widget: string,
+                                  required: false,
+                              }
+                            - label: Address
+                              name: address
+                              required: false
+                              widget: list
+                              fields:
+                                  - {
+                                        label: Line,
+                                        name: line,
+                                        widget: string,
+                                        required: false,
+                                    }
+                      - label: 'Link'
+                        name: 'link'
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Text',
+                                  name: 'text',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Href',
+                                  name: 'href',
+                                  widget: 'string',
+                                  required: false,
+                              }
+          - file: 'src/markdown/de/our-story.md'
+            label: 'Our Story'
+            name: 'our-story'
+            fields:
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'one-column-page',
+                  }
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'de',
+                  }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - label: 'Opener Image'
+                  name: 'openerImage'
+                  widget: object
+                  collapsed: true
+                  required: false
+                  fields:
+                      - {
+                            label: 'Image Source',
+                            name: 'source',
+                            widget: 'image',
+                            required: false,
+                        }
+                      - {
+                            label: 'Alt',
+                            name: 'alt',
+                            widget: 'string',
+                            required: false,
+                        }
+                - label: 'Page Content'
+                  name: 'content'
+                  widget: markdown
+                  buttons:
+                      [
+                          bold,
+                          italic,
+                          link,
+                          heading-one,
+                          heading-two,
+                          heading-three,
+                          bulleted-list,
+                          numbered-list,
+                      ]
+                  editorComponents: [image]
+                - label: Team
+                  name: teamList
+                  widget: list
+                  collapsed: true
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                              }
+                            - { label: 'Alt', name: 'alt', widget: 'string' }
+                      - { label: Role, name: role, widget: string }
+          - file: 'src/markdown/de/contact-us.md'
+            label: 'Contact Us'
+            name: 'contact_us'
+            fields:
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'contact',
+                  }
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'de',
+                  }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - { label: 'Page Heading', name: heading, widget: string }
+                - label: 'Contact Form'
+                  name: form
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Topic, name: topic, widget: string }
+                      - { label: Heading, name: heading, widget: string }
+                      - {
+                            label: Description,
+                            name: description,
+                            widget: string,
+                        }
+                      - { label: 'Button Text', name: button, widget: string }
+                - label: Contact
+                  name: contact
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Topic, name: topic, widget: string }
+                      - { label: Heading, name: heading, widget: string }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Alt',
+                                  name: 'alt',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                      - { label: Role, name: role, widget: string }
+                      - label: Address
+                        name: address
+                        widget: object
+                        collapsed: false
+                        fields:
+                            - { label: Heading, name: heading, widget: string }
+                            - label: Address
+                              name: address
+                              widget: list
+                              fields:
+                                  - { label: Line, name: line, widget: string }
+                      - label: Telephone
+                        name: telephone
+                        widget: object
+                        collapsed: false
+                        fields:
+                            - { label: Heading, name: heading, widget: string }
+                            - { label: Line, name: line, widget: string }
+
+    - name: 'one-column-de'
+      label: 'One Column Pages (De)'
+      label_singular: Page
+      folder: 'src/markdown/de/one-column-pages'
+      field_identifier: path
+      create: true
+      fields:
+          - {
+                label: 'Path',
+                name: 'path',
+                widget: 'string',
+                hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+            }
+          - {
+                label: 'TemplateKey',
+                name: 'templateKey',
+                widget: 'hidden',
+                default: 'one-column-page',
+            }
+          - { label: 'Locale', name: 'locale', widget: 'hidden', default: 'de' }
+          - {
+                label: 'Page Title',
+                name: 'pageTitle',
+                widget: 'string',
+                hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+            }
+
+          - label: 'Opener Image'
+            name: 'openerImage'
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+                - {
+                      label: 'Image Source',
+                      name: 'source',
+                      widget: 'image',
+                      required: false,
+                  }
+                - {
+                      label: 'Alt',
+                      name: 'alt',
+                      widget: 'string',
+                      required: false,
+                  }
+          - label: 'Page Content'
+            name: 'content'
+            widget: markdown
+            buttons:
+                [
+                    bold,
+                    italic,
+                    link,
+                    heading-one,
+                    heading-two,
+                    heading-three,
+                    bulleted-list,
+                    numbered-list,
+                ]
+            editorComponents: [image]

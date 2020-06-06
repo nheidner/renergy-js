@@ -25,19 +25,15 @@ export const Wrapper = styled.div`
 `;
 
 export const Button = styled(Link)`
-    background: #ffc400;
+    background: #fff;
     color: #252525;
     text-decoration: none;
-    :after {
-        content: '→';
-        display: inline-block;
-        font-family: 'Ionicons';
-        font-style: normal;
-        font-weight: bold;
-        font-variant: normal;
-        text-transform: none;
-        text-rendering: auto;
-        line-height: 1;
+    font-weight: bold;
+    padding: 6px 11px;
+    text-transform: uppercase;
+    border: none;
+    @media (min-width: 450px) {
+        padding: 10px 14px;
     }
 `;
 

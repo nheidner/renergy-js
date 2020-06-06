@@ -50,8 +50,8 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                 showThumbs={false}
                 infiniteLoop={true}
                 showStatus={false}
-                autoPlay={true}
-                interval={3000}
+                // autoPlay={true}
+                // interval={3000}
                 transitionTime={500}
                 dynamicHeight={true}
                 useKeyboardArrows={true}
@@ -98,24 +98,26 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                     to={opener?.heading?.href as string}
                                     css={css`
                                         font-size: 25px;
+
                                         text-decoration: none;
-                                        @media (min-width: ${theme
-                                                .breakpoints[3]}px) {
-                                            font-size: 40px;
+                                        @media (min-width: 380px) {
+                                            font-size: 32px;
                                         }
-                                        @media (min-width: ${theme
-                                                .breakpoints[0]}px) {
-                                            font-size: 60px;
+                                        @media (min-width: 500px) {
+                                            font-size: 37px;
+                                        }
+                                        @media (min-width: 700px) {
+                                            font-size: 55px;
                                         }
                                         @media (min-width: ${theme
                                                 .breakpoints[1]}px) {
-                                            font-size: 80px;
+                                            font-size: 75px;
                                         }
                                         line-height: 120%;
                                         color: #fff;
 
                                         p {
-                                            margin: 0;
+                                            line-height: 12%;
                                         }
                                     `}>
                                     <Content
@@ -150,7 +152,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             margin: 0 0 24px;
                         }
                         div.excerpt {
-                            margin: 0 0 10px;
+                            margin: 0 0 48px;
                         }
                         @media (min-width: ${theme.breakpoints[0]}px) {
                             display: flex;

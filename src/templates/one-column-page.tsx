@@ -30,7 +30,7 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
         <div
             css={css`
                 ${mainTemplateTextStyles}
-                background: #252525;
+                background-color: #252525;
                 > img {
                     width: 100%;
                 }

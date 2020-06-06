@@ -378,6 +378,7 @@ collections:
                         widget: object
                         collapsed: false
                         fields:
+                            - { label: Heading, name: heading, widget: string }
                             - { label: Line, name: line, widget: string }
 
     - name: 'one-column'

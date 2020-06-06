@@ -1,9 +1,12 @@
 ---
+path: /our-offer
 templateKey: one-column-page
 locale: en
 pageTitle: Our offer
-path: /our-offer
 content: >-
+  # Our offer
+
+
   **Our offer if you have around 700,000 t / year of waste in your area. :**
 
 

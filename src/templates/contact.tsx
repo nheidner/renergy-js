@@ -7,9 +7,8 @@ import Layout from '../components/layout';
 import { ContactQuery } from '../../gatsby-graphql';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { Button } from '../utils/styles';
 import returnLocalizedString from '../utils/returnLocalizedString';
-import { Wrapper } from '../utils/styles';
+import { Wrapper, mainTemplateTextStyles, Button } from '../utils/styles';
 import SectionHeading from '../components/SectionHeading';
 import { personImg } from '../utils/fragment';
 import Img, { FluidObject } from 'gatsby-image';
@@ -258,6 +257,7 @@ export const ContactTemplate: FC<TIndexTemplate> = ({
                 > section {
                     margin-bottom: 50px;
                 }
+                ${mainTemplateTextStyles}
                 @media (min-width: ${theme.breakpoints[0]}px) {
                     display: flex;
                     justify-content: space-between;

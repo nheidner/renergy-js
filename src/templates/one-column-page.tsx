@@ -8,7 +8,11 @@ import { OneColumnPageQuery } from '../../gatsby-graphql';
 import Img, { FluidObject } from 'gatsby-image';
 import { openerImageFragment, teamPerson } from '../utils/fragment';
 import Content from '../components/Content';
-import { Wrapper, mainTextStyles } from '../utils/styles';
+import {
+    Wrapper,
+    mainTextStyles,
+    mainTemplateTextStyles,
+} from '../utils/styles';
 import theme from '../utils/theme';
 
 type TMarkdownRemark = OneColumnPageQuery[keyof OneColumnPageQuery] & {
@@ -25,6 +29,7 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
     <Wrapper>
         <div
             css={css`
+                ${mainTemplateTextStyles}
                 background: #252525;
                 > img {
                     width: 100%;

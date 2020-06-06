@@ -43,6 +43,9 @@ export const mainTextStyles = css`
         margin: 20px auto;
         max-width: 100%;
     }
+`;
+
+export const mainTemplateTextStyles = css`
     a {
         border-bottom: 1px dotted #ffc400;
         color: #bbbbbb;

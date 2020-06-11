@@ -31,7 +31,7 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
             css={css`
                 ${mainTemplateTextStyles}
                 background-color: #252525;
-                > img {
+                .gatsby-image-wrapper {
                     width: 100%;
                 }
                 div.gatsby-image-wrapper  {
@@ -47,7 +47,7 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
                     alt={openerImage?.alt as string}
                 />
             ) : (
-                <div>
+                <div className='gatsby-image-wrapper'>
                     <img
                         src={openerImage?.source as string}
                         alt={openerImage?.alt as string}

@@ -138,7 +138,6 @@ const menuStyles = css`
         border: 1px solid #222;
         border-radius: 0;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-        background-clip: padding-box;
     }
     ul.menu > li.onHover ul {
         opacity: 1;

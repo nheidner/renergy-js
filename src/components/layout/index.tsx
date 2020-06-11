@@ -60,15 +60,15 @@ const Layout: FC<{ pageTitle: makeOptional<string> }> = ({
                 {/* <link
                     rel='apple-touch-icon'
                     sizes='180x180'
-                    href={`${withPrefix('/')}metaSite/apple-touch-icon.png`}
-                />
+                    href={`${withPrefix('/')}meta_site/logo_bildmarke.png`}
+                /> */}
                 <link
                     rel='icon'
                     type='image/png'
                     sizes='32x32'
-                    href={`${withPrefix('/')}metaSite/favicon-32x32.png`}
+                    href={`${withPrefix('/')}meta_site/logo_bildmarke.png`}
                 />
-                <link
+                {/*<link
                     rel='icon'
                     type='image/png'
                     sizes='16x16'

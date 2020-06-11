@@ -111,17 +111,17 @@ contact:
   image:
     source: /img/foto.jpg
     alt: Renergy
-  office-germany:
+  office_germany:
     heading: Office Germany
     address:
       - line: Potsdamer Platz 7, 10785 Berlin
-  get-in-touch:
+  get_in_touch:
     heading: Get in Touch
     telephone: Tel. +49 1525 424 14 59
     email:
       text: info@renergy.berln
       href: info@renergy.berln
-  office-uae:
+  office_uae:
     heading: Office Uae
     address:
       - line: Burj Khalifa Street, Opal Tower 605,

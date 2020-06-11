@@ -8,7 +8,12 @@ import { ContactQuery } from '../../gatsby-graphql';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import returnLocalizedString from '../utils/returnLocalizedString';
-import { Wrapper, mainTemplateTextStyles, Button } from '../utils/styles';
+import {
+    Wrapper,
+    mainTemplateTextStyles,
+    Button,
+    mainTextStyles,
+} from '../utils/styles';
 import SectionHeading from '../components/SectionHeading';
 import { personImg } from '../utils/fragment';
 import Img, { FluidObject } from 'gatsby-image';
@@ -145,7 +150,6 @@ const Form: FC<{
                 ),
         }),
         onSubmit: (values) => {
-            console.log(encode({ 'form-name': 'Contact Form', ...values }));
             fetch('/', {
                 method: 'POST',
                 headers: {
@@ -167,7 +171,7 @@ const Form: FC<{
                     {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
                     {returnRedAsteriks()}
                 </label>
-                <input name='name' {...formik.getFieldProps('name')} />
+                <input {...formik.getFieldProps('name')} />
                 <div className='errorMessage'>
                     {formik.touched.name && formik.errors.name ? (
                         <span>{formik.errors.name}</span>
@@ -183,7 +187,7 @@ const Form: FC<{
                     )}
                     {returnRedAsteriks()}
                 </label>
-                <input name='email' {...formik.getFieldProps('email')} />
+                <input {...formik.getFieldProps('email')} />
                 <div className='errorMessage'>
                     {formik.touched.email && formik.errors.email ? (
                         <span>{formik.errors.email}</span>
@@ -199,7 +203,7 @@ const Form: FC<{
                     )}
                     {returnRedAsteriks()}
                 </label>
-                <input name='subject' {...formik.getFieldProps('subject')} />
+                <input {...formik.getFieldProps('subject')} />
                 <div className='errorMessage'>
                     {formik.touched.subject && formik.errors.subject ? (
                         <span>{formik.errors.subject}</span>
@@ -215,7 +219,7 @@ const Form: FC<{
                     )}
                     {returnRedAsteriks()}
                 </label>
-                <textarea name='message' {...formik.getFieldProps('message')} />
+                <textarea {...formik.getFieldProps('message')} />
                 <div className='errorMessage'>
                     {formik.touched.message && formik.errors.message ? (
                         <span>{formik.errors.message}</span>
@@ -245,7 +249,10 @@ export const ContactTemplate: FC<TIndexTemplate> = ({
     form,
     contact,
 }) => (
-    <Wrapper>
+    <Wrapper
+        css={css`
+            ${mainTextStyles}
+        `}>
         <h1
             css={css`
                 margin: 50px 0 50px;
@@ -395,7 +402,6 @@ export const ContactTemplate: FC<TIndexTemplate> = ({
 
 const Index: FC<{ data: ContactQuery }> = ({ data }) => {
     const { frontmatter } = data.markdownRemark || {};
-    console.log(data);
     return (
         <Layout pageTitle={frontmatter?.pageTitle}>
             <ContactTemplate

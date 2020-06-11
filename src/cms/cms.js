@@ -18,7 +18,6 @@ const OneColumnPagePreviewEn = ({ entry }) => {
 
 const IndexTemplatePreviewEn = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
-    console.log(data);
     return (
         <IndexTemplate
             openers={data.openers}
@@ -31,23 +30,28 @@ const IndexTemplatePreviewEn = ({ entry }) => {
 
 const ContactPreviewEn = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
-    console.log(data);
     return (
-        // <ContactTemplate
-        //     locale={data.locale}
-        //     heading={data.heading}
-        //     form={data.form}
-        //     contact={data.contact}
-        // />
-        <div></div>
+        <ContactTemplate
+            locale={data.locale}
+            heading={data.heading}
+            form={data.form}
+            contact={data.contact}
+        />
     );
 };
 
-CMS.registerPreviewTemplate('our-story', withEmotion(OneColumnPagePreviewEn));
-CMS.registerPreviewTemplate('one-column', withEmotion(OneColumnPagePreviewEn));
-CMS.registerPreviewTemplate('index', withEmotion(IndexTemplatePreviewEn));
-CMS.registerPreviewTemplate('contact_us', withEmotion(ContactPreviewEn));
+CMS.registerPreviewTemplate(
+    'our-story-en',
+    withEmotion(OneColumnPagePreviewEn)
+);
+CMS.registerPreviewTemplate(
+    'one-column-en',
+    withEmotion(OneColumnPagePreviewEn)
+);
+CMS.registerPreviewTemplate('index-en', withEmotion(IndexTemplatePreviewEn));
+CMS.registerPreviewTemplate('contact_us-en', withEmotion(ContactPreviewEn));
 
+// German
 const OneColumnPagePreviewDe = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
     return (
@@ -61,7 +65,6 @@ const OneColumnPagePreviewDe = ({ entry }) => {
 
 const IndexTemplatePreviewDe = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
-    console.log(data);
     return (
         <IndexTemplate
             openers={data.openers}
@@ -74,15 +77,13 @@ const IndexTemplatePreviewDe = ({ entry }) => {
 
 const ContactPreviewDe = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
-    console.log(data);
     return (
-        // <ContactTemplate
-        //     locale={data.locale}
-        //     heading={data.heading}
-        //     form={data.form}
-        //     contact={data.contact}
-        // />
-        <div></div>
+        <ContactTemplate
+            locale={data.locale}
+            heading={data.heading}
+            form={data.form}
+            contact={data.contact}
+        />
     );
 };
 

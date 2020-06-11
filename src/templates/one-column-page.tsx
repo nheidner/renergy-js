@@ -31,11 +31,12 @@ export const OneColumnPageTemplate: FC<TOneColumnPageTemplate> = ({
             css={css`
                 ${mainTemplateTextStyles}
                 background-color: #252525;
-                .gatsby-image-wrapper {
-                    width: 100%;
-                }
                 div.gatsby-image-wrapper  {
+                    width: 100%;
                     margin-bottom: 40px;
+                }
+                div.gatsby-image-wrapper img {
+                    width: 100%;
                 }
             `}>
             {openerImage?.source?.childImageSharp ? (

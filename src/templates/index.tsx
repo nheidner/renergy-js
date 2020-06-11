@@ -313,7 +313,6 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                         </div>
                     </Section>
                 ) : null}
-                {console.log('contact: ', contact)}
                 {contact ? (
                     <Section
                         css={css`

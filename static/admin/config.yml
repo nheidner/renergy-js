@@ -1,5 +1,5 @@
 backend:
-    name: github
+    name: git-gateway
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -605,12 +605,12 @@ collections:
                         widget: list
                         fields:
                             - {
-                            label: Summary,
-                            name: summary,
-                            widget: string,
-                            hint: 'Does not appear on website - for better orientation only',
-                            required: false,
-                        }
+                                  label: Summary,
+                                  name: summary,
+                                  widget: string,
+                                  hint: 'Does not appear on website - for better orientation only',
+                                  required: false,
+                              }
                             - label: 'Image'
                               name: 'image'
                               required: false

@@ -1,5 +1,5 @@
 backend:
-    name: git-gateway
+    name: github
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -47,8 +47,14 @@ collections:
                 - label: Openers
                   name: openers
                   widget: list
-                  summary: 'opener'
                   fields:
+                      - {
+                            label: Summary,
+                            name: summary,
+                            widget: string,
+                            hint: 'Does not appear on website - for better orientation only',
+                            required: false,
+                        }
                       - label: 'Opener Image'
                         name: 'image'
                         widget: object
@@ -118,6 +124,13 @@ collections:
                         name: clients-list
                         widget: list
                         fields:
+                            - {
+                                  label: Summary,
+                                  name: summary,
+                                  widget: string,
+                                  hint: 'Does not appear on website - for better orientation only',
+                                  required: false,
+                              }
                             - label: 'Image'
                               name: 'image'
                               widget: object
@@ -478,6 +491,13 @@ collections:
                   widget: list
                   summary: 'opener'
                   fields:
+                      - {
+                            label: Summary,
+                            name: summary,
+                            widget: string,
+                            hint: 'Does not appear on website - for better orientation only',
+                            required: false,
+                        }
                       - label: 'Opener Image'
                         name: 'image'
                         widget: object
@@ -584,6 +604,13 @@ collections:
                         required: false
                         widget: list
                         fields:
+                            - {
+                            label: Summary,
+                            name: summary,
+                            widget: string,
+                            hint: 'Does not appear on website - for better orientation only',
+                            required: false,
+                        }
                             - label: 'Image'
                               name: 'image'
                               required: false

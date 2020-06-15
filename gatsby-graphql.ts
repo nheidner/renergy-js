@@ -3391,7 +3391,7 @@ export type StringQueryOperatorInput = {
 export type FooterQueryVariables = {};
 
 
-export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'content'>> }>, de?: Maybe<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'content'>> }> };
+export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<{ form?: Maybe<Pick<MarkdownRemarkFrontmatterForm, 'topic' | 'heading' | 'description' | 'button'>> }> }>, de?: Maybe<{ frontmatter?: Maybe<{ form?: Maybe<Pick<MarkdownRemarkFrontmatterForm, 'topic' | 'heading' | 'description' | 'button'>> }> }> };
 
 export type Unnamed_1_QueryVariables = {};
 

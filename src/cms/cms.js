@@ -1,8 +1,9 @@
 import CMS from 'netlify-cms-app';
 import React from 'react';
-import { Template, OneColumnPageTemplate } from '../templates/one-column-page';
+import { OneColumnPageTemplate } from '../templates/one-column-page';
 import { IndexTemplate } from '../templates/index';
 import { ContactTemplate } from '../templates/contact';
+import { FooterTemplate } from '../components/layout/Footer';
 import withEmotion from './with-emotion';
 
 const OneColumnPagePreviewEn = ({ entry }) => {
@@ -40,6 +41,11 @@ const ContactPreviewEn = ({ entry }) => {
     );
 };
 
+const FooterPreviewEn = ({ entry }) => {
+    const data = entry.getIn(['data']).toJS();
+    return <FooterTemplate currentLocale={data.locale} form={data.form} />;
+};
+
 CMS.registerPreviewTemplate(
     'our-story-en',
     withEmotion(OneColumnPagePreviewEn)
@@ -50,6 +56,7 @@ CMS.registerPreviewTemplate(
 );
 CMS.registerPreviewTemplate('index-en', withEmotion(IndexTemplatePreviewEn));
 CMS.registerPreviewTemplate('contact_us-en', withEmotion(ContactPreviewEn));
+CMS.registerPreviewTemplate('footer_en', withEmotion(FooterPreviewEn));
 
 // German
 const OneColumnPagePreviewDe = ({ entry }) => {

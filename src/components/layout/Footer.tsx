@@ -237,15 +237,16 @@ const Form: FC<{
     );
 };
 
-const FooterTemplate: FC<TFooterTemplate & { currentLocale: string }> = ({
-    content,
-    currentLocale,
-}) => {
+export const FooterTemplate: FC<
+    TFooterTemplate & { currentLocale: string }
+> = ({ currentLocale, form }) => {
     return (
         <div
             css={css`
+                ${mainTextStyles}
+                ${mainTemplateTextStyles}
                 background-color: #151515;
-                height: 500px;
+                height: 200px;
             `}>
             {/* <Form
                 locale={currentLocale as string}
@@ -312,8 +313,12 @@ const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
                     }
                 ) {
                     frontmatter {
-                        title
-                        content
+                        form {
+                            topic
+                            heading
+                            description
+                            button
+                        }
                     }
                 }
                 de: markdownRemark(
@@ -323,8 +328,12 @@ const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
                     }
                 ) {
                     frontmatter {
-                        title
-                        content
+                        form {
+                            topic
+                            heading
+                            description
+                            button
+                        }
                     }
                 }
             }
@@ -333,7 +342,7 @@ const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
 
     return (
         <FooterTemplate
-            content={queryData[currentLocale]?.frontmatter?.content}
+            form={queryData[currentLocale]?.frontmatter?.form}
             currentLocale={currentLocale}
         />
     );

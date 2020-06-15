@@ -1,7 +1,6 @@
 ---
 locale: en
-title: Great coffee with a conscience
-content: Hello Footer in English
+templateKey: footer
 form:
   topic: "Get In Touch.   "
   heading: "Contact Form   "

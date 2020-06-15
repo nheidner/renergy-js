@@ -1,5 +1,5 @@
 backend:
-    name: github
+    name: git-gateway
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -395,7 +395,7 @@ collections:
                             - { label: Line, name: line, widget: string }
           - file: 'src/markdown/en/footer.md'
             label: 'Footer'
-            name: 'footer'
+            name: 'footer_en'
             fields:
                 - {
                       label: 'Locale',

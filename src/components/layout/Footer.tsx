@@ -15,7 +15,7 @@ const FooterTemplate: FC<TFooterTemplate> = ({ content }) => {
         <div
             css={css`
                 background-color: #151515;
-                height: 0px;
+                height: 500px;
             `}></div>
     );
 };

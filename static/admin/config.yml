@@ -1,5 +1,5 @@
 backend:
-    name: git-gateway
+    name: github
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -393,7 +393,29 @@ collections:
                         fields:
                             - { label: Heading, name: heading, widget: string }
                             - { label: Line, name: line, widget: string }
-
+          - file: 'src/markdown/en/footer.md'
+            label: 'Footer'
+            name: 'footer'
+            fields:
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'en',
+                  }
+                - label: 'Contact Form'
+                  name: form
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Topic, name: topic, widget: string }
+                      - { label: Heading, name: heading, widget: string }
+                      - {
+                            label: Description,
+                            name: description,
+                            widget: string,
+                        }
+                      - { label: 'Button Text', name: button, widget: string }
     - name: 'one-column-en'
       label: 'One Column Pages (En)'
       label_singular: Page

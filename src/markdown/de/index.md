@@ -22,7 +22,6 @@ openers:
       alt: " energieeffizient und umweltfreundlich"
     heading:
       text: |-
-        \
         Energieeffizient &
 
         Umweltfreundlich
@@ -35,10 +34,11 @@ openers:
       alt: Eine einzigartige Lösung zur Energierückgewinnung
     heading:
       text: |-
-        \
-        Eine einzigartige Lösung 
+        Eine einzigartige 
 
-        zur Energierückgewinnung
+        Lösung zur 
+
+        Energiegewinnung
       href: /
     link:
       text: Find Out More

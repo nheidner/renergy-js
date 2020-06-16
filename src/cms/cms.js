@@ -43,7 +43,17 @@ const ContactPreviewEn = ({ entry }) => {
 
 const FooterPreviewEn = ({ entry }) => {
     const data = entry.getIn(['data']).toJS();
-    return <FooterTemplate currentLocale={data.locale} form={data.form} />;
+    return (
+        <FooterTemplate
+            currentLocale={data.locale}
+            form={data.form}
+            office_germany={data.office_germany}
+            get_in_touch={data.get_in_touch}
+            office_uae={data.office_uae}
+            links={data.links}
+            heading={data.heading}
+        />
+    );
 };
 
 CMS.registerPreviewTemplate(
@@ -94,6 +104,21 @@ const ContactPreviewDe = ({ entry }) => {
     );
 };
 
+const FooterPreviewDe = ({ entry }) => {
+    const data = entry.getIn(['data']).toJS();
+    return (
+        <FooterTemplate
+            currentLocale={data.locale}
+            form={data.form}
+            office_germany={data.office_germany}
+            get_in_touch={data.get_in_touch}
+            office_uae={data.office_uae}
+            links={data.links}
+            heading={data.heading}
+        />
+    );
+};
+
 CMS.registerPreviewTemplate(
     'our-story-de',
     withEmotion(OneColumnPagePreviewDe)
@@ -104,3 +129,4 @@ CMS.registerPreviewTemplate(
 );
 CMS.registerPreviewTemplate('pages-de', withEmotion(IndexTemplatePreviewDe));
 CMS.registerPreviewTemplate('contact_us-de', withEmotion(ContactPreviewDe));
+CMS.registerPreviewTemplate('footer_de', withEmotion(FooterPreviewDe));

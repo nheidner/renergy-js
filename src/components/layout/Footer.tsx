@@ -9,7 +9,6 @@ import * as Yup from 'yup';
 import returnLocalizedString from '../../utils/returnLocalizedString';
 import theme from '../../utils/theme';
 import Link from '../Link';
-import useLocales from '../../utils/useLocales';
 import {
     Wrapper,
     mainTemplateTextStyles,

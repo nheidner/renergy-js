@@ -99,5 +99,5 @@ CMS.registerPreviewTemplate(
     'one-column-de',
     withEmotion(OneColumnPagePreviewDe)
 );
-CMS.registerPreviewTemplate('pages-de', withEmotion(IndexTemplatePreviewDe));
+CMS.registerPreviewTemplate('index_de', withEmotion(IndexTemplatePreviewDe));
 CMS.registerPreviewTemplate('footer_de', withEmotion(FooterPreviewDe));

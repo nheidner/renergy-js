@@ -1,5 +1,5 @@
 backend:
-    name: git-gateway
+    name: github
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -121,7 +121,7 @@ collections:
                   fields:
                       - { label: Topic, name: topic, widget: string }
                       - label: List Of Clients
-                        name: clients-list
+                        name: clientsList
                         widget: list
                         fields:
                             - {
@@ -236,91 +236,6 @@ collections:
                               }
                             - { label: 'Alt', name: 'alt', widget: 'string' }
                       - { label: Role, name: role, widget: string }
-          - file: 'src/markdown/en/contact-us.md'
-            label: 'Contact Us'
-            name: 'contact_us-en'
-            fields:
-                - {
-                      label: 'TemplateKey',
-                      name: 'templateKey',
-                      widget: 'hidden',
-                      default: 'contact',
-                  }
-                - {
-                      label: 'Locale',
-                      name: 'locale',
-                      widget: 'hidden',
-                      default: 'en',
-                  }
-                - {
-                      label: 'Page Title',
-                      name: 'pageTitle',
-                      widget: 'string',
-                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
-                  }
-                - {
-                      label: 'Path',
-                      name: 'path',
-                      widget: 'string',
-                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
-                  }
-                - { label: 'Page Heading', name: heading, widget: string }
-                - label: 'Contact Form'
-                  name: form
-                  widget: object
-                  collapsed: true
-                  fields:
-                      - { label: Topic, name: topic, widget: string }
-                      - { label: Heading, name: heading, widget: string }
-                      - {
-                            label: Description,
-                            name: description,
-                            widget: string,
-                        }
-                      - { label: 'Button Text', name: button, widget: string }
-                - label: Contact
-                  name: contact
-                  widget: object
-                  collapsed: true
-                  fields:
-                      - { label: Topic, name: topic, widget: string }
-                      - { label: Heading, name: heading, widget: string }
-                      - label: 'Image'
-                        name: 'image'
-                        widget: object
-                        collapsed: true
-                        fields:
-                            - {
-                                  label: 'Image Source',
-                                  name: 'source',
-                                  widget: 'image',
-                                  required: false,
-                              }
-                            - {
-                                  label: 'Alt',
-                                  name: 'alt',
-                                  widget: 'string',
-                                  required: false,
-                              }
-                      - { label: Role, name: role, widget: string }
-                      - label: Address
-                        name: address
-                        widget: object
-                        collapsed: false
-                        fields:
-                            - { label: Heading, name: heading, widget: string }
-                            - label: Address
-                              name: address
-                              widget: list
-                              fields:
-                                  - { label: Line, name: line, widget: string }
-                      - label: Telephone
-                        name: telephone
-                        widget: object
-                        collapsed: false
-                        fields:
-                            - { label: Heading, name: heading, widget: string }
-                            - { label: Line, name: line, widget: string }
 
           - file: 'src/markdown/en/footer.md'
             label: 'Footer'
@@ -492,7 +407,7 @@ collections:
       files:
           - file: 'src/markdown/de/index.md'
             label: 'Home'
-            name: 'index'
+            name: 'index_de'
             fields:
                 - {
                       label: 'TemplateKey',
@@ -632,7 +547,7 @@ collections:
                             required: false,
                         }
                       - label: List Of Clients
-                        name: clients-list
+                        name: clientsList
                         required: false
                         widget: list
                         fields:
@@ -753,91 +668,6 @@ collections:
                               }
                             - { label: 'Alt', name: 'alt', widget: 'string' }
                       - { label: Role, name: role, widget: string }
-          - file: 'src/markdown/de/contact-us.md'
-            label: 'Contact Us'
-            name: 'contact_us-de'
-            fields:
-                - {
-                      label: 'TemplateKey',
-                      name: 'templateKey',
-                      widget: 'hidden',
-                      default: 'contact',
-                  }
-                - {
-                      label: 'Locale',
-                      name: 'locale',
-                      widget: 'hidden',
-                      default: 'de',
-                  }
-                - {
-                      label: 'Page Title',
-                      name: 'pageTitle',
-                      widget: 'string',
-                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
-                  }
-                - {
-                      label: 'Path',
-                      name: 'path',
-                      widget: 'string',
-                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
-                  }
-                - { label: 'Page Heading', name: heading, widget: string }
-                - label: 'Contact Form'
-                  name: form
-                  widget: object
-                  collapsed: true
-                  fields:
-                      - { label: Topic, name: topic, widget: string }
-                      - { label: Heading, name: heading, widget: string }
-                      - {
-                            label: Description,
-                            name: description,
-                            widget: string,
-                        }
-                      - { label: 'Button Text', name: button, widget: string }
-                - label: Contact
-                  name: contact
-                  widget: object
-                  collapsed: true
-                  fields:
-                      - { label: Topic, name: topic, widget: string }
-                      - { label: Heading, name: heading, widget: string }
-                      - label: 'Image'
-                        name: 'image'
-                        widget: object
-                        collapsed: true
-                        fields:
-                            - {
-                                  label: 'Image Source',
-                                  name: 'source',
-                                  widget: 'image',
-                                  required: false,
-                              }
-                            - {
-                                  label: 'Alt',
-                                  name: 'alt',
-                                  widget: 'string',
-                                  required: false,
-                              }
-                      - { label: Role, name: role, widget: string }
-                      - label: Address
-                        name: address
-                        widget: object
-                        collapsed: false
-                        fields:
-                            - { label: Heading, name: heading, widget: string }
-                            - label: Address
-                              name: address
-                              widget: list
-                              fields:
-                                  - { label: Line, name: line, widget: string }
-                      - label: Telephone
-                        name: telephone
-                        widget: object
-                        collapsed: false
-                        fields:
-                            - { label: Heading, name: heading, widget: string }
-                            - { label: Line, name: line, widget: string }
 
           - file: 'src/markdown/de/footer.md'
             label: 'Footer'

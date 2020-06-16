@@ -3,9 +3,6 @@ templateKey: one-column-page
 locale: en
 pageTitle: Our Story
 path: /our-story
-openerImage:
-  source: ""
-  alt: ""
 content: >-
   # Our Story 
 

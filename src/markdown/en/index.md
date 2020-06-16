@@ -41,7 +41,7 @@ openers:
       text: "Find out more "
       href: /waste-to-energy/concept
 clients:
-  topic: Clients.
+  topic: Clients
   clientsList:
     - image:
         source: /img/item-8.png
@@ -83,12 +83,13 @@ clients:
         alt: GPM Engineering Technologie LTD
       link:
         href: /
+  clients-list: []
 contact:
-  topic: Contact.
-  heading: We Are Here to Meet You
+  topic: Contact
+  heading: Get in Touch
   image:
-    source: /img/foto.jpg
-    alt: Renergy
+    source: /img/mll20.jpg
+    alt: Waste
   office_germany:
     heading: Office Germany
     address:
@@ -109,8 +110,8 @@ contact:
     href: /
 content: Hello Index in English
 introducing:
-  topic: Introducing.
-  heading: Generation and Utilisation of Synthesis Gas from organic waste
+  topic: Introducing
+  heading: Generating and utilizing Synthesis Gas from Organic Waste
   text: The synthesis gas systems of the RENERGY SG Series represent a world-wide
     unique solution for energy recovery from organic waste of any kind. With the
     synthesis gas produced in the plants, generators are driven by gas engines
@@ -121,5 +122,5 @@ introducing:
     alt: RENERGY Synthesis Gas Plant
   link:
     text: "Find Out More "
-    href: /
+    href: /waste-to-energy/concept
 ---

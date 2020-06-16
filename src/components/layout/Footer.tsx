@@ -7,11 +7,15 @@ import { FooterQuery } from '../../../gatsby-graphql';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import returnLocalizedString from '../../utils/returnLocalizedString';
+import theme from '../../utils/theme';
+import Link from '../Link';
+import useLocales from '../../utils/useLocales';
 import {
     Wrapper,
     mainTemplateTextStyles,
     Button,
     mainTextStyles,
+    clearfix,
 } from '../../utils/styles';
 
 type TLocale = IFooterQuery[keyof IFooterQuery] & {
@@ -161,32 +165,37 @@ const Form: FC<{
     return (
         <form onSubmit={formik.handleSubmit} name='Contact Form' {...props}>
             <div className='description'>{description}</div>
-            <div className='name'>
-                <label htmlFor='name'>
-                    {returnLocalizedString({ en: 'Name', de: 'Name' }, locale)}
-                    {returnRedAsteriks()}
-                </label>
-                <input {...formik.getFieldProps('name')} />
-                <div className='errorMessage'>
-                    {formik.touched.name && formik.errors.name ? (
-                        <span>{formik.errors.name}</span>
-                    ) : null}
+            <div className='nameEmail'>
+                <div className='name'>
+                    <label htmlFor='name'>
+                        {returnLocalizedString(
+                            { en: 'Name', de: 'Name' },
+                            locale
+                        )}
+                        {returnRedAsteriks()}
+                    </label>
+                    <input {...formik.getFieldProps('name')} />
+                    <div className='errorMessage'>
+                        {formik.touched.name && formik.errors.name ? (
+                            <span>{formik.errors.name}</span>
+                        ) : null}
+                    </div>
                 </div>
-            </div>
 
-            <div className='email'>
-                <label htmlFor='email'>
-                    {returnLocalizedString(
-                        { en: 'Email', de: 'E-Mail' },
-                        locale
-                    )}
-                    {returnRedAsteriks()}
-                </label>
-                <input {...formik.getFieldProps('email')} />
-                <div className='errorMessage'>
-                    {formik.touched.email && formik.errors.email ? (
-                        <span>{formik.errors.email}</span>
-                    ) : null}
+                <div className='email'>
+                    <label htmlFor='email'>
+                        {returnLocalizedString(
+                            { en: 'Email', de: 'E-Mail' },
+                            locale
+                        )}
+                        {returnRedAsteriks()}
+                    </label>
+                    <input {...formik.getFieldProps('email')} />
+                    <div className='errorMessage'>
+                        {formik.touched.email && formik.errors.email ? (
+                            <span>{formik.errors.email}</span>
+                        ) : null}
+                    </div>
                 </div>
             </div>
 
@@ -222,94 +231,270 @@ const Form: FC<{
                 </div>
             </div>
 
-            <SubmitButton type='submit'>{buttonText}</SubmitButton>
-            {submitted ? (
-                <div>
-                    {returnLocalizedString(
-                        {
-                            en: 'Your message was sent',
-                            de: 'Deine Nachricht wurde gesendet',
-                        },
-                        locale
-                    )}
-                </div>
-            ) : null}
+            <div className='submitButton'>
+                <SubmitButton type='submit'>{buttonText}</SubmitButton>
+                {submitted ? (
+                    <div>
+                        {returnLocalizedString(
+                            {
+                                en: 'Your message was sent',
+                                de: 'Deine Nachricht wurde gesendet',
+                            },
+                            locale
+                        )}
+                    </div>
+                ) : null}
+            </div>
         </form>
     );
 };
 
+const FlexItem = styled.div``;
+
 export const FooterTemplate: FC<
-    TFooterTemplate & { currentLocale: string }
-> = ({ currentLocale, form }) => {
+    { currentLocale: string } & TFooterTemplate
+> = ({ currentLocale, form, office_germany, office_uae, get_in_touch }) => {
+    const { primary: primaryLocale } = useLocales();
+    console.log(form);
+
     return (
-        <div
+        <footer
+            id='footer'
             css={css`
                 width: 100%;
+                border-top: 1px solid rgba(255, 255, 255, 0.05);
                 background-color: #151515;
             `}>
             <Wrapper
                 css={css`
                     ${mainTextStyles}
                     ${mainTemplateTextStyles}
+                    margin: 0 auto;
+                    padding: 50px 0 50px;
+                    max-width: 900px;
+
                     background-color: #151515;
                     margin: 0 auto;
                 `}>
-                <Form
-                    locale={currentLocale as string}
-                    description={form?.description as string}
-                    buttonText={form?.button as string}
+                <h1
                     css={css`
-                        > div {
-                            width: 100%;
-                            margin-bottom: 12px;
+                        color: #bbb;
+                        font-size: 40px;
+                        margin-top: 0;
+                    `}>
+                    Contact Us
+                </h1>
+                <div
+                    css={css`
+                        @media (min-width: ${theme.breakpoints[0]}px) {
+                            display: flex;
+                            flex-wrap: nowrap;
+                            justify-content: space-between;
                         }
+                    `}>
+                    <FlexItem
+                        css={css`
+                            @media (min-width: ${theme.breakpoints[0]}px) {
+                                width: 60%;
+                            }
+                        `}>
+                        <Form
+                            locale={currentLocale as string}
+                            description={form?.description as string}
+                            buttonText={form?.button as string}
+                            css={css`
+                                div {
+                                    width: 100%;
+                                    margin-bottom: 10px;
+                                }
 
-                        div.description {
-                            font-size: 13px;
-                        }
-                        div.name {
-                        }
-                        div.email {
-                        }
-                        div.subject {
-                        }
-                        div.message textarea {
-                            height: 80px;
-                        }
-                        > div label {
-                            padding-bottom: 6px;
-                        }
-                        > div > input,
-                        textarea {
-                            width: calc(100% - 30px);
-                            display: block;
-                            padding: 11px 15px;
-                            font-size: 14px;
-                            line-height: 1.72;
-                            color: #bbbbbb;
-                            background-color: rgba(255, 255, 255, 0.05);
-                            border: 1px solid rgba(255, 255, 255, 0.01);
-                        }
-                        > div div.errorMessage {
-                            color: #a4a4a4;
-                            height: 23px;
-                        }
-                    `}
-                />
+                                div.description {
+                                    font-size: 13px;
+                                }
+                                div.nameEmail {
+                                    display: flex;
+                                    flex-wrap: nowrap;
+                                    justify-content: space-between;
+                                    margin-bottom: 0;
+                                }
+                                div.nameEmail > div {
+                                    width: 45%;
+                                }
+                                div.name {
+                                }
+                                div.email {
+                                }
+                                div.subject {
+                                }
+                                @media (min-width: ${theme.breakpoints[0]}px) {
+                                    div.submitButton {
+                                        text-align: right;
+                                    }
+                                }
+
+                                div.message textarea {
+                                    height: 80px;
+                                }
+                                > div label {
+                                    padding-bottom: 6px;
+                                }
+                                div > input,
+                                textarea {
+                                    width: calc(100% - 30px);
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    display: block;
+                                    padding: 9px 12px;
+                                    font-size: 14px;
+                                    line-height: 1.72;
+                                    color: #bbbbbb;
+                                    background-color: rgba(255, 255, 255, 0.05);
+                                    border: 1px solid rgba(255, 255, 255, 0.01);
+                                }
+                                > div div.errorMessage {
+                                    color: #a4a4a4;
+                                    height: 23px;
+                                }
+                            `}
+                        />
+                    </FlexItem>
+                    <FlexItem
+                        css={css`
+                            position: relative;
+                            margin-top: 50px;
+                            @media (min-width: ${theme.breakpoints[0]}px) {
+                                margin-top: 0;
+                                padding-left: 50px;
+                            }
+                            section {
+                                margin-bottom: 48px;
+                            }
+                            section h5 {
+                                color: #888888;
+                                font-size: 11px;
+                                font-family: 'IBM Plex Sans Condensed',
+                                    sans-serif;
+                                font-weight: 400;
+                                text-transform: uppercase;
+                                margin: 0 0 6px;
+                            }
+                            section p {
+                                margin: 0 0 2px;
+                            }
+                            section a {
+                                border-bottom: 1px dotted #ffc400;
+                                color: #bbb;
+                                text-decoration: none;
+                            }
+                        `}>
+                        <section>
+                            <h5>{office_germany?.heading}</h5>
+                            {office_germany?.address?.map(
+                                (addressLine, index) => {
+                                    return (
+                                        <p key={index}>{addressLine?.line}</p>
+                                    );
+                                }
+                            )}
+                        </section>
+                        <section>
+                            <h5>{get_in_touch?.heading}</h5>
+                            <p>{get_in_touch?.telephone}</p>
+                            <p>
+                                <Link to={get_in_touch?.email?.href as string}>
+                                    {get_in_touch?.email?.text}
+                                </Link>
+                            </p>
+                        </section>
+                        <section>
+                            <h5>{office_uae?.heading}</h5>
+                            {office_uae?.address?.map((addressLine, index) => {
+                                return <p key={index}>{addressLine?.line}</p>;
+                            })}
+                        </section>
+                        <div
+                            css={css`
+                                min-width: 300px;
+                                @media (min-width: ${theme.breakpoints[0]}px) {
+                                    position: absolute;
+                                    right: 0;
+                                    bottom: 0;
+                                }
+                            `}>
+                            <ul
+                                css={css`
+                                    list-style: none;
+                                    li {
+                                        float: right;
+                                        margin-left: 25px;
+                                        position: relative;
+                                    }
+                                    li:first-of-type::before {
+                                        content: '·';
+                                        color: #fff;
+                                        font-weight: bold;
+                                        position: absolute;
+                                        left: -15px;
+                                        top: 0;
+                                    }
+                                    a {
+                                        text-decoration: none;
+                                        border-bottom: none;
+                                        text-transform: uppercase;
+                                        transition: color, 200ms;
+                                    }
+
+                                    a:hover {
+                                        color: #888;
+                                    }
+                                `}>
+                                <li>
+                                    <Link
+                                        to={`${
+                                            currentLocale === primaryLocale
+                                                ? ''
+                                                : '/' + currentLocale
+                                        }/imprint`}>
+                                        {returnLocalizedString(
+                                            {
+                                                en: 'Imprint',
+                                                de: 'Impressum',
+                                            },
+                                            currentLocale
+                                        )}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        to={`${
+                                            currentLocale === primaryLocale
+                                                ? ''
+                                                : '/' + currentLocale
+                                        }/privacy`}>
+                                        {returnLocalizedString(
+                                            {
+                                                en: 'Privacy Policy',
+                                                de: 'Datenschutz',
+                                            },
+                                            currentLocale
+                                        )}
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
+                    </FlexItem>
+                </div>
             </Wrapper>
-        </div>
+        </footer>
     );
 };
-
-interface IFooterProps {
-    currentLocale: string;
-}
 
 interface IFooterQuery extends FooterQuery {
     [locale: string]: FooterQuery[keyof FooterQuery];
 }
 
-const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
+const Footer: FC<{
+    currentLocale: string;
+}> = ({ currentLocale }): ReactElement => {
     const queryData = useStaticQuery<IFooterQuery>(
         graphql`
             query Footer {
@@ -326,6 +511,26 @@ const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
                             description
                             button
                         }
+                        office_germany {
+                            heading
+                            address {
+                                line
+                            }
+                        }
+                        get_in_touch {
+                            heading
+                            telephone
+                            email {
+                                text
+                                href
+                            }
+                        }
+                        office_uae {
+                            heading
+                            address {
+                                line
+                            }
+                        }
                     }
                 }
                 de: markdownRemark(
@@ -341,15 +546,37 @@ const Footer: FC<IFooterProps> = ({ currentLocale }): ReactElement => {
                             description
                             button
                         }
+                        office_germany {
+                            heading
+                            address {
+                                line
+                            }
+                        }
+                        get_in_touch {
+                            heading
+                            telephone
+                            email {
+                                text
+                                href
+                            }
+                        }
+                        office_uae {
+                            heading
+                            address {
+                                line
+                            }
+                        }
                     }
                 }
             }
         `
     );
-
     return (
         <FooterTemplate
             form={queryData[currentLocale]?.frontmatter?.form}
+            office_germany={queryData['en']?.frontmatter?.office_germany}
+            get_in_touch={queryData['en']?.frontmatter?.get_in_touch}
+            office_uae={queryData['en']?.frontmatter?.office_uae}
             currentLocale={currentLocale}
         />
     );

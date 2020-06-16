@@ -1,5 +1,5 @@
 backend:
-    name: git-gateway
+    name: github
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -393,6 +393,7 @@ collections:
                         fields:
                             - { label: Heading, name: heading, widget: string }
                             - { label: Line, name: line, widget: string }
+
           - file: 'src/markdown/en/footer.md'
             label: 'Footer'
             name: 'footer_en'
@@ -403,19 +404,92 @@ collections:
                       widget: 'hidden',
                       default: 'en',
                   }
+                - { label: Heading, name: heading, widget: string }
                 - label: 'Contact Form'
                   name: form
                   widget: object
                   collapsed: true
                   fields:
-                      - { label: Topic, name: topic, widget: string }
-                      - { label: Heading, name: heading, widget: string }
                       - {
                             label: Description,
                             name: description,
                             widget: string,
                         }
+                      - label: Labels
+                        name: labels
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Name Label',
+                                  name: name_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Email Label',
+                                  name: email_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Subject Label',
+                                  name: subject_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Message Label',
+                                  name: message_label,
+                                  widget: string,
+                              }
                       - { label: 'Button Text', name: button, widget: string }
+                - label: Office Germany
+                  name: office_germany
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - label: Address
+                        name: address
+                        widget: list
+                        fields:
+                            - { label: Line, name: line, widget: string }
+                - label: Get In Touch
+                  name: get_in_touch
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - { label: Telephone, name: telephone, widget: string }
+                      - label: 'Email'
+                        name: 'email'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - { label: 'Text', name: 'text', widget: 'string' }
+                            - {
+                                  label: 'Email Address',
+                                  name: 'href',
+                                  widget: 'string',
+                              }
+                - label: Office UAE
+                  name: office_uae
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - label: Address
+                        name: address
+                        widget: list
+                        fields:
+                            - { label: Line, name: line, widget: string }
+                - label: Links
+                  label_singular: Link
+                  name: links
+                  widget: list
+                  collapsed: true
+                  fields:
+                      - { label: 'Text', name: 'text', widget: 'string' }
+                      - { label: 'Href', name: 'href', widget: 'string' }
+
     - name: 'one-column-en'
       label: 'One Column Pages (En)'
       label_singular: Page
@@ -963,6 +1037,102 @@ collections:
                         fields:
                             - { label: Heading, name: heading, widget: string }
                             - { label: Line, name: line, widget: string }
+
+          - file: 'src/markdown/de/footer.md'
+            label: 'Footer'
+            name: 'footer_de'
+            fields:
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'de',
+                  }
+                - { label: Heading, name: heading, widget: string }
+                - label: 'Contact Form'
+                  name: form
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Description,
+                            name: description,
+                            widget: string,
+                        }
+                      - label: Labels
+                        name: labels
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Name Label',
+                                  name: name_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Email Label',
+                                  name: email_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Subject Label',
+                                  name: subject_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Message Label',
+                                  name: message_label,
+                                  widget: string,
+                              }
+                      - { label: 'Button Text', name: button, widget: string }
+                - label: Office Germany
+                  name: office_germany
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - label: Address
+                        name: address
+                        widget: list
+                        fields:
+                            - { label: Line, name: line, widget: string }
+                - label: Get In Touch
+                  name: get_in_touch
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - { label: Telephone, name: telephone, widget: string }
+                      - label: 'Email'
+                        name: 'email'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - { label: 'Text', name: 'text', widget: 'string' }
+                            - {
+                                  label: 'Email Address',
+                                  name: 'href',
+                                  widget: 'string',
+                              }
+                - label: Office UAE
+                  name: office_uae
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - label: Address
+                        name: address
+                        widget: list
+                        fields:
+                            - { label: Line, name: line, widget: string }
+                - label: Links
+                  label_singular: Link
+                  name: links
+                  widget: list
+                  collapsed: true
+                  fields:
+                      - { label: 'Text', name: 'text', widget: 'string' }
+                      - { label: 'Href', name: 'href', widget: 'string' }
 
     - name: 'one-column-de'
       label: 'One Column Pages (De)'

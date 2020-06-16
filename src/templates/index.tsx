@@ -93,45 +93,61 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                             <div
                                 css={css`
                                     position: absolute;
-                                    top: 5%;
-                                    left: 5%;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
                                     text-align: left;
                                 `}>
-                                <Link
-                                    to={opener?.heading?.href as string}
+                                <div
                                     css={css`
-                                        font-size: 25px;
-
-                                        text-decoration: none;
-                                        @media (min-width: 380px) {
-                                            font-size: 32px;
-                                        }
-                                        @media (min-width: 500px) {
-                                            font-size: 37px;
-                                        }
-                                        @media (min-width: 700px) {
-                                            font-size: 55px;
-                                        }
-                                        @media (min-width: ${theme
-                                                .breakpoints[1]}px) {
-                                            font-size: 75px;
-                                        }
-                                        line-height: 120%;
-                                        color: #fff;
-
-                                        p {
-                                            line-height: 12%;
-                                        }
+                                        padding: 0 24px 0;
+                                        margin: 0 auto;
                                     `}>
-                                    <Content
-                                        markdown={
-                                            opener?.heading?.text as string
-                                        }
-                                    />
-                                </Link>
-                                <Button to={opener?.link?.href as string}>
-                                    {opener?.link?.text}
-                                </Button>
+                                    <div
+                                        css={css`
+                                            max-width: calc(1300px - 48px);
+                                            margin: 2.5% auto 0;
+                                        `}>
+                                        <Link
+                                            to={opener?.heading?.href as string}
+                                            css={css`
+                                                font-size: 25px;
+                                                text-decoration: none;
+                                                display: block;
+                                                margin-bottom: 4%;
+                                                @media (min-width: 380px) {
+                                                    font-size: 32px;
+                                                }
+                                                @media (min-width: 500px) {
+                                                    font-size: 37px;
+                                                }
+                                                @media (min-width: 700px) {
+                                                    font-size: 55px;
+                                                }
+                                                @media (min-width: ${theme
+                                                        .breakpoints[1]}px) {
+                                                    font-size: 85px;
+                                                }
+                                                color: #fff;
+
+                                                p {
+                                                    margin: 0;
+                                                    line-height: 1.2;
+                                                }
+                                            `}>
+                                            <Content
+                                                markdown={
+                                                    opener?.heading
+                                                        ?.text as string
+                                                }
+                                            />
+                                        </Link>
+                                        <Button
+                                            to={opener?.link?.href as string}>
+                                            {opener?.link?.text}
+                                        </Button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     );

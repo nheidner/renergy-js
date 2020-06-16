@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
+import styled from '@emotion/styled';
 import React, { FC, ReactElement, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { FooterQuery } from '../../../gatsby-graphql';
@@ -243,53 +244,59 @@ export const FooterTemplate: FC<
     return (
         <div
             css={css`
-                ${mainTextStyles}
-                ${mainTemplateTextStyles}
+                width: 100%;
                 background-color: #151515;
-                height: 200px;
             `}>
-            {/* <Form
-                locale={currentLocale as string}
-                description={form?.description as string}
-                buttonText={form?.button as string}
+            <Wrapper
                 css={css`
-                    > div {
-                        width: 100%;
-                        margin-bottom: 12px;
-                    }
+                    ${mainTextStyles}
+                    ${mainTemplateTextStyles}
+                    background-color: #151515;
+                    margin: 0 auto;
+                `}>
+                <Form
+                    locale={currentLocale as string}
+                    description={form?.description as string}
+                    buttonText={form?.button as string}
+                    css={css`
+                        > div {
+                            width: 100%;
+                            margin-bottom: 12px;
+                        }
 
-                    div.description {
-                        font-size: 13px;
-                    }
-                    div.name {
-                    }
-                    div.email {
-                    }
-                    div.subject {
-                    }
-                    div.message textarea {
-                        height: 80px;
-                    }
-                    > div label {
-                        padding-bottom: 6px;
-                    }
-                    > div > input,
-                    textarea {
-                        width: calc(100% - 30px);
-                        display: block;
-                        padding: 11px 15px;
-                        font-size: 14px;
-                        line-height: 1.72;
-                        color: #bbbbbb;
-                        background-color: rgba(255, 255, 255, 0.05);
-                        border: 1px solid rgba(255, 255, 255, 0.01);
-                    }
-                    > div div.errorMessage {
-                        color: #a4a4a4;
-                        height: 23px;
-                    }
-                `}
-            /> */}
+                        div.description {
+                            font-size: 13px;
+                        }
+                        div.name {
+                        }
+                        div.email {
+                        }
+                        div.subject {
+                        }
+                        div.message textarea {
+                            height: 80px;
+                        }
+                        > div label {
+                            padding-bottom: 6px;
+                        }
+                        > div > input,
+                        textarea {
+                            width: calc(100% - 30px);
+                            display: block;
+                            padding: 11px 15px;
+                            font-size: 14px;
+                            line-height: 1.72;
+                            color: #bbbbbb;
+                            background-color: rgba(255, 255, 255, 0.05);
+                            border: 1px solid rgba(255, 255, 255, 0.01);
+                        }
+                        > div div.errorMessage {
+                            color: #a4a4a4;
+                            height: 23px;
+                        }
+                    `}
+                />
+            </Wrapper>
         </div>
     );
 };

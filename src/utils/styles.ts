@@ -12,10 +12,8 @@ export const clearfix = css`
 export const Wrapper = styled.div`
     width: calc(100% - 48px);
     padding: 0 24px;
-    margin: auto;
-    @media (min-width: ${theme.breakpoints[2]}px) {
-        width: calc(${theme.breakpoints[2]}px - 2 * ${theme.margins.margin1});
-    }
+    margin: 0 auto;
+    max-width: calc(${theme.breakpoints[2]}px - 2 * ${theme.margins.margin1});
 `;
 
 export const Button = styled(Link)`

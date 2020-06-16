@@ -5,7 +5,7 @@ pageTitle: Our Story
 path: /our-story
 openerImage:
   source: ""
-  alt: Concept
+  alt: ""
 content: >-
   # Our Story 
 

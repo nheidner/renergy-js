@@ -3521,7 +3521,12 @@ export type StringQueryOperatorInput = {
 export type FooterQueryVariables = {};
 
 
-export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<{ form?: Maybe<Pick<MarkdownRemarkFrontmatterForm, 'topic' | 'heading' | 'description' | 'button'>>, office_germany?: Maybe<(
+export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'heading'>
+      & { form?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterForm, 'description' | 'button'>
+        & { labels?: Maybe<Pick<MarkdownRemarkFrontmatterFormLabels, 'name_label' | 'email_label' | 'subject_label' | 'message_label'>> }
+      )>, office_germany?: Maybe<(
         Pick<MarkdownRemarkFrontmatterOffice_Germany, 'heading'>
         & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_GermanyAddress, 'line'>>>> }
       )>, get_in_touch?: Maybe<(
@@ -3530,7 +3535,13 @@ export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<{ form?: Maybe<Pick
       )>, office_uae?: Maybe<(
         Pick<MarkdownRemarkFrontmatterOffice_Uae, 'heading'>
         & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_UaeAddress, 'line'>>>> }
-      )> }> }>, de?: Maybe<{ frontmatter?: Maybe<{ form?: Maybe<Pick<MarkdownRemarkFrontmatterForm, 'topic' | 'heading' | 'description' | 'button'>>, office_germany?: Maybe<(
+      )>, links?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterLinks, 'text' | 'href'>>>> }
+    )> }>, de?: Maybe<{ frontmatter?: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'heading'>
+      & { form?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterForm, 'description' | 'button'>
+        & { labels?: Maybe<Pick<MarkdownRemarkFrontmatterFormLabels, 'name_label' | 'email_label' | 'subject_label' | 'message_label'>> }
+      )>, office_germany?: Maybe<(
         Pick<MarkdownRemarkFrontmatterOffice_Germany, 'heading'>
         & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_GermanyAddress, 'line'>>>> }
       )>, get_in_touch?: Maybe<(
@@ -3539,7 +3550,8 @@ export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<{ form?: Maybe<Pick
       )>, office_uae?: Maybe<(
         Pick<MarkdownRemarkFrontmatterOffice_Uae, 'heading'>
         & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_UaeAddress, 'line'>>>> }
-      )> }> }> };
+      )>, links?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterLinks, 'text' | 'href'>>>> }
+    )> }> };
 
 export type Unnamed_1_QueryVariables = {};
 

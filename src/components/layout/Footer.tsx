@@ -15,7 +15,6 @@ import {
     mainTemplateTextStyles,
     Button,
     mainTextStyles,
-    clearfix,
 } from '../../utils/styles';
 
 type TLocale = IFooterQuery[keyof IFooterQuery] & {
@@ -51,12 +50,21 @@ const returnRedAsteriks = () => (
         *
     </span>
 );
+
+interface ILabels {
+    subject_label: string;
+    name_label: string;
+    message_label: string;
+    email_label: string;
+}
+
 const Form: FC<{
     locale: string;
     description: string;
     buttonText: string;
+    labels: ILabels;
     [props: string]: any;
-}> = ({ locale, description, buttonText, ...props }) => {
+}> = ({ locale, description, buttonText, labels, ...props }) => {
     const [submitted, setSubmitted] = useState(false);
 
     const formik = useFormik({
@@ -168,10 +176,7 @@ const Form: FC<{
             <div className='nameEmail'>
                 <div className='name'>
                     <label htmlFor='name'>
-                        {returnLocalizedString(
-                            { en: 'Name', de: 'Name' },
-                            locale
-                        )}
+                        {labels.name_label}
                         {returnRedAsteriks()}
                     </label>
                     <input {...formik.getFieldProps('name')} />
@@ -184,10 +189,7 @@ const Form: FC<{
 
                 <div className='email'>
                     <label htmlFor='email'>
-                        {returnLocalizedString(
-                            { en: 'Email', de: 'E-Mail' },
-                            locale
-                        )}
+                        {labels.email_label}
                         {returnRedAsteriks()}
                     </label>
                     <input {...formik.getFieldProps('email')} />
@@ -201,10 +203,7 @@ const Form: FC<{
 
             <div className='subject'>
                 <label htmlFor='subject'>
-                    {returnLocalizedString(
-                        { en: 'Subject', de: 'Betreff' },
-                        locale
-                    )}
+                    {labels.subject_label}
                     {returnRedAsteriks()}
                 </label>
                 <input {...formik.getFieldProps('subject')} />
@@ -217,10 +216,7 @@ const Form: FC<{
 
             <div className='message'>
                 <label htmlFor='message'>
-                    {returnLocalizedString(
-                        { en: 'Message', de: 'Nachricht' },
-                        locale
-                    )}
+                    {labels.message_label}
                     {returnRedAsteriks()}
                 </label>
                 <textarea {...formik.getFieldProps('message')} />
@@ -253,8 +249,15 @@ const FlexItem = styled.div``;
 
 export const FooterTemplate: FC<
     { currentLocale: string } & TFooterTemplate
-> = ({ currentLocale, form, office_germany, office_uae, get_in_touch }) => {
-    const { primary: primaryLocale } = useLocales();
+> = ({
+    currentLocale,
+    form,
+    office_germany,
+    office_uae,
+    get_in_touch,
+    links,
+    heading,
+}) => {
     console.log(form);
 
     return (
@@ -282,7 +285,7 @@ export const FooterTemplate: FC<
                         font-size: 40px;
                         margin-top: 0;
                     `}>
-                    Contact Us
+                    {heading}
                 </h1>
                 <div
                     css={css`
@@ -302,6 +305,7 @@ export const FooterTemplate: FC<
                             locale={currentLocale as string}
                             description={form?.description as string}
                             buttonText={form?.button as string}
+                            labels={form?.labels as ILabels}
                             css={css`
                                 div {
                                     width: 100%;
@@ -428,8 +432,16 @@ export const FooterTemplate: FC<
                                         margin-left: 25px;
                                         position: relative;
                                     }
-                                    li:first-of-type::before {
+                                    li::before {
                                         content: '·';
+                                        color: #fff;
+                                        font-weight: bold;
+                                        position: absolute;
+                                        left: -14px;
+                                        top: 0;
+                                    }
+                                    li:last-of-type::before {
+                                        content: '';
                                         color: #fff;
                                         font-weight: bold;
                                         position: absolute;
@@ -447,38 +459,15 @@ export const FooterTemplate: FC<
                                         color: #888;
                                     }
                                 `}>
-                                <li>
-                                    <Link
-                                        to={`${
-                                            currentLocale === primaryLocale
-                                                ? ''
-                                                : '/' + currentLocale
-                                        }/imprint`}>
-                                        {returnLocalizedString(
-                                            {
-                                                en: 'Imprint',
-                                                de: 'Impressum',
-                                            },
-                                            currentLocale
-                                        )}
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        to={`${
-                                            currentLocale === primaryLocale
-                                                ? ''
-                                                : '/' + currentLocale
-                                        }/privacy`}>
-                                        {returnLocalizedString(
-                                            {
-                                                en: 'Privacy Policy',
-                                                de: 'Datenschutz',
-                                            },
-                                            currentLocale
-                                        )}
-                                    </Link>
-                                </li>
+                                {links?.map((linkItem, index) => {
+                                    return (
+                                        <li key={index}>
+                                            <Link to={linkItem?.href as string}>
+                                                {linkItem?.text}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     </FlexItem>
@@ -505,10 +494,15 @@ const Footer: FC<{
                     }
                 ) {
                     frontmatter {
+                        heading
                         form {
-                            topic
-                            heading
                             description
+                            labels {
+                                name_label
+                                email_label
+                                subject_label
+                                message_label
+                            }
                             button
                         }
                         office_germany {
@@ -530,6 +524,10 @@ const Footer: FC<{
                             address {
                                 line
                             }
+                        }
+                        links {
+                            text
+                            href
                         }
                     }
                 }
@@ -540,10 +538,15 @@ const Footer: FC<{
                     }
                 ) {
                     frontmatter {
+                        heading
                         form {
-                            topic
-                            heading
                             description
+                            labels {
+                                name_label
+                                email_label
+                                subject_label
+                                message_label
+                            }
                             button
                         }
                         office_germany {
@@ -566,18 +569,27 @@ const Footer: FC<{
                                 line
                             }
                         }
+                        links {
+                            text
+                            href
+                        }
                     }
                 }
             }
         `
     );
+    console.log(queryData[currentLocale]?.frontmatter);
     return (
         <FooterTemplate
             form={queryData[currentLocale]?.frontmatter?.form}
-            office_germany={queryData['en']?.frontmatter?.office_germany}
-            get_in_touch={queryData['en']?.frontmatter?.get_in_touch}
-            office_uae={queryData['en']?.frontmatter?.office_uae}
+            office_germany={
+                queryData[currentLocale]?.frontmatter?.office_germany
+            }
+            get_in_touch={queryData[currentLocale]?.frontmatter?.get_in_touch}
+            office_uae={queryData[currentLocale]?.frontmatter?.office_uae}
+            links={queryData[currentLocale]?.frontmatter?.links}
             currentLocale={currentLocale}
+            heading={queryData[currentLocale]?.frontmatter?.heading}
         />
     );
 };

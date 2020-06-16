@@ -454,6 +454,7 @@ collections:
                   fields:
                       - { label: Heading, name: heading, widget: string }
                       - label: Address
+                        label_singular: 'Address Line'
                         name: address
                         widget: list
                         fields:
@@ -483,6 +484,7 @@ collections:
                   fields:
                       - { label: Heading, name: heading, widget: string }
                       - label: Address
+                        label_singular: 'Address Line'
                         name: address
                         widget: list
                         fields:
@@ -1133,6 +1135,7 @@ collections:
                   fields:
                       - { label: Heading, name: heading, widget: string }
                       - label: Address
+                        label_singular: 'Address Line'
                         name: address
                         widget: list
                         fields:

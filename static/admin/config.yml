@@ -404,6 +404,12 @@ collections:
                       widget: 'hidden',
                       default: 'en',
                   }
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'footer',
+                  }
                 - { label: Heading, name: heading, widget: string }
                 - label: 'Contact Form'
                   name: form
@@ -1047,6 +1053,12 @@ collections:
                       name: 'locale',
                       widget: 'hidden',
                       default: 'de',
+                  }
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'footer',
                   }
                 - { label: Heading, name: heading, widget: string }
                 - label: 'Contact Form'

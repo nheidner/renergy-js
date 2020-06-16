@@ -5,24 +5,22 @@ pageTitle: Home
 path: /
 openers:
   - image:
-      source: /img/item-1.jpg
+      source: /img/powerplant.png
       alt: make money without invest!
     link:
       text: "Find Out More "
-      href: /
+      href: /waste-to-energy/concept/
     heading:
-      text: Turn Waste into Profit!
-      href: /concept
+      text: Turn Waste into Profit
+      href: /
   - image:
       source: /img/mll20.jpg
       alt: Energy from waste
     heading:
       text: |-
-        Energy
+        Energy-Efficient &
 
-        from
-
-        waste
+        Eco-Friendly
       href: /
     link:
       text: "Find out More "

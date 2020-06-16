@@ -2,7 +2,6 @@ import CMS from 'netlify-cms-app';
 import React from 'react';
 import { OneColumnPageTemplate } from '../templates/one-column-page';
 import { IndexTemplate } from '../templates/index';
-import { ContactTemplate } from '../templates/contact';
 import { FooterTemplate } from '../components/layout/Footer';
 import withEmotion from './with-emotion';
 
@@ -24,19 +23,6 @@ const IndexTemplatePreviewEn = ({ entry }) => {
             openers={data.openers}
             introducing={data.introducing}
             clients={data.clients}
-            contact={data.contact}
-        />
-    );
-};
-
-const ContactPreviewEn = ({ entry }) => {
-    const data = entry.getIn(['data']).toJS();
-    return (
-        <ContactTemplate
-            locale={data.locale}
-            heading={data.heading}
-            form={data.form}
-            contact={data.contact}
         />
     );
 };
@@ -65,7 +51,6 @@ CMS.registerPreviewTemplate(
     withEmotion(OneColumnPagePreviewEn)
 );
 CMS.registerPreviewTemplate('index-en', withEmotion(IndexTemplatePreviewEn));
-CMS.registerPreviewTemplate('contact_us-en', withEmotion(ContactPreviewEn));
 CMS.registerPreviewTemplate('footer_en', withEmotion(FooterPreviewEn));
 
 // German
@@ -87,19 +72,6 @@ const IndexTemplatePreviewDe = ({ entry }) => {
             openers={data.openers}
             introducing={data.introducing}
             clients={data.clients}
-            contact={data.contact}
-        />
-    );
-};
-
-const ContactPreviewDe = ({ entry }) => {
-    const data = entry.getIn(['data']).toJS();
-    return (
-        <ContactTemplate
-            locale={data.locale}
-            heading={data.heading}
-            form={data.form}
-            contact={data.contact}
         />
     );
 };
@@ -128,5 +100,4 @@ CMS.registerPreviewTemplate(
     withEmotion(OneColumnPagePreviewDe)
 );
 CMS.registerPreviewTemplate('pages-de', withEmotion(IndexTemplatePreviewDe));
-CMS.registerPreviewTemplate('contact_us-de', withEmotion(ContactPreviewDe));
 CMS.registerPreviewTemplate('footer_de', withEmotion(FooterPreviewDe));

@@ -257,11 +257,9 @@ export const FooterTemplate: FC<
     links,
     heading,
 }) => {
-    console.log(form);
-
     return (
         <footer
-            id='footer'
+            id='contact'
             css={css`
                 width: 100%;
                 border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -577,7 +575,7 @@ const Footer: FC<{
             }
         `
     );
-    console.log(queryData[currentLocale]?.frontmatter);
+
     return (
         <FooterTemplate
             form={queryData[currentLocale]?.frontmatter?.form}

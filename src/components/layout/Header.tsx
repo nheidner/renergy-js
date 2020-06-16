@@ -32,6 +32,7 @@ const mobileMenuStyles = css`
     ul.mobileMenu > li  {
     }
     ul.mobileMenu > li a {
+        cursor: pointer;
         transition: color, 100ms;
         text-decoration: none;
         display: block;
@@ -110,6 +111,7 @@ const menuStyles = css`
         transition: color, 100ms;
         display: block;
         padding: 4px 0;
+        cursor: pointer;
         color: #fff;
         font-family: 'IBM Plex Sans Condensed', sans-serif;
         font-size: 13px;

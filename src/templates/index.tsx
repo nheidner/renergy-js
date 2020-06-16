@@ -31,7 +31,6 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
     openers,
     introducing,
     clients,
-    contact,
 }) => {
     return (
         <div
@@ -329,127 +328,6 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                         </div>
                     </Section>
                 ) : null}
-                {contact ? (
-                    <Section
-                        css={css`
-                            div.gatsby-image-wrapper  {
-                                margin-bottom: 48px;
-                            }
-                            div.sectionHeading {
-                                margin-bottom: 24px;
-                            }
-                            h2 {
-                                max-width: 336px;
-                                margin-top: 0;
-                                margin-bottom: 48px;
-                                font-size: 40px;
-                            }
-                            section {
-                                margin-bottom: 48px;
-                            }
-                            section h5 {
-                                color: #888888;
-                                font-size: 11px;
-                                font-family: 'IBM Plex Sans Condensed',
-                                    sans-serif;
-                                font-weight: 400;
-                                text-transform: uppercase;
-                                margin-bottom: 6px;
-                            }
-                            section p {
-                                margin: 0 0 2px;
-                            }
-                            section a {
-                                border-bottom: 1px dotted #ffc400;
-                                color: #bbb;
-                                text-decoration: none;
-                            }
-                            @media (min-width: ${theme.breakpoints[0]}px) {
-                                display: flex;
-                                /* flex-direction: row-reverse; */
-                                justify-content: space-between;
-                                align-items: center;
-
-                                > div.image {
-                                    width: 50%;
-                                }
-                                > div.text {
-                                    width: 40%;
-                                }
-                                div.gatsby-image-wrapper {
-                                    margin-bottom: 0;
-                                }
-                            }
-                        `}>
-                        <div className='image'>
-                            {contact?.image?.source?.childImageSharp ? (
-                                <Img
-                                    fluid={
-                                        contact?.image?.source?.childImageSharp
-                                            ?.fluid as FluidObject
-                                    }
-                                    alt={contact?.image?.alt as string}
-                                />
-                            ) : (
-                                <img
-                                    src={contact?.image?.source as string}
-                                    alt={contact?.image?.alt as string}
-                                    css={css`
-                                        width: 100%;
-                                        margin-bottom: 48px;
-                                        display: block;
-                                    `}
-                                />
-                            )}
-                        </div>
-                        <div className='text'>
-                            <SectionHeading backImg>
-                                {contact?.topic}
-                            </SectionHeading>
-                            <h2>{contact?.heading}</h2>
-                            <section>
-                                <h5>{contact?.office_germany?.heading}</h5>
-                                {contact?.office_germany?.address?.map(
-                                    (addressLine, index) => {
-                                        return (
-                                            <p key={index}>
-                                                {addressLine?.line}
-                                            </p>
-                                        );
-                                    }
-                                )}
-                            </section>
-                            <section>
-                                <h5>{contact?.get_in_touch?.heading}</h5>
-                                <p>{contact?.get_in_touch?.telephone}</p>
-                                <p>
-                                    <Link
-                                        to={
-                                            contact?.get_in_touch?.email
-                                                ?.href as string
-                                        }>
-                                        {contact?.get_in_touch?.email?.text}
-                                    </Link>
-                                </p>
-                            </section>
-                            <section>
-                                <h5>{contact?.office_uae?.heading}</h5>
-                                {contact?.office_uae?.address?.map(
-                                    (addressLine, index) => {
-                                        return (
-                                            <p key={index}>
-                                                {addressLine?.line}
-                                            </p>
-                                        );
-                                    }
-                                )}
-                            </section>
-                            <Button to={contact?.link?.href as string}>
-                                {contact?.link?.text}
-                            </Button>
-                        </div>
-                    </Section>
-                ) : null}
             </Wrapper>
         </div>
     );
@@ -464,7 +342,6 @@ const Index: FC<{ data: IndexQuery }> = ({ data }) => {
                 openers={frontmatter?.openers}
                 introducing={frontmatter?.introducing}
                 clients={frontmatter?.clients}
-                contact={frontmatter?.contact}
             />
         </Layout>
     );
@@ -518,40 +395,6 @@ export const indexQuery = graphql`
                         link {
                             href
                         }
-                    }
-                }
-                contact {
-                    topic
-                    heading
-                    image {
-                        source {
-                            ...thumbNail
-                        }
-                        alt
-                    }
-                    office_germany {
-                        heading
-                        address {
-                            line
-                        }
-                    }
-                    get_in_touch {
-                        heading
-                        telephone
-                        email {
-                            text
-                            href
-                        }
-                    }
-                    office_uae {
-                        heading
-                        address {
-                            line
-                        }
-                    }
-                    link {
-                        text
-                        href
                     }
                 }
             }

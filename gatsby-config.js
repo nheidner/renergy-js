@@ -113,7 +113,7 @@ module.exports = {
                     en: 'Contact Us',
                     de: 'Kontakt',
                 },
-                to: '/contact-us',
+                to: '#contact',
             },
         ],
     },

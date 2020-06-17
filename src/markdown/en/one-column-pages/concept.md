@@ -17,4 +17,7 @@ content: >-
 
 
   The plants of the Renergy Synthesis Gas Systems can be adapted to changing conditions and thus take into account increasing waste amounts and at the same time raising energy demands in municipalities and urban agglomerations.
+
+
+  ![Renergy SG 300](/img/sg-300-2.jpg "Renergy SG 300")
 ---

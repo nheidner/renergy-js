@@ -7,7 +7,7 @@ openerImage:
   alt: Poweplant
   source: /img/sg-300-2.jpg
 content: >-
-  # DAS KONZEPT
+  # Konzept
 
 
   ## Die Erzeugung und Nutzung von Synthesegas aus organischen Abfällen

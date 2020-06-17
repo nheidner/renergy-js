@@ -4,7 +4,7 @@ templateKey: one-column-page
 locale: de
 pageTitle: Input -> Output
 content: >-
-  # Müll INPUT OUTPUT
+  # Input und Output
 
 
   Geeignete Abfälle und Reststoffe:

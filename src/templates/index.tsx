@@ -52,7 +52,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                 showThumbs={false}
                 infiniteLoop={true}
                 showStatus={false}
-                autoPlay={true}
+                // autoPlay={true}
                 interval={3000}
                 transitionTime={500}
                 dynamicHeight={true}
@@ -335,6 +335,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
 
 const Index: FC<{ data: IndexQuery }> = ({ data }) => {
     const { frontmatter } = data.markdownRemark || {};
+    console.log(frontmatter?.openers);
 
     return (
         <Layout pageTitle={frontmatter?.pageTitle}>

@@ -1,22 +1,16 @@
 ---
+path: /waste-to-energy
 templateKey: one-column-page
 locale: en
 pageTitle: Waste To Energy
-path: /waste-to-energy
 openerImage:
-  source: /img/sg-300-.jpg
+  source: /img/sg-300-2.jpg
   alt: Waste To Energy
 content: >-
-  # THE CONCEPT
+  # Concept
 
 
   ## Generation and Utilisation of Synthesis Gas from organic waste
-
-
-  The synthesis gas systems of the Renergy SG Series represent a world-wide unique solution for energy recovery from organic waste of any kind.
-
-
-  With the synthesis gas produced in the plants, generators are driven by gas engines for power generation. This allows, amongst others, the feed-in of electricity to public grids.
 
 
   Many years of research & development led to an innovative technology, the synthesis gas production without process-related flue-gases as it is applied in the plants of the Renergy Synthesis Gas Systems (Renergy SG Series).\

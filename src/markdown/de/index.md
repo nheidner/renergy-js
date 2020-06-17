@@ -30,7 +30,7 @@ openers:
       text: Find Out More
       href: /de/waste-to-energy/concept
   - image:
-      source: /img/müll.jpg
+      source: /img/muell.jpg
       alt: Eine einzigartige Lösung zur Energierückgewinnung
     heading:
       text: |-

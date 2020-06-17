@@ -29,7 +29,7 @@ openers:
       text: "Find out More "
       href: /waste-to-energy/concept
   - image:
-      source: /img/müll.jpg
+      source: /img/muell.jpg
       alt: A Unique Solution for Energy Recovery
     heading:
       text: |-

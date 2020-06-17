@@ -4,216 +4,83 @@ templateKey: one-column-page
 locale: en
 pageTitle: Privacy Policy
 content: >-
-  # Datenschutzerklärung
+  # Privacy Policy
 
 
-  ## Datenschutz
+  Renergy Berlin Gmbh Privacy Policy
 
 
-  Wir haben diese Datenschutzerklärung (Fassung 17.06.2020-311186958) verfasst, um Ihnen gemäß der Vorgaben der [Datenschutz-Grundverordnung (EU) 2016/679](https://eur-lex.europa.eu/legal-content/DE/ALL/?uri=celex%3A32016R0679&tid=311186958) zu erklären, welche Informationen wir sammeln, wie wir Daten verwenden und welche Entscheidungsmöglichkeiten Sie als Besucher dieser Webseite haben.
+  This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from www.renergy-solutions.de (the “Site”).
 
 
-  Leider liegt es in der Natur der Sache, dass diese Erklärungen sehr technisch klingen, wir haben uns bei der Erstellung jedoch bemüht die wichtigsten Dinge so einfach und klar wie möglich zu beschreiben.
+  PERSONAL INFORMATION WE COLLECT
 
 
-  ## Automatische Datenspeicherung
+  When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as “Device Information.”
 
 
-  Wenn Sie heutzutage Webseiten besuchen, werden gewisse Informationen automatisch erstellt und gespeichert, so auch auf dieser Webseite.
+  We collect Device Information using the following technologies:
 
 
-  Wenn Sie unsere Webseite so wie jetzt gerade besuchen, speichert unser Webserver (Computer auf dem diese Webseite gespeichert ist) automatisch Daten wie
+  Additionally when you make a purchase or attempt to make a purchase through the Site, we collect certain information from you, including your name, billing address, shipping address, payment information (including credit card numbers, email address, and phone number.  We refer to this information as “Order Information.”
 
 
-  * die Adresse (URL) der aufgerufenen Webseite
+  When we talk about “Personal Information” in this Privacy Policy, we are talking both about Device Information and Order Information.
 
-  * Browser und Browserversion
 
-  * das verwendete Betriebssystem
+  HOW DO WE USE YOUR PERSONAL INFORMATION?
 
-  * die Adresse (URL) der zuvor besuchten Seite (Referrer URL)
 
-  * den Hostname und die IP-Adresse des Geräts von welchem aus zugegriffen wird
+  We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations).  Additionally, we use this Order Information to: Communicate with you;
 
-  * Datum und Uhrzeit
+  Screen our orders for potential risk or fraud; and
 
+  When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.
 
-  in Dateien (Webserver-Logfiles).
+  We use the Device Information that we collect to help us screen for potential risk and fraud (in particular, your IP address), and more generally to improve and optimize our Site (for example, by generating analytics about how our customers browse and interact with the Site, and to assess the success of our marketing and advertising campaigns).
 
 
-  In der Regel werden Webserver-Logfiles zwei Wochen gespeichert und danach automatisch gelöscht. Wir geben diese Daten nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
+  SHARING YOUR PERSONAL INFORMATION
 
 
-  ## Cookies
+  We share your Personal Information with third parties to help us use your Personal Information, as described above.  For example, we use Shopify to power our online store--you can read more about how Shopify uses your Personal Information here:  https://www.shopify.com/legal/privacy.  We also use Google Analytics to help us understand how our customers use the Site--you can read more about how Google uses your Personal Information here:  https://www.google.com/intl/en/policies/privacy/.  You can also opt-out of Google Analytics here:  https://tools.google.com/dlpage/gaoptout.
 
 
-  Unsere Website verwendet HTTP-Cookies um nutzerspezifische Daten zu speichern.\
+  Finally, we may also share your Personal Information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to otherwise protect our rights.
 
-  Im Folgenden erklären wir, was Cookies sind und warum Sie genutzt werden, damit Sie die folgende Datenschutzerklärung besser verstehen.
 
+  BEHAVIOURAL ADVERTISING
 
-  ### Was genau sind Cookies?
 
+  As described above, we use your Personal Information to provide you with targeted advertisements or marketing communications we believe may be of interest to you.  For more information about how targeted advertising works, you can visit the Network Advertising Initiative’s (“NAI”) educational page at http://www.networkadvertising.org/understanding-online-advertising/how-does-it-work.
 
-  Immer wenn Sie durch das Internet surfen, verwenden Sie einen Browser. Bekannte Browser sind beispielsweise Chrome, Safari, Firefox, Internet Explorer und Microsoft Edge. Die meisten Webseiten speichern kleine Text-Dateien in Ihrem Browser. Diese Dateien nennt man Cookies.
 
+  Additionally, you can opt out of some of these services by visiting the Digital Advertising Alliance’s opt-out portal at:  http://optout.aboutads.info/.
 
-  Eines ist nicht von der Hand zu weisen: Cookies sind echt nützliche Helferlein. Fast alle Webseiten verwenden Cookies. Genauer gesprochen sind es HTTP-Cookies, da es auch noch andere Cookies für andere Anwendungsbereiche gibt. HTTP-Cookies sind kleine Dateien, die von unserer Website auf Ihrem Computer gespeichert werden. Diese Cookie-Dateien werden automatisch im Cookie-Ordner, quasi dem “Hirn” Ihres Browsers, untergebracht. Ein Cookie besteht aus einem Namen und einem Wert. Bei der Definition eines Cookies müssen zusätzlich ein oder mehrere Attribute angegeben werden.
 
+  DO NOT TRACK Please note that we do not alter our Site’s data collection and use practices when we see a Do Not Track signal from your browser.
 
-  Cookies speichern gewisse Nutzerdaten von Ihnen, wie beispielsweise Sprache oder persönliche Seiteneinstellungen. Wenn Sie unsere Seite wieder aufrufen, übermittelt Ihr Browser die „userbezogenen“ Informationen an unsere Seite zurück. Dank der Cookies weiß unsere Website, wer Sie sind und bietet Ihnen Ihre gewohnte Standardeinstellung. In einigen Browsern hat jedes Cookie eine eigene Datei, in anderen wie beispielsweise Firefox sind alle Cookies in einer einzigen Datei gespeichert.
 
+  YOUR RIGHTS
 
-  Es gibt sowohl Erstanbieter Cookies als auch Drittanbieter-Cookies. Erstanbieter-Cookies werden direkt von unserer Seite erstellt, Drittanbieter-Cookies werden von Partner-Webseiten (z.B. Google Analytics) erstellt. Jedes Cookie ist individuell zu bewerten, da jedes Cookie andere Daten speichert. Auch die Ablaufzeit eines Cookies variiert von ein paar Minuten bis hin zu ein paar Jahren. Cookies sind keine Software-Programme und enthalten keine Viren, Trojaner oder andere „Schädlinge“. Cookies können auch nicht auf Informationen Ihres PCs zugreifen.
 
+  If you are a European resident, you have the right to access personal information we hold about you and to ask that your personal information be corrected, updated, or deleted. If you would like to exercise this right, please contact us through the contact information below.
 
-  So können zum Beispiel Cookie-Daten aussehen:
 
+  Additionally, if you are a European resident we note that we are processing your information in order to fulfill contracts we might have with you (for example if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above.  Additionally, please note that your information will be transferred outside of Europe, including to Canada and the United States.
 
-  * Name: _ga
 
-  * Ablaufzeit: 2 Jahre
+  DATA RETENTION 
 
-  * Verwendung: Unterscheidung der Webseitenbesucher
 
-  * Beispielhafter Wert: GA1.2.1326744211.152311186958
+  When you place an order through the Site, we will maintain your Order Information for our records unless and until you ask us to delete this information.
 
 
-  Ein Browser sollte folgende Mindestgrößen unterstützen:
+  CHANGES We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.
 
 
-  * Ein Cookie soll mindestens 4096 Bytes enthalten können
+  CONTACT US For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at info@renergy-solutions.de or by mail using the details provided below:
 
-  * Pro Domain sollen mindestens 50 Cookies gespeichert werden können
 
-  * Insgesamt sollen mindestens 3000 Cookies gespeichert werden können
-
-
-  ### Welche Arten von Cookies gibt es?
-
-
-  Die Frage welche Cookies wir im Speziellen verwenden, hängt von den verwendeten Diensten ab und wird in der folgenden Abschnitten der Datenschutzerklärung geklärt. An dieser Stelle möchten wir kurz auf die verschiedenen Arten von HTTP-Cookies eingehen.
-
-
-  Man kann 4 Arten von Cookies unterscheiden:
-
-
-  **Unbedingt notwendige Cookies**
-
-
-  Diese Cookies sind nötig, um grundlegende Funktionen der Website sicherzustellen. Zum Beispiel braucht es diese Cookies, wenn ein User ein Produkt in den Warenkorb legt, dann auf anderen Seiten weitersurft und später erst zur Kasse geht. Durch diese Cookies wird der Warenkorb nicht gelöscht, selbst wenn der User sein Browserfenster schließt.
-
-
-  **Funktionelle Cookies**
-
-
-  Diese Cookies sammeln Infos über das Userverhalten und ob der User etwaige Fehlermeldungen bekommt. Zudem werden mithilfe dieser Cookies auch die Ladezeit und das Verhalten der Website bei verschiedenen Browsern gemessen.
-
-
-  **Zielorientierte Cookies**
-
-
-  Diese Cookies sorgen für eine bessere Nutzerfreundlichkeit. Beispielsweise werden eingegebene Standorte, Schriftgrößen oder Formulardaten gespeichert.
-
-
-  **Werbe-Cookies**
-
-
-  Diese Cookies werden auch Targeting-Cookies genannt. Sie dienen dazu dem User individuell angepasste Werbung zu liefern. Das kann sehr praktisch, aber auch sehr nervig sein.
-
-
-  Üblicherweise werden Sie beim erstmaligen Besuch einer Webseite gefragt, welche dieser Cookiearten Sie zulassen möchten. Und natürlich wird diese Entscheidung auch in einem Cookie gespeichert.
-
-
-  ### Wie kann ich Cookies löschen?
-
-
-  Wie und ob Sie Cookies verwenden wollen, entscheiden Sie selbst. Unabhängig von welchem Service oder welcher Website die Cookies stammen, haben Sie immer die Möglichkeit Cookies zu löschen, nur teilweise zuzulassen oder zu deaktivieren. Zum Beispiel können Sie Cookies von Drittanbietern blockieren, aber alle anderen Cookies zulassen.
-
-
-  Wenn Sie feststellen möchten, welche Cookies in Ihrem Browser gespeichert wurden, wenn Sie Cookie-Einstellungen ändern oder löschen wollen, können Sie dies in Ihren Browser-Einstellungen finden:
-
-
-  [Chrome: Cookies in Chrome löschen, aktivieren und verwalten](https://support.google.com/chrome/answer/95647?tid=311186958)
-
-
-  [Safari: Verwalten von Cookies und Websitedaten mit Safari](https://support.apple.com/de-at/guide/safari/sfri11471/mac?tid=311186958)
-
-
-  [Firefox: Cookies löschen, um Daten zu entfernen, die Websites auf Ihrem Computer abgelegt haben](https://support.mozilla.org/de/kb/cookies-und-website-daten-in-firefox-loschen?tid=311186958)
-
-
-  [Internet Explorer: Löschen und Verwalten von Cookies](https://support.microsoft.com/de-at/help/17442/windows-internet-explorer-delete-manage-cookies?tid=311186958)
-
-
-  [Microsoft Edge: Löschen und Verwalten von Cookies](https://support.microsoft.com/de-at/help/4027947/windows-delete-cookies?tid=311186958)
-
-
-  Falls Sie grundsätzlich keine Cookies haben wollen, können Sie Ihren Browser so einrichten, dass er Sie immer informiert, wenn ein Cookie gesetzt werden soll. So können Sie bei jedem einzelnen Cookie entscheiden, ob Sie das Cookie erlauben oder nicht. Die Vorgangsweise ist je nach Browser verschieden. Am besten ist es Sie suchen die Anleitung in Google mit dem Suchbegriff “Cookies löschen Chrome” oder “Cookies deaktivieren Chrome” im Falle eines Chrome Browsers oder tauschen das Wort “Chrome” gegen den Namen Ihres Browsers, z.B. Edge, Firefox, Safari aus.
-
-
-  ### Wie sieht es mit meinem Datenschutz aus?
-
-
-  Seit 2009 gibt es die sogenannten „Cookie-Richtlinien“. Darin ist festgehalten, dass das Speichern von Cookies eine Einwilligung des Website-Besuchers (also von Ihnen) verlangt. Innerhalb der EU-Länder gibt es allerdings noch sehr unterschiedliche Reaktionen auf diese Richtlinien. In Deutschland wurden die Cookie-Richtlinien nicht als nationales Recht umgesetzt. Stattdessen erfolgte die Umsetzung dieser Richtlinie weitgehend in § 15 Abs.3 des Telemediengesetzes (TMG).
-
-
-  Wenn Sie mehr über Cookies wissen möchten und vor technischen Dokumentationen nicht zurückscheuen, empfehlen wir <https://tools.ietf.org/html/rfc6265>, dem Request for Comments der Internet Engineering Task Force (IETF) namens “HTTP State Management Mechanism”.
-
-
-  ## Speicherung persönlicher Daten
-
-
-  Persönliche Daten, die Sie uns auf dieser Website elektronisch übermitteln, wie zum Beispiel Name, E-Mail-Adresse, Adresse oder andere persönlichen Angaben im Rahmen der Übermittlung eines Formulars oder Kommentaren im Blog, werden von uns gemeinsam mit dem Zeitpunkt und der IP-Adresse nur zum jeweils angegebenen Zweck verwendet, sicher verwahrt und nicht an Dritte weitergegeben.
-
-
-  Wir nutzen Ihre persönlichen Daten somit nur für die Kommunikation mit jenen Besuchern, die Kontakt ausdrücklich wünschen und für die Abwicklung der auf dieser Webseite angebotenen Dienstleistungen und Produkte. Wir geben Ihre persönlichen Daten ohne Zustimmung nicht weiter, können jedoch nicht ausschließen, dass diese Daten beim Vorliegen von rechtswidrigem Verhalten eingesehen werden.
-
-
-  Wenn Sie uns persönliche Daten per E-Mail schicken – somit abseits dieser Webseite – können wir keine sichere Übertragung und den Schutz Ihrer Daten garantieren. Wir empfehlen Ihnen, vertrauliche Daten niemals unverschlüsselt per E-Mail zu übermitteln.
-
-
-  Die Rechtsgrundlage besteht nach [Artikel 6 Absatz 1 a DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=311186958) (Rechtmäßigkeit der Verarbeitung) darin, dass Sie uns die Einwilligung zur Verarbeitung der von Ihnen eingegebenen Daten geben. Sie können diesen Einwilligung jederzeit widerrufen – eine formlose E-Mail reicht aus, Sie finden unsere Kontaktdaten im Impressum.
-
-
-  ## Rechte laut Datenschutzgrundverordnung
-
-
-  Ihnen stehen laut den Bestimmungen der DSGVO grundsätzlich die folgende Rechte zu:
-
-
-  * Recht auf Berichtigung (Artikel 16 DSGVO)
-
-  * Recht auf Löschung („Recht auf Vergessenwerden“) (Artikel 17 DSGVO)
-
-  * Recht auf Einschränkung der Verarbeitung (Artikel 18 DSGVO)
-
-  * Recht auf Benachrichtigung – Mitteilungspflicht im Zusammenhang mit der Berichtigung oder Löschung personenbezogener Daten oder der Einschränkung der Verarbeitung (Artikel 19 DSGVO)
-
-  * Recht auf Datenübertragbarkeit (Artikel 20 DSGVO)
-
-  * Widerspruchsrecht (Artikel 21 DSGVO)
-
-  * Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden Entscheidung unterworfen zu werden (Artikel 22 DSGVO)
-
-
-  Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich an die [Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (BfDI)](https://www.bfdi.bund.de) wenden.
-
-
-  ## Auswertung des Besucherverhaltens
-
-
-  In der folgenden Datenschutzerklärung informieren wir Sie darüber, ob und wie wir Daten Ihres Besuchs dieser Website auswerten. Die Auswertung der gesammelten Daten erfolgt in der Regel anonym und wir können von Ihrem Verhalten auf dieser Website nicht auf Ihre Person schließen.
-
-
-  Mehr über Möglichkeiten dieser Auswertung der Besuchsdaten zu widersprechen erfahren Sie in der folgenden Datenschutzerklärung.
-
-
-  ## TLS-Verschlüsselung mit https
-
-
-  Wir verwenden https um Daten abhörsicher im Internet zu übertragen (Datenschutz durch Technikgestaltung [Artikel 25 Absatz 1 DSGVO](https://eur-lex.europa.eu/legal-content/DE/TXT/HTML/?uri=CELEX:32016R0679&from=DE&tid=311186958)). Durch den Einsatz von TLS (Transport Layer Security), einem Verschlüsselungsprotokoll zur sicheren Datenübertragung im Internet können wir den Schutz vertraulicher Daten sicherstellen. Sie erkennen die Benutzung dieser Absicherung der Datenübertragung am kleinen Schloßsymbol links oben im Browser und der Verwendung des Schemas https (anstatt http) als Teil unserer Internetadresse.
-
-
-  Quelle: Erstellt mit dem [Datenschutz Generator](https://www.adsimple.de/datenschutz-generator/ "Datenschutz Generator Deutschland") von AdSimple in Kooperation mit [slashtechnik.de](https://www.slashtechnik.de)
+  Potsdamer Strasse 4, Berlin, BE, 10785, Germany
 ---

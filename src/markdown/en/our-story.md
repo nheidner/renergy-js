@@ -4,7 +4,7 @@ locale: en
 pageTitle: Our Story
 path: /our-story
 content: >-
-  # Our Story 
+  # Our Story
 
 
   Renergy is a German engineering company with headquarters in Berlin and a branch in Dubai.

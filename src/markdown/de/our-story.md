@@ -4,49 +4,29 @@ locale: de
 pageTitle: Über Uns
 path: /our-story
 openerImage:
-  source: /img/konzept1_de.jpg
-  alt: Unser Konzept
+  source: ""
+  alt: ""
 content: >-
-  # FIRMENVORSTELLUNG
+  ## Unsere Geschichte
 
 
-  *Renergy* ist ein deutsches Engineering Unternehmen mit Hauptsitz in Berlin und einer Niederlassung in Dubai.
+  Renergy ist ein deutsches Engineering Unternehmen mit Hauptsitz in Berlin und einer Niederlassung in Dubai.
 
 
-  ### Mission
+  Renergy versteht sich als Systemanbieter und Technologielieferant von innovativen, ökologischen und hoch profitablen Umwelttechnologien in den Know-How-Bereichen Recycling und Verwertung. Wir liefern schlüsselfertige Lösungen, zugeschnitten auf Ihre Bedürfnisse ohne Investition. Dabei konzentriert sich Renergy vorrangig auf zwei Geschäftsbereiche; Energiegewinnung aus Abfällen und Reifenrecycling.
 
 
-  *Renergy* versteht sich als Systemanbieter und Technologielieferant von innovativen, ökologischen und hoch profitablen Umwelttechnologien in den Know-How-Bereichen Recycling und Verwertung. Dabei konzentriert sich *Renergy* vorrangig auf zwei Geschäftsbereiche:
+  ### Unsere Vision
 
 
-  ### **Energie aus Abfällen Reifenrecycling**
+  Renergys Vision einer saubereren Welt ist direkt verknüpft mit der Umwandlung von Abfallprodukten in wertvolle Rohstoffe – und das bei hohen Renditen. Ein ökologischer Anspruch schließt nicht länger ökonomischen Erfolg aus. Ständig wachsende Müll- und Altreifenberge zwingen weltweit zu verstärkten Bemühungen für ökologisch und ökonomisch sinnvolle Lösungen. Unter konsequenter Berücksichtigung dieser Aspekte begann *Renergy* vor vielen Jahren die Entwicklung von Reifen- bzw. Restmüllverwertungssystemen, die heute den weltweit höchsten Stand der Technik darstellen und erstmals dem Nutzer dieser Technologie eine bislang nicht vorhandene Effektivität und Rentabilität sowie dem Investor eine überdurchschnittlich hohe Rendite des eingesetzten Kapitals ermöglichen.
 
 
-  *Renergy* liefert schlüsselfertige Lösungen, zugeschnitten auf Ihre Bedürfnisse ohne Investition!
+  Altreifen, Abfall- und Reststoffe sind für Renergy wertvolle Rohstoffressourcen. Sie einfach nur entsorgen oder zu verbrennen, entspricht nicht unserer Vision.
 
 
-  *Renergy* verkauft oder betreibt komplette Anlagen mit Gewinnbeteiligung für den Kunden.
-
-
-  *Renergy* schützt die Umwelt und sorgt gleichzeitig für win win Situationen aller Beteiligten.
-
-
-  ### Vision
-
-
-  *Renergy*'s Vision einer saubereren Welt ist direkt verknüpft mit der Umwandlung von Abfallprodukten in wertvolle Rohstoffe – und das bei hohen Renditen. Ein ökologischer Anspruch schließt nicht länger ökonomischen Erfolg aus. Ständig wachsende Müll- und Altreifenberge zwingen weltweit zu verstärkten Bemühungen für ökologisch und ökonomisch sinnvolle Lösungen. Unter konsequenter Berücksichtigung dieser Aspekte begann *Renergy* vor vielen Jahren die Entwicklung von Reifen- bzw. Restmüllverwertungssystemen, die heute den weltweit höchsten Stand der Technik darstellen und erstmals dem Nutzer dieser Technologie eine bislang nicht vorhandene Effektivität und Rentabilität sowie dem Investor eine überdurchschnittlich hohe Rendite des eingesetzten Kapitals ermöglichen.
-
-
-  Altreifen, Abfall- und Reststoffe sind für *Renergy* wertvolle Rohstoffressourcen. Sie einfach nur entsorgen oder zu verbrennen, entspricht nicht unserer Vision.
-
-
-  *Renergy* versteht sich als Systemanbieter von innovativen Umwelttechnologien und anwenderspezifischen Know-How – zugeschnitten auf Ihre Bedürfnisse und mit Nachhaltigkeit verbunden.
+  ### Unser Team
 teamList:
-  - name: Nils Burde
-    image:
-      source: /img/nils.jpg
-      alt: Nils Burde
-    role: General Manager
   - name: Hisham Dishoni
     image:
       alt: Hisham Dishoni

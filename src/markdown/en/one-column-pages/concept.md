@@ -7,7 +7,7 @@ openerImage:
   source: /img/sg-300-2.jpg
   alt: Waste To Energy
 content: >-
-  # THE CONCEPT
+  # Concept
 
 
   ## Generation and Utilisation of Synthesis Gas from organic waste

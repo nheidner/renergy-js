@@ -4,7 +4,7 @@ templateKey: one-column-page
 locale: de
 pageTitle: Technologie
 content: >-
-  # DIE TECHNOLOGIE
+  # Technologie
 
 
   Das Renergy Recycling- und Gummimehl-Produktionsverfahren

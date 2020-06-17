@@ -3,9 +3,6 @@ templateKey: one-column-page
 locale: de
 pageTitle: Über Uns
 path: /our-story
-openerImage:
-  source: ""
-  alt: ""
 content: >-
   ## Über uns
 

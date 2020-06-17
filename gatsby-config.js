@@ -96,20 +96,6 @@ module.exports = {
             },
             {
                 item: {
-                    en: 'Our Offer',
-                    de: 'Angebot',
-                },
-                to: '/our-offer',
-            },
-            {
-                item: {
-                    en: 'Calculation',
-                    de: 'Kalkulation',
-                },
-                to: '/calculation',
-            },
-            {
-                item: {
                     en: 'Contact Us',
                     de: 'Kontakt',
                 },

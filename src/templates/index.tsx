@@ -242,7 +242,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                 justify-content: space-between;
                                 flex-wrap: wrap;
                             }
-                            > div.bodyWrapper a {
+                            > div.bodyWrapper div.client_container {
                                 display: block;
                                 height: 120px;
                                 width: 100%;
@@ -258,17 +258,21 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                 transition: background-color, 150ms;
                                 position: relative;
                             }
-                            > div.bodyWrapper a:hover {
+                            > div.bodyWrapper div.client_container:hover {
                                 background-color: #000;
                             }
-                            > div.bodyWrapper a div.gatsby-image-wrapper {
+                            > div.bodyWrapper
+                                div.client_container
+                                div.gatsby-image-wrapper {
                                 max-width: 170px;
                                 position: absolute;
                                 top: 50%;
                                 left: 50%;
                                 transform: translate(-50%, -50%);
                             }
-                            > div.bodyWrapper a img.gatsby-image-wrapper {
+                            > div.bodyWrapper
+                                div.client_container
+                                img.gatsby-image-wrapper {
                                 max-width: 170px;
                                 width: calc(100% - 6px);
                                 position: absolute;
@@ -283,9 +287,9 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                         <div className='bodyWrapper'>
                             {clients?.clientsList?.map((clientItem, index) => {
                                 return (
-                                    <Link
+                                    <div
                                         key={index}
-                                        to={clientItem?.link?.href as string}>
+                                        className='client_container'>
                                         {clientItem?.image?.source
                                             ?.childImageSharp ? (
                                             <Img
@@ -322,7 +326,7 @@ export const IndexTemplate: FC<TIndexTemplate> = ({
                                                 />
                                             </div>
                                         )}
-                                    </Link>
+                                    </div>
                                 );
                             })}
                         </div>

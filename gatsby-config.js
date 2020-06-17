@@ -23,7 +23,7 @@ module.exports = {
             {
                 item: {
                     en: 'Waste To Energy',
-                    de: 'Energie aus Müll',
+                    de: 'Energie aus Abfall',
                 },
                 to: '/waste-to-energy',
                 children: [
@@ -59,7 +59,7 @@ module.exports = {
             },
             {
                 item: {
-                    en: 'Tire Recycling',
+                    en: 'Tyre Recycling',
                     de: 'Reifen Recycling',
                 },
                 to: '/tire-recycling',

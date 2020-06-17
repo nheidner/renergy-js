@@ -3,9 +3,6 @@ path: /waste-to-energy/concept
 templateKey: one-column-page
 locale: de
 pageTitle: Konzept
-openerImage:
-  alt: Poweplant
-  source: /img/sg-300-2.jpg
 content: >-
   # Konzept
 

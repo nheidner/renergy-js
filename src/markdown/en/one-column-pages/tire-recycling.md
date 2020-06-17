@@ -1,13 +1,13 @@
 ---
+path: /tire-recycling
 templateKey: one-column-page
 locale: en
 pageTitle: Tire Recycling Concept
-path: /tire-recycling
 openerImage:
   source: /img/rc400-05_en.jpg
   alt: Concept
 content: >-
-  # THE CONCEPT
+  # Concept
 
 
   ## Production of micro rubber powder from end-of-life tyres and rubber residues

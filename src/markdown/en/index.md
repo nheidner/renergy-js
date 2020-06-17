@@ -29,7 +29,7 @@ openers:
       text: "Find out More "
       href: /waste-to-energy/concept
   - image:
-      source: /img/müll.jpg
+      source: /img/müll.jpg
       alt: A Unique Solution for Energy Recovery
     heading:
       text: |-
@@ -40,6 +40,20 @@ openers:
     link:
       text: "Find out more "
       href: /waste-to-energy/concept
+introducing:
+  topic: Introducing
+  heading: Generating and utilizing Synthesis Gas from Organic Waste
+  text: The synthesis gas systems of the RENERGY SG Series represent a world-wide
+    unique solution for energy recovery from organic waste of any kind. With the
+    synthesis gas produced in the plants, generators are driven by gas engines
+    for power generation. This allows, amongst others, the feed-in of
+    electricity to public grids.
+  image:
+    source: /img/item-1-1-.jpg
+    alt: RENERGY Synthesis Gas Plant
+  link:
+    text: "Find Out More "
+    href: /waste-to-energy/concept
 clients:
   topic: Clients
   clientsList:
@@ -83,18 +97,4 @@ clients:
         alt: GPM Engineering Technologie LTD
       link:
         href: /
-introducing:
-  topic: Introducing
-  heading: Generating and utilizing Synthesis Gas from Organic Waste
-  text: The synthesis gas systems of the RENERGY SG Series represent a world-wide
-    unique solution for energy recovery from organic waste of any kind. With the
-    synthesis gas produced in the plants, generators are driven by gas engines
-    for power generation. This allows, amongst others, the feed-in of
-    electricity to public grids.
-  image:
-    source: /img/item-1-1-.jpg
-    alt: RENERGY Synthesis Gas Plant
-  link:
-    text: "Find Out More "
-    href: /waste-to-energy/concept
 ---

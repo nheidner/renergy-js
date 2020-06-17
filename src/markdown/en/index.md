@@ -33,9 +33,13 @@ openers:
       alt: A Unique Solution for Energy Recovery
     heading:
       text: |-
-        A Unique Solution
+        A Unique 
 
-        for Energy Recovery
+        Solution
+
+        for Energy 
+
+        Recovery
       href: /
     link:
       text: "Find out more "

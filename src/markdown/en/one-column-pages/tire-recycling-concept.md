@@ -2,7 +2,7 @@
 path: /tire-recycling/concept
 templateKey: one-column-page
 locale: en
-pageTitle: Tire Recycling Concept
+pageTitle: Tyre Recycling Concept
 openerImage:
   source: /img/sg-300-3.jpg
   alt: Concept
@@ -10,10 +10,10 @@ content: >-
   # Concept
 
 
-  ## Production of micro rubber powder from end-of-life tires and rubber residues
+  ## Production of micro rubber powder from end-of-life tyres and rubber residues
 
 
-  The Renergy RC 400/05 Tire Recycling and Rubber Powder Processing System was developed for the material recovery of end-of-life tires and rubber residues as an alternative to the disadvantageous incineration. For Renergy, these residues are not only an ecologic challenge but also primarily a valuable resource.
+  The Renergy RC 400/05 Tyre Recycling and Rubber Powder Processing System was developed for the material recovery of end-of-life tyres and rubber residues as an alternative to the disadvantageous incineration. For Renergy, these residues are not only an ecologic challenge but also primarily a valuable resource.
 
 
   The produced micro rubber powder can either be utilised as aggregate in rubber mixtures or for the production of elastomeric alloys with characteristics similar to thermoplastic elastomers (TPE).

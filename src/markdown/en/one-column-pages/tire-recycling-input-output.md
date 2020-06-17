@@ -4,7 +4,7 @@ templateKey: one-column-page
 locale: en
 pageTitle: Tires Input Output
 content: >-
-  # Tires Input and Output
+  # Input and Output
 
 
   Renergy RC 400/05 Tyre Recycling and Rubber Powder Processing Plant

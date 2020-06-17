@@ -13,7 +13,7 @@ form:
 office_germany:
   heading: OFFICE GERMANY
   address:
-    - line: Potsdamer Platz 7, 10785 Berlin
+    - line: Potsdamer Strasse 4, 10785 Berlin
 get_in_touch:
   heading: GET IN TOUCH
   telephone: Tel. +49 1525 424 14 59

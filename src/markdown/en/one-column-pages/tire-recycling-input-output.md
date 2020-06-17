@@ -2,7 +2,7 @@
 path: /tire-recycling/input-output
 templateKey: one-column-page
 locale: en
-pageTitle: Tires Input Output
+pageTitle: Tyres Input Output
 content: >-
   # Input and Output
 

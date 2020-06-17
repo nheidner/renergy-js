@@ -23,4 +23,7 @@ content: >-
 
 
   Der modulare und redundante Aufbau von Herstellungs- und Verarbeitungsanlagen der Renergy RC 400/05 gewährleistet einen kontinuierlichen Betrieb, auch während Wartungs- und Reparaturarbeiten.
+
+
+  ![Renergy RC 400/05](/img/sg-300-3.jpg "Renergy RC 400/05")
 ---

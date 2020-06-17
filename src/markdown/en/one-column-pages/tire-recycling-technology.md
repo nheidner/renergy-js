@@ -4,7 +4,7 @@ templateKey: one-column-page
 locale: en
 pageTitle: Technology
 content: >-
-  # THE TECHNOLOGY
+  # Technology
 
 
   ## The Renergy Tyre Recycling and Rubber Powder Processing Technology
@@ -23,7 +23,7 @@ content: >-
   ![The Technology](/img/rc_technology_en.jpg "The Technology")
 
 
-  ## PROCESS FEATURES
+  ## Process Features
 
 
   * Practically complete separation of the main tyre constituents (purity > 99 %)

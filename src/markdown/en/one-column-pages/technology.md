@@ -28,7 +28,7 @@ content: >-
   ![Process Scheme](/img/sg_technology_en.png "Process Scheme")
 
 
-  ## Charachteristics of the Process
+  ## Characteristics of the Process
 
 
   * Power generation of up to 2.2 MWh from one tonne of organic waste

@@ -54,4 +54,30 @@ introducing:
   link:
     text: FIND OUT MORE
     href: /de/waste-to-energy/concept
+clients:
+  clientsList:
+    - image:
+        source: /img/item-8.png
+        alt: Trapp
+    - image:
+        source: /img/item-2.png
+        alt: Belaz
+    - image:
+        source: /img/item-1.png
+        alt: RPA Process
+    - image:
+        source: /img/item-3.png
+        alt: Blair
+    - image:
+        source: /img/item-4.png
+        alt: Turbo Rührwerke
+    - image:
+        source: /img/item-5.png
+        alt: Hormesa
+    - image:
+        source: /img/item-6.png
+        alt: TMS
+    - image:
+        source: /img/logomittel.png
+        alt: GPM
 ---

@@ -3,9 +3,6 @@ path: /tire-recycling/technology
 templateKey: one-column-page
 locale: en
 pageTitle: Technology
-openerImage:
-  source: ""
-  alt: Technology
 content: >-
   # THE TECHNOLOGY
 

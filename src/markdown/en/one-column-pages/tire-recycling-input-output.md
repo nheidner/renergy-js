@@ -1,16 +1,13 @@
 ---
+path: /tire-recycling/input-output
 templateKey: one-column-page
 locale: en
 pageTitle: Tires Input Output
-path: /tire-recycling/input-output
 content: >-
-  # Tires Input Output
+  # Tires Input and Output
 
 
-  ## Input + Output
-
-
-  ReNERGY RC 400/05 Tyre Recycling and Rubber Powder Processing Plant
+  Renergy RC 400/05 Tyre Recycling and Rubber Powder Processing Plant
 
 
   Suitable recycling material:

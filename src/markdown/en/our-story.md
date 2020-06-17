@@ -13,7 +13,7 @@ content: >-
   Renergy sees itself as a system provider and technology supplier of innovative, ecological and highly profitable environmental technologies in the know-how areas of recycling and recovery. We deliver turnkey solutions tailored to your needs, without any further investment from your side.
 
 
-  WE focuses primarily on two business areas; generating energy from both waste and tire recycling.
+  We focuses primarily on two business areas; generating energy from both waste and tyre recycling.
 
 
   ## Our Vision
@@ -26,7 +26,7 @@ content: >-
   With consequent consideration of these aspects, we started the development of tire and waste recovery systems which today reflect the current technological state of the art and, for the first time, allow a to-date unseen affectivity and profitability as well as an outstanding high yield of the employed capital.
 
 
-  To Renergy, end-of-life tires as well as waste and residues are valuable raw material resources. Simple disposal or incineration does not comply with our vision.
+  To Renergy, end-of-life tyres as well as waste and residues are valuable raw material resources. Simple disposal or incineration does not comply with our vision.
 
 
   ## Our Team

@@ -54,6 +54,8 @@ introducing:
   link:
     text: FIND OUT MORE
     href: /de/waste-to-energy/concept
+  image:
+    source: /img/item-1-1-.jpg
 clients:
   clientsList:
     - image:

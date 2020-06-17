@@ -35,9 +35,9 @@ openers:
       text: |-
         A Unique 
 
-        Solution
+        Solution for
 
-        for Energy 
+        Energy 
 
         Recovery
       href: /

@@ -23,4 +23,7 @@ content: >-
 
 
   The modular and redundant design of the production and treatment facilities of the Renergy RC 400/05 ensures continuous operation also during maintenance and repair.
+
+
+  ![Renergy RC 400/05](/img/sg-300-3.jpg "Renergy RC 400/05")
 ---

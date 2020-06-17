@@ -4,7 +4,7 @@ templateKey: one-column-page
 locale: de
 pageTitle: Input / Output
 content: >-
-  # Reifen Input und Output
+  # Input und Output
 
 
   Renergy RC 400/05 Reifenrecycling und Gummimehl Produktionsanlage

@@ -51,4 +51,7 @@ introducing:
     Generatoren zur Erzeugung von elektrischem Strom angetrieben. Dies
     ermöglicht u.a. die Stromeinspeisung in öffentliche Netze.
   topic: Einführung
+  link:
+    text: FIND OUT MORE
+    href: /de/waste-to-energy/concept
 ---

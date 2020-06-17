@@ -7,7 +7,7 @@ openerImage:
   source: /img/sg-300-3.jpg
   alt: Konzept
 content: >-
-  # DAS KONZEPT
+  # Konzept
 
 
   Die Erzeugung von Feinst-Gummimehl aus Altreifen und Altgummi

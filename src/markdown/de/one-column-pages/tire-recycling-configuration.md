@@ -4,19 +4,19 @@ templateKey: one-column-page
 locale: de
 pageTitle: Anlagenaufbau
 content: >-
-  # KONFIGURATION
+  # Konfiguration
 
 
-  ## ANLAGENAUFBAU
+  ## Anlagentiefbau
 
 
-  RENERGY RC 400/05 Reifenrecycling und Gummimehl Produktionsanlage
+  Renergy RC 400/05 Reifenrecycling und Gummimehl Produktionsanlage
 
 
-  Die RENERGY-RC 400/05 erzeugt aus Altreifen und Abfallgummi unter Zuführung des mit der RENERGY-LZ-Serie separierten Stickstoffs ein Feinst-Gummimehl, dass in der RENERGY TPE Serie, in der RENERGY DU Serie und in RENERGY SP Serie zu neuen Produkten verarbeitet wird.
+  Die Renergy-RC 400/05 erzeugt aus Altreifen und Abfallgummi unter Zuführung des mit der Renergy-LZ-Serie separierten Stickstoffs ein Feinst-Gummimehl, dass in der Renergy TPE Serie, in der Renergy DU Serie und in Renergy SP Serie zu neuen Produkten verarbeitet wird.
 
 
-  Das modulare RENERGY RC 400/05-System besteht aus den nachstehenden Anlagenkomponenten:
+  Das modulare Renergy RC 400/05-System besteht aus den nachstehenden Anlagenkomponenten:
 
 
   ![Anlagenkomponenten](/img/plant_de.jpg "Anlagenkomponenten")

@@ -17,4 +17,7 @@ content: >-
 
 
   Die Anlagen der Renergy Synthesegas-Systeme lassen sich bedarfsgerecht anpassen und tragen damit dem steigendem Abfallaufkommen und gleichzeitig wachsendem Energiebedarf in Kommunen und Ballungsgebieten Rechnung.
+
+
+  ![Renergy SG 300](/img/sg-300-2.jpg "Renergy SG 300")
 ---

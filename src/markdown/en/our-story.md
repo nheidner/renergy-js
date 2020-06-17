@@ -29,6 +29,11 @@ content: >-
 
   ## Our Team
 teamList:
+  - name: Dario Bauer
+    role: General Director
+    image:
+      source: /img/hisham.jpg
+      alt: Dario
   - name: Hisham Dishoni
     role: Marketing Director
     image:

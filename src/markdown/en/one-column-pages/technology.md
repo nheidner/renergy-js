@@ -3,9 +3,6 @@ templateKey: one-column-page
 locale: en
 pageTitle: Technology
 path: /waste-to-energy/technology
-openerImage:
-  source: /img/sg_technology_en.png
-  alt: The Technology
 content: >-
   # THE TECHNOLOGY
 

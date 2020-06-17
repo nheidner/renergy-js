@@ -7,7 +7,7 @@ openerImage:
   source: /img/sg-300-3.jpg
   alt: Concept
 content: >-
-  # THE CONCEPT
+  # Concept
 
 
   ## Production of micro rubber powder from end-of-life tyres and rubber residues

@@ -24,6 +24,11 @@ content: >-
 
   ### Unser Team
 teamList:
+  - name: Dario Bauer
+    role: General Director
+    image:
+      source: /img/hisham.jpg
+      alt: Dario
   - name: Hisham Dishoni
     image:
       alt: Hisham Dishoni

@@ -19,7 +19,7 @@ content: >-
   The produced micro rubber powder can either be utilised as aggregate in rubber mixtures or for the production of elastomeric alloys with characteristics similar to thermoplastic elastomers (TPE).
 
 
-  Continuous long-term research as well as the erection of several plant generations led to the development of the INTEC RC 400/05, producing ultra-fine and -pure rubber powders.
+  Continuous long-term research as well as the erection of several plant generations led to the development of the Renergy RC 400/05, producing ultra-fine and -pure rubber powders.
 
 
   The technologies for further processing of the produced rubber powder has been developed in a way allowing further utilisation on industrial standard equipment.

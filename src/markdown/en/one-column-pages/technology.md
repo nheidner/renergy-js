@@ -1,10 +1,10 @@
 ---
+path: /waste-to-energy/technology
 templateKey: one-column-page
 locale: en
 pageTitle: Technology
-path: /waste-to-energy/technology
 content: >-
-  # THE TECHNOLOGY
+  # Technology
 
 
   ## The Renergy Thermolytic Cracking Process
@@ -28,7 +28,7 @@ content: >-
   ![Process Scheme](/img/sg_technology_en.png "Process Scheme")
 
 
-  ## CHARACTERISTICS OF THE PROCESS
+  ## Charachteristics of the Process
 
 
   * Power generation of up to 2.2 MWh from one tonne of organic waste

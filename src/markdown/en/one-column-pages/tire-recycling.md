@@ -2,7 +2,7 @@
 path: /tire-recycling
 templateKey: one-column-page
 locale: en
-pageTitle: Tire Recycling Concept
+pageTitle: Tyre Recycling Concept
 openerImage:
   source: /img/sg-300-3.jpg
   alt: Concept

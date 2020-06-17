@@ -19,14 +19,12 @@ content: >-
   ## Our Vision
 
 
-  Our vision of a cleaner world is directly coupled with turning waste materials into valuable commodities with high returns on investment.\
-
-  An ecologic approach does not exclude economic success anymore. Constantly growing waste streams and amounts of end-of-life tires globally force to increasing endeavours for ecologic and economic solutions.\
-
-  With consequent consideration of these aspects, we started the development of tire and waste recovery systems which today reflect the current technological state of the art and, for the first time, allow a to-date unseen affectivity and profitability as well as an outstanding high yield of the employed capital.
+  Our vision of a cleaner world is directly coupled with turning waste materials into valuable commodities with high returns on investment. An ecologic approach does not exclude economic success anymore. Constantly growing waste streams and amounts of end-of-life tires globally force to increasing endeavours for ecologic and economic solutions. With consequent consideration of these aspects, we started the development of tyre and waste energy recovery systems which today reflect the current technological state of the art and, for the first time, allow a to-date unseen affectivity and profitability as well as an outstanding high yield of the employed capital.
 
 
-  To Renergy, end-of-life tyres as well as waste and residues are valuable raw material resources. Simple disposal or incineration does not comply with our vision.
+  To Renergy, end-of-life tyres as well as waste and residues are valuable raw material resources. Simple disposal or incineration does not comply with our ideal.
+
+
 
 
   ## Our Team

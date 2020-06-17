@@ -18,8 +18,8 @@ get_in_touch:
   heading: GET IN TOUCH
   telephone: Tel. +49 1525 424 14 59
   email:
-    text: info@renergy.berlin
-    href: "mailto: info@renergy.berlin"
+    text: info@renergy-solutions.de
+    href: "mailto: info@renergy-solutions.de"
 office_uae:
   heading: OFFICE UAE
   address:

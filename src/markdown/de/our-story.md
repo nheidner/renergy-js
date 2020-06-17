@@ -7,7 +7,7 @@ openerImage:
   source: ""
   alt: ""
 content: >-
-  ## Unsere Geschichte
+  ## Über uns
 
 
   Renergy ist ein deutsches Engineering Unternehmen mit Hauptsitz in Berlin und einer Niederlassung in Dubai.

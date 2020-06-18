@@ -25,5 +25,5 @@ content: |-
   * Tel.: +971-586812303
   * Email: [info@emiratesprop.com](mailto:info@emiratesprop.com)
   * Web: [amwaj-al-nile.com](http://amwaj-al-nile.com/)
-  * [emiratesprop.com](http://emiratesprop.com/)
+  * Web: [emiratesprop.com](http://emiratesprop.com/)
 ---

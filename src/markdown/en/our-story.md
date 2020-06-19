@@ -48,7 +48,7 @@ teamList:
     image:
       alt: Thorsten Schmitt
       source: /img/07d8cbe4-6146-4487-92f6-06185ed2d191.jpg
-    role: Technical Director Europe
+    role: Technical Director Africa
   - name: Mary Mc Kay
     image:
       alt: Mary Mc Kay

@@ -26,8 +26,10 @@ get_in_touch:
 office_uae:
   heading: OFFICE UAE
   address:
-    - line: Burj Khalifa Street, Opal Tower 605,
-    - line: Business Bay, Dubai, UAE
+    - line: Burj Khalifa Street, Opal Tower 605
+    - line: Business Bay
+    - line: Dubai
+    - line: United Arab Emirates
 links:
   - text: Imprint
     href: /imprint

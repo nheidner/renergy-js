@@ -399,7 +399,6 @@ export const FooterTemplate: FC<
                         </section>
                         <section>
                             <h5>{get_in_touch?.heading}</h5>
-                            <p>{get_in_touch?.telephone}</p>
                             <p>
                                 <Link to={get_in_touch?.email?.href as string}>
                                     {get_in_touch?.email?.text}

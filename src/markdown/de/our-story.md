@@ -43,11 +43,11 @@ teamList:
     image:
       alt: Thorsten Schmitt
       source: /img/07d8cbe4-6146-4487-92f6-06185ed2d191.jpg
-    role: Technischer Direktor Europa
+    role: Technischer Direktor Europe
   - image:
       source: /img/photo-2020-06-24-19-58-31.jpg
       alt: Mustafa El Tahir Mustafa Ahmed
-    role: Technischer Direktor Afrika
+    role: Technischer Direktor Africa
     name: Mustafa El Tahir Mustafa Ahmed
   - name: Mary Mc Kay
     image:

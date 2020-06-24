@@ -19,7 +19,7 @@ office_germany:
     - line: Germany
 get_in_touch:
   heading: GET IN TOUCH
-  telephone: Tel. +49 1525 424 14 59
+  telephone: /
   email:
     text: info@renergy-solutions.de
     href: mailto:info@renergy-solutions.de

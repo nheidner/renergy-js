@@ -96,6 +96,13 @@ module.exports = {
             },
             {
                 item: {
+                    en: 'Calculation',
+                    de: 'Kalkulation',
+                },
+                to: '/calculation',
+            },
+            {
+                item: {
                     en: 'Contact Us',
                     de: 'Kontakt',
                 },

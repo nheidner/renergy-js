@@ -16,7 +16,7 @@ office_germany:
   address:
     - line: Potsdamer Strasse 4
     - line: 10785 Berlin
-    - line: Germany
+    - line: Allemagne
 get_in_touch:
   heading: Contactez nous
   email:
@@ -29,7 +29,7 @@ office_uae:
     - line: Burj Khalifa Street, Opal Tower 605
     - line: Business Bay
     - line: Dubai
-    - line: United Arab Emirates
+    - line: Émirats Arabes Unis
 links:
   - text: Empreinte
     href: /fr/imprint

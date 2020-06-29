@@ -4,8 +4,8 @@ templateKey: one-column-page
 locale: fr
 pageTitle: Déchets à l'énergie
 openerImage:
-  source: /img/sg-300-2.jpg
-  alt: SG 300
+  source: ""
+  alt: ""
 content: >-
   # Concept
 
@@ -20,4 +20,7 @@ content: >-
 
 
   La conception modulaire et redondante avec plusieurs lignes de production de la série Renergy SG assure un fonctionnement assidu parallèlement durant la maintenance et la réparation. Les installations des systèmes de gaz de synthèse de Renergy peuvent être adaptées aux conditions variables et ainsi prendre en compte la quantité progressante de déchets et en même temps accroître la demande en énergie dans les municipalités et les accumulations urbaines.
+
+
+  ![SG 300](/img/sg-300-2.jpg "SG 300")
 ---

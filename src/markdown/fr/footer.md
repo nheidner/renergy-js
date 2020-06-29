@@ -31,8 +31,8 @@ office_uae:
     - line: Dubai
     - line: United Arab Emirates
 links:
-  - text: Privacy Policy
-    href: /fr/privacy
-  - text: Imprint
+  - text: Empreinte
     href: /fr/imprint
+  - text: Politique de Confidentialité
+    href: /fr/privacy
 ---

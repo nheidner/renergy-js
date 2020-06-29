@@ -1,1 +1,1 @@
-module.exports = { locales: ['en', 'de'], primary: 'en' };
+module.exports = { locales: ['en', 'de', 'fr'], primary: 'en' };

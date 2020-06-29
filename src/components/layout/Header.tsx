@@ -192,7 +192,7 @@ const localesToggleStyles = css`
         padding: 2px 6px;
         position: relative;
     }
-    li:last-of-type::before {
+    li::before {
         content: '|';
         color: #fff;
         font-size: 22px;
@@ -200,6 +200,9 @@ const localesToggleStyles = css`
         position: absolute;
         left: -3px;
         top: -1px;
+    }
+    li:first-of-type::before {
+        content: '';
     }
 
     a {

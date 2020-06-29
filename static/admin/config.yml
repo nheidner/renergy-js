@@ -1,5 +1,5 @@
 backend:
-    name: git-gateway
+    name: github #git-gateway
     repo: nheidner/renergy-js
     branch: master
     commit_messages:
@@ -792,6 +792,437 @@ collections:
                 default: 'one-column-page',
             }
           - { label: 'Locale', name: 'locale', widget: 'hidden', default: 'de' }
+          - {
+                label: 'Page Title',
+                name: 'pageTitle',
+                widget: 'string',
+                hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+            }
+
+          - label: 'Opener Image'
+            name: 'openerImage'
+            widget: object
+            collapsed: true
+            required: false
+            fields:
+                - {
+                      label: 'Image Source',
+                      name: 'source',
+                      widget: 'image',
+                      required: false,
+                  }
+                - {
+                      label: 'Alt',
+                      name: 'alt',
+                      widget: 'string',
+                      required: false,
+                  }
+          - label: 'Page Content'
+            name: 'content'
+            widget: markdown
+            buttons:
+                [
+                    bold,
+                    italic,
+                    link,
+                    heading-one,
+                    heading-two,
+                    heading-three,
+                    bulleted-list,
+                    numbered-list,
+                ]
+            editorComponents: [image]
+
+    - name: pages-fr
+      label: Pages (Fr)
+      files:
+          - file: 'src/markdown/fr/index.md'
+            label: 'Home'
+            name: 'index_fr'
+            fields:
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'index',
+                  }
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'fr',
+                  }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - label: Openers
+                  name: openers
+                  widget: list
+                  summary: 'opener'
+                  fields:
+                      - {
+                            label: Summary,
+                            name: summary,
+                            widget: string,
+                            hint: 'Does not appear on website - for better orientation only',
+                            required: false,
+                        }
+                      - label: 'Opener Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                              }
+                            - { label: 'Alt', name: 'alt', widget: 'string' }
+                      - label: 'Heading Link'
+                        name: 'heading'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - label: 'Text'
+                              name: 'text'
+                              widget: markdown
+                              buttons: [bold, italic, link]
+                              editorComponents: []
+                            - { label: 'Href', name: 'href', widget: 'string' }
+                      - label: 'More Link'
+                        name: 'link'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - { label: 'Text', name: 'text', widget: 'string' }
+                            - { label: 'Href', name: 'href', widget: 'string' }
+                - label: Introducing
+                  name: introducing
+                  widget: object
+                  required: false
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Topic,
+                            name: topic,
+                            widget: string,
+                            required: false,
+                        }
+                      - {
+                            label: Heading,
+                            name: heading,
+                            widget: string,
+                            required: false,
+                        }
+                      - label: 'Excerpt'
+                        name: 'text'
+                        required: false
+                        widget: markdown
+                        buttons: [bold, italic, link]
+                        editorComponents: []
+                      - label: 'Image'
+                        name: 'image'
+                        required: false
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Alt',
+                                  name: 'alt',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                      - label: 'Link'
+                        name: 'link'
+                        widget: object
+                        required: false
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Text',
+                                  name: 'text',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                            - {
+                                  label: 'Href',
+                                  name: 'href',
+                                  widget: 'string',
+                                  required: false,
+                              }
+                - label: Clients
+                  name: clients
+                  widget: object
+                  required: false
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Topic,
+                            name: topic,
+                            widget: string,
+                            required: false,
+                        }
+                      - label: List Of Clients
+                        name: clientsList
+                        required: false
+                        widget: list
+                        fields:
+                            - {
+                                  label: Summary,
+                                  name: summary,
+                                  widget: string,
+                                  hint: 'Does not appear on website - for better orientation only',
+                                  required: false,
+                              }
+                            - label: 'Image'
+                              name: 'image'
+                              required: false
+                              widget: object
+                              collapsed: true
+                              fields:
+                                  - {
+                                        label: 'Image Source',
+                                        name: 'source',
+                                        required: false,
+                                        widget: 'image',
+                                    }
+                                  - {
+                                        label: 'Alt',
+                                        name: 'alt',
+                                        required: false,
+                                        widget: 'string',
+                                    }
+                            - label: 'Link'
+                              name: 'link'
+                              required: false
+                              widget: object
+                              collapsed: true
+                              fields:
+                                  - {
+                                        label: 'Href',
+                                        name: 'href',
+                                        required: false,
+                                        widget: 'string',
+                                    }
+
+          - file: 'src/markdown/fr/our-story.md'
+            label: 'Our Story'
+            name: 'our-story-fr'
+            fields:
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'one-column-page',
+                  }
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'fr',
+                  }
+                - {
+                      label: 'Page Title',
+                      name: 'pageTitle',
+                      widget: 'string',
+                      hint: 'Modifies the title of the page that will be rendered in the browser - as f.e. seen in the tab bar of the browser',
+                  }
+                - {
+                      label: 'Path',
+                      name: 'path',
+                      widget: 'string',
+                      hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+                  }
+                - label: 'Opener Image'
+                  name: 'openerImage'
+                  widget: object
+                  collapsed: true
+                  required: false
+                  fields:
+                      - {
+                            label: 'Image Source',
+                            name: 'source',
+                            widget: 'image',
+                            required: false,
+                        }
+                      - {
+                            label: 'Alt',
+                            name: 'alt',
+                            widget: 'string',
+                            required: false,
+                        }
+                - label: 'Page Content'
+                  name: 'content'
+                  widget: markdown
+                  buttons:
+                      [
+                          bold,
+                          italic,
+                          link,
+                          heading-one,
+                          heading-two,
+                          heading-three,
+                          bulleted-list,
+                          numbered-list,
+                      ]
+                  editorComponents: [image]
+                - label: Team
+                  name: teamList
+                  widget: list
+                  collapsed: true
+                  fields:
+                      - { label: Name, name: name, widget: string }
+                      - label: 'Image'
+                        name: 'image'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Image Source',
+                                  name: 'source',
+                                  widget: 'image',
+                              }
+                            - { label: 'Alt', name: 'alt', widget: 'string' }
+                      - { label: Role, name: role, widget: string }
+
+          - file: 'src/markdown/fr/footer.md'
+            label: 'Footer'
+            name: 'footer_fr'
+            fields:
+                - {
+                      label: 'Locale',
+                      name: 'locale',
+                      widget: 'hidden',
+                      default: 'fr',
+                  }
+                - {
+                      label: 'TemplateKey',
+                      name: 'templateKey',
+                      widget: 'hidden',
+                      default: 'footer',
+                  }
+                - { label: Heading, name: heading, widget: string }
+                - label: 'Contact Form'
+                  name: form
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - {
+                            label: Description,
+                            name: description,
+                            widget: string,
+                        }
+                      - label: Labels
+                        name: labels
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - {
+                                  label: 'Name Label',
+                                  name: name_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Email Label',
+                                  name: email_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Subject Label',
+                                  name: subject_label,
+                                  widget: string,
+                              }
+                            - {
+                                  label: 'Message Label',
+                                  name: message_label,
+                                  widget: string,
+                              }
+                      - { label: 'Button Text', name: button, widget: string }
+                - label: Office Germany
+                  name: office_germany
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - label: Address
+                        name: address
+                        widget: list
+                        fields:
+                            - { label: Line, name: line, widget: string }
+                - label: Get In Touch
+                  name: get_in_touch
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - { label: Telephone, name: telephone, widget: string }
+                      - label: 'Email'
+                        name: 'email'
+                        widget: object
+                        collapsed: true
+                        fields:
+                            - { label: 'Text', name: 'text', widget: 'string' }
+                            - {
+                                  label: 'Email Address',
+                                  name: 'href',
+                                  widget: 'string',
+                              }
+                - label: Office UAE
+                  name: office_uae
+                  widget: object
+                  collapsed: true
+                  fields:
+                      - { label: Heading, name: heading, widget: string }
+                      - label: Address
+                        label_singular: 'Address Line'
+                        name: address
+                        widget: list
+                        fields:
+                            - { label: Line, name: line, widget: string }
+                - label: Links
+                  label_singular: Link
+                  name: links
+                  widget: list
+                  collapsed: true
+                  fields:
+                      - { label: 'Text', name: 'text', widget: 'string' }
+                      - { label: 'Href', name: 'href', widget: 'string' }
+
+    - name: 'one-column-fr'
+      label: 'One Column Pages (Fr)'
+      label_singular: Page
+      folder: 'src/markdown/fr/one-column-pages'
+      field_identifier: path
+      create: true
+      fields:
+          - {
+                label: 'Path',
+                name: 'path',
+                widget: 'string',
+                hint: 'Modifies the path under which the page will be found - Warning: Please only change it, if you know, what you are doing!',
+            }
+          - {
+                label: 'TemplateKey',
+                name: 'templateKey',
+                widget: 'hidden',
+                default: 'one-column-page',
+            }
+          - { label: 'Locale', name: 'locale', widget: 'hidden', default: 'fr' }
           - {
                 label: 'Page Title',
                 name: 'pageTitle',

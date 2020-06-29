@@ -1,5 +1,5 @@
 backend:
-    name: github #git-gateway
+    name: git-gateway
     repo: nheidner/renergy-js
     branch: master
     commit_messages:

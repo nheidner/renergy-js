@@ -81,6 +81,7 @@ const Form: FC<{
                         {
                             en: 'Must be 80 characters or less',
                             de: 'Kann max. nur 80 Zeichen enthalten',
+                            fr: 'Doit énumérer 80 caractères ou moins',
                         },
                         locale
                     )
@@ -90,6 +91,7 @@ const Form: FC<{
                         {
                             en: 'Required',
                             de: 'Benötigt',
+                            fr: 'Obligatoire',
                         },
                         locale
                     )
@@ -101,6 +103,7 @@ const Form: FC<{
                         {
                             en: 'Invalid email address',
                             de: 'Ungültige Email Addresse',
+                            fr: 'Adresse Email invalide',
                         },
                         locale
                     )
@@ -110,6 +113,7 @@ const Form: FC<{
                         {
                             en: 'Required',
                             de: 'Benötigt',
+                            fr: 'Obligatoire',
                         },
                         locale
                     )
@@ -121,6 +125,7 @@ const Form: FC<{
                         {
                             en: 'Must be 40 characters or less',
                             de: 'Kann max. nur 40 Zeichen enthalten',
+                            fr: 'Doit énumérer 40 caractères ou moins',
                         },
                         locale
                     )
@@ -130,6 +135,7 @@ const Form: FC<{
                         {
                             en: 'Required',
                             de: 'Benötigt',
+                            fr: 'Obligatoire',
                         },
                         locale
                     )
@@ -141,6 +147,7 @@ const Form: FC<{
                         {
                             en: 'Must be 300 characters or less',
                             de: 'Kann max. nur 300 Zeichen enthalten',
+                            fr: 'Doit énumérer 300 caractères ou moins',
                         },
                         locale
                     )
@@ -150,6 +157,7 @@ const Form: FC<{
                         {
                             en: 'Required',
                             de: 'Benötigt',
+                            fr: 'Obligatoire',
                         },
                         locale
                     )
@@ -234,6 +242,7 @@ const Form: FC<{
                             {
                                 en: 'Your message was sent',
                                 de: 'Deine Nachricht wurde gesendet',
+                                fr: 'Votre message a été envoyé',
                             },
                             locale
                         )}
@@ -531,6 +540,50 @@ const Footer: FC<{
                     frontmatter: {
                         templateKey: { eq: "footer" }
                         locale: { eq: "de" }
+                    }
+                ) {
+                    frontmatter {
+                        heading
+                        form {
+                            description
+                            labels {
+                                name_label
+                                email_label
+                                subject_label
+                                message_label
+                            }
+                            button
+                        }
+                        office_germany {
+                            heading
+                            address {
+                                line
+                            }
+                        }
+                        get_in_touch {
+                            heading
+                            telephone
+                            email {
+                                text
+                                href
+                            }
+                        }
+                        office_uae {
+                            heading
+                            address {
+                                line
+                            }
+                        }
+                        links {
+                            text
+                            href
+                        }
+                    }
+                }
+                fr: markdownRemark(
+                    frontmatter: {
+                        templateKey: { eq: "footer" }
+                        locale: { eq: "fr" }
                     }
                 ) {
                     frontmatter {

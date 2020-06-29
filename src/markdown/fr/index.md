@@ -1,5 +1,7 @@
 ---
 pageTitle: Home
+templateKey: index
+locale: fr
 path: /
 openers:
   - summary: Start Turning Waste Into Profit

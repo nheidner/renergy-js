@@ -388,12 +388,14 @@ const Header: FC<{
                             item {
                                 en
                                 de
+                                fr
                             }
                             to
                             children {
                                 item {
                                     en
                                     de
+                                    fr
                                 }
                                 to
                             }

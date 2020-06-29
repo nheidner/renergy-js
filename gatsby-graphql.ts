@@ -693,14 +693,12 @@ export type FileFieldsEnum =
   | 'internal___type'
   | 'childMarkdownRemark___id'
   | 'childMarkdownRemark___frontmatter___title'
-  | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___locale'
-  | 'childMarkdownRemark___frontmatter___pageTitle'
-  | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___heading'
-  | 'childMarkdownRemark___frontmatter___form___heading'
   | 'childMarkdownRemark___frontmatter___form___description'
   | 'childMarkdownRemark___frontmatter___form___button'
+  | 'childMarkdownRemark___frontmatter___form___heading'
   | 'childMarkdownRemark___frontmatter___office_germany___heading'
   | 'childMarkdownRemark___frontmatter___office_germany___address'
   | 'childMarkdownRemark___frontmatter___get_in_touch___heading'
@@ -710,11 +708,14 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___links'
   | 'childMarkdownRemark___frontmatter___links___text'
   | 'childMarkdownRemark___frontmatter___links___href'
+  | 'childMarkdownRemark___frontmatter___pageTitle'
+  | 'childMarkdownRemark___frontmatter___path'
   | 'childMarkdownRemark___frontmatter___content'
   | 'childMarkdownRemark___frontmatter___teamList'
   | 'childMarkdownRemark___frontmatter___teamList___name'
   | 'childMarkdownRemark___frontmatter___teamList___role'
   | 'childMarkdownRemark___frontmatter___openers'
+  | 'childMarkdownRemark___frontmatter___openers___summary'
   | 'childMarkdownRemark___frontmatter___introducing___topic'
   | 'childMarkdownRemark___frontmatter___introducing___heading'
   | 'childMarkdownRemark___frontmatter___introducing___text'
@@ -1491,31 +1492,31 @@ export type MarkdownRemarkFields = {
 export type MarkdownRemarkFieldsEnum = 
   | 'id'
   | 'frontmatter___title'
-  | 'frontmatter___templateKey'
   | 'frontmatter___locale'
-  | 'frontmatter___pageTitle'
-  | 'frontmatter___path'
+  | 'frontmatter___templateKey'
   | 'frontmatter___heading'
-  | 'frontmatter___form___heading'
   | 'frontmatter___form___description'
-  | 'frontmatter___form___button'
   | 'frontmatter___form___labels___name_label'
   | 'frontmatter___form___labels___email_label'
   | 'frontmatter___form___labels___subject_label'
   | 'frontmatter___form___labels___message_label'
+  | 'frontmatter___form___button'
+  | 'frontmatter___form___heading'
   | 'frontmatter___office_germany___heading'
   | 'frontmatter___office_germany___address'
   | 'frontmatter___office_germany___address___line'
   | 'frontmatter___get_in_touch___heading'
-  | 'frontmatter___get_in_touch___telephone'
   | 'frontmatter___get_in_touch___email___text'
   | 'frontmatter___get_in_touch___email___href'
+  | 'frontmatter___get_in_touch___telephone'
   | 'frontmatter___office_uae___heading'
   | 'frontmatter___office_uae___address'
   | 'frontmatter___office_uae___address___line'
   | 'frontmatter___links'
   | 'frontmatter___links___text'
   | 'frontmatter___links___href'
+  | 'frontmatter___pageTitle'
+  | 'frontmatter___path'
   | 'frontmatter___content'
   | 'frontmatter___teamList'
   | 'frontmatter___teamList___name'
@@ -1527,6 +1528,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___openers___link___href'
   | 'frontmatter___openers___heading___text'
   | 'frontmatter___openers___heading___href'
+  | 'frontmatter___openers___summary'
   | 'frontmatter___introducing___topic'
   | 'frontmatter___introducing___heading'
   | 'frontmatter___introducing___text'
@@ -1535,6 +1537,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___introducing___link___href'
   | 'frontmatter___clients___topic'
   | 'frontmatter___clients___clientsList'
+  | 'frontmatter___clients___clientsList___summary'
   | 'frontmatter___openerImage___source___sourceInstanceName'
   | 'frontmatter___openerImage___source___absolutePath'
   | 'frontmatter___openerImage___source___relativePath'
@@ -1699,16 +1702,16 @@ export type MarkdownRemarkFilterInput = {
 
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
-  templateKey?: Maybe<Scalars['String']>;
   locale?: Maybe<Scalars['String']>;
-  pageTitle?: Maybe<Scalars['String']>;
-  path?: Maybe<Scalars['String']>;
+  templateKey?: Maybe<Scalars['String']>;
   heading?: Maybe<Scalars['String']>;
   form?: Maybe<MarkdownRemarkFrontmatterForm>;
   office_germany?: Maybe<MarkdownRemarkFrontmatterOffice_Germany>;
   get_in_touch?: Maybe<MarkdownRemarkFrontmatterGet_In_Touch>;
   office_uae?: Maybe<MarkdownRemarkFrontmatterOffice_Uae>;
   links?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterLinks>>>;
+  pageTitle?: Maybe<Scalars['String']>;
+  path?: Maybe<Scalars['String']>;
   content?: Maybe<Scalars['String']>;
   teamList?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterTeamList>>>;
   openers?: Maybe<Array<Maybe<MarkdownRemarkFrontmatterOpeners>>>;
@@ -1725,11 +1728,13 @@ export type MarkdownRemarkFrontmatterClients = {
 export type MarkdownRemarkFrontmatterClientsClientsList = {
   image?: Maybe<MarkdownRemarkFrontmatterClientsClientsListImage>;
   link?: Maybe<MarkdownRemarkFrontmatterClientsClientsListLink>;
+  summary?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterClientsClientsListFilterInput = {
   image?: Maybe<MarkdownRemarkFrontmatterClientsClientsListImageFilterInput>;
   link?: Maybe<MarkdownRemarkFrontmatterClientsClientsListLinkFilterInput>;
+  summary?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterClientsClientsListFilterListInput = {
@@ -1761,16 +1766,16 @@ export type MarkdownRemarkFrontmatterClientsFilterInput = {
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
-  templateKey?: Maybe<StringQueryOperatorInput>;
   locale?: Maybe<StringQueryOperatorInput>;
-  pageTitle?: Maybe<StringQueryOperatorInput>;
-  path?: Maybe<StringQueryOperatorInput>;
+  templateKey?: Maybe<StringQueryOperatorInput>;
   heading?: Maybe<StringQueryOperatorInput>;
   form?: Maybe<MarkdownRemarkFrontmatterFormFilterInput>;
   office_germany?: Maybe<MarkdownRemarkFrontmatterOffice_GermanyFilterInput>;
   get_in_touch?: Maybe<MarkdownRemarkFrontmatterGet_In_TouchFilterInput>;
   office_uae?: Maybe<MarkdownRemarkFrontmatterOffice_UaeFilterInput>;
   links?: Maybe<MarkdownRemarkFrontmatterLinksFilterListInput>;
+  pageTitle?: Maybe<StringQueryOperatorInput>;
+  path?: Maybe<StringQueryOperatorInput>;
   content?: Maybe<StringQueryOperatorInput>;
   teamList?: Maybe<MarkdownRemarkFrontmatterTeamListFilterListInput>;
   openers?: Maybe<MarkdownRemarkFrontmatterOpenersFilterListInput>;
@@ -1780,17 +1785,17 @@ export type MarkdownRemarkFrontmatterFilterInput = {
 };
 
 export type MarkdownRemarkFrontmatterForm = {
-  heading?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
-  button?: Maybe<Scalars['String']>;
   labels?: Maybe<MarkdownRemarkFrontmatterFormLabels>;
+  button?: Maybe<Scalars['String']>;
+  heading?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterFormFilterInput = {
-  heading?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
-  button?: Maybe<StringQueryOperatorInput>;
   labels?: Maybe<MarkdownRemarkFrontmatterFormLabelsFilterInput>;
+  button?: Maybe<StringQueryOperatorInput>;
+  heading?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterFormLabels = {
@@ -1809,8 +1814,8 @@ export type MarkdownRemarkFrontmatterFormLabelsFilterInput = {
 
 export type MarkdownRemarkFrontmatterGet_In_Touch = {
   heading?: Maybe<Scalars['String']>;
-  telephone?: Maybe<Scalars['String']>;
   email?: Maybe<MarkdownRemarkFrontmatterGet_In_TouchEmail>;
+  telephone?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterGet_In_TouchEmail = {
@@ -1825,8 +1830,8 @@ export type MarkdownRemarkFrontmatterGet_In_TouchEmailFilterInput = {
 
 export type MarkdownRemarkFrontmatterGet_In_TouchFilterInput = {
   heading?: Maybe<StringQueryOperatorInput>;
-  telephone?: Maybe<StringQueryOperatorInput>;
   email?: Maybe<MarkdownRemarkFrontmatterGet_In_TouchEmailFilterInput>;
+  telephone?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterIntroducing = {
@@ -1937,12 +1942,14 @@ export type MarkdownRemarkFrontmatterOpeners = {
   image?: Maybe<MarkdownRemarkFrontmatterOpenersImage>;
   link?: Maybe<MarkdownRemarkFrontmatterOpenersLink>;
   heading?: Maybe<MarkdownRemarkFrontmatterOpenersHeading>;
+  summary?: Maybe<Scalars['String']>;
 };
 
 export type MarkdownRemarkFrontmatterOpenersFilterInput = {
   image?: Maybe<MarkdownRemarkFrontmatterOpenersImageFilterInput>;
   link?: Maybe<MarkdownRemarkFrontmatterOpenersLinkFilterInput>;
   heading?: Maybe<MarkdownRemarkFrontmatterOpenersHeadingFilterInput>;
+  summary?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkFrontmatterOpenersFilterListInput = {
@@ -2207,15 +2214,15 @@ export type QuerySitePageArgs = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
 };
 
 
@@ -2232,8 +2239,6 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2345,8 +2350,6 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  polyfill?: Maybe<Scalars['Boolean']>;
-  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -2551,13 +2554,12 @@ export type SiteFieldsEnum =
   | 'siteMetadata___menu'
   | 'siteMetadata___menu___item___en'
   | 'siteMetadata___menu___item___de'
+  | 'siteMetadata___menu___item___fr'
   | 'siteMetadata___menu___to'
   | 'siteMetadata___menu___children'
   | 'siteMetadata___menu___children___to'
   | 'port'
   | 'host'
-  | 'polyfill'
-  | 'pathPrefix'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2650,8 +2652,6 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2673,15 +2673,15 @@ export type SitePage = Node & {
   internalComponentName: Scalars['String'];
   componentChunkName: Scalars['String'];
   matchPath?: Maybe<Scalars['String']>;
-  id: Scalars['ID'];
-  parent?: Maybe<Node>;
-  children: Array<Node>;
-  internal: Internal;
   isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
   context?: Maybe<SitePageContext>;
   pluginCreator?: Maybe<SitePlugin>;
   pluginCreatorId?: Maybe<Scalars['String']>;
   componentPath?: Maybe<Scalars['String']>;
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
 };
 
 export type SitePageConnection = {
@@ -2725,6 +2725,87 @@ export type SitePageFieldsEnum =
   | 'internalComponentName'
   | 'componentChunkName'
   | 'matchPath'
+  | 'isCreatedByStatefulCreatePages'
+  | 'context___id'
+  | 'pluginCreator___id'
+  | 'pluginCreator___parent___id'
+  | 'pluginCreator___parent___parent___id'
+  | 'pluginCreator___parent___parent___children'
+  | 'pluginCreator___parent___children'
+  | 'pluginCreator___parent___children___id'
+  | 'pluginCreator___parent___children___children'
+  | 'pluginCreator___parent___internal___content'
+  | 'pluginCreator___parent___internal___contentDigest'
+  | 'pluginCreator___parent___internal___description'
+  | 'pluginCreator___parent___internal___fieldOwners'
+  | 'pluginCreator___parent___internal___ignoreType'
+  | 'pluginCreator___parent___internal___mediaType'
+  | 'pluginCreator___parent___internal___owner'
+  | 'pluginCreator___parent___internal___type'
+  | 'pluginCreator___children'
+  | 'pluginCreator___children___id'
+  | 'pluginCreator___children___parent___id'
+  | 'pluginCreator___children___parent___children'
+  | 'pluginCreator___children___children'
+  | 'pluginCreator___children___children___id'
+  | 'pluginCreator___children___children___children'
+  | 'pluginCreator___children___internal___content'
+  | 'pluginCreator___children___internal___contentDigest'
+  | 'pluginCreator___children___internal___description'
+  | 'pluginCreator___children___internal___fieldOwners'
+  | 'pluginCreator___children___internal___ignoreType'
+  | 'pluginCreator___children___internal___mediaType'
+  | 'pluginCreator___children___internal___owner'
+  | 'pluginCreator___children___internal___type'
+  | 'pluginCreator___internal___content'
+  | 'pluginCreator___internal___contentDigest'
+  | 'pluginCreator___internal___description'
+  | 'pluginCreator___internal___fieldOwners'
+  | 'pluginCreator___internal___ignoreType'
+  | 'pluginCreator___internal___mediaType'
+  | 'pluginCreator___internal___owner'
+  | 'pluginCreator___internal___type'
+  | 'pluginCreator___resolve'
+  | 'pluginCreator___name'
+  | 'pluginCreator___version'
+  | 'pluginCreator___pluginOptions___plugins'
+  | 'pluginCreator___pluginOptions___plugins___resolve'
+  | 'pluginCreator___pluginOptions___plugins___id'
+  | 'pluginCreator___pluginOptions___plugins___name'
+  | 'pluginCreator___pluginOptions___plugins___version'
+  | 'pluginCreator___pluginOptions___plugins___browserAPIs'
+  | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
+  | 'pluginCreator___pluginOptions___fileName'
+  | 'pluginCreator___pluginOptions___path'
+  | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___maxWidth'
+  | 'pluginCreator___pluginOptions___destinationDir'
+  | 'pluginCreator___pluginOptions___modulePath'
+  | 'pluginCreator___pluginOptions___enableIdentityWidget'
+  | 'pluginCreator___pluginOptions___publicPath'
+  | 'pluginCreator___pluginOptions___htmlTitle'
+  | 'pluginCreator___pluginOptions___pathCheck'
+  | 'pluginCreator___nodeAPIs'
+  | 'pluginCreator___browserAPIs'
+  | 'pluginCreator___ssrAPIs'
+  | 'pluginCreator___pluginFilepath'
+  | 'pluginCreator___packageJson___name'
+  | 'pluginCreator___packageJson___description'
+  | 'pluginCreator___packageJson___version'
+  | 'pluginCreator___packageJson___main'
+  | 'pluginCreator___packageJson___license'
+  | 'pluginCreator___packageJson___dependencies'
+  | 'pluginCreator___packageJson___dependencies___name'
+  | 'pluginCreator___packageJson___dependencies___version'
+  | 'pluginCreator___packageJson___devDependencies'
+  | 'pluginCreator___packageJson___devDependencies___name'
+  | 'pluginCreator___packageJson___devDependencies___version'
+  | 'pluginCreator___packageJson___peerDependencies'
+  | 'pluginCreator___packageJson___peerDependencies___name'
+  | 'pluginCreator___packageJson___peerDependencies___version'
+  | 'pluginCreator___packageJson___keywords'
+  | 'pluginCreatorId'
+  | 'componentPath'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2810,88 +2891,7 @@ export type SitePageFieldsEnum =
   | 'internal___ignoreType'
   | 'internal___mediaType'
   | 'internal___owner'
-  | 'internal___type'
-  | 'isCreatedByStatefulCreatePages'
-  | 'context___id'
-  | 'pluginCreator___id'
-  | 'pluginCreator___parent___id'
-  | 'pluginCreator___parent___parent___id'
-  | 'pluginCreator___parent___parent___children'
-  | 'pluginCreator___parent___children'
-  | 'pluginCreator___parent___children___id'
-  | 'pluginCreator___parent___children___children'
-  | 'pluginCreator___parent___internal___content'
-  | 'pluginCreator___parent___internal___contentDigest'
-  | 'pluginCreator___parent___internal___description'
-  | 'pluginCreator___parent___internal___fieldOwners'
-  | 'pluginCreator___parent___internal___ignoreType'
-  | 'pluginCreator___parent___internal___mediaType'
-  | 'pluginCreator___parent___internal___owner'
-  | 'pluginCreator___parent___internal___type'
-  | 'pluginCreator___children'
-  | 'pluginCreator___children___id'
-  | 'pluginCreator___children___parent___id'
-  | 'pluginCreator___children___parent___children'
-  | 'pluginCreator___children___children'
-  | 'pluginCreator___children___children___id'
-  | 'pluginCreator___children___children___children'
-  | 'pluginCreator___children___internal___content'
-  | 'pluginCreator___children___internal___contentDigest'
-  | 'pluginCreator___children___internal___description'
-  | 'pluginCreator___children___internal___fieldOwners'
-  | 'pluginCreator___children___internal___ignoreType'
-  | 'pluginCreator___children___internal___mediaType'
-  | 'pluginCreator___children___internal___owner'
-  | 'pluginCreator___children___internal___type'
-  | 'pluginCreator___internal___content'
-  | 'pluginCreator___internal___contentDigest'
-  | 'pluginCreator___internal___description'
-  | 'pluginCreator___internal___fieldOwners'
-  | 'pluginCreator___internal___ignoreType'
-  | 'pluginCreator___internal___mediaType'
-  | 'pluginCreator___internal___owner'
-  | 'pluginCreator___internal___type'
-  | 'pluginCreator___resolve'
-  | 'pluginCreator___name'
-  | 'pluginCreator___version'
-  | 'pluginCreator___pluginOptions___plugins'
-  | 'pluginCreator___pluginOptions___plugins___resolve'
-  | 'pluginCreator___pluginOptions___plugins___id'
-  | 'pluginCreator___pluginOptions___plugins___name'
-  | 'pluginCreator___pluginOptions___plugins___version'
-  | 'pluginCreator___pluginOptions___plugins___browserAPIs'
-  | 'pluginCreator___pluginOptions___plugins___pluginFilepath'
-  | 'pluginCreator___pluginOptions___fileName'
-  | 'pluginCreator___pluginOptions___path'
-  | 'pluginCreator___pluginOptions___name'
-  | 'pluginCreator___pluginOptions___maxWidth'
-  | 'pluginCreator___pluginOptions___destinationDir'
-  | 'pluginCreator___pluginOptions___modulePath'
-  | 'pluginCreator___pluginOptions___enableIdentityWidget'
-  | 'pluginCreator___pluginOptions___publicPath'
-  | 'pluginCreator___pluginOptions___htmlTitle'
-  | 'pluginCreator___pluginOptions___pathCheck'
-  | 'pluginCreator___nodeAPIs'
-  | 'pluginCreator___browserAPIs'
-  | 'pluginCreator___ssrAPIs'
-  | 'pluginCreator___pluginFilepath'
-  | 'pluginCreator___packageJson___name'
-  | 'pluginCreator___packageJson___description'
-  | 'pluginCreator___packageJson___version'
-  | 'pluginCreator___packageJson___main'
-  | 'pluginCreator___packageJson___license'
-  | 'pluginCreator___packageJson___dependencies'
-  | 'pluginCreator___packageJson___dependencies___name'
-  | 'pluginCreator___packageJson___dependencies___version'
-  | 'pluginCreator___packageJson___devDependencies'
-  | 'pluginCreator___packageJson___devDependencies___name'
-  | 'pluginCreator___packageJson___devDependencies___version'
-  | 'pluginCreator___packageJson___peerDependencies'
-  | 'pluginCreator___packageJson___peerDependencies___name'
-  | 'pluginCreator___packageJson___peerDependencies___version'
-  | 'pluginCreator___packageJson___keywords'
-  | 'pluginCreatorId'
-  | 'componentPath';
+  | 'internal___type';
 
 export type SitePageFilterInput = {
   path?: Maybe<StringQueryOperatorInput>;
@@ -2899,15 +2899,15 @@ export type SitePageFilterInput = {
   internalComponentName?: Maybe<StringQueryOperatorInput>;
   componentChunkName?: Maybe<StringQueryOperatorInput>;
   matchPath?: Maybe<StringQueryOperatorInput>;
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
   context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
 };
 
 export type SitePageGroupConnection = {
@@ -3304,11 +3304,13 @@ export type SiteSiteMetadataMenuChildrenFilterListInput = {
 export type SiteSiteMetadataMenuChildrenItem = {
   en?: Maybe<Scalars['String']>;
   de?: Maybe<Scalars['String']>;
+  fr?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataMenuChildrenItemFilterInput = {
   en?: Maybe<StringQueryOperatorInput>;
   de?: Maybe<StringQueryOperatorInput>;
+  fr?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSiteMetadataMenuFilterInput = {
@@ -3324,11 +3326,13 @@ export type SiteSiteMetadataMenuFilterListInput = {
 export type SiteSiteMetadataMenuItem = {
   en?: Maybe<Scalars['String']>;
   de?: Maybe<Scalars['String']>;
+  fr?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataMenuItemFilterInput = {
   en?: Maybe<StringQueryOperatorInput>;
   de?: Maybe<StringQueryOperatorInput>;
+  fr?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -3382,6 +3386,21 @@ export type FooterQuery = { en?: Maybe<{ frontmatter?: Maybe<(
         Pick<MarkdownRemarkFrontmatterOffice_Uae, 'heading'>
         & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_UaeAddress, 'line'>>>> }
       )>, links?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterLinks, 'text' | 'href'>>>> }
+    )> }>, fr?: Maybe<{ frontmatter?: Maybe<(
+      Pick<MarkdownRemarkFrontmatter, 'heading'>
+      & { form?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterForm, 'description' | 'button'>
+        & { labels?: Maybe<Pick<MarkdownRemarkFrontmatterFormLabels, 'name_label' | 'email_label' | 'subject_label' | 'message_label'>> }
+      )>, office_germany?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterOffice_Germany, 'heading'>
+        & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_GermanyAddress, 'line'>>>> }
+      )>, get_in_touch?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterGet_In_Touch, 'heading' | 'telephone'>
+        & { email?: Maybe<Pick<MarkdownRemarkFrontmatterGet_In_TouchEmail, 'text' | 'href'>> }
+      )>, office_uae?: Maybe<(
+        Pick<MarkdownRemarkFrontmatterOffice_Uae, 'heading'>
+        & { address?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterOffice_UaeAddress, 'line'>>>> }
+      )>, links?: Maybe<Array<Maybe<Pick<MarkdownRemarkFrontmatterLinks, 'text' | 'href'>>>> }
     )> }> };
 
 export type Unnamed_1_QueryVariables = {};
@@ -3389,9 +3408,9 @@ export type Unnamed_1_QueryVariables = {};
 
 export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<{ menu?: Maybe<Array<Maybe<(
         Pick<SiteSiteMetadataMenu, 'to'>
-        & { item?: Maybe<Pick<SiteSiteMetadataMenuItem, 'en' | 'de'>>, children?: Maybe<Array<Maybe<(
+        & { item?: Maybe<Pick<SiteSiteMetadataMenuItem, 'en' | 'de' | 'fr'>>, children?: Maybe<Array<Maybe<(
           Pick<SiteSiteMetadataMenuChildren, 'to'>
-          & { item?: Maybe<Pick<SiteSiteMetadataMenuChildrenItem, 'en' | 'de'>> }
+          & { item?: Maybe<Pick<SiteSiteMetadataMenuChildrenItem, 'en' | 'de' | 'fr'>> }
         )>>> }
       )>>> }> }> };
 

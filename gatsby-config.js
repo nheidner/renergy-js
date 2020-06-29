@@ -10,6 +10,7 @@ module.exports = {
                 item: {
                     en: 'Home',
                     de: 'Start',
+                    fr: 'Accueil',
                 },
                 to: '/',
             },
@@ -17,6 +18,7 @@ module.exports = {
                 item: {
                     en: 'Our Story',
                     de: 'Über Uns',
+                    fr: 'Notre Histoire',
                 },
                 to: '/our-story',
             },
@@ -24,6 +26,7 @@ module.exports = {
                 item: {
                     en: 'Waste To Energy',
                     de: 'Energie aus Abfall',
+                    fr: 'DÉCHETS À L’ÉNERGIE',
                 },
                 to: '/waste-to-energy',
                 children: [
@@ -31,6 +34,7 @@ module.exports = {
                         item: {
                             en: 'Concept',
                             de: 'Konzept',
+                            fr: 'CONCEPT',
                         },
                         to: '/waste-to-energy/concept',
                     },
@@ -38,6 +42,7 @@ module.exports = {
                         item: {
                             en: 'Technology',
                             de: 'Technologie',
+                            fr: 'TECHNOLOGIE',
                         },
                         to: '/waste-to-energy/technology',
                     },
@@ -45,6 +50,7 @@ module.exports = {
                         item: {
                             en: 'Configuration',
                             de: 'Konfiguration',
+                            fr: 'CONFIGURATION',
                         },
                         to: '/waste-to-energy/configuration',
                     },
@@ -52,6 +58,7 @@ module.exports = {
                         item: {
                             en: 'Input / Output',
                             de: 'Input / Output',
+                            fr: 'ENTRÉES / SORTIES',
                         },
                         to: '/waste-to-energy/input-output',
                     },
@@ -61,6 +68,7 @@ module.exports = {
                 item: {
                     en: 'Tyre Recycling',
                     de: 'Reifen Recycling',
+                    fr: 'RECYCLAGE DES PNEUMATIQUES',
                 },
                 to: '/tire-recycling',
                 children: [
@@ -68,6 +76,7 @@ module.exports = {
                         item: {
                             en: 'Concept',
                             de: 'Konzept',
+                            fr: 'CONCEPT',
                         },
                         to: '/tire-recycling/concept',
                     },
@@ -75,6 +84,7 @@ module.exports = {
                         item: {
                             en: 'Technology',
                             de: 'Technologie',
+                            fr: 'TECHNOLOGIE',
                         },
                         to: '/tire-recycling/technology',
                     },
@@ -82,6 +92,7 @@ module.exports = {
                         item: {
                             en: 'Configuration',
                             de: 'Anlagenaufbau',
+                            fr: 'CONFIGURATION',
                         },
                         to: '/tire-recycling/configuration',
                     },
@@ -89,6 +100,7 @@ module.exports = {
                         item: {
                             en: 'Input / Output',
                             de: 'Input / Output',
+                            fr: 'ENTRÉES / SORTIES',
                         },
                         to: '/tire-recycling/input-output',
                     },
@@ -98,6 +110,7 @@ module.exports = {
                 item: {
                     en: 'Calculation',
                     de: 'Kalkulation',
+                    fr: 'CALCUL',
                 },
                 to: '/calculation',
             },
@@ -105,6 +118,7 @@ module.exports = {
                 item: {
                     en: 'Contact Us',
                     de: 'Kontakt',
+                    fr: 'NOUS CONTACTER',
                 },
                 to: '#contact',
             },

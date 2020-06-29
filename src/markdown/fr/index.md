@@ -1,10 +1,10 @@
 ---
-pageTitle: Home
 templateKey: index
 locale: fr
+pageTitle: Accueil
 path: /
 openers:
-  - summary: Start Turning Waste Into Profit
+  - summary: Commencer à transformer le déchet en profit
     image:
       source: /img/powerplant.jpg
       alt: Start Turning Waste Into Profit
@@ -12,8 +12,39 @@ openers:
       text: En Savoir Plus
       href: /fr/our-story/
     heading:
-      text: Start Turning Waste Into Profit
+      text: |-
+        Commencer à transformer
+
+        le déchet en profit
       href: /fr/our-story/
+  - summary: Éconergétique et écologique
+    image:
+      source: /img/kugel.jpg
+      alt: Éconergétique et écologique
+    heading:
+      text: |-
+        Éconergétique & 
+
+        Écologique
+      href: /fr/waste-to-energy/concept/
+    link:
+      text: En Savoir plus
+      href: /fr/waste-to-energy/concept/
+  - summary: Une solution unique pour la récupération d’énergie
+    image:
+      source: /img/muell.jpg
+      alt: Une solution unique pour la récupération d’énergie
+    heading:
+      text: |-
+        Une solution 
+
+        unique pour la 
+
+        récupération d’énergie
+      href: /fr/waste-to-energy/concept/
+    link:
+      text: En Savoir Plus
+      href: /fr/waste-to-energy/concept/
 introducing:
   topic: Introduire
   heading: "Production et usage de gaz de synthèse à l’issue des déchets organiques  "

@@ -2,7 +2,7 @@
 path: /calculation
 templateKey: one-column-page
 locale: fr
-pageTitle: Calculation
+pageTitle: Calcul
 content: >-
   # Estimation et calcul du coût et du revenu des installations de gaz de
   synthèse

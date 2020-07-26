@@ -19,7 +19,7 @@ content: >-
   Stromaufnahme ca. 100.000; 300.000 oder 500.000 MW / Jahr. 
 
 
-  Berechneter Preis: 14 Eurocent pro KW. Dies wird von der Firma bezahlt, welche den Strom weiter nutzt.
+  Berechneter Preis: 4,4 Eurocent pro KW. Dies wird von der Firma bezahlt, welche den Strom weiter nutzt.
 
 
   Alternativ: Es kann eine Stromentschädigung in Höhe von 18 Euro pro kW geliefert werden. Hausmüll zu Pflanzen bei 0,00 EUR / t. Dieser Preis könnte in Bezug auf die oberen Bedingungen für die Eingabe von Abfällen als variable verstanden werde. 

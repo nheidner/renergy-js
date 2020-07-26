@@ -20,7 +20,7 @@ content: >-
   Consommation électrique d’environ 100 000; 300 000 ou 500 000 MW / Anno.
 
 
-  Prix calculé : 14 Eurocent par KW. Celui-ci sera payé par l’entreprise qui prend le pouvoir.
+  Prix calculé : 4,4 Eurocent par KW. Celui-ci sera payé par l’entreprise qui prend le pouvoir.
 
 
   Alternativement : la compensation d’électricité à 18 Eurocent par kW peut être livrée ; les déchets ménagers à l’usine à 0,00 EUR / t. Ce prix pourrait être rendu variable (à la hausse ou à la baisse ) par rapport aux conditions supérieures de l’entrée des déchets et le prix de l’électricité.

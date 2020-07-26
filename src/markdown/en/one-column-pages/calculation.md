@@ -18,7 +18,7 @@ content: >-
 
   Current power consumption approx. 100,000; 300,000 or 500,000 MW / Anno.
 
-   Calculated price : 14 Eurocent per KW. This will be paid by the company who takes the power.
+   Calculated price : 4,4 Eurocent per KW. This will be paid by the company who takes the power.
 
   Alternatively: Electricity compensation at 18 Eurocent per KW can be delivered; household waste to plant at 0,00 EUR / t. This price could be made variable ( up or down ) in relation to the upper conditions of input from waste and the price of electricity.
 

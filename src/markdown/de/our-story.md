@@ -59,9 +59,9 @@ teamList:
       alt: Karin Sommer
       source: /img/karin.jpg
     role: Marketing Assistenz
-  - role: "Technischer Assistenz Afrika "
+  - role: "Technische Assistenz Afrika "
     name: Chandani Krishanaratne
     image:
       source: /img/photo-2020-08-03-11-48-48.jpg
-      alt: "Technischer Assistenz Afrika "
+      alt: "Technische Assistenz Afrika "
 ---

@@ -65,8 +65,8 @@ teamList:
       source: /img/karin.jpg
     role: Marketing Assistant
   - name: Chandani Krishanaratne
-    role: Technical Director Assistant
+    role: Technical Assistant Africa
     image:
       source: /img/photo-2020-08-03-11-48-48.jpg
-      alt: Technical Director Assistant
+      alt: Technical Assistant
 ---

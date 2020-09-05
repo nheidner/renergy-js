@@ -16,7 +16,7 @@ content: >-
   Die Anlage wird kostenlos geliefert und ist vom Lieferanten zu bezahlen..
 
 
-  Stromaufnahme ca. 100.000; 300.000 oder 500.000 MW / Jahr. 
+  Stromaufnahme ca. 100; 300 oder 500 MW / Jahr. 
 
 
   Berechneter Preis: 4,4 Eurocent pro KW. Dies wird von der Firma bezahlt, welche den Strom weiter nutzt.

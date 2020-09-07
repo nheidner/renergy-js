@@ -17,18 +17,17 @@ office_germany:
     - line: Buisness Bay
     - line: Dubai
 get_in_touch:
-  heading: GET IN TOUCH
-  telephone: Tel. +49 1525 424 14 59
+  heading: Get In Touch
+  telephone: +971-586812303
   email:
-    text: info@renergy-solutions.de
+    text: office@amwaj-alnile.com
     href: "mailto: info@renergy-solutions.de"
 office_uae:
-  heading: OFFICE UAE
+  heading: Renergie
   address:
-    - line: Burj Khalifa Street, Opal Tower 605
-    - line: Business Bay
-    - line: Dubai
-    - line: Vereinigte Arabische Emirate
+    - line: Potsdamer Strasse 4
+    - line: 10785 Berlin
+    - line: Deutschland
 links:
   - text: Impressum
     href: /de/imprint

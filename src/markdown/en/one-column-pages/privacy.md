@@ -7,10 +7,10 @@ content: >-
   # Privacy Policy
 
 
-  Renergy Berlin Gmbh Privacy Policy
+  Amwaj Al Nile Limitid
 
 
-  This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from www.renergy-solutions.de (the “Site”).
+  This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from www.amwaj-alnile.com (the “Site”).
 
 
   PERSONAL INFORMATION WE COLLECT
@@ -31,9 +31,7 @@ content: >-
   HOW DO WE USE YOUR PERSONAL INFORMATION?
 
 
-  We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations).  Additionally, we use this Order Information to: Communicate with you;
-
-  Screen our orders for potential risk or fraud; and
+  We use the Order Information that we collect generally to fulfill any orders placed through the Site (including processing your payment information, arranging for shipping, and providing you with invoices and/or order confirmations).  Additionally, we use this Order Information to: Communicate with you; Screen our orders for potential risk or fraud; and
 
   When in line with the preferences you have shared with us, provide you with information or advertising relating to our products or services.
 
@@ -79,7 +77,7 @@ content: >-
   CHANGES We may update this privacy policy from time to time in order to reflect, for example, changes to our practices or for other operational, legal or regulatory reasons.
 
 
-  CONTACT US For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at info@renergy-solutions.de or by mail using the details provided below:
+  CONTACT US For more information about our privacy practices, if you have questions, or if you would like to make a complaint, please contact us by e-mail at office@amwaj-alnile.com or by mail using the details provided below:
 
 
   Potsdamer Strasse 4, Berlin, BE, 10785, Germany

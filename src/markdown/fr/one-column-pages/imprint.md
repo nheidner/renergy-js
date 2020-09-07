@@ -6,14 +6,14 @@ pageTitle: Imprint
 content: |-
   # Imprint
 
-  ## Renergy Berlin Gmbh
+  ## Renergy 
 
   * Potsdamer Strasse 4
   * 10785 Berlin
   * Germany
   * Phone: +49-3089641327
-  * Email: [info@renergy-solutions.de](<mailto: info@renergy-solutions.de>)
-  * Web: [www.renergy-solutions.de](https://www.renergy-solutions.de)
+  * Email: [](<mailto: info@renergy-solutions.de>)office@amwaj-alnile.com
+  * Web: [www.](https://www.renergy-solutions.de)amwaj-alnile.com
 
   ## Amwaj Al Nile Limited
 
@@ -23,7 +23,6 @@ content: |-
   * Dubai
   * United Arab Emirates
   * Phone.: +971-586812303
-  * Email: [info@emiratesprop.com](mailto:info@emiratesprop.com)
-  * Web: [amwaj-al-nile.com](http://amwaj-al-nile.com/)
-  * Web: [emiratesprop.com](http://emiratesprop.com/)
+  * Email: [](mailto:info@emiratesprop.com)office@amwaj-alnile.com
+  * Web: [](http://amwaj-al-nile.com/)www.amwaj-alnile.com
 ---

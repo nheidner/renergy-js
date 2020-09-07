@@ -13,7 +13,7 @@ content: >-
   Die Erzeugung von Feinst-Gummimehl aus Altreifen und Altgummi
 
 
-  Die RENERGY RC 400/05 ist als Alternative zur Verbrennung für die stoffliche Verwertung von Altreifen und Altgummi entwickelt worden. Für RENERGY sind diese Reststoffe nicht nur eine ökologische Herausforderung, sondern in erster Linie eine wertvolle Rohstoffquelle.
+  Die RENERGY RC 400/05 ist als Alternative zur Verbrennung für die stoffliche Verwertung von Altreifen und Altgummi entwickelt worden. Für Amwaj Al Nile sind diese Reststoffe nicht nur eine ökologische Herausforderung, sondern in erster Linie eine wertvolle Rohstoffquelle.
 
 
   Das hergestellte Feinst-Gummimehl kann sowohl als Zuschlagstoff in Gummimischungen als auch zur Herstellung von Elastomer-Legierungen mit TPE-ähnlichen Eigenschaften verwendet werden.

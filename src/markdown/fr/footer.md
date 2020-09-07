@@ -30,7 +30,6 @@ office_uae:
     - line: Potsdamer Strasse 4
     - line: 10785 Berlin
     - line: Allemagne
-    - line: Émirats Arabes Unis
 links:
   - text: Empreinte
     href: /fr/imprint

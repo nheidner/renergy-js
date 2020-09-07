@@ -16,6 +16,7 @@ office_germany:
     - line: Burj Khalifa Street, Opal Tower 605
     - line: Buisness Bay
     - line: Dubai
+    - line: Vereinigte Arabische Emirate
 get_in_touch:
   heading: Get In Touch
   telephone: +971-586812303

@@ -4,7 +4,7 @@ templateKey: one-column-page
 locale: en
 pageTitle: Waste To Energy
 openerImage:
-  source: /img/sg-300-3.jpg
+  source: /img/sg-300-2.jpg
   alt: Waste To Energy
 content: >-
   # Concept

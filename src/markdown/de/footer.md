@@ -24,7 +24,7 @@ get_in_touch:
     text: office@amwaj-alnile.com
     href: "mailto: info@renergy-solutions.de"
 office_uae:
-  heading: Renergie
+  heading: Renergy
   address:
     - line: Potsdamer Strasse 4
     - line: 10785 Berlin

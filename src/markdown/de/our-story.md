@@ -7,7 +7,7 @@ content: >-
   ## Über uns
 
 
-  Amwaj Al Nile Limited ist ein Energie-Unternehmen mit Hauptsitz in Dubai mit der Niederlassung  Renergie in Berlin.
+  Amwaj Al Nile Limited ist ein Energie-Unternehmen mit Hauptsitz in Dubai und einer Niederlassung, unter dem Namen Renergy, in Berlin.
 
 
   Amwaj Al Nile Limited versteht sich als Systemanbieter und Technologielieferant von innovativen, ökologischen und hoch profitablen Umwelttechnologien in den Know-How-Bereichen Recycling und Verwertung. Wir liefern schlüsselfertige Lösungen, zugeschnitten auf Ihre Bedürfnisse ohne Investition. Dabei konzentriert sich Renergy vorrangig auf zwei Geschäftsbereiche; Energiegewinnung aus Abfällen und Reifenrecycling.

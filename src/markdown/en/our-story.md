@@ -7,7 +7,7 @@ content: >-
   # Our Story
 
 
-  Amwaj Al Nile Limited  is a Engineering company with headquarters in Dubai and a branch Renergy in Berlin.
+  Amwaj Al Nile Limited  is an engineering company with headquarters in Dubai and a branch office, named. Renergy, in Berlin.
 
 
   Amwaj Al Nile Limited sees itself as a system provider and technology supplier of innovative, ecological and highly profitable environmental technologies in the know-how areas of recycling and recovery. We deliver turnkey solutions tailored to your needs, without any further investment from your side.

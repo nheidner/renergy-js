@@ -11,11 +11,11 @@ form:
     message_label: Nachricht
   button: E-MAIL SENDEN
 office_germany:
-  heading: OFFICE GERMANY
+  heading: Office UAE
   address:
-    - line: Potsdamer Strasse 4
-    - line: 10785 Berlin
-    - line: Deutschland
+    - line: Burj Khalifa Street, Opal Tower 605
+    - line: Buisness Bay
+    - line: Dubai
 get_in_touch:
   heading: GET IN TOUCH
   telephone: Tel. +49 1525 424 14 59

@@ -12,11 +12,12 @@ form:
     message_label: Message
   button: Envoyer EMAIL
 office_germany:
-  heading: Bureau Allemagne
+  heading: Amwaj Al Nile Limited
   address:
-    - line: Potsdamer Strasse 4
-    - line: 10785 Berlin
-    - line: Allemagne
+    - line: Burj Khalifa Street, Opal Tower 605
+    - line: Business Bay
+    - line: Dubai
+    - line: Emirats Arabes Unis
 get_in_touch:
   heading: Contactez nous
   email:

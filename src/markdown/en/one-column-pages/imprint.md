@@ -6,7 +6,7 @@ pageTitle: Imprint
 content: |-
   # Imprint
 
-  ## Renergy 
+  ## Renergy
 
   * Potsdamer Strasse 4
   * 10785 Berlin
@@ -25,5 +25,4 @@ content: |-
   * Phone.: +971-586812303
   * Email: [](mailto:info@emiratesprop.com)office@amwaj-alnile.com
   * Web: [](http://amwaj-al-nile.com/)www.amwaj-alnile.com
-  * Web: [emiratesprop.com](http://emiratesprop.com/)
 ---

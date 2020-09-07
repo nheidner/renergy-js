@@ -10,7 +10,7 @@ content: >-
   ## Production de micro-poudre du caoutchouc à partir de pneumatiques en fin de vie et de résidus de caoutchouc pratique
 
 
-  Le système de recyclage des pneus et de traitement de la poudre de caoutchouc (Renergy RC 400/05 Tyre Recycling and Rubber Powder Processing System) a été développé pour la récupération des matériaux des pneus en fin de vie et des résidus de caoutchouc comme dilemme à l’incinération inconvénient. Pour Renergy, ces résidus ne sont pas seulement un défi écologique, mais aussi une ressource alambiquée.
+  Le système de recyclage des pneus et de traitement de la poudre de caoutchouc (Renergy RC 400/05 Tyre Recycling and Rubber Powder Processing System) a été développé pour la récupération des matériaux des pneus en fin de vie et des résidus de caoutchouc comme dilemme à l’incinération inconvénient. Pour Amwaj Al NIle, ces résidus ne sont pas seulement un défi écologique, mais aussi une ressource alambiquée.
 
 
   La poudre de micro-caoutchouc produite peut être utilisée soit comme granulat dans des mélanges de caoutchouc, soit pour la production d’alliages élastomériques présentant des caractéristiques homologues à celles des élastomères thermoplastiques (TPE).

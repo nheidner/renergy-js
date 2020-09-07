@@ -25,7 +25,7 @@ content: >-
   Alternativ: Es kann eine Stromentschädigung in Höhe von 18 Euro pro kW geliefert werden. Hausmüll zu Pflanzen bei 0,00 EUR / t. Dieser Preis könnte in Bezug auf die oberen Bedingungen für die Eingabe von Abfällen als variable verstanden werde. 
 
 
-  Die Vertragsdauer muss mindestens 25 Jahre betragen. Abhängig von den besonderen Umständen einer Stadt oder eines Landes können wir eine Leistungsgarantie verlangen, die auf einem gesperrten Konto im Staat der Vertragspartei gehalten wird. Im Vertrag können wir der jeweiligen Stadt oder dem jeweiligen Land eine Beteiligung von 30% anbieten. Es besteht auch die Möglichkeit einer offiziellen und rechtlichen 3-5% igen Beteiligung einer Person, eines Unternehmens oder einer anderen Institution, die den Abschluss des Vertrags ermöglicht.
+  Die Vertragsdauer muss mindestens 25 Jahre betragen. Abhängig von den besonderen Umständen einer Stadt oder eines Landes können wir eine Leistungsgarantie verlangen, die auf einem gesperrten Konto im Staat der Vertragspartei gehalten wird. Es besteht auch die Möglichkeit einer offiziellen und rechtlichen 3-5% igen Beteiligung einer Person, eines Unternehmens oder einer anderen Institution, die den Abschluss des Vertrags ermöglicht.
 
 
   Der Gewinn wurde mit 30-40 Mio. EUR / Jahr berechnet. Aus der genannten Investition sowie den zuvor beschriebenen Zahlen und Fakten kann daraus der Beteiligungsprozentsatz berechnet werden.

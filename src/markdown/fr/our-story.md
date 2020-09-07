@@ -7,7 +7,7 @@ content: >-
   # Notre histoire
 
 
-  Amwaj Al Nile Limited est une société d’ingénierie allemande dont le siège est à Berlin avec une filiale à Dubaï. 
+  Amwaj Al Nile Limited est une société d’ingénierie allemande dont le siège est à Dubai avec une filiale Renergy à Berlin. 
 
 
   Amwaj Al Nile Limited se considère comme un fournisseur du système et un distributeur de technologies écologiques innovantes et lucratives dans la sphère du recyclage et de la récupération. Nous procurons des solutions clés à main ajustée à vos exigences, sans besoin d’investir de votre part. 

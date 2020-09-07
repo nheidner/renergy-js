@@ -16,7 +16,7 @@ content: >-
   Calculated price: 25.00 EUR/t. delivered free plant, which is to be paid by the supplier.
 
 
-  Current power consumption approx. 100,000; 300,000 or 500,000 MW / Anno.
+  Current power consumption approx. 100, 300 or 500 MW / Anno.
 
    Calculated price : 4,4 Eurocent per KW. This will be paid by the company who takes the power.
 

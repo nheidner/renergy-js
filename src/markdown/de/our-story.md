@@ -29,7 +29,7 @@ teamList:
     image:
       source: /img/15038a9f-3c0d-4c56-aa2b-86a97c63e891.jpg
       alt: Dario
-  - name: Hisham Dishoni
+  - name: Hisham S. A. El Dishoni
     image:
       alt: Hisham Dishoni
       source: /img/hisham.jpg

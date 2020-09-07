@@ -25,11 +25,11 @@ get_in_touch:
     href: office@amwaj-alnile.com
   telephone: +971-586812303
 office_uae:
-  heading: Bureau UAE
+  heading: Renergy
   address:
-    - line: Burj Khalifa Street, Opal Tower 605
-    - line: Business Bay
-    - line: Dubai
+    - line: Potsdamer Strasse 4
+    - line: 10785 Berlin
+    - line: Allemagne
     - line: Émirats Arabes Unis
 links:
   - text: Empreinte

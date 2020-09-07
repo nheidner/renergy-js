@@ -11,7 +11,7 @@ form:
     message_label: Nachricht
   button: E-MAIL SENDEN
 office_germany:
-  heading: Office UAE
+  heading: Amwaj Al Nile Limited
   address:
     - line: Burj Khalifa Street, Opal Tower 605
     - line: Buisness Bay

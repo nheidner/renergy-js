@@ -47,7 +47,7 @@ introducing:
   heading: Die Erzeugung und Nutzung von Synthesegas aus organischen Abfällen
   text: Die Synthesegas-Systeme der*Renergy*SG Anlagenserie stellen eine weltweit
     einzigartige Lösung zur Energierückgewinnung aus organischen Abfällen aller
-    Art dar.\ Mit dem in der Anlage erzeugten Synthesegas werden über Gasmotoren
+    Art dar. Mit dem in der Anlage erzeugten Synthesegas werden über Gasmotoren
     Generatoren zur Erzeugung von elektrischem Strom angetrieben. Dies
     ermöglicht u.a. die Stromeinspeisung in öffentliche Netze.
   topic: Einführung

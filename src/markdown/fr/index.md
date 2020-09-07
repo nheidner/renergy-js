@@ -38,9 +38,11 @@ openers:
       text: |-
         Une solution 
 
-        unique pour la 
+        unique pour
 
-        récupération d’énergie
+        la récupération 
+
+        d’énergie
       href: /fr/waste-to-energy/concept/
     link:
       text: En Savoir Plus

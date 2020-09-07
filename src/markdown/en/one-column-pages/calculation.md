@@ -23,7 +23,7 @@ content: >-
   Alternatively: Electricity compensation at 18 Eurocent per KW can be delivered; household waste to plant at 0,00 EUR / t. This price could be made variable ( up or down ) in relation to the upper conditions of input from waste and the price of electricity.
 
 
-  The contract duration must be guaranteed for at least 25 years. Depending on the specific circumstances of a city or country, we may ask for a performance guarantee , which is held on a blocked account in the state of the contracting party. In the contract, we can offer a 30% participation to the respective city or state. There is also the possibility of an official and legal 3-5 % participation of a person, a company or another institution, which allows the conclusion of the contract.
+  The contract duration must be guaranteed for at least 25 years. Depending on the specific circumstances of a city or country, we may ask for a performance guarantee , which is held on a blocked account in the state of the contracting party. There is also the possibility of an official and legal 3-5 % participation of a person, a company or another institution, which allows the conclusion of the contract.
 
 
   The profit was calculated at 30-40Mio EUR / Anno. With the named investment, as well as previously described numbers and facts, the participation percentage can be calculated from this.

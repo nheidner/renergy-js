@@ -17,7 +17,7 @@ content: >-
   Prix calculé : 25,00 EUR/t. livré usine gratuite, qui est à payer par le fournisseur.
 
 
-  Consommation électrique d’environ 100; 300  ou 500  MW / Anno.
+  Consommation électrique d’environ 100, 300  ou 500  MW / Anno.
 
 
   Prix calculé : 4,4 Eurocent par KW. Celui-ci sera payé par l’entreprise qui prend le pouvoir.

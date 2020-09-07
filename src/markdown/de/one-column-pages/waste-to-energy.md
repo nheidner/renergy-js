@@ -5,7 +5,7 @@ locale: de
 pageTitle: Energie aus Müll
 openerImage:
   alt: Energie aus Müll
-  source: /img/sg-300-2.jpg
+  source: /img/sg-300-3.jpg
 content: >-
   # Konzept
 

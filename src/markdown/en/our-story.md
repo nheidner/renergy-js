@@ -67,4 +67,9 @@ teamList:
     image:
       source: /img/photo-2020-08-03-11-48-48.jpg
       alt: Technical Assistant
+  - name: Skenderbeg Klaiqi
+    role: Marketing Director Balkan Region
+    image:
+      alt: Marketing Director Balkan Region
+      source: /img/photo-2020-10-02-10-41-43.jpg
 ---

@@ -64,4 +64,9 @@ teamList:
     image:
       source: /img/photo-2020-08-03-11-48-48.jpg
       alt: "Technische Assistenz Afrika "
+  - name: Skenderbeg Klaiqi
+    image:
+      source: /img/photo-2020-10-02-10-41-43.jpg
+      alt: Marketing Director Balkan Region
+    role: Marketing Director Balkan Region
 ---

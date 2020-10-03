@@ -62,4 +62,9 @@ teamList:
       source: /img/karin.jpg
       alt: Karin Sommer
     role: Assistante Marketing
+  - role: "Directeur Marketing Balkan "
+    name: Skenderbeg Klaiqi
+    image:
+      source: /img/photo-2020-10-02-10-41-43.jpg
+      alt: Directeur Marketing Balkan
 ---

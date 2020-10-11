@@ -6,14 +6,14 @@ pageTitle: Impressum
 content: |-
   # Impressum
 
-  ## Renergy 
+  ## Renergy
 
   * Potsdamer Strasse 4
   * 10785 Berlin
   * Deutschland
   * Tel: +49-3089641327
-  * Email: [](<mailto: info@renergy-solutions.de>)office@amwaj-alnile.com
-  * Web: [www.](https://www.renergy-solutions.de/)amwaj-alnile.com
+  * Email: [](<mailto: info@renergy-solutions.de>)Info@renergy-solutions.de
+  * Web: [www.](https://www.renergy-solutions.de/)renergy-solutions.de
 
   ## Amwaj Al Nile Limited
 

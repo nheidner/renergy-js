@@ -2,7 +2,7 @@
 templateKey: one-column-page
 locale: de
 pageTitle: Über uns
-path: /Über uns
+path: /our-story
 content: >-
   ## Über uns
 

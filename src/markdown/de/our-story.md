@@ -1,25 +1,25 @@
 ---
 templateKey: one-column-page
 locale: de
-pageTitle: Über Uns
-path: /our-story
+pageTitle: Über uns
+path: Über uns
 content: >-
   ## Über uns
 
 
-  Amwaj Al Nile Limited ist ein Energie-Unternehmen mit Hauptsitz in Dubai und einer Niederlassung, unter dem Namen Renergy, in Berlin.
+  Renergy Berlin Unternehmungsgruppe ist ein Energie-Unternehmen mit Hauptsitz in Berlin und einer Niederlassung, unter dem Namen Amwaj Al Nile Limited, in Dubai.
 
 
-  Amwaj Al Nile Limited versteht sich als Systemanbieter und Technologielieferant von innovativen, ökologischen und hoch profitablen Umwelttechnologien in den Know-How-Bereichen Recycling und Verwertung. Wir liefern schlüsselfertige Lösungen, zugeschnitten auf Ihre Bedürfnisse ohne Investition. Dabei konzentriert sich Amwaj Al Nile vorrangig auf zwei Geschäftsbereiche; Energiegewinnung aus Abfällen und Reifenrecycling.
+  Renergy Berlin Unternehmungsgruppe versteht sich als Systemanbieter und Technologielieferant von innovativen, ökologischen und hoch profitablen Umwelttechnologien in den Know-How-Bereichen Recycling und Verwertung. Wir liefern schlüsselfertige Lösungen, zugeschnitten auf Ihre Bedürfnisse ohne Investition. Dabei konzentriert sich Renergy Berlin Unternehmungsgruppe vorrangig auf zwei Geschäftsbereiche; Energiegewinnung aus Abfällen und Reifenrecycling.
 
 
   ### Unsere Vision
 
 
-  Amwaj Al Nile Limiteds Vision einer saubereren Welt ist direkt verknüpft mit der Umwandlung von Abfallprodukten in wertvolle Rohstoffe – und das bei hohen Renditen. Ein ökologischer Anspruch schließt nicht länger ökonomischen Erfolg aus. Ständig wachsende Müll- und Altreifenberge zwingen weltweit zu verstärkten Bemühungen für ökologisch und ökonomisch sinnvolle Lösungen. Unter konsequenter Berücksichtigung dieser Aspekte begann Amwaj Al Nile Limited vor vielen Jahren die Entwicklung von Reifen- bzw. Restmüllverwertungssystemen, die heute den weltweit höchsten Stand der Technik darstellen und erstmals dem Nutzer dieser Technologie eine bislang nicht vorhandene Effektivität und Rentabilität sowie dem Investor eine überdurchschnittlich hohe Rendite des eingesetzten Kapitals ermöglichen.
+  Renergys Berlin Unternehmungsgruppe Vision einer saubereren Welt ist direkt verknüpft mit der Umwandlung von Abfallprodukten in wertvolle Rohstoffe – und das bei hohen Renditen. Ein ökologischer Anspruch schließt nicht länger ökonomischen Erfolg aus. Ständig wachsende Müll- und Altreifenberge zwingen weltweit zu verstärkten Bemühungen für ökologisch und ökonomisch sinnvolle Lösungen. Unter konsequenter Berücksichtigung dieser Aspekte begann Renergy Berlin Unternehmungsgruppevor vielen Jahren die Entwicklung von Reifen- bzw. Restmüllverwertungssystemen, die heute den weltweit höchsten Stand der Technik darstellen und erstmals dem Nutzer dieser Technologie eine bislang nicht vorhandene Effektivität und Rentabilität sowie dem Investor eine überdurchschnittlich hohe Rendite des eingesetzten Kapitals ermöglichen.
 
 
-  Altreifen, Abfall- und Reststoffe sind für Amwaj Al Nile Limited wertvolle Rohstoffressourcen. Sie einfach nur entsorgen oder zu verbrennen, entspricht nicht unserer Vision.
+  Altreifen, Abfall- und Reststoffe sind für Renergy Berlin Unternehmungsgruppe wertvolle Rohstoffressourcen. Sie einfach nur entsorgen oder zu verbrennen, entspricht nicht unserer Vision.
 
 
   ### Unser Team

@@ -7,7 +7,7 @@ content: >-
   ## Über uns
 
 
-  Renergy Berlin Unternehmungsgruppe ist ein Energie-Unternehmen mit Hauptsitz in Berlin und einer Niederlassung, unter dem Namen Amwaj Al Nile Limited, in Dubai.
+  Renerg Berlin Unternehmungsgruppe ist ein Energie-Unternehmen mit Hauptsitz in Berlin und einer Niederlassung, unter dem Namen Amwaj Al Nile Limited, in Dubai.
 
 
   Renergy Berlin Unternehmungsgruppe versteht sich als Systemanbieter und Technologielieferant von innovativen, ökologischen und hoch profitablen Umwelttechnologien in den Know-How-Bereichen Recycling und Verwertung. Wir liefern schlüsselfertige Lösungen, zugeschnitten auf Ihre Bedürfnisse ohne Investition. Dabei konzentriert sich Renergy Berlin Unternehmungsgruppe vorrangig auf zwei Geschäftsbereiche; Energiegewinnung aus Abfällen und Reifenrecycling.

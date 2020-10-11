@@ -21,7 +21,7 @@ office_germany:
 get_in_touch:
   heading: Contactez nous
   email:
-    text: office@amwaj-alnile.com
+    text: info@renergy-solutions.de
     href: office@amwaj-alnile.com
   telephone: +971-586812303
 office_uae:

@@ -7,10 +7,10 @@ content: >-
   # Notre histoire
 
 
-  Amwaj Al Nile Limited est une société d’energie dont le siège est à Dubai et la filiale Renergy à Berlin. 
+  Renergy Berlin Unternehmungsgruppe est une société d’energie dont le siège est à Berlin et la filiale Amwaj Al Nile Limited à Dubai. 
 
 
-  Amwaj Al Nile Limited se considère comme un fournisseur du système et un distributeur de technologies écologiques innovantes et lucratives dans la sphère du recyclage et de la récupération. Nous procurons des solutions clés à main ajustée à vos exigences, sans besoin d’investir de votre part. 
+  Renergy Berlin Unternehmungsgruppe se considère comme un fournisseur du système et un distributeur de technologies écologiques innovantes et lucratives dans la sphère du recyclage et de la récupération. Nous procurons des solutions clés à main ajustée à vos exigences, sans besoin d’investir de votre part. 
 
 
   Nous focalisons notamment sur deux secteurs d'activité qui sont la production de l'énergie à partir du recyclage ainsi des déchets et des pneus.
@@ -22,7 +22,7 @@ content: >-
   Notre aspiration d’un monde plus propre est associée concrètement à la transformation des déchets en bien de valeur avec un rendement élevé sur l’investissement. Une approche écologique ne limoge plus la réussite économique. La croissance inaltérable des flux de déchets et des quantités de pneus expirés utile partout dans le monde impose à accroître les efforts pour trouver des épilogues écologiques et bénéfiques. En tenant compte de ces aspects, nous avons commencé à développer des systèmes de récupération d’énergie des pneus et des déchets qui reflètent nos jours l’état actuel de la technique et, pour la première fois, le taux d’activité et de rentabilité du capital employé est très haut. 
 
 
-  Pour Amwaj Al Nile Limited, les pneus en fin de vie ainsi que les déchets et les résidus sont des matières premières chichiteuses. Le retranchement simplement ou l’incinération ne standardise plus à notre idéal.
+  Pour Renergy Berlin Unternehmungsgruppe, les pneus en fin de vie ainsi que les déchets et les résidus sont des matières premières chichiteuses. Le retranchement simplement ou l’incinération ne standardise plus à notre idéal.
 
 
   ## Notre équipe

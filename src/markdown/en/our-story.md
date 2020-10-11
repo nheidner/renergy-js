@@ -7,10 +7,10 @@ content: >-
   # Our Story
 
 
-  Amwaj Al Nile Limited  is an engineering company with headquarters in Dubai and a branch office, named. Renergy, in Berlin.
+  Renergy Berlin Unternehmungsgruppe is an engineering company with headquarters in Berlin and a branch office, named. Amwaj Al Nile Limited, in Dubai.
 
 
-  Amwaj Al Nile Limited sees itself as a system provider and technology supplier of innovative, ecological and highly profitable environmental technologies in the know-how areas of recycling and recovery. We deliver turnkey solutions tailored to your needs, without any further investment from your side.
+  Renergy Berlin Unternehmungsgruppe sees itself as a system provider and technology supplier of innovative, ecological and highly profitable environmental technologies in the know-how areas of recycling and recovery. We deliver turnkey solutions tailored to your needs, without any further investment from your side.
 
 
   We focuses primarily on two business areas; generating energy from both waste and tyre recycling.
@@ -22,7 +22,7 @@ content: >-
   Our vision of a cleaner world is directly coupled with turning waste materials into valuable commodities with high returns on investment. An ecologic approach does not exclude economic success anymore. Constantly growing waste streams and amounts of end-of-life tires globally force to increasing endeavours for ecologic and economic solutions. With consequent consideration of these aspects, we started the development of tyre and waste energy recovery systems which today reflect the current technological state of the art and, for the first time, allow a to-date unseen affectivity and profitability as well as an outstanding high yield of the employed capital.
 
 
-  To Amwaj Al Nile Limited, end-of-life tyres as well as waste and residues are valuable raw material resources. Simple disposal or incineration does not comply with our ideal.
+  To Renergy Berlin Unternehmungsgruppe, end-of-life tyres as well as waste and residues are valuable raw material resources. Simple disposal or incineration does not comply with our ideal.
 
 
   ## Our Team

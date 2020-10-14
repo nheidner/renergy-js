@@ -32,6 +32,11 @@ teamList:
     image:
       source: /img/15038a9f-3c0d-4c56-aa2b-86a97c63e891.jpg
       alt: Dario Bauer
+  - image:
+      alt: Ingénieur général
+      source: /img/65173bd6-e80f-48f0-aae3-4b6d8d91caea.jpg
+    role: Ingénieur général
+    name: Thomas Hein
   - name: Hisham S. A. El Dishoni
     image:
       source: /img/hisham.jpg
